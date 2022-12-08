@@ -1,0 +1,332 @@
+{
+  "menu": [
+    {
+      "url": "javascript:void(0)",
+      "i18n": "Dashboard",
+      "name": "Dashboard",
+      "slug": "dashboard",
+      "activate": "DashboardDropdown",
+      "icon": "dashboard",
+      "dropdown": "1",
+      "submenu": [
+        {
+          "url": "modern",
+          "i18n": "Modern",
+          "name": "Modern",
+          "slug": "modern"
+        },
+        {
+          "url": "ecommerce",
+          "i18n": "eCommerce",
+          "name": "eCommerce",
+          "slug": "ecommerce"
+        },
+        {
+          "url": "analytics",
+          "i18n": "Analytics",
+          "name": "Analytics",
+          "slug": "analytics"
+        }
+      ]
+    },
+    {
+      "url": "javascript:void(0)",
+      "i18n": "Apps",
+      "name": "Apps",
+      "slug": "apps",
+      "activate": "AppsDropdown",
+      "icon": "mail_outline",
+      "dropdown": "1",
+      "submenu": [
+        {
+          "url": "app-email",
+          "i18n": "Mail",
+          "name": "Mail",
+          "slug": "app-email"
+        },
+        {
+          "url": "app-chat",
+          "i18n": "Chat",
+          "name": "Chat",
+          "slug": "app-chat"
+        },
+        {
+          "url": "app-todo",
+          "i18n": "ToDo",
+          "name": "ToDo",
+          "slug": "app-todo"
+        },
+        {
+          "url": "app-contacts",
+          "i18n": "Contacts",
+          "name": "Contacts",
+          "slug": "app-contacts"
+        },
+        {
+          "url": "app-calendar",
+          "i18n": "Calendar",
+          "name": "Calendar",
+          "slug": "app-calendar"
+        },
+        {
+          "url": "app-kanban",
+          "name": "Kanban",
+          "i18n": "Kanban",
+          "slug": "app-kanban"
+        },
+        {
+          "url": "app-file-manager",
+          "name": "File manager",
+          "i18n": "File Manager",
+          "slug": "app-file-manager"
+        },
+        {
+          "url": "javascript:void(0)",
+          "name": "Invoice",
+          "i18n": "Invoice",
+          "slug": "invoice",
+          "icon": "chevron_right",
+          "activate": "invoiceDropdown",
+          "dropdown": "1",
+          "submenu": [
+            {
+              "url": "app-invoice-list",
+              "name": "Invoice List",
+              "i18n": "Invoice List",
+              "slug": "app-invoice-list"
+            },
+            {
+              "url": "app-invoice-view",
+              "name": "Invoice View",
+              "i18n": "Invoice View",
+              "slug": "app-invoice-view"
+            },
+            {
+              "url": "app-invoice-edit",
+              "name": "Invoice Edit",
+              "i18n": "Invoice Edit",
+              "slug": "app-invoice-edit"
+            },
+            {
+              "url": "app-invoice-add",
+              "name": "Invoice Add",
+              "i18n": "Invoice Add",
+              "slug": "app-invoice-add"
+            }
+          ]
+        },
+        {
+          "url": "javascript:void(0)",
+          "name": "eCommerce",
+          "i18n": "eCommerce",
+          "slug": "eCommerce",
+          "icon": "chevron_right",
+          "activate": "eCommerceDropdown",
+          "dropdown": "1",
+          "submenu": [
+            {
+              "url": "eCommerce-products-page",
+              "i18n": "Products Page",
+              "name": "Products Page",
+              "slug": "eCommerce-products-page"
+            },
+            {
+              "url": "eCommerce-pricing",
+              "i18n": "Pricing",
+              "name": "Pricing",
+              "slug": "eCommerce-pricing"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "javascript:void(0)",
+      "i18n": "Pages",
+      "name": "Pages",
+      "activate": "PageDropdown",
+      "slug": "pages",
+      "icon": "content_paste",
+      "dropdown": "1",
+      "submenu": [
+        {
+          "url": "page-contact",
+          "i18n": "Contact",
+          "name": "Contact",
+          "slug": "page-contact"
+        },
+        {
+          "url": "page-blog-list",
+          "i18n": "Blog",
+          "name": "Blog",
+          "slug": "page-blog-list"
+        },
+        {
+          "url": "page-search",
+          "i18n": "Search",
+          "name": "Search",
+          "slug": "page-search"
+        },
+        {
+          "url": "page-knowledge",
+          "i18n": "Knowledge",
+          "name": "Knowledge",
+          "slug": "page-knowledge"
+        },
+        {
+          "url": "page-timeline",
+          "name": "Timeline",
+          "i18n": "Timeline",
+          "slug": "page-timeline"
+        },
+        {
+          "url": "page-faq",
+          "i18n": "FAQs",
+          "name": "FAQs",
+          "slug": "page-faq"
+        },
+        {
+          "url": "page-blank",
+          "i18n": "Page Blank",
+          "name": "Page Blank",
+          "slug": "page-blank"
+        },
+        {
+          "url": "user-profile-page",
+          "i18n": "User Profile",
+          "name": "User Profile",
+          "slug": "user-profile-page"
+        },
+        {
+          "url": "javascript:void(0)",
+          "name": "User",
+          "i18n": "User",
+          "slug": "User",
+          "icon": "chevron_right",
+          "activate": "userDropdown",
+          "dropdown": "1",
+          "submenu": [
+            {
+              "url": "page-users-list",
+              "name": "List",
+              "i18n": "List",
+              "slug": "users-list"
+            },
+            {
+              "url": "page-users-view",
+              "name": "View",
+              "i18n": "View",
+              "slug": "users-view"
+            },
+            {
+              "url": "page-users-edit",
+              "name": "Edit",
+              "i18n": "Edit",
+              "slug": "users-edit"
+            }
+          ]
+        },
+        {
+          "url": "javascript:void(0)",
+          "name": "Medias",
+          "i18n": "Medias",
+          "slug": "medias",
+          "icon": "chevron_right",
+          "activate": "mediasDropdown",
+          "dropdown": "1",
+          "submenu": [
+            {
+              "url": "media-gallery-page",
+              "name": "Gallery Page",
+              "i18n": "Gallery Page",
+              "slug": "media-gallery-page"
+            },
+            {
+              "url": "media-hover-effects",
+              "name": "Media Hover Effects",
+              "i18n": "Media Hover Effects",
+              "slug": "media-hover-effects"
+            }
+          ]
+        },
+        {
+          "url": "javascript:void(0)",
+          "name": "Authentication",
+          "i18n": "Authentication",
+          "slug": "authentication",
+          "icon": "chevron_right",
+          "activate": "authDropdown",
+          "dropdown": "1",
+          "submenu": [
+            {
+              "url": "user-login",
+              "i18n": "Login",
+              "name": "Login",
+              "slug": "user-login",
+              "newTab": "_blank"
+            },
+            {
+              "url": "user-register",
+              "i18n": "Register",
+              "name": "Register",
+              "slug": "user-register",
+              "newTab": "_blank"
+            },
+            {
+              "url": "user-forgot-password",
+              "i18n": "Forgot Password",
+              "name": "Forgot Password",
+              "slug": "user-forgot-password",
+              "newTab": "_blank"
+            },
+            {
+              "url": "user-lock-screen",
+              "i18n": "Lock Screen",
+              "name": "Lock Screen",
+              "slug": "user-lock-screen",
+              "newTab": "_blank"
+            }
+          ]
+        },
+        {
+          "url": "javascript:void(0)",
+          "name": "Misc",
+          "i18n": "Misc",
+          "slug": "misc",
+          "icon": "chevron_right",
+          "activate": "miscDropdown",
+          "dropdown": "1",
+          "submenu": [
+            {
+              "url": "page-404",
+              "i18n": "404",
+              "name": "404",
+              "slug": "page-404",
+              "newTab": "_blank"
+            },
+            {
+              "url": "page-500",
+              "i18n": "500",
+              "name": "500",
+              "slug": "page-505",
+              "newTab": "_blank"
+            },
+            {
+              "url": "page-maintenance",
+              "i18n": "Page Maintenanace",
+              "name": "Page Maintenanace",
+              "slug": "page-maintenance",
+              "newTab": "_blank"
+            }
+          ]
+        },
+        {
+          "url": "page-account-settings",
+          "name": "Account Settings",
+          "i18n": "Account Settings",
+          "slug": "page-account-settings"
+        }
+      ]
+    }
+  ]
+}
