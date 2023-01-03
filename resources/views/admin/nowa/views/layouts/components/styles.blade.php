@@ -1,5 +1,5 @@
 		<!-- FAVICON -->
-		<link rel="icon" href="{{asset('admin/assets/img/brand/favicon.png')}}" type="image/x-icon"/>
+		{{-- <link rel="icon" href="{{asset('admin/assets/img/brand/favicon.png')}}" type="image/x-icon"/> --}}
 
 		<!-- ICONS CSS -->
 		<link href="{{asset('admin/assets/plugins/icons/icons.css')}}" rel="stylesheet">

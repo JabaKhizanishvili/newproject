@@ -13,5 +13,6 @@ class SliderTranslation extends BaseTranslationModel
         'title_2',
         'short_description',
         'description',
+        'button_text',
     ];
 }

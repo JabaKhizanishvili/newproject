@@ -15,24 +15,22 @@ class Slider extends Model
 {
     use SoftDeletes, Translatable, HasFactory, ScopeFilter;
 
-
     protected $table = 'sliders';
-
-
     protected $fillable = [
         'status',
         'youtube_url',
-        'reddirect_url'
+        'parent_id',
+        'reddirect_url',
+        'btncolor',
     ];
-
 
     protected $translationModel = SliderTranslation::class;
 
-    /** @var array */
     public $translatedAttributes = [
         'title',
         'title_2',
-        'description'
+        'description',
+        'button_text',
     ];
 
     public function getFilterScopes(): array
@@ -57,9 +55,7 @@ class Slider extends Model
     {
         return $this->morphMany(File::class, 'fileable');
     }
-    /**
-     * @return MorphOne
-     */
+
     public function file(): MorphOne
     {
         return $this->morphOne(File::class, 'fileable');

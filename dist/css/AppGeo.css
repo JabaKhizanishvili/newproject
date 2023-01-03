@@ -1,0 +1,13 @@
+@font-face {
+    font-family: "mtav";
+    src: url(/public/assets/fonts/AS-Grammatika-Regular_Mtav.ttf);
+}
+*,
+*::after,
+*::before {
+    font-family: "mtav";
+}
+body {
+    font-family: "mtav";
+}
+

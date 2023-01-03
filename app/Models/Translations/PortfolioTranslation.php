@@ -14,14 +14,7 @@ class PortfolioTranslation extends BaseTranslationModel
     //     'position',
     // ];
     protected $fillable = [
-        'name',
-        'video_url',
-        'costumer',
-        'duration',
-        'about_project',
-        'directions',
-        'design',
-        'animation',
-        'music',
+        'title',
+        'description',
     ];
 }

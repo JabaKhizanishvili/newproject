@@ -20,7 +20,7 @@ class CreateSubClassTranslationsTable extends Migration
 
             $table->string('title')->nullable();
 
-            $table->unique(['subclass_id','locale']);
+            $table->unique(['subclass_id', 'locale']);
             $table->foreign('subclass_id')
                 ->references('id')
                 ->on('subclasses')

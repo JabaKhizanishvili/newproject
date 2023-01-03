@@ -62,7 +62,6 @@ class EvaluationController extends Controller
         /*return view('admin.pages.product.index', [
             'products' => $this->productRepository->getData($request, ['translations', 'categories'])
         ]);*/
-
         return view('admin.nowa.views.apps.evaluation', [
             // 'data' => $this->skillRepository->getData($request),
             'data'  => $rate->all()
@@ -71,9 +70,10 @@ class EvaluationController extends Controller
 
     public function details(Request $req, $locale, RateService $owner, $id = "")
     {
-        return view('admin.nowa.views.apps.evaldetail', [
-            'data'  => $owner->find($id)
-        ]);
+        dd('asdasd');
+        // return view('admin.nowa.views.apps.evaldetail', [
+        //     'data'  => $owner->find($id)
+        // ]);
     }
     public function show(Request $req, $locale, RateService $owner, $id = "")
     {

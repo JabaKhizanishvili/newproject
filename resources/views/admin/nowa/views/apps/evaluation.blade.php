@@ -41,8 +41,8 @@
                                             <thead>
                                                 <tr>
                                                    <th>id</th>
-                                                   <th>Name</th>
-                                                   <th>details</th>
+                                                   <th>Email</th>
+                                                   {{-- <th>details</th> --}}
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -50,7 +50,7 @@
                                                      @foreach($data as $item)
                                                      <tr>
                                                         <td>{{$item->id}}</td>
-                                                        <td>{{$item->name}}</td>
+                                                        <td>{{$item->email}}</td>
                                                         <td><a class="btn btn-primary" href="{{route('eval.details',$item->id)}}">
                                                               details</a></td>
                                                     </tr>

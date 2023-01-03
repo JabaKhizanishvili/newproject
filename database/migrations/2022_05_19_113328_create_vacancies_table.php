@@ -15,13 +15,12 @@ class CreateVacanciesTable extends Migration
     {
         Schema::create('vacancies', function (Blueprint $table) {
             $table->id();
-            $table->string('slug')->unique()->nullable();
+            $table->string('slug')->nullable();
             $table->integer('position')->default(0);
             $table->string('remuneration')->nullable();
             $table->tinyInteger('rate');
             $table->boolean('status')->default(true);
             $table->timestamps();
-
         });
     }
 

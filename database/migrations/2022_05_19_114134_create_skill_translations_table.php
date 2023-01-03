@@ -20,7 +20,7 @@ class CreateSkillTranslationsTable extends Migration
 
             $table->string('title')->nullable();
 
-            $table->unique(['skill_id','locale']);
+            $table->unique(['skill_id', 'locale']);
             $table->foreign('skill_id')
                 ->references('id')
                 ->on('skills')

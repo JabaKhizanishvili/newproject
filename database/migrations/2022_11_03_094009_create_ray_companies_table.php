@@ -16,7 +16,7 @@ class CreateRayCompaniesTable extends Migration
         Schema::create('ray_companies', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('slug')->unique();
+            $table->string('slug');
             $table->timestamps();
         });
     }

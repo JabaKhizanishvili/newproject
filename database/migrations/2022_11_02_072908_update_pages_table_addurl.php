@@ -16,6 +16,7 @@ class UpdatePagesTableAddurl extends Migration
         //
         Schema::table('pages', function (Blueprint $table) {
             $table->string('url')->nullable();
+            $table->string('partnerslink')->nullable();
         });
     }
 

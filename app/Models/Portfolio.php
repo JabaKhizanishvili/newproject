@@ -18,7 +18,7 @@ class Portfolio extends Model
 {
     use Translatable, HasFactory, ScopeFilter;
     protected $table = 'portfolio';
-    protected $fillable = ['status', 'video_url', 'category_id'];
+    protected $fillable = ['parent_id', 'color', 'status'];
 
     public function getFilterScopes(): array
     {
@@ -49,17 +49,14 @@ class Portfolio extends Model
     }
 
     public $translatedAttributes = [
-        'name',
-        'costumer',
-        'duration',
-        'about_project',
-        'directions',
-        'video_url',
-        'design',
-        'animation',
-        'music',
+        'title',
+        'description',
     ];
 
+    public function file(): MorphOne
+    {
+        return $this->morphOne(File::class, 'fileable');
+    }
     // this adds image
     public function latestImage()
     {

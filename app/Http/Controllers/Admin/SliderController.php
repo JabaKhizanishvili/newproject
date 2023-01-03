@@ -5,8 +5,11 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\SliderRequest;
 use App\Models\Slider;
+use App\Models\Menu;
 use App\Repositories\SliderRepositoryInterface;
 use Illuminate\Support\Arr;
+
+use function App\Http\Controllers\Admin\getMenu as AdminGetMenu;
 
 class SliderController extends Controller
 {
@@ -49,6 +52,14 @@ class SliderController extends Controller
     {
         $slider = $this->slideRepository->model;
 
+        function getMenu()
+        {
+            static $data = null;
+            if ($data == null) {
+                $data = Menu::with("translations")->get()->all();
+            }
+            return $data;
+        }
         $url = locale_route('slider.store', [], false);
         $method = 'POST';
 
@@ -60,6 +71,7 @@ class SliderController extends Controller
 
         return view('admin.nowa.views.slider.form', [
             'slider' => $slider,
+            'menus' => getMenu(),
             'url' => $url,
             'method' => $method,
         ]);
@@ -75,6 +87,7 @@ class SliderController extends Controller
      */
     public function store(SliderRequest $request)
     {
+        // dd($request->all());
         $saveData = Arr::except($request->except('_token'), []);
         $saveData['status'] = isset($saveData['status']) && (bool)$saveData['status'];
         $slider = $this->slideRepository->create($saveData);
@@ -87,14 +100,6 @@ class SliderController extends Controller
         return redirect(locale_route('slider.index', $slider->id))->with('success', __('admin.create_successfully'));
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param string $locale
-     * @param \App\Models\Product $product
-     *
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
-     */
     public function show(string $locale, Slider $slider)
     {
         return view('admin.pages.slider.show', [
@@ -102,45 +107,34 @@ class SliderController extends Controller
         ]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param string $locale
-     * @param \App\Models\Category $category
-     *
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
-     */
     public function edit(string $locale, Slider $slider)
     {
         $url = locale_route('slider.update', $slider->id, false);
         $method = 'PUT';
+        function getMenu()
+        {
+            $data = null;
+            if ($data == null) {
+                $data = Menu::with("translations")->get()->all();
+            }
+            return $data;
+        }
 
-        /*return view('admin.pages.slider.form', [
-            'slider' => $slider,
-            'url' => $url,
-            'method' => $method,
-        ]);*/
 
         return view('admin.nowa.views.slider.form', [
             'slider' => $slider,
+            'menus' => getMenu(),
             'url' => $url,
             'method' => $method,
         ]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param \App\Http\Requests\Admin\CategoryRequest $request
-     * @param string $locale
-     * @param \App\Models\Category $category
-     *
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
-     */
+
     public function update(SliderRequest $request, string $locale, Slider $slider)
     {
         $saveData = Arr::except($request->except('_token'), []);
         $saveData['status'] = isset($saveData['status']) && (bool)$saveData['status'];
+        // dd($saveData);
 
         $this->slideRepository->update($slider->id, $saveData);
 
@@ -160,6 +154,7 @@ class SliderController extends Controller
      */
     public function destroy(string $locale, Slider $slider)
     {
+        // dd($slider);
         if (!$this->slideRepository->delete($slider->id)) {
             return redirect(locale_route('slider.show', $slider->id))->with('danger', __('admin.not_delete_message'));
         }

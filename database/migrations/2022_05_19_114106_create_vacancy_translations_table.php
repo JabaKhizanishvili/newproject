@@ -22,7 +22,7 @@ class CreateVacancyTranslationsTable extends Migration
             $table->string('sub_title')->nullable();
             $table->longText('description')->nullable();
 
-            $table->unique(['vacancy_id','locale']);
+            $table->unique(['vacancy_id', 'locale']);
             $table->foreign('vacancy_id')
                 ->references('id')
                 ->on('vacancies')

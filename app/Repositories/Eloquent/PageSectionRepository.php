@@ -1,4 +1,5 @@
 <?php
+
 /**
  *  app/Repositories/Eloquent/ProductRepository.php
  *
@@ -37,16 +38,14 @@ class PageSectionRepository extends BaseRepository implements PageSectionReposit
     {
         //dd($request->file('image'));
 
-        if($request->hasFile('image')){
-            foreach ($request->file('image') as $key => $file){
-                $model = $this->model->where('id',$key)->first();
+        if ($request->hasFile('image')) {
+            foreach ($request->file('image') as $key => $file) {
+                $model = $this->model->where('id', $key)->first();
 
-                if ($model->file){
+                if ($model->file) {
                     Storage::delete($model->file->getFileUrlAttribute());
                     $model->file->delete();
                 }
-
-
             }
         }
 
@@ -64,7 +63,7 @@ class PageSectionRepository extends BaseRepository implements PageSectionReposit
                 $imagename = date('Ymhs') . str_replace(' ', '', $file->getClientOriginalName());
                 $destination = base_path() . '/storage/app/public/' . $modelName . '/' . $key;
                 $request->file('image')[$key]->move($destination, $imagename);
-                $model = $this->model->where('id',$key)->first();
+                $model = $this->model->where('id', $key)->first();
                 $model->file()->create([
                     'title' => $imagename,
                     'path' => 'storage/' . $modelName . '/' . $key,
@@ -76,5 +75,4 @@ class PageSectionRepository extends BaseRepository implements PageSectionReposit
 
         return $this->model;
     }
-
 }

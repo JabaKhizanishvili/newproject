@@ -15,19 +15,11 @@ class CreatePortfolioTable extends Migration
     {
         Schema::create('portfolio', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('costumer');
-            $table->string('duration');
-            $table->string('category_id');
-            $table->string('about_project');
-            $table->string('video_url');
-            $table->string('directions');
-            $table->string('design');
-            $table->string('animation');
-            $table->string('music');
+            $table->string('title');
+            $table->string('description');
+            $table->string('parent_id');
+            $table->string('color');
             $table->boolean('status');
-            // $table->string('position');
-            // $table->boolean('status');
             $table->timestamps();
         });
     }

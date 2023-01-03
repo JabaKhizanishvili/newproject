@@ -8,19 +8,6 @@
 
 @section('content')
 
-
-
-    <!-- breadcrumb -->
-    {{-- <div class="breadcrumb-header justify-content-between">
-        <div class="left-content">
-            <span class="main-content-title mg-b-0 mg-b-lg-1">@lang('admin.partners')</span>
-        </div>
-        <div class="justify-content-center mt-2">
-            @include('admin.nowa.views.layouts.components.breadcrump')
-        </div>
-    </div> --}}
-    <!-- /breadcrumb -->
-
     <!-- row opened -->
     <div class="row row-sm">
         <div class="col-xl-12">
@@ -31,7 +18,6 @@
                     </div>
                     <a href="{{locale_route('portfolio.create')}}" class="btn ripple btn-primary" type="button">@lang('admin.createbutt')</a>
 
-                    {{--<p class="tx-12 tx-gray-500 mb-2">Example of Nowa Simple Table. <a href="">Learn more</a></p>--}}
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -53,13 +39,7 @@
                                                value="{{Request::get('id')}}"
                                                class="validate {{$errors->has('id') ? '' : 'valid'}}">
                                     </th>
-                                    {{-- <th>
-                                        <select class="form-control" name="status" onchange="this.form.submit()">
-                                            <option value="" {{Request::get('status') === '' ? 'selected' :''}}>@lang('admin.any')</option>
-                                            <option value="1" {{Request::get('status') === '1' ? 'selected' :''}}>@lang('admin.active')</option>
-                                            <option value="0" {{Request::get('status') === '0' ? 'selected' :''}}>@lang('admin.not_active')</option>
-                                        </select>
-                                    </th> --}}
+
                                     <th>
                                         <input class="form-control" type="text" name="title" onchange="this.form.submit()"
                                                value="{{Request::get('title')}}"
@@ -98,7 +78,7 @@
 
                                                             @foreach(config('translatable.locales') as $locale)
                                                                 <div class="tab-pane {{$loop->first?"active":""}}" id="cat-{{$locale}}-{{$item->id}}">
-                                                                    {{$item->translate($locale)->costumer ?? ''}}
+                                                                    {{$item->translate($locale)->title ?? ''}}
                                                                 </div>
                                                             @endforeach
 

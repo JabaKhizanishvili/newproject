@@ -109,7 +109,6 @@
                                             </td>
 
                                             <td>
-
                                                 <a href="{{locale_route('slider.edit',$slider->id)}}"
                                                    class="pl-3">
                                                     <i class="fa fa-edit">შეცვლა</i>

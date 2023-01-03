@@ -1,5 +1,4 @@
 function setSeoData(seoData) {
-    console.log(seoData);
     Object.keys(seoData).map((key) => {
         let value = seoData[key]
         switch (key) {

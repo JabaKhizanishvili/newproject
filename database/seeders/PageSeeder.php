@@ -20,33 +20,6 @@ class PageSeeder extends Seeder
             [
                 'key' => 'home'
             ],
-            [
-                'key' => 'aboutus',
-            ],
-            [
-                'key' => 'contact'
-            ],
-            [
-                'key' => 'news'
-            ],
-            [
-                'key' => 'rayacademy'
-            ],
-            [
-                'key' => 'rayanimation'
-            ],
-            [
-                'key' => 'rayproduction'
-            ],
-            [
-                'key' => 'raycrypto'
-            ],
-            [
-                'key' => 'projects'
-            ],
-            [
-                'key' => 'singleproduct'
-            ],
         ];
 
         // Insert Pages

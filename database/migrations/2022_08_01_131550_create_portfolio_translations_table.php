@@ -25,16 +25,8 @@ class CreatePortfolioTranslationsTable extends Migration
             $table->bigInteger('portfolio_id')->unsigned();
             $table->string('locale')->index();
 
-            $table->string('name')->nullable();
-            $table->string('costumer')->nullable();
-            $table->string('duration')->nullable();
-            $table->string('about_project')->nullable();
-            $table->string('directions')->nullable();
-            $table->string('design')->nullable();
-            $table->string('video_url')->nullable();
-            $table->string('animation')->nullable();
-            $table->string('music')->nullable();
-            // $table->string('position')->nullable();
+            $table->string('title')->nullable();
+            $table->string('description')->nullable();
 
             $table->unique(['portfolio_id', 'locale']);
             $table->foreign('portfolio_id')

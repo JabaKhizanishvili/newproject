@@ -69,13 +69,13 @@ class HandleInertiaRequests extends Middleware
 
 
         //dd(Auth::guard('customer')->user());
-        //Generates urls for language switcher with each locale
         $locale_urls = $this->locale_urls();
         //Generates link for go back button
         $urlPrev = $this->urlPrev();
         return array_merge(parent::share($request), [
             "locales" => $locales,
             "pathname" => $currentRoute,
+            'filepath' => asset('storage/images/blogIcons'),
             "locale_urls" => $locale_urls,
             'urlPrev'    => $urlPrev,
             //'categories' => $result,

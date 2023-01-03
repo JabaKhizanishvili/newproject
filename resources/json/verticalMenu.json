@@ -15,6 +15,13 @@
                 "slug": "page"
                 },
                 {
+                "url": "menu.index",
+                "name": "მენიუ",
+                "i18n": "page",
+                "icon": "language",
+                "slug": "page"
+                },
+                {
                 "url": "password.index",
                 "name": "პაროლის შეცვლა",
                 "i18n": "change password",
@@ -29,24 +36,15 @@
                 "slug": "setting"
                 },
                 {
-                "url": "product.index",
-                "name": "გაქირავება",
-                "i18n": "product",
+                "url": "blog.index",
+                "name": "ბლოგი",
+                "i18n": "page",
                 "icon": "language",
-                "slug": "product"
+                "slug": "page"
                 },
-
                 {
-                "url": "upcomingevents.index",
-                "name": "ივენთები",
-                "i18n": "slider",
-                "icon": "language",
-                "slug": "slider"
-                },
-
-                {
-                "url": "news.index",
-                "name": "სიახლეები",
+                "url": "partner.index",
+                "name": "პარტნიორები",
                 "i18n": "page",
                 "icon": "language",
                 "slug": "page"
@@ -69,52 +67,20 @@
                 },
                 {
                 "url": "slider1.index",
-                "name": "კომპანიების",
+                "name": "სლაიდერი2",
+                "i18n": "slider",
+                "icon": "language",
+                "slug": "slider"
+                },
+                {
+                "url": "portfolio.index",
+                "name": "სლაიდერივით",
                 "i18n": "slider",
                 "icon": "language",
                 "slug": "slider"
                 }
             ]
         },
-
-        {
-            "url": "javascript:void(0)",
-            "name": "3. Ray კომპანიები",
-            "i18n": "user",
-            "icon": "brightness_low",
-            "slug": "user",
-            "submenu": [
-                {
-                    "url": "team.index",
-                    "name": "Ray Academy",
-                    "i18n": "page",
-                    "icon": "language",
-                    "slug": "page"
-                },
-                {
-                    "url": "staff.index",
-                    "name": "პროექტები",
-                    "i18n": "page",
-                    "icon": "language",
-                    "slug": "page"
-                },
-                {
-                    "url": "category.index",
-                    "name": "ვიდეო გალერეა",
-                    "i18n": "page",
-                    "icon": "language",
-                    "slug": "page"
-                },
-                {
-                    "url": "raycontent.index",
-                    "name": "კონტენტი",
-                    "i18n": "page",
-                    "icon": "language",
-                    "slug": "page"
-                }
-            ]
-        },
-
         {
             "url": "javascript:void(0)",
             "name": "4. ენის პარამეტრები",
@@ -144,6 +110,13 @@
             "i18n": "page",
             "icon": "language",
             "slug": "page"
+        },
+        {
+            "url": "bookvisit.index",
+            "name": "bookvisit",
+            "i18n": "page",
+            "icon": "language",
+            "slug": "page"
         }
 
     ],
@@ -161,13 +134,6 @@
             "i18n": "category",
             "icon": "language",
             "slug": "category"
-        },
-        {
-            "url": "product.index",
-            "name": "product",
-            "i18n": "product",
-            "icon": "language",
-            "slug": "product"
         },
         {
             "url": "project.index",

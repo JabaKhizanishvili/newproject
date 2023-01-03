@@ -52,7 +52,8 @@ class AppServiceProvider extends ServiceProvider
         // }
         // View::share('newUrl', $newUrl);
         if ($this->app->environment('production')) {
-            URL::forceScheme('https');
+            // URL::forceScheme('https');
+            URL::forceScheme('http');
         }
 
         Language::observe(LanguageObserver::class);

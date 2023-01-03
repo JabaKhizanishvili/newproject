@@ -149,15 +149,14 @@ class DocumentationController extends Controller
     public function add_rateservices(Request $request)
     {
 
-        // dd($request->all());
         $rateservices = Rateservice::create(
             $request->only(
-                'name',
+                // 'name',
                 // 'created_at',
-                'surname',
-                'phone',
+                // 'surname',
+                // 'phone',
                 'email',
-                'course',
+                // 'course',
             )
         );
 

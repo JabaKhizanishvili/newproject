@@ -13,15 +13,13 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\CustomerRequest;
 use App\Http\Requests\Admin\ProductRequest;
-use App\Http\Requests\Admin\StaffRequest;
-use App\Http\Requests\Admin\PortfolioRequest;
+use App\Http\Requests\Admin\NewsRequest as PortfolioRequest;
 use App\Models\Category;
 use App\Models\Customer;
 use App\Models\File;
 use App\Models\Product;
-use App\Models\Skill;
 use App\Models\Portfolio;
-use App\Models\Staff;
+use App\Models\Menu;
 use App\Repositories\CategoryRepositoryInterface;
 use App\Repositories\Eloquent\CustomerRepository;
 use App\Repositories\Eloquent\StaffRepository;
@@ -79,6 +77,14 @@ class PortfolioController extends Controller
         $portfolio = $this->portfolioRepository->model;
         $url = locale_route('portfolio.store', [], false);
         $method = 'POST';
+        function getMenu()
+        {
+            static $data = null;
+            if ($data == null) {
+                $data = Menu::with("translations")->get()->all();
+            }
+            return $data;
+        }
 
         /*return view('admin.pages.product.form', [
             'product' => $product,
@@ -91,6 +97,7 @@ class PortfolioController extends Controller
             'url' => $url,
             'method' => $method,
             'portfolio' => $portfolio,
+            'menus' => getMenu(),
             'category' => Category::with('translation')->get(),
         ]);
     }
@@ -159,9 +166,19 @@ class PortfolioController extends Controller
             'categories' => $this->categories
         ]);*/
 
+        function getMenu()
+        {
+            static $data = null;
+            if ($data == null) {
+                $data = Menu::with("translations")->get()->all();
+            }
+            return $data;
+        }
+
         return view('admin.nowa.views.portfolio.form', [
             'portfolio' => $portfolio,
             'url' => $url,
+            'menus' => getMenu(),
             'method' => $method,
             'category' => Category::with('translation')->get(),
         ]);
@@ -178,7 +195,6 @@ class PortfolioController extends Controller
      */
     public function update(PortfolioRequest $request, string $locale, Portfolio $portfolio)
     {
-        //dd($request->all());
         $saveData = Arr::except($request->except('_token'), []);
         $saveData['status'] = isset($saveData['status']) && (bool)$saveData['status'];
 

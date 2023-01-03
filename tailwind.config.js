@@ -35,10 +35,13 @@ const colors = {
     ...defaultColors,
     ...{
       "custom-yellow": "#F8D532",
+      "dropdown-color":"#f3f2fd",
       "custom-green": "#A7DE5C",
       "custom-blue": "#3FA0CD",
       "custom-red": "#EA2D24",
       "custom-purple": "#7261BD",
+      "custom-color-blue" : "#f3f2fd",
+      "custom-color-darkblue" : "#6f61ea",
       "custom-orange": "#ED5C2F",
       "custom-dark": "#131313",
       "custom-slate": {

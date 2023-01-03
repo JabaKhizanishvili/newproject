@@ -233,6 +233,10 @@
                 @endif
 
 
+                <div class="form-group">
+                    <label class="form-label">@lang('admin.partners_link')</label>
+                    <input type="text" name="partnerslink" class="form-control" placeholder="@lang('partnerslink')" value="{{$page->partnerslink ?? ''}}">
+                </div>
 
                     <div class="form-group mb-0 mt-3 justify-content-end">
                         <div>
@@ -279,9 +283,8 @@
                     </div>
                     @foreach($page->sections as $item)
                         <div class="form-group">
-
                             {{-- <input type="file" class="dropify" name="image[{{$page->sections->id}}]" data-default-file="{{($page->sections->file) ? asset($page->sections->file->getFileUrlAttribute()) : ''}}" data-height="200"  /> --}}
- <input type="file" class="dropify" name="image[{{$item->id}}]" data-default-file="{{($item->file) ? asset($item->file->getFileUrlAttribute()) : ''}}" data-height="200"  />
+                          <input type="file" class="dropify" name="image[{{$item->id}}]" data-default-file="{{($item->file) ? asset($item->file->getFileUrlAttribute()) : ''}}" data-height="200"  />
                         </div>
                     @endforeach
                 </div>

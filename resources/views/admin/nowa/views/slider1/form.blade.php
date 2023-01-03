@@ -64,6 +64,7 @@
                             </div>
                             <div class="panel-body tabs-menu-body main-content-body-right border">
                                 <div class="tab-content">
+
                                     @foreach(config('translatable.locales') as $locale)
 
                                         <?php
@@ -71,19 +72,6 @@
                                         if($loop->first) $active = 'active';
                                         ?>
                                         <div class="tab-pane {{$active}}" id="lang-{{$locale}}">
-
-                                            {{-- <div class="container">
-                                                <div>
-                                                    <h6 class="card-title mb-1">@lang('admin.logo')</h6>
-                                                </div>
-                                                <div class="input-images1"></div>
-                                                @if ($errors->has('images1'))
-                                                    <span class="help-block">
-                                                                        {{ $errors->first('images1') }}
-                                                                    </span>
-                                                @endif
-                                            </div> --}}
-                                            {{-- <input type="file" id="myfile" class="form-controll" name="myfile"><br><br> --}}
 
                                             <div class="form-group">
                                                 {!! Form::label($locale.'[title]',__('admin.title'),['class' => 'form-label']) !!}
@@ -97,37 +85,8 @@
                                                 </small>
                                                 @enderror
                                             </div>
-                                            {{--<div class="form-group">
-                                                {!! Form::label($locale.'[title_2]',__('admin.title_2'),['class' => 'form-label']) !!}
-                                                {!! Form::text($locale.'[title_2]',$sliderr->translate($locale)->title_2 ?? '',['class' => 'form-control']) !!}
 
-                                                @error($locale.'.title_2')
-                                                <small class="text-danger">
-                                                    <div class="error">
-                                                        {{$message}}
-                                                    </div>
-                                                </small>
-                                                @enderror
-                                            </div>--}}
                                             <div class="form-group">
-                                                <label class="form-label" for="short_description">@lang('admin.short_description')</label>
-                                                <input type='text'
-                                                class="form-control" id="short_description-{{$locale}}"
-                                                name="{{$locale}}[short_description]'"
-                                                value="{!! $slider->translate($locale)->short_description ?? '' !!}"
-                                            >
-                                            </input>
-                                                @error($locale.'.short_description')
-                                                <small class="text-danger">
-                                                    <div class="error">
-                                                        {{$message}}
-                                                    </div>
-                                                </small>
-                                                @enderror
-                                            </div>
-
-
-                                            {{-- <div class="form-group">
                                                 <label class="form-label" for="description">@lang('admin.description')</label>
                                                 <textarea class="form-control" id="description-{{$locale}}"
                                                           name="{{$locale}}[description]'">
@@ -140,7 +99,7 @@
                                                     </div>
                                                 </small>
                                                 @enderror
-                                            </div> --}}
+                                            </div>
 
                                         </div>
 
@@ -159,14 +118,6 @@
         <div class="col-lg-6 col-md-12">
             <div class="card">
                 <div class="card-body">
-                    <div>
-                        <h6 class="card-title mb-1">@lang('admin.logo')</h6>
-                    </div>
-                    <div class="input-group mb-3">
-                        <input type="file" name='logo' class="form-control" onchange="readURL(this);" value={{$slider != null?$slider->logo: null }}>
-                    </div>
-                    {{-- @dd($slider) --}}
-                    <img id="blah" src={{isset($slider)&&$slider != null? $links . "/" . $slider->logo : "#"}} alt="" style={{$slider != null? "width:90px; height:70px" : ""}} />
 
                     <div class="form-group">
                         {!! Form::label("reddirect_url",__('admin.btn_reddirect_url'),['class' => 'form-label']) !!}
@@ -180,15 +131,40 @@
                         </small>
                         @enderror
                     </div>
+                    {{-- <div class="form-group">
+                        {!! Form::label("youtube_url",__('admin.btn_link'),['class' => 'form-label']) !!}
+                        {!! Form::text("youtube_url",$slider->youtube_url ?? '',['class' => 'form-control']) !!}
 
-                    <div class="form-group">
+                        @error($locale.'.youtube_url')
+                        <small class="text-danger">
+                            <div class="error">
+                                {{$message}}
+                            </div>
+                        </small>
+                        @enderror
+                    </div> --}}
+
+                    {{-- select category id --}}
+                    <select name="parent_id" id="cars" class="form-control mb-8">
+                        <option value="volvo" disabled selected>select menu id</option>
+                        @foreach ($menus as $value)
+                            <option value={{$value->id}}
+
+                                    @if ($slider->parent_id == $value->id)
+                                      selected
+                                    @endif
+                                >{{$value->translations[0]->name}}</option>
+                        @endforeach
+                    </select>
+
+                    <div class="form-group mt-4">
                         <label class="ckbox">
                             <input type="checkbox" name="status"
                                    value="true" {{$slider->status ? 'checked' : ''}}>
                             <span>{{__('admin.status')}}</span>
                         </label>
                     </div>
-{{-- @dd($sliderr) --}}
+{{-- @dd($slider) --}}
                     <div class="form-group mb-0 mt-3 justify-content-end">
                         <div>
                             {!! Form::submit($slider->created_at ? __('admin.update') : __('admin.create'),['class' => 'btn btn-primary']) !!}
@@ -263,19 +239,6 @@
     <script src="{{asset('uploader/image-uploader.js')}}"></script>
 
     <script>
-function readURL(input) {
-  if (input.files && input.files[0]) {
-    var reader = new FileReader();
-
-    reader.onload = function (e) {
-      $('#blah').attr('src', e.target.result).width(90).height(70);
-    };
-
-    reader.readAsDataURL(input.files[0]);
-  }
-}
-
-
         let oldImages = $('#old_images').val();
         if (oldImages) {
             oldImages = JSON.parse(oldImages);
@@ -302,38 +265,6 @@ function readURL(input) {
         } else {
             $('.input-images').imageUploader();
         }
-
-        // let oldImages1 = $('#old_images1').val();
-        // if (oldImages1) {
-        //     oldImages1 = JSON.parse(oldImages1);
-        // }
-        // let imagedata1 = [];
-        // let getUrl1 = window.location;
-        // let baseUrl1 = getUrl1.protocol + "//" + getUrl1.host + "/" + getUrl1.pathname.split('/')[0];
-        // if (oldImages1 && oldImages1.length > 0) {
-        //     // alert('asdasd')
-        //     oldImages1.forEach((el, key) => {
-        //         // let directory = '';
-        //         if (el.fileable_type === 'App\\Models\\Project') {
-        //             directory = 'project';
-        //         }
-        //         imagedata1.push({
-        //             id: el.id,
-        //             src: `${baseUrl1}${el.path}/${el.title}`
-        //         })
-        //     })
-        //     $('.input-images1').imageUploader({
-        //         preloaded: imagedata1,
-        //         imagesInputName: 'images1',
-        //         preloadedInputName: 'old_images1'
-        //     });
-        // } else {
-        //     $('.input-images1').imageUploader();
-        // }
-
-
-
-
     </script>
 
     <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>

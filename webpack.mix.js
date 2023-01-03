@@ -1,6 +1,7 @@
 const mix = require('laravel-mix');
 const tailwindcss = require('tailwindcss');
 
+
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -31,3 +32,4 @@ mix.js('resources/js/app.js', 'public/js').js('resources/js/admin.js', 'public/j
 if (mix.inProduction()) {
     mix.version();
 }
+

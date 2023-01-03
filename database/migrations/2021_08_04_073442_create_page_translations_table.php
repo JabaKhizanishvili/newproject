@@ -23,7 +23,7 @@ class CreatePageTranslationsTable extends Migration
             $table->string('meta_title')->nullable();
             $table->string('meta_description')->nullable();
 
-            $table->unique(['page_id','locale']);
+            $table->unique(['page_id', 'locale']);
             $table->foreign('page_id')
                 ->references('id')
                 ->on('pages')

@@ -26,7 +26,7 @@ class CreateNewsTranslationsTable extends Migration
             $table->string('meta_description')->nullable();
             $table->string('meta_keyword')->nullable();
 
-            $table->unique(['news_id','locale']);
+            $table->unique(['news_id', 'locale']);
             $table->foreign('news_id')
                 ->references('id')
                 ->on('news')

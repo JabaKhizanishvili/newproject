@@ -23,11 +23,11 @@
 @endsection
 
 @section('content')
-{{-- @dd($category) --}}
+
     <!-- breadcrumb -->
     {{-- <div class="breadcrumb-header justify-content-between">
         <div class="left-content">
-            <span class="main-content-title mg-b-0 mg-b-lg-1">{{$staff->created_at ? __('admin.partners-update') : __('admin.partners-create')}}</span>
+            <span class="main-content-title mg-b-0 mg-b-lg-1">{{$portfolio->slider_id ? __('admin.slider-update') : __('admin.slider-create')}}</span>
         </div>
         <div class="justify-content-center mt-2">
             @include('admin.nowa.views.layouts.components.breadcrump')
@@ -42,8 +42,8 @@
             <div class="card">
                 <div class="card-body">
 
-
                     <div class="mb-4">
+
 
                         <div class="panel panel-primary tabs-style-2">
                             <div class=" tab-menu-heading">
@@ -74,147 +74,36 @@
                                         <div class="tab-pane {{$active}}" id="lang-{{$locale}}">
 
                                             <div class="form-group">
-                                                <label class="form-label">@lang('admin.costumer')</label>
-                                                <input type="text" name="{{$locale.'[costumer]'}}" class="form-control" placeholder="@lang('admin.costumer')" value="{{$portfolio->translate($locale)->costumer ?? ''}}" >
+                                                {!! Form::label($locale.'[title]',__('admin.title'),['class' => 'form-label']) !!}
+                                                {!! Form::text($locale.'[title]',$portfolio->translate($locale)->title ?? '',['class' => 'form-control']) !!}
 
+                                                @error($locale.'.title')
+                                                <small class="text-danger">
+                                                    <div class="error">
+                                                        {{$message}}
+                                                    </div>
+                                                </small>
+                                                @enderror
                                             </div>
-                                            @error($locale.'.costumer')
-                                            <small class="text-danger">
-                                                <div class="error">
-                                                    {{$message}}
-                                                </div>
-                                            </small>
-                                            @enderror
 
                                             <div class="form-group">
-                                                <label class="form-label">@lang('admin.name')</label>
-                                                <input type="text" name="{{$locale.'[name]'}}" class="form-control" placeholder="@lang('admin.name')" value="{{$portfolio->translate($locale)->name ?? ''}}" >
-
+                                                <label class="form-label" for="description">@lang('admin.description')</label>
+                                                <textarea class="form-control" id="description-{{$locale}}"
+                                                          name="{{$locale}}[description]'">
+                                                {!! $portfolio->translate($locale)->description ?? '' !!}
+                                            </textarea>
+                                                @error($locale.'.description')
+                                                <small class="text-danger">
+                                                    <div class="error">
+                                                        {{$message}}
+                                                    </div>
+                                                </small>
+                                                @enderror
                                             </div>
-                                            @error($locale.'.name')
-                                            <small class="text-danger">
-                                                <div class="error">
-                                                    {{$message}}
-                                                </div>
-                                            </small>
-                                            @enderror
-
-                                            <div class="form-group">
-                                                <label class="form-label">@lang('admin.duration')</label>
-                                                <input type="text" name="{{$locale.'[duration]'}}" class="form-control" placeholder="@lang('admin.duration')" value="{{$portfolio->translate($locale)->duration ?? ''}}" >
-
-                                            </div>
-                                            @error($locale.'.duration')
-                                            <small class="text-danger">
-                                                <div class="error">
-                                                    {{$message}}
-                                                </div>
-                                            </small>
-                                            @enderror
-
-
-                                            <div class="form-group">
-                                                <label class="form-label">@lang('admin.category')</label>
-                                                <select name="category_id" class="select2 browser-default">
-                                                    <option value="" disabled selected>Choose your option</option>
-                                                    @foreach ($category as $cat)
-                                                    {{-- <option value={{$cat->id}}>{{$cat->name}}</option>
-                                                    {{old('cat_id') ==  $cat->id   ?   "selected":""}} value="{{$cat->translate($locale)->brand}}"> {{$cat->name}}</option> --}}
-
-                                                    <option{{old('category_id') ==  $cat->id   ?   "selected":""}}  value="{{$cat->id}}" >{{$cat->name}}</option>
-
-                                                    @endforeach
-                                                </select>
-
-                                            </div>
-                                            {{-- @error($locale.'.category_id')
-                                            <small class="text-danger">
-                                                <div class="error">
-                                                    {{$message}}
-                                                </div>
-                                            </small>
-                                            @enderror --}}
-
-                                            <div class="form-group">
-                                                <label class="form-label">@lang('admin.about_project')</label>
-                                                <input type="text" name="{{$locale.'[about_project]'}}" class="form-control" placeholder="@lang('admin.about_project')" value="{{$portfolio->translate($locale)->about_project ?? ''}}" >
-
-                                            </div>
-                                            @error($locale.'.about_project')
-                                            <small class="text-danger">
-                                                <div class="error">
-                                                    {{$message}}
-                                                </div>
-                                            </small>
-                                            @enderror
-
-                                            <div class="form-group">
-                                                <label class="form-label">@lang('admin.directions')</label>
-                                                <input type="text" name="{{$locale.'[directions]'}}" class="form-control" placeholder="@lang('admin.directions')" value="{{$portfolio->translate($locale)->directions ?? ''}}" >
-
-                                            </div>
-                                            @error($locale.'.directions')
-                                            <small class="text-danger">
-                                                <div class="error">
-                                                    {{$message}}
-                                                </div>
-                                            </small>
-                                            @enderror
-
-                                            <div class="form-group">
-                                                <label class="form-label">@lang('admin.design')</label>
-                                                <input type="text" name="{{$locale.'[design]'}}" class="form-control" placeholder="@lang('admin.design')" value="{{$portfolio->translate($locale)->design ?? ''}}" >
-
-                                            </div>
-                                            @error($locale.'.design')
-                                            <small class="text-danger">
-                                                <div class="error">
-                                                    {{$message}}
-                                                </div>
-                                            </small>
-                                            @enderror
-
-                                            <div class="form-group">
-                                                <label class="form-label">@lang('admin.animation')</label>
-                                                <input type="text" name="{{$locale.'[animation]'}}" class="form-control" placeholder="@lang('admin.animation')" value="{{$portfolio->translate($locale)->animation ?? ''}}" >
-
-                                            </div>
-                                            @error($locale.'.animation')
-                                            <small class="text-danger">
-                                                <div class="error">
-                                                    {{$message}}
-                                                </div>
-                                            </small>
-                                            @enderror
-                                            <div class="form-group">
-                                                <label class="form-label">@lang('admin.music')</label>
-                                                <input type="text" name="{{$locale.'[music]'}}" class="form-control" placeholder="@lang('admin.music')" value="{{$portfolio->translate($locale)->music ?? ''}}" >
-                                            </div>
-                                            @error($locale.'.music')
-                                            <small class="text-danger">
-                                                <div class="error">
-                                                    {{$message}}
-                                                </div>
-                                            </small>
-                                            @enderror
-
-                                            <div class="form-group">
-                                                <label class="form-label">@lang('admin.video_url')</label>
-                                                <input type="text" name={{$locale.'[video_url]'}} class="form-control" placeholder="@lang('admin.video_url')" value="{{$portfolio->video_url ?? ''}}">
-
-                                            </div>
-                                            @error($locale.'.video_url')
-                                            <small class="text-danger">
-                                                <div class="error">
-                                                    {{$message}}
-                                                </div>
-                                            </small>
-                                            @enderror
 
                                         </div>
 
                                     @endforeach
-
 
                                 </div>
                             </div>
@@ -223,14 +112,56 @@
                     </div>
 
 
-                    {{-- <div class="form-group mb-0 justify-content-end">
-                        <div class="checkbox">
-                            <div class="custom-checkbox custom-control">
-                                <input type="checkbox" data-checkboxes="mygroup" name="status" class="custom-control-input" id="checkbox-2" {{$portfolio->status ? 'checked' : ''}}>
-                                <label for="checkbox-2" class="custom-control-label mt-1">{{__('admin.status')}}</label>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    {{-- <div class="form-group">
+                        {!! Form::label("youtube_url",__('admin.btn_link'),['class' => 'form-label']) !!}
+                        {!! Form::text("youtube_url",$portfolio->youtube_url ?? '',['class' => 'form-control']) !!}
+
+                        @error($locale.'.youtube_url')
+                        <small class="text-danger">
+                            <div class="error">
+                                {{$message}}
                             </div>
-                        </div>
+                        </small>
+                        @enderror
                     </div> --}}
+                    <select name="parent_id" id="cars" class="form-control mb-8">
+                        <option value="volvo" disabled selected>select menu id</option>
+                        @foreach ($menus as $value)
+                            <option value={{$value->id}}
+
+                                    @if ($portfolio->parent_id == $value->id)
+                                      selected
+                                    @endif
+                                >{{$value->translations[0]->name}}</option>
+                        @endforeach
+                    </select>
+                    <div class="form-group">
+                        {!! Form::label("btncolor",__('admin.btn_color'),['class' => 'form-label']) !!}
+                        {!! Form::color("color",$portfolio->color ?? '',['class' => 'form-control w-25']) !!}
+
+                        @error($locale.'.color')
+                        <small class="text-danger">
+                            <div class="error">
+                                {{$message}}
+                            </div>
+                        </small>
+                        @enderror
+                    </div>
+
+                    <div class="form-group mt-4">
+                        <label class="ckbox">
+                            <input type="checkbox" name="status"
+                                   value="true" {{$portfolio->status ? 'checked' : ''}}>
+                            <span>{{__('admin.status')}}</span>
+                        </label>
+                    </div>
+{{-- @dd($portfolio) --}}
                     <div class="form-group mb-0 mt-3 justify-content-end">
                         <div>
                             {!! Form::submit($portfolio->created_at ? __('admin.update') : __('admin.create'),['class' => 'btn btn-primary']) !!}
@@ -240,7 +171,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 
     <!-- /row -->
@@ -249,6 +179,9 @@
         <div class="col-lg-12 col-md-12">
             <div class="card">
                 <div class="card-body">
+                    <div>
+                        <h6 class="card-title mb-1">@lang('admin.mages')</h6>
+                    </div>
                     <div class="input-images"></div>
                     @if ($errors->has('images'))
                         <span class="help-block">
@@ -329,6 +262,16 @@
         } else {
             $('.input-images').imageUploader();
         }
+    </script>
+
+    <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
+    <script>
+        @foreach(config('translatable.locales') as $locale)
+        CKEDITOR.replace('description-{{$locale}}', {
+            filebrowserUploadUrl: "{{route('upload', ['_token' => csrf_token() ])}}",
+            filebrowserUploadMethod: 'form'
+        });
+        @endforeach
     </script>
 
 @endsection

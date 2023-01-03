@@ -21,6 +21,8 @@ class DatabaseSeeder extends Seeder
             SettingSeeder::class,
             UserSeeder::class,
             RayCompanySeeder::class,
+            LayoutSeeder::class,
+            MenuSeeder::class,
             // CategorySeeder::class,
         ]);
     }

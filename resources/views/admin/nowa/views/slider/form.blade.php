@@ -85,35 +85,6 @@
                                                 </small>
                                                 @enderror
                                             </div>
-                                            {{--<div class="form-group">
-                                                {!! Form::label($locale.'[title_2]',__('admin.title_2'),['class' => 'form-label']) !!}
-                                                {!! Form::text($locale.'[title_2]',$slider->translate($locale)->title_2 ?? '',['class' => 'form-control']) !!}
-
-                                                @error($locale.'.title_2')
-                                                <small class="text-danger">
-                                                    <div class="error">
-                                                        {{$message}}
-                                                    </div>
-                                                </small>
-                                                @enderror
-                                            </div>--}}
-                                            <div class="form-group">
-                                                <label class="form-label" for="short_description">@lang('admin.short_description')</label>
-                                                <input type='text'
-                                                class="form-control" id="short_description-{{$locale}}"
-                                                name="{{$locale}}[short_description]'"
-                                                value="{!! $slider->translate($locale)->short_description ?? '' !!}"
-                                            >
-                                            </input>
-                                                @error($locale.'.short_description')
-                                                <small class="text-danger">
-                                                    <div class="error">
-                                                        {{$message}}
-                                                    </div>
-                                                </small>
-                                                @enderror
-                                            </div>
-
 
                                             <div class="form-group">
                                                 <label class="form-label" for="description">@lang('admin.description')</label>
@@ -122,6 +93,19 @@
                                                 {!! $slider->translate($locale)->description ?? '' !!}
                                             </textarea>
                                                 @error($locale.'.description')
+                                                <small class="text-danger">
+                                                    <div class="error">
+                                                        {{$message}}
+                                                    </div>
+                                                </small>
+                                                @enderror
+                                            </div>
+
+                                            <div class="form-group">
+                                                {!! Form::label($locale.'[button_text]',__('admin.button_text'),['class' => 'form-label']) !!}
+                                                {!! Form::text($locale.'[button_text]',$slider->translate($locale)->button_text ?? '',['class' => 'form-control']) !!}
+
+                                                @error($locale.'.button_text')
                                                 <small class="text-danger">
                                                     <div class="error">
                                                         {{$message}}
@@ -147,6 +131,18 @@
         <div class="col-lg-6 col-md-12">
             <div class="card">
                 <div class="card-body">
+                    <div class="form-group">
+                        {!! Form::label("btncolor",__('admin.btn_color'),['class' => 'form-label']) !!}
+                        {!! Form::color("btncolor",$slider->btncolor ?? '',['class' => 'form-control w-25']) !!}
+
+                        @error($locale.'.btncolor')
+                        <small class="text-danger">
+                            <div class="error">
+                                {{$message}}
+                            </div>
+                        </small>
+                        @enderror
+                    </div>
 
                     <div class="form-group">
                         {!! Form::label("reddirect_url",__('admin.btn_reddirect_url'),['class' => 'form-label']) !!}
@@ -172,7 +168,19 @@
                         </small>
                         @enderror
                     </div> --}}
-                    <div class="form-group">
+                    <select name="parent_id" id="cars" class="form-control mb-8">
+                        <option value="volvo" disabled selected>select menu id</option>
+                        @foreach ($menus as $value)
+                            <option value={{$value->id}}
+
+                                    @if ($slider->parent_id == $value->id)
+                                      selected
+                                    @endif
+                                >{{$value->translations[0]->name}}</option>
+                        @endforeach
+                    </select>
+
+                    <div class="form-group mt-4">
                         <label class="ckbox">
                             <input type="checkbox" name="status"
                                    value="true" {{$slider->status ? 'checked' : ''}}>

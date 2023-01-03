@@ -16,8 +16,10 @@ class CreateSlidersTable extends Migration
         Schema::create('sliders', function (Blueprint $table) {
             $table->id();
             $table->boolean("status")->default(true);
-            $table->string('youtube_url')->nullable();
+            $table->boolean("show")->default(true);
+            $table->string("parent_id")->default(true);
             $table->string('reddirect_url')->nullable();
+            $table->string('btncolor')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

@@ -1,12 +1,5 @@
 <?php
 
-/**
- *  app/Repositories/Eloquent/Base/BaseRepository.php
- *
- * Date-Time: 04.06.21
- * Time: 09:41
- * @author Insite LLC <hello@insite.international>
- */
 
 namespace App\Repositories\Eloquent\Base;
 
@@ -15,16 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 use ReflectionClass;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
-/**
- * Class BaseRepository
- * @package App\Repositories\Eloquent\Base
- */
 class BaseRepository implements EloquentRepositoryInterface
 {
 
-    /**
-     * @var \Illuminate\Database\Eloquent\Model
-     */
     public $model;
 
     public function __construct(Model $model)
@@ -45,26 +31,11 @@ class BaseRepository implements EloquentRepositoryInterface
         return $data->paginate($perPage);
     }
 
-    /**
-     * Get all
-     *
-     * @param array $columns
-     * @param array $with
-     *
-     * @return \Illuminate\Database\Eloquent\Builder[]|\Illuminate\Database\Eloquent\Collection
-     */
     public function all(array $columns = ["*"], array $with = [])
     {
         return $this->model->with($with)->get($columns);
     }
 
-    /**
-     * Create new model
-     *
-     * @param array $attributes
-     *
-     * @return Model
-     */
     public function create(array $attributes = []): Model
     {
         // try {
@@ -75,33 +46,16 @@ class BaseRepository implements EloquentRepositoryInterface
         // }
     }
 
-    /**
-     * Update model by the given ID
-     *
-     * @param integer $id
-     * @param array $data
-     *
-     * @return mixed
-     */
     public function update(int $id, array $data = [])
     {
-        // dd($data,  $this->model);
         $this->model = $this->findOrFail($id);
         try {
-            // dd($data);
             return $this->model->update($data);
         } catch (\Illuminate\Database\QueryException $exception) {
             return $exception->errorInfo;
         }
     }
 
-    /**
-     * Delete model by the given ID
-     *
-     * @param integer $id
-     *
-     * @return \Illuminate\Database\Eloquent\Model|string
-     */
     public function delete(int $id)
     {
         $this->model = $this->findOrFail($id);
@@ -113,14 +67,6 @@ class BaseRepository implements EloquentRepositoryInterface
         }
     }
 
-    /**
-     * Find model by the given ID
-     *
-     * @param integer $id
-     * @param array $columns
-     *
-     * @return mixed
-     */
     public function findOrFail(int $id, array $columns = ['*'])
     {
         $data = $this->model->find($id, $columns);
@@ -130,13 +76,6 @@ class BaseRepository implements EloquentRepositoryInterface
         return $data;
     }
 
-    /**
-     * Restore model by the given ID
-     *
-     * @param integer $id
-     *
-     * @return Model
-     */
     public function findTrash(int $id): Model
     {
         $model = $this->model->withTrashed()->find($id);
@@ -150,17 +89,9 @@ class BaseRepository implements EloquentRepositoryInterface
         return $model;
     }
 
-    /**
-     * Create new model
-     *
-     * @param int $id
-     * @param $request
-     *
-     * @return Model
-     * @throws \ReflectionException
-     */
     public function saveFiles(int $id, $request): Model
     {
+        // dd($request);
         $this->model = $this->findOrFail($id);
         // Delete old files if exist
         if (count($this->model->files)) {
@@ -181,9 +112,16 @@ class BaseRepository implements EloquentRepositoryInterface
             $modelName = $reflection->getShortName();
 
             foreach ($request->file('images') as $key => $file) {
+                $img = \Image::make($file);
                 $imagename = date('Ymhs') . str_replace(' ', '', $file->getClientOriginalName());
                 $destination = base_path() . '/storage/app/public/' . $modelName . '/' . $this->model->id;
-                $request->file('images')[$key]->move($destination, $imagename);
+                // $destination = base_path() . '/storage/app/public/' . $modelName . '/' . $this->model->id . '/';
+                // $request->file('images')[$key]->move($destination, $imagename);
+                // $img->move($destination, $imagename);
+                if (!file_exists($destination)) {
+                    mkdir($destination, 666, true);
+                }
+                $img->save("{$destination}/{$imagename}", 20);
                 $this->model->files()->create([
                     'title' => $imagename,
                     'path' => 'storage/' . $modelName . '/' . $this->model->id,

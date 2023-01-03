@@ -32,7 +32,10 @@ class SettingSeeder extends Seeder
                 'key' => 'instagram'
             ],
             [
-                'key' => 'youtube'
+                'key' => 'linkedin'
+            ],
+            [
+                'key' => 'twitter'
             ],
         ];
 

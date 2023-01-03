@@ -29,16 +29,16 @@ class LanguageSeeder extends Seeder
         // Language array
         $languages = [
             [
-                'title' => 'ქართული',
+                'title' => 'ge',
                 'locale' => 'ge',
                 'status' => true,
-                'default' => false
+                'default' => true
             ],
             [
-                'title' => 'English',
+                'title' => 'en',
                 'locale' => 'en',
                 'status' => true,
-                'default' => true
+                'default' => false
             ],
         ];
 

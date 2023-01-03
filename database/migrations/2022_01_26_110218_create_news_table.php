@@ -15,7 +15,7 @@ class CreateNewsTable extends Migration
     {
         Schema::create('news', function (Blueprint $table) {
             $table->id();
-            // $table->string('slug')->unique();
+            $table->string('slug')->unique();
             $table->boolean('status')->default(true);
             $table->timestamps();
             $table->softDeletes();

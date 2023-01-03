@@ -1,4 +1,5 @@
 <?php
+
 /**
  *  app/Models/File.php
  *
@@ -6,6 +7,7 @@
  * Time: 09:55
  * @author Insite LLC <hello@insite.international>
  */
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -28,7 +30,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  */
 class File extends Model
 {
-    use HasFactory,softDeletes;
+    use HasFactory, softDeletes;
 
     public const FILE_DEFAULT = 1;
     public const FILE_MAIN_1 = 2;
@@ -51,9 +53,12 @@ class File extends Model
         'title',
         'path',
         'format',
-        'type'
+        'type',
+        'icon',
+        'header_icon',
+        'fileable_id',
     ];
-
+    
     /**
      * @return \Illuminate\Database\Eloquent\Relations\MorphTo
      */

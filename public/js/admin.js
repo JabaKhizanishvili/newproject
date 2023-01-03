@@ -2340,23 +2340,18 @@ __webpack_require__.r(__webpack_exports__);
 
 $(document).ready(function () {
   var oldImages = $('#old_images').val();
-
   if (oldImages) {
     oldImages = JSON.parse(oldImages);
   }
-
   var imagedata = [];
   var getUrl = window.location;
   var baseUrl = getUrl.protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[0];
-
   if (oldImages && oldImages.length > 0) {
     oldImages.forEach(function (el, key) {
       var directory = '';
-
       if (el.fileable_type === 'App\\Models\\Project') {
         directory = 'project';
       }
-
       imagedata.push({
         id: el.id,
         src: "".concat(baseUrl).concat(el.path, "/").concat(el.title)
@@ -2370,7 +2365,6 @@ $(document).ready(function () {
   } else {
     $('.input-images').imageUploader();
   }
-
   var productCategory = $('#product_category_select');
   var featureContainer = $('#features-container');
   var activeLanguage = $('meta[name="active_language"]').attr('content');
@@ -2378,15 +2372,12 @@ $(document).ready(function () {
   productCategory.on('change', function (event) {
     axios__WEBPACK_IMPORTED_MODULE_0___default().get("/api/category/".concat(event.target.value, "/feature")).then(function (response) {
       var _response$data;
-
       featureContainer.html('');
       var category = (_response$data = response.data) === null || _response$data === void 0 ? void 0 : _response$data.category;
       var content = '';
-
       if (category.features) {
         category.features.forEach(function (feature) {
           var featureLanguage = getLanguage(feature.languages);
-
           if (feature.answers.length) {
             content = "\n                                ".concat(content, "\n                                <div class=\"col\">\n                                    <label for=\"feature[").concat(feature.id, "][]\">\n                                        ").concat(featureLanguage.title.substring(0, 25), "\n                                    </label>\n                                </div>\n                                    <div class=\"input-field col s12\">\n                                        <select class=\"select2-customize-result browser-default\" multiple=\"multiple\"\n                                                id=\"select2-customize-result-").concat(feature.id, "\" name=\"feature[").concat(feature.id, "][]\">\n                                            <optgroup>\n                                                ").concat(getOptions(feature.answers), "\n                                            </optgroup>\n                                        </select>\n                                    </div>\n                            ");
           }
@@ -2396,22 +2387,18 @@ $(document).ready(function () {
       }
     });
   });
-
   function getLanguage(languages) {
     var data = languages.find(function (language, index) {
       if (language.language_id == activeLanguage && language.title !== null) return true;
     });
-
     if (data !== undefined) {
       return data;
     }
-
     data = languages.find(function (language, index) {
       if (language.language_id == defaultLanguage && language.title !== null) return true;
     });
     return data;
   }
-
   function getOptions(answers) {
     var options = '';
     answers.forEach(function (answer) {

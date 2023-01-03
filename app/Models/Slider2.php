@@ -13,13 +13,12 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Slider2 extends Model
 {
-    use SoftDeletes, Translatable, HasFactory, ScopeFilter;
+    use  Translatable, HasFactory, ScopeFilter;
 
     protected $table = 'slider2s';
     protected $fillable = [
         'status',
-        'logo',
-        // 'youtube_url',
+        'parent_id',
         'reddirect_url'
     ];
 

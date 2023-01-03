@@ -107,7 +107,6 @@ class PageController extends Controller
     public function update(PageRequest $request, string $locale, Page $page)
     {
         //dd($request->files);
-        // dd($request->all());
         $saveData = Arr::except($request->except('_token'), []);
         $saveData['images'] = isset($saveData['images']) && (bool)$saveData['images'];
         $this->pageRepository->update($page->id, $saveData);

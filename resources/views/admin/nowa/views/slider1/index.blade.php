@@ -66,6 +66,8 @@
                                                class="validate {{$errors->has('title') ? '' : 'valid'}}">
                                     </th>
                                     <th></th>
+
+
                                 @if($sliders)
                                     @foreach($sliders as $slider)
                                         <tr>
@@ -112,7 +114,7 @@
                                                    class="pl-3">
                                                     <i class="fa fa-edit">შეცვლა</i>
                                                 </a>
-                                                <a href="{{locale_route('slider.destroy',$slider->id)}}"
+                                                <a href="{{locale_route('slider1.destroy',$slider->id)}}"
                                                    onclick="return confirm('Are you sure?')" class="pl-3">
                                                     <i class="fa fa-edit">წაშლა</i>
                                                 </a>

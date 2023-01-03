@@ -32,26 +32,15 @@ use ReflectionException;
 class NewsController extends Controller
 {
 
-    /**
-     * @var NewsRepositoryInterface
-     */
     private $newsRepository;
 
 
-    /**
-     * @param NewsRepositoryInterface $newsRepository
-     */
     public function __construct(
         NewsRepository $newsRepository
     ) {
         $this->newsRepository = $newsRepository;
     }
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return Application|Factory|View
-     */
     public function index(NewsRequest $request)
     {
         return view('admin.nowa.views.news.index', [
@@ -60,11 +49,6 @@ class NewsController extends Controller
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return Application|Factory|View
-     */
     public function create()
     {
         $news = $this->newsRepository->model;
@@ -79,14 +63,6 @@ class NewsController extends Controller
         ]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param ProductRequest $request
-     *
-     * @return Application|RedirectResponse|Redirector
-     * @throws ReflectionException
-     */
     public function store(NewsRequest $request)
     {
         // dd($request->post());

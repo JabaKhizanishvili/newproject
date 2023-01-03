@@ -16,7 +16,7 @@ class CreateIronsTable extends Migration
         Schema::create('irons', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('slug')->unique();
+            $table->string('slug');
             $table->timestamps();
             $table->softDeletes();
         });

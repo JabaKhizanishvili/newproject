@@ -15,7 +15,7 @@ class CreateUpcominEventsTranslationsTable extends Migration
     {
         Schema::create('upcomin_events_translations', function (Blueprint $table) {
 
-            
+
             $table->bigIncrements('id');
             $table->bigInteger('upcoming_event_id')->unsigned();
             $table->string('locale')->index();

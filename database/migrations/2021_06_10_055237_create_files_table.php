@@ -1,4 +1,5 @@
 <?php
+
 /**
  *  database/migrations/2021_06_10_055237_create_files_table.php
  *
@@ -6,6 +7,7 @@
  * Time: 09:54
  * @author Insite LLC <hello@insite.international>
  */
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -27,6 +29,12 @@ class CreateFilesTable extends Migration
             $table->string('path')->nullable();
             $table->string('format')->nullable();
             $table->integer('type')->default(1);
+
+            // for icons
+            $table->string('icon')->nullable();
+            $table->string('header_icon')->nullable();
+
+
             $table->timestamps();
             $table->softDeletes();
         });

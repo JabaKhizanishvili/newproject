@@ -11,8 +11,7 @@
 }
 
 .btn-bd-primary:focus {
-  -webkit-box-shadow: 0 0 0 3px rgba(121, 82, 179, 0.25);
-          box-shadow: 0 0 0 3px rgba(121, 82, 179, 0.25);
+  box-shadow: 0 0 0 3px rgba(121, 82, 179, 0.25);
 }
 
 .btn-bd-download {
@@ -28,8 +27,7 @@
 }
 
 .btn-bd-download:focus {
-  -webkit-box-shadow: 0 0 0 3px rgba(255, 228, 132, 0.25);
-          box-shadow: 0 0 0 3px rgba(255, 228, 132, 0.25);
+  box-shadow: 0 0 0 3px rgba(255, 228, 132, 0.25);
 }
 
 .bd-clipboard {
@@ -484,19 +482,13 @@
 .chroma .language-sh::before {
   color: #adb5bd;
   content: "$ ";
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 
 .chroma .language-powershell::before {
   color: #009;
   content: "PM> ";
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 
 #carbonads {
@@ -682,8 +674,7 @@
 }
 
 .btn-group > .btn {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  flex-shrink: 0;
 }
 
 .name {
@@ -692,9 +683,7 @@
 
 @media (min-width: 1200px) {
   .row-cols-xl-8 > * {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 12.5%;
-            flex: 0 0 12.5%;
+    flex: 0 0 12.5%;
     max-width: 12.5%;
   }
 }

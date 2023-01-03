@@ -10,7 +10,8 @@
     content="{{ $meta_description }}">
     <meta name="keywords" content="{{ $meta_keyword }}">
     <meta property="og:title" content="{{ $og_title }}">
-    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
+    {{-- shortcut icon --}}
+    <link rel="shortcut icon" href="{{ asset('logo.ico') }}">
     <meta property="og:description" content="{{ $og_description }}">
     <meta name="apple-mobile-web-app-capable" content="yes">
     {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> --}}
@@ -29,7 +30,7 @@
     {{--    @dd($page["props"]["page"]["meta_title"])--}}
     @routes
     <!-- JQUERY JS -->
-    <script src="{{asset('admin/assets/plugins/jquery/jquery.min.js')}}"></script>
+    {{-- <script src="{{asset('admin/assets/plugins/jquery/jquery.min.js')}}"></script> --}}
     <script src="{{ mix('/js/app.js') }}" defer></script>
     <script>
         function __(key, sharedData, replace = {}) {
