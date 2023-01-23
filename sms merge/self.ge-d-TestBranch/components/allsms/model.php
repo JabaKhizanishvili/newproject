@@ -13,6 +13,7 @@ class allsmsModel extends Model
 
 	public function getItems()
 	{
+
 		$query = 'select t.* from system_allsms t ';
 		$data = DB::LoadObjectList( $query, 'KEY' );
 		$return = new stdClass();
@@ -25,7 +26,7 @@ class allsmsModel extends Model
 
 	}
 
-	public function Prepare( $Data, $Print = 1 )
+	public function Prepare( $Data, $Print = 1)
 	{
 		$org = C::_( 'ORG', $Data );
 		$IE = C::_( 'IE_TYPE', $Data ) == 2 ? 'not' : '';
@@ -34,7 +35,6 @@ class allsmsModel extends Model
 		$where[] = 'w.id > 0';
 		$where[] = ' w.active = 1 ';
 		$where[] = ' w.mobile_phone_number is not null ';
-
 		$Workers = implode( ',', Helper::CleanArray( explode( ',', C::_( 'WORKERS', $Data ) ) ) );
 		if ( $Workers )
 		{
@@ -43,7 +43,11 @@ class allsmsModel extends Model
 		$Units = implode( ',', Helper::CleanArray( explode( '|', C::_( 'UNIT', $Data ) ) ) );
 		if ( $Units )
 		{
+            if(C::_("IE_TYPE", $Data) == 2){
+			$where[] = ' w.org_place ' . ' in ( ' . $Units . ' ) ';
+            }else{
 			$where[] = ' w.org_place ' . $IE . ' in ( ' . $Units . ' ) ';
+            }
 		}
 
 		$sch = C::_( 'SCHEDULE', $Data );
@@ -63,7 +67,7 @@ class allsmsModel extends Model
 		if ( $Print )
 		{
 			$Cols = ' sp.firstname || \' \'  || sp.lastname  Worker, '
-							. ' sp.mobile_phone_number '
+							. ' sp.mobile_phone_number'
 			;
 		}
 		else
@@ -71,26 +75,13 @@ class allsmsModel extends Model
 			$Cols = ' w.id, '
 							. ' w.firstname, '
 							. ' w.lastname, '
+							. ' w.id, '
 							. ' w.position, '
 							. ' w.mobile_phone_number, '
 							. ' u.lib_title as unit '
 			;
 		}
 		$order_or_union = ' order by sp.lastname ';
-//		if ( $Units && $IE == 'not' )
-//		{
-//			$order_or_union = ' UNION '
-//							. ' select '
-//							. $Cols
-//							. ' from hrs_workers w '
-//							. ' left join lib_units u on u.id = w.org_place where '
-//							. ' (w.id > 0)'
-//							. ' and ( w.active = 1 )'
-//							. ' and ( w.mobile_phone_number is not null )'
-//							. ' and ( w.org_place is null )'
-//							. ' AND ( w.org = ' . DB::Quote( $org ) . ')'
-//			;
-//		}
 
 		$Query = 'select '
 						. $Cols
@@ -107,10 +98,6 @@ class allsmsModel extends Model
 		;
 
 		$result = DB::LoadObjectList( $Query );
-		if ( !count( $result ) )
-		{
-			$result = Text::_( 'Phone number not Detected!' );
-		}
 		$Data['SELECTED_WORKERS'] = json_encode( $result, JSON_UNESCAPED_UNICODE );
 		return $Data;
 
@@ -134,8 +121,12 @@ class allsmsModel extends Model
 
 	public function SendSMS( $data )
 	{
+//        if(C::_( 'SELECTED_WORKERS', $data )){
+//
+//        }
 		$Data = $this->Prepare( $data );
 		$Workers = json_decode( C::_( 'SELECTED_WORKERS', $Data ) );
+
 		$SMS = C::_( 'SMS', $Data );
 		$SMSS = new oneWaySMS();
 		foreach ( $Workers as $Worker )

@@ -12,7 +12,7 @@
 		</param>
 		<param name="WORKERS" type="slfstaff" case="2" label="EXCLUDED_WORKERS"  />
 		<param name="UNIT" type="units" label="STRUCTURE"  />
-		<param name="SCHEDULE" type="schedules" label="STAFF_SCHEDULE"  />
+		<param name="SCHEDULE" type="schedules" label="STAFF_SCHEDULE" />
 		<param name="ORG" type="hidden" default="" label="ORG" />
 	</params>
 </install>
