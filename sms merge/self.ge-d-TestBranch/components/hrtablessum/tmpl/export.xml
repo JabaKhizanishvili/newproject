@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://apps.magticom.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<params name="Working time accounting form">
+		<param order="worker" type="print" label="worker" key="WORKERNAME" rclass="text-left" />
+		<param order="" type="print" label="private_number" rclass="text-center" key="PRIVATE_NUMBER" />
+		<param order="" type="print" label="BILL_ID" rclass="text-center" key="BILL_ID" />
+		<param order="t.status" type="switch" label="status" rclass="text-center" state_id='ID' key="STATUS" >
+			<option value="-1">No Data</option>
+			<option value="0">filled Data</option>
+			<option value="1">For Approve</option>
+			<option value="2">Approved</option>
+			<option value="3">Sent</option>
+		</param>
+		<param order="approver" type="print" label="APPROVER" rclass="text-center" key="APPROVER" />
+		<param order="t.approve_date" type="print" label="APPROVE_DATE" rclass="text-center" key="APPROVE_DATE" />
+		<param order="" type="billlink" label="View Times" rclass="text-center" key="" />
+	</params>
+</install>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<param name="LIB_TITLE" type="text" default="" label="Title" must="1"  geokbd="1" />
+		<param name="LIB_DESC" type="textarea" default="" label="Description" geokbd="1" />
+		<group>
+			<param name="ACTIVE" type="radio" default="1">
+				<option value="1">Active Status</option>
+				<option value="0">Inactive</option>
+			</param>
+			<param name="ORDERING" type="text" default="999" label="ORDERING"  />
+		</group>
+		<param name="ID" type="hidden" default="" />
+	</params>
+	<params group="details">
+		<param name="CLASS" type="list" default="-1" label="CLASS" must="1">
+			<option value="-1">-</option>
+			<option value="1">regular_term_benefit</option>
+		</param>
+		<param name="REGULARITY" type="list" default="-1" label="REGULARITY" must="1">
+			<option value="-1">select category</option>
+			<option value="1">regular</option>
+			<option value="2">Irregular</option>
+			<option value="3">both</option>
+		</param>
+		<param name="COST" type="bound" subtype="number" boundto="REGULARITY" when="1,3" label="COST" must="1" />
+		<!--<param name="SHARE_TYPE_PERCENT" type="bound" subtype="radio" boundto="REGULARITY" when="2" label="COMPANY_SHARE_TYPE" default="1" must="1" >
+			<option value="1">percent</option>
+		</param>-->
+		<group>
+			<param name="COMPANY_SHARE" type="number" dec="2" default="" label="COMPANY_SHARE" must="1"/>
+			<param name="WORKER_SHARE" type="number" dec="2" default="" label="WORKER_SHARE" must="1"/>
+			<param name="SHARE_TYPE" type="radio" label="COMPANY_SHARE_TYPE" must="1" >
+				<option value="1">percent</option>
+				<option value="2">cost</option>
+			</param>
+		</group>
+
+		<!--		<param name="INCOME" type="radio" default="" label="INCOME" must="1">-->
+		<!--			<option value="1">yes</option>-->
+		<!--			<option value="0">no</option>-->
+		<!--		</param>-->
+		<!--		<param name="PENSION" type="radio" default="" label="PENSION" must="1">-->
+		<!--			<option value="1">yes</option>-->
+		<!--			<option value="0">no</option>-->
+		<!--		</param>-->
+		<param name="GROSS_TAX_TYPE" type="radio" default="" label="GROSS_TAX_TYPES" must="1">
+			<option value="2">INCOME_TAX</option>
+			<option value="1">INCOME_PENSION</option>
+			<option value="0">NONE</option>
+		</param>
+		<param name="ACCRUAL_TYPE" type="bound" subtype="radio" boundto="REGULARITY" when="1,3" default="" label="ACCRUAL_TYPE" must="1">
+			<option value="1">proportional</option>
+			<option value="2">complete</option>
+		</param>
+		<param name="PERIODICITY" type="bound" subtype="list" boundto="REGULARITY" when="1,3" default="-1" label="PERIODICITY"  must="1">
+			<option value="-1">SELECT CATEGORY</option>
+			<option value="1">MONTH</option>
+			<option value="2">QUARTER</option>
+			<option value="3">YEAR</option>
+		</param>
+		<param name="START_DATE" type="bound" subtype="calendar" boundto="REGULARITY" when="1,3"  default="" label="START_DATE" must="1" />
+		<param name="END_DATE" type="bound" subtype="calendar" boundto="REGULARITY" when="1,3"  default="" label="END_DATE" must="1" />
+		
+		<param name="BENEFIT" type="benefits" default="" label="BENEFIT" must="1" />
+		<param name="ACCRUAL_SET" type="bound" subtype="radio" boundto="REGULARITY" when="1,3" label="ACCRUAL_SET" must="1" >
+			<option value="1">pre</option>
+			<option value="2">post</option>
+		</param>
+		<param name="TYPE" type="radio" default="" label="TYPE" must="1">
+			<option value="1">Supplement</option>
+			<option value="2">loss</option>
+		</param>
+		<param name="CALCULATION_DAY" type="rangenumber" default="" label="CALCULATION_DAY" start="1" end="28" must="1" />
+	</params>
+</install>

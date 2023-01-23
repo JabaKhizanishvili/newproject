@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="hrs_login_log">
+	<column name="id" type="number" />
+	<column name="log_ip" type="varchar2" length="50" />
+	<column name="log_user_id" type="number" />
+	<column name="log_user_name" type="varchar2" length="500" />
+	<column name="log_prev_user_name" type="varchar2" length="500" />
+	<column name="log_date" type="date" />
+	<!--here-->
+	<column name="os_type" type="varchar2" length="100" />
+	<column name="os_family" type="varchar2" length="100" />
+	<column name="os_name" type="varchar2" length="100" />
+	<column name="os_version" type="varchar2" length="100" />
+	<column name="os_title" type="varchar2" length="100" />
+	<column name="device_type" type="varchar2" length="100" />
+	<column name="browser_name" type="varchar2" length="100" />
+	<column name="browser_version" type="varchar2" length="100" />
+	<column name="browser_title" type="varchar2" length="100" />
+	<column name="browser_chrome_original" type="varchar2" length="100" />
+	<column name="browser_firefox_original" type="varchar2" length="100" />
+	<column name="browser_safari_original" type="varchar2" length="100" />
+	<column name="browser_chromium_version" type="varchar2" length="100" />
+	<column name="browser_gecko_version" type="varchar2" length="100" />
+	<column name="browser_webkit_version" type="varchar2" length="100" />
+	<column name="browser_android_webview" type="varchar2" length="100" />
+	<column name="browser_ios_webview" type="varchar2" length="100" />
+	<column name="browser_desktop_mode" type="varchar2" length="100" />
+	<column name="client_id" type="number" default="00" />
+	<column name="modify_user" type="number" />
+	<column name="modify_date" type="date" />
+</table>

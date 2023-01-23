@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Created by Irakli Gzirishvili 28-10-2021-->
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="lib_limit_app_types" history="yes">
+	<columns>
+		
+		<column name="id" type="number" null="n" />
+		<column name="lib_title" type="varchar2" length="500" Ti="1" />
+		<column name="lib_desc" type="varchar2" length="4000" />
+		<!--here-->
+		<column name="PERIODICITY" type="number" />
+		<column name="LIMIT" type="number" />
+		<column name="WAGE_TYPE" type="number" />
+		<column name="holiday_restart_day" type="number" />
+		<column name="holiday_restart_month" type="number" />
+		<column name="holiday_start_limit" type="number" />
+	
+		<column name="to_employee_a" type="number" />
+		<column name="to_leader_a" type="number" />
+		<column name="to_admin_a" type="number" />
+	
+		<column name="to_employee_b" type="number" />
+		<column name="to_leader_b" type="number" />
+		<column name="to_admin_b" type="number" />
+	
+		<column name="to_employee_c" type="number" />
+		<column name="to_leader_c" type="number" />
+		<column name="to_admin_c" type="number" />
+	
+		<column name="to_employee_d" type="number" />
+		<column name="to_leader_d" type="number" />
+		<column name="to_admin_d" type="number" />
+	
+		<column name="to_employee_e" type="number" />
+		<column name="to_leader_e" type="number" />
+		<column name="to_admin_e" type="number" />
+	
+		<column name="replacer_field" type="number" />
+		<column name="comment_field" type="number" />
+		<column name="files_field" type="number" />
+	
+		<column name="show_on_profile" type="number" null="n" default="1 " />
+		<!--here-->
+		<column name="active" type="number" null="n" default="1 " />
+		<column name="ordering" type="number" null="n" default="999" />
+		<column name="category" type="number" />
+		<!--<column name="org" type="number"/>-->
+		<column name="client_id" type="number" default="00" />
+		<column name="flow" type="number" default="00" />
+		<column name="modify_user" type="number" />
+		<column name="modify_date" type="date" />
+	</columns>
+	<history>
+		<column name="lib_title" type="varchar2" length="500" />
+		<column name="lib_desc" type="varchar2" length="4000" />
+		<!--here-->
+		<column name="PERIODICITY" type="number" />
+		<column name="LIMIT" type="number" />
+		<column name="WAGE_TYPE" type="number" />
+		<column name="holiday_restart_day" type="number" />
+		<column name="holiday_restart_month" type="number" />
+		<column name="holiday_start_limit" type="number" />
+	
+		<column name="to_employee_a" type="number" />
+		<column name="to_leader_a" type="number" />
+		<column name="to_admin_a" type="number" />
+	
+		<column name="to_employee_b" type="number" />
+		<column name="to_leader_b" type="number" />
+		<column name="to_admin_b" type="number" />
+	
+		<column name="to_employee_c" type="number" />
+		<column name="to_leader_c" type="number" />
+		<column name="to_admin_c" type="number" />
+	
+		<column name="to_employee_d" type="number" />
+		<column name="to_leader_d" type="number" />
+		<column name="to_admin_d" type="number" />
+	
+		<column name="to_employee_e" type="number" />
+		<column name="to_leader_e" type="number" />
+		<column name="to_admin_e" type="number" />
+	
+		<column name="replacer_field" type="number" />
+		<column name="comment_field" type="number" />
+		<column name="files_field" type="number" />
+	
+		<column name="show_on_profile" type="number" null="n" default="1 " />
+		<!--here-->
+		<column name="active" type="number" null="n" default="1 " />
+		<column name="ordering" type="number" null="n" default="999" />
+		<column name="category" type="number" />
+		<!--<column name="org" type="number"/>-->
+		<column name="flow" type="number" default="00" />
+		<column name="modify_user" type="number" />
+		<column name="modify_date" type="date" />
+	</history>
+	<sequence  name="SQS_HOLIDAYS" start="100" />
+	<histsequence  name="sqs_limit_app_types_hist" />
+</table>

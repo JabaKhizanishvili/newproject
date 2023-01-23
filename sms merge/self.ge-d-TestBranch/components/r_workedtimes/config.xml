@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/component.config.dtd">
+<config>
+	<defaultTask value="add" />
+	<tasks>
+		<task name="admin" default="1" label="admin" />
+		<task name="manager" default="1" label="manager" />
+	</tasks>
+	<allowTasks>
+		<task name="cancel" default="1" label="cancel" />
+	</allowTasks>
+</config>

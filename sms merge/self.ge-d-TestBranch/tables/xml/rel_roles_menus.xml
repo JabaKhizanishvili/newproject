@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="rel_roles_menus">
+	<column name="role" type="number" null="n" />
+	<column name="menu" type="number" null="n"  />
+	<column name="params" type="varchar2" length="4000" />
+	<column name="client_id" type="number" default="00" />
+</table>

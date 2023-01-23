@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="number" default="" label="#" rclass="text-center" hclass="text-center"/>		
+		<param order="" type="checkall" default="" label="" rclass="text-center" key="CONTROLLER_CODE" />
+		<param order="" type="taskto" label="Actions" action="register" rclass="text-center" default="1" key="CONTROLLER_CODE" check="0" />
+		<param order="" type="print" label="Code" key="CONTROLLER_CODE" rclass="text-left" />
+		<param order="" type="print" label="Device ID" key="DEVICE_ID" rclass="text-left" />
+		<param order="" type="print" label="Controler model" key="CONTROLER_MODEL" rclass="text-left" />
+		<param order="" type="print" label="System load" key="SYSTEM_LOAD" rclass="text-left" />
+		<param order="" type="print" label="Uptime start" key="UPTIME_START" rclass="text-left" />
+		<param order="" type="print" label="Memory usage (%)" key="MEMORY_USAGE" rclass="text-left" />
+		<param order="" type="print" label="Disc usage (%)" key="DISC_USAGE" rclass="text-left" />
+		<param order="" type="print" label="Controller time" key="CONTROLER_DATE" rclass="text-left" />
+		<param order="" type="print" label="Local IP" key="LOCAL_IP" rclass="text-left" />
+		<param order="" type="print" label="IP" key="IP" rclass="text-left" />
+		<param order="" type="print" label="CPU Temperature" key="CPU_TEMP" rclass="text-left" />
+		<param order="" type="print" label="Record date" key="REC_DATE" rclass="text-left" />
+	</params>
+</install>

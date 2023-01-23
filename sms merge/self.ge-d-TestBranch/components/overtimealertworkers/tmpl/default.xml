@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="page_filter_block" type="h">
+		<filter name="firstname" type="stext" default="" label="firstname" class="kbd" />
+		<filter name="lastname" type="stext" default="" label="lastname" class="kbd" />
+		<filter name="start_date" type="calendar" default="" label="start date" />
+		<filter name="end_date" type="calendar" default="" label="end date" />
+		<filter name="year" type="year" default="" label="year" />
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="number" default="" label="#" rclass="text-center" />
+		<param order="" type="checkall" default="" label="" rclass="text-center"   />
+		<param order="worker" type="editlink" label="worker" key="WORKER" rclass="text-left" />
+		<param order="t.start_date" type="print" label="Date" key="START_DATE" rclass="text-center" />
+		<param order="t.day_count" type="print" label="OVERTIME_HOURS" key="DAY_COUNT" rclass="text-center" />
+		<param order="t.info" type="print" label="INFO" key="INFO" rclass="text-left" />
+		<param order="approver" type="print" label="APPROVER" rclass="text-center" key="APPROVER" />
+		<param order="t.approve_date" type="print" label="APPROVE_DATE" rclass="text-center" key="APPROVE_DATE" />
+		<param order="t.status" type="approve" label="status" rclass="text-center" state_id='ID' state_key="STATUS" />
+		<param order="t.id" type="print" label="ID" key="ID" rclass="text-center" />
+	</params>
+</install>

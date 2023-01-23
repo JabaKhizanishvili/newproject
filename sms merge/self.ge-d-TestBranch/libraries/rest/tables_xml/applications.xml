@@ -1,0 +1,50 @@
+<table name="hrs_applications" title="Applications" >
+	<columns>
+		<column name="id" alias="app_id" />
+		<column name="worker" alias="org_p_id" />
+		<column name="type" alias="app_type_id" />
+		<column name="status" />
+		<column name="start_date" />
+		<column name="end_date"  />
+		<column name="day_count" />
+		<column name="info" />
+		<column name="rec_date" alias="create_date"/>
+		<column name="approve" />
+		<column name="approve_date" />
+		<!--<column name="del_user" />-->
+		<!--<column name="del_date" />-->
+		<column name="ucomment" alias="comment"/>
+		<!--<column name="auto" />-->
+		<!--<column name="files" />-->
+		<column name="org" alias="org_id" />
+		<column name="w_holiday_comment" />
+		<column name="replacing_workers" alias="replacing_workers_p_id" />
+		<column name="rec_user" alias="create_user_p_id" />
+		<!--<column name="additional_status" />-->
+		<column name="worker_id" alias="w_id" />
+	</columns>
+	<request>
+		<item name="start" type="number" required="0">
+			<value>
+				<v name="min" value="0" />
+				<v name="max" value="Unlimited" />
+				<v name="default" value="0" />
+			</value>
+		</item>
+		<item name="limit" type="number" required="0">
+			<value>
+				<v name="min" value="1" />
+				<v name="max" value="500" />
+				<v name="default" value="50" />
+			</value>
+		</item>
+	</request>
+	<response>
+		<item name="start" type="number" />
+		<item name="limit" type="number" />
+		<item name="count" type="number" />
+		<item name="items" type="array" />
+	</response>
+	<order by="id" type="asc" />
+	<where><![CDATA[ status = 1 ]]></where>
+</table>

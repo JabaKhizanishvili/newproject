@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<param name="ORG" type="orgprint" default="" label="org" />
+		<param name="WORKER" type="slfstaff" case="2" tmpl="single" label="WORKER" must="1"/>
+		<param name="BENEFIT_ID" type="sql" search="1" default="-1" label="IREGULAR_BENEFIT" key_field="ID" value_field="LIB_TITLE" query="select e.id, e.lib_title || ' (' || e.lib_desc || ')' as lib_title from LIB_F_BENEFIT_TYPES e where e.REGULARITY in (2,3) order by e.lib_title" select_label="-" class="search-select" must="1" />
+	</params>
+	<params group="details">
+	</params>
+</install>

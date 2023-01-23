@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="page_filter_block" type="h">
+		<filter name="firstname" type="stext" default="" label="firstname" class="kbd" />
+		<filter name="lastname" type="stext" default="" label="lastname" class="kbd" />
+		<filter name="position" type="stext" default="" label="position" class="kbd" />
+		<filter name="orgid" type="org" default="" label="org" />
+		<filter name="org_place" type="unit" default="" label="unit"  elementid="orgid" />
+		<!--<filter name="category" type="sql" default="" label="CATEGORY_ID" key_field="ID" value_field="LIB_TITLE" query="select id, lib_title from lib_categories t where t.active=1 order by t. lib_title asc" select_label="Select Category" must="1" />-->
+		<filter name="tablenum" type="text" default="" label="TABLENUM" />
+		<filter name="active" type="state" default="-3" label="Worker Status">
+			<option value="-3">Select State</option>
+			<option value="1">Current Contract</option>
+			<option value="0">Paused Contract</option>
+			<option value="-1">Canceled Contract</option>
+		</filter>
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+	<params class="table table-bordered table-condensed table-hover table-striped exporttable" id="exportable">
+		<param order="" type="number" default="" label="#" rclass="text-center" />
+		<param order="w.firstname" type="print" label="W_FIRSTNAME" key="FIRSTNAME" rclass="text-left" T="1" Tscope="person" />
+		<param order="w.lastname" type="print" label="W_LASTNAME" key="LASTNAME" rclass="text-left" T="1" Tscope="person" />
+		<param order="w.private_number" type="print" label="W_PRIVATE_NUMBER" key="PRIVATE_NUMBER" rclass="text-left" />
+		<param order="w.org_name" type="print" label="ORG" key="ORG_NAME" rclass="text-left" T="1" />
+		<param order="w.gender" type="switch" label="W_GENDER" key="GENDER" rclass="text-left" >
+			<option value="1">Male</option>
+			<option value="2">FeMale</option>
+		</param>
+		<param order="w.nationality" type="switch" label="W_NATIONALITY" key="NATIONALITY" rclass="text-left" >
+			<option value="1">Georgia</option>
+			<option value="0">Other Country</option>
+		</param>
+		<param order="w.birthdate" type="print" label="W_BIRTHDATE" key="BIRTHDATE" rclass="text-left" />
+		<param order="w.mobile_phone_number" type="print" label="W_MOBILE_PHONE_NUMBER" key="MOBILE_PHONE_NUMBER" rclass="text-left" />
+		<param order="work_type" type="switch" label="W_WORK_TYPE" rclass="text-center" key="WORK_TYPE" >
+			<option value="1">Full Time</option>
+			<option value="2">Part Time</option>
+		</param>
+		
+		<param order="contract_state" type="switch" label="CONTRACT_STATE" rclass="text-center" key="CONTRACT_STATE" >
+			<option value="1">Current Contract</option>
+			<option value="0">Paused Contract</option>
+			<option value="-1">Canceled Contract</option>
+		</param>
+		<param order="country_name" type="print" label="W_COUNTRY_CODE" rclass="text-center" key="COUNTRY_NAME" T="1"/>
+	</params>
+</install>

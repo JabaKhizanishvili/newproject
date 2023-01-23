@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<param name="LIB_TITLE" type="text" default="" label="Title" must="1"  class="kbd" />
+		<param name="LIB_DESC" type="text" default="" label="Description"  class="kbd"  />
+		<param name="TYPE" type="list" default="1">
+			<option value="1">In Door</option>
+			<option value="2">Out Door</option>
+			<option value="10">Sport Hall Door In</option>
+			<option value="11">Sport Hall Door Out</option>
+			<option value="1500">DAY_OFF</option>
+			<option value="2000">START_DAY</option>
+			<option value="2500">START_BREAK</option>
+			<option value="3000">END_BREAK</option>
+			<option value="3500">END_DAY</option>
+			<option value="4000">DECRET_TIME_START</option>
+			<option value="4500">DECRET_TIME_END</option>
+		</param>
+		<param name="ACTIVE" type="radio" default="1">
+			<option value="1">Active Status</option>
+			<option value="0">Inactive</option>
+		</param>
+		<param name="ID" type="hidden" default="" />
+	</params>
+</install>

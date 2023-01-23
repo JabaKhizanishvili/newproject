@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="page_filter_block" type="v">
+		<filter name="firstname" type="stext" default="" label="firstname" class="kbd" />
+		<filter name="lastname" type="stext" default="" label="lastname" class="kbd" />
+		<filter name="start_date" type="calendar" default="now" label="Start Date" />
+		<filter name="end_date" type="calendar" default="now" label="End Date" />
+		<filter name="orgid" type="org" default="" label="org" />
+		<filter name="org_place" type="unit" default="" admin="o_review" label="org_place"  elementid="orgid" />
+<!--		<filter name="c_resolution" type="state" default="0" label="status">
+			<option value="0">PENDING</option>
+			<option value="1">ACCEPTED</option>
+			<option value="2">DECLINED</option>
+		</filter>-->
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+</install>

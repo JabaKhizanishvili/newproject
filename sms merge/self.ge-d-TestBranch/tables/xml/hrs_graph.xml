@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="hrs_graph" history="yes">
+	<columns>
+		<column name="worker" type="number" null="n" />
+		<column name="gt_day" type="number" />
+		<column name="gt_year" type="number" />
+		<column name="time_id" type="number" />
+		<column name="real_date" type="date" />
+		<column name="org" type="number"  />
+		<column name="change_woker" type="number" />
+		<column name="change_date" type="date" />
+		<column name="lib_title" type="varchar2" length="500" />
+		<column name="lib_desc" type="varchar2" length="4000" />
+		<column name="start_time" type="varchar2"  length="20" />
+		<column name="end_time"  type="varchar2"  length="20" />
+		<column name="start_break"  type="varchar2"  length="20"  />
+		<column name="end_break" type="varchar2"  length="20" />
+		<column name="color" type="varchar2"  length="20" />
+		<column name="rest_type" type="number" default="1"   />
+		<column name="rest_minutes" type="number" default="00"   />
+		<column name="vacation_index" type="number" default="1" />
+		<column name="working_time" type="number" default="00"   />
+		<column name="rest_time" type="number" default="00"   />
+		<column name="night_time" type="number" default="00"   />
+		<column name="modify_user" type="number" />
+		<column name="modify_date" type="date" />
+		<column name="calculus_type" type="number" />
+		<column name="calculus_regime" type="number" />
+		<column name="holiday_yn" type="number" />
+		<column name="lateness" type="number" />
+		<column name="checksum" type="varchar2" length="4000" />
+		<column name="type" type="number" default="00" />
+		<column name="standard_graph_checksum" type="varchar2" length="4000" />
+		<column name="standard_graph_id" type="number" default="00" />
+		<column name="id" type="number" />
+	</columns>
+	<history>
+		<column name="worker" type="number" null="n" />
+		<column name="gt_day" type="number" />
+		<column name="gt_year" type="number" />
+		<column name="time_id" type="number" />
+		<column name="real_date" type="date" />
+		<column name="org" type="number"  />
+		<column name="change_woker" type="number" />
+		<column name="change_date" type="date" />
+		<column name="lib_title" type="varchar2" length="500" />
+		<column name="lib_desc" type="varchar2" length="4000" />
+		<column name="start_time" type="varchar2"  length="20" />
+		<column name="end_time"  type="varchar2"  length="20" />
+		<column name="start_break"  type="varchar2"  length="20"  />
+		<column name="end_break" type="varchar2"  length="20" />
+		<column name="color" type="varchar2"  length="20" />
+		<column name="rest_type" type="number" default="1"   />
+		<column name="rest_minutes" type="number" default="00"   />
+		<column name="vacation_index" type="number" default="1" />
+		<column name="working_time" type="number" default="00"   />
+		<column name="rest_time" type="number" default="00"   />
+		<column name="night_time" type="number" default="00"   />
+		<column name="modify_user" type="number" />
+		<column name="modify_date" type="date" />
+		<column name="calculus_type" type="number" />
+		<column name="calculus_regime" type="number" />
+		<column name="holiday_yn" type="number" />
+		<column name="lateness" type="number" />
+		<column name="checksum" type="varchar2" length="4000" />
+		<column name="type" type="number" default="00" />
+		<column name="standard_graph_checksum" type="varchar2" length="4000" />
+		<column name="standard_graph_id" type="number" default="00" />
+	</history>
+	<sequence  name="library" start="100" />
+	<histsequence  name="sqs_hrs_graph_hist" />
+</table>

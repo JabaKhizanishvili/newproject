@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<param name="LIB_TITLE" type="text" default="" label="LIB_TITLE" />
+<!--		<param name="VNUMBER" type="text" default="" label="VNUMBER" must="1" />-->
+		<param name="LIB_DESC" type="textarea" default="" label="Description" class="kbd" />
+		<param name="ITEM_WORKING_PRINCIPES" type="textarea" default="" label="item_working_principes" class="kbd" />
+<!--		<param name="DRIVER" type="number" default="" must="1" label="DRIVER" />-->
+		<param name="WORKINGORDER" type="textarea" default="" label="WORKINGORDER" class="kbd" />
+
+		<group>
+			<param name="ACTIVE" type="radio" default="1">
+				<option value="1">Active Status</option>
+				<option value="0">Inactive</option>
+			</param>
+			<param name="ORDERING" type="text" default="999" label="ORDERING" />
+		</group>
+		<param name="ID" type="hidden" default="" />
+	</params>
+
+	<params group="details">
+		<param name="ITEM_WORKING_PRINCIPES" type="textarea" default="" label="item_working_principes" class="kbd" />
+		<param name="ITEM_LOCATION" type="textarea" default="" label="item_location" class="kbd" />
+		<param name="SAFETY" type="textarea" default="" label="SAFETY" class="kbd" />
+		<param name="INTOLERABLE" type="textarea" default="" label="INTOLERABLE" class="kbd" />
+		<param name="" type="spacer" default="techinventar period" label="" description="" />
+		<param name="MAINTENANCE_START" type="calendar" default="" label="MAINTENANCE_START" />
+		<param name="MAINTENANCE_REPEAT" type="number" default="" label="MAINTENANCE_REPEAT" />
+	</params>
+</install>

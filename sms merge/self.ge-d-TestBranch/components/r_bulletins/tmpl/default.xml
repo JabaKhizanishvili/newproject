@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="table table-bordered table-condensed table-filter-vertical" type="v">
+		<filter name="firstname" type="stext" default="" label="firstname" class="kbd"  />
+		<filter name="lastname" type="stext" default="" label="lastname" class="kbd"  />		
+		<filter name="org" type="org" default="" label="org" />
+		<filter name="state" type="state" default="-1" label="State">
+			<option value="-1">Select State</option>
+			<option value="1">BL_CURRENT</option>
+			<option value="2">BL_CLOSE</option>
+			<option value="3">BL_CONFIRMED</option>
+		</filter>
+		<filter name="year" type="year" default="" label="year" />
+		<filter name="start_date" type="calendar" default="now -1 year" label="Start Date" />
+		<filter name="end_date" type="calendar" default="now +1 day" label="End Date" />
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+</install>

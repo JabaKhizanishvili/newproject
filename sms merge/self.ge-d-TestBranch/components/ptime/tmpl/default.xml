@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<param name="START_DATE" type="calendar" default="now" label="Private Time Date" must="1" />
+		<param name="START_TIME" type="time" default="now" label="Time Start" must="1" />
+		<param name="END_TIME" type="time" default="now + 30 minutes" label="Time End" must="1" />
+		<param name="UCOMMENT" type="text" default="" label="UCOMMENT" must="1" />
+		<param name="ORG" type="org" default="" label="org" limit="2" must="1" />
+		<param name="ID" type="hidden" default="" />
+	</params>
+</install>

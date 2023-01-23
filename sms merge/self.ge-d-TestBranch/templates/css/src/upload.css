@@ -1,0 +1,12 @@
+.uploadblock
+{
+	max-width: 150px;
+	margin-bottom: 10px;
+	margin: 0 auto;
+}
+.uploadblock img
+{
+	/*width: 100%;*/
+	max-height: 150px;
+	border-radius: 10px;
+}

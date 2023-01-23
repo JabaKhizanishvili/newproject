@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<param name="WORKER" type="slfstaff" default="" label="Worker" must="1" case="1" tmpl="single" class="kbd" />
+		<param name="CERT_DATE" type="calendar" default="" label="CERT_DATE" must="1"  />
+		<param name="CERT_DUE" type="calendar" default="" label="CERT_DUE" must="1"  />
+		<param name="CERT_NUMBER" type="text" default="" label="CERT_NUMBER" must="1" class="kbd" />
+		<param name="ID" type="hidden" default="" />
+	</params>
+</install>

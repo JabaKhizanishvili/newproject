@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!--
+    TODO define vocabulary identification
+    PUBLIC ID: -//vendor//vocabulary//EN
+    SYSTEM ID: http://server/path/grid.dtd
+
+-->
+
+<!--
+    An example how to use this DTD from your XML document:
+
+    <?xml version="1.0"?>
+
+    <!DOCTYPE install SYSTEM "grid.dtd">
+
+    <install>
+    ...
+    </install>
+-->
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT install (filters|params)*>
+<!ATTLIST install
+    type CDATA #IMPLIED
+    version CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT filters (filter)*>
+<!ATTLIST filters
+    class CDATA #IMPLIED
+    type CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT filter EMPTY>
+<!ATTLIST filter
+    name CDATA #IMPLIED
+    type CDATA #IMPLIED
+    default CDATA #IMPLIED
+    label CDATA #IMPLIED
+    class CDATA #IMPLIED
+    submit_label CDATA #IMPLIED
+    reset_label CDATA #IMPLIED
+    show_reset CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT params (param)*>
+<!ATTLIST params
+    class CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT param EMPTY>
+<!ATTLIST param
+    order CDATA #IMPLIED
+    type CDATA #IMPLIED
+    default CDATA #IMPLIED
+    label CDATA #IMPLIED
+    rclass CDATA #IMPLIED
+    key CDATA #IMPLIED
+    length CDATA #IMPLIED
+    limit_type CDATA #IMPLIED
+  >

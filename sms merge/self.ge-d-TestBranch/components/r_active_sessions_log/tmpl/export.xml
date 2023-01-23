@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Edited by Irakli Gzirishvili 21-10-2021.-->
+<!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<params name="Workers">
+		<param order=""   type="number" default="" label="#" rclass="text-center" hclass="text-center"/>
+		<param order="" type="checkall" default="" label="" rclass="text-center"  hclass="text-center" />
+		<param order="" type="stringdate" label="SESSION START" key="LOG_DATE" rclass="text-right" />
+		<param order="" type="editlink" label="worker" key="WFIRSTNAME, WLASTNAME" rclass="text-left" T="1" Tscope="person" />
+		<param order="" type="print" label="ORG" key="ORG_NAME" rclass="text-left" />
+		<param order="" type="print" label="POSITION" key="POSITION" rclass="text-left" />
+		<param order="" type="print" label="IP" key="LOG_IP" rclass="text-center" />
+		<param order="" type="print" label="BROWSER" key="BROWSER_NAME" rclass="text-center" />
+		<param order="" type="print" label="OS NAME" key="OS_NAME" rclass="text-center" />
+		<param order="" type="print" label="START DATE" key="START_DATE" rclass="text-center" />
+		<param order="" type="print" label="END DATE" key="END_DATE" rclass="text-center" />
+		<param order="" type="print" label="UPDATE DATE" key="LOG_DATE" rclass="text-center" />
+	</params>
+</install>

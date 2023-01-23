@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="hrs_staff_events" history="yes">
+	<columns>
+		<column name="id" type="number" null="n" />
+		<column name="staff_id" type="number" null="n" />
+		<column name="real_type_id" type="number" null="n" />
+		<column name="event_date" type="date" />
+		<column name="time_comment" type="varchar2" length="4000" />
+		<column name="time_id" type="number" />
+		<column name="gt_day" type="number" />
+		<column name="gt_year" type="number" />
+		<column name="rec_date" type="date" />
+		<column name="time_min" type="number" default="00" />
+		<column name="app_id" type="number" default="00" />
+		<column name="prev_event_date" type="date" />
+		<column name="prev_event_type" type="number" default="00" />
+		<column name="u_comment" type="varchar2" length="4000" />
+		<column name="u_comment_date" type="date"  />	
+		<column name="c_chief" type="number" />
+		<column name="c_resolution" type="number" default="00"  />
+		<column name="c_comment" type="varchar2" length="4000" />
+		<column name="c_comment_date" type="varchar2" length="4000" />
+		<column name="true_time_min" type="number" default="00" />
+		<column name="event_type" type="number" default="00" />
+		<column name="rest_time" type="number" default="00" />
+		<column name="client_id" type="number" default="00" />
+		<column name="modify_user" type="number" />
+		<column name="modify_date" type="date" />
+	</columns>
+	<history>
+		<column name="time_min" type="number" default="00" />
+	</history>
+	<histsequence  name="sqs_staff_events_hist" />
+</table>

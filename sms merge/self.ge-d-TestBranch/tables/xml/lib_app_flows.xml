@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Created by Irakli Gzirishvili 28-10-2021-->
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="lib_app_flows" history="yes">
+	<columns>
+		<column name="id" type="number" null="n" />
+		<column name="app_type" type="number" null="n" />
+		<column name="lib_title" type="varchar2" length="500" />
+		<column name="lib_desc" type="varchar2" length="4000" />
+		<column name="ordering" type="number" null="n" />
+		<column name="active" type="number" null="n" />
+	     <column name="modify_user" type="number" />
+          <column name="modify_date" type="date" />
+     </columns>
+	<history>
+		<column name="app_type" type="number" null="n" />
+		<column name="lib_title" type="varchar2" length="500" />
+		<column name="lib_desc" type="varchar2" length="4000" />
+		<column name="ordering" type="number" null="n" />
+		<column name="active" type="number" null="n" />
+	     <column name="modify_user" type="number" />
+          <column name="modify_date" type="date" />
+     </history>
+	<sequence  name="sqs_lib_app_flows" />
+	<histsequence  name="sqs_app_flows_hist" />
+</table>

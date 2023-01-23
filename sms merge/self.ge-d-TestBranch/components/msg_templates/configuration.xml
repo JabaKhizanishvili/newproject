@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params name="Regular Sms Template Configuration" ordering="3" >
+		<param name="" type="spacer" default="SMS Config" label="" description="" />
+		<param name="sms_templates" type="textarea" rows="10" cols="35" default="" label="sms_templates"  />
+		<param name="" type="spacer" default="Lateness Config" label="" description="" />
+		<param name="hr_lateness_1" type="text" default="20" label="hr_lateness_1" must="1" />
+		<param name="hr_lateness_2" type="text" default="30" label="hr_lateness_2" must="1" />
+		<param name="hr_lateness_sms_1" type="textarea" default="" label="hr_lateness_sms_1" must="1" />
+		<param name="hr_lateness_sms_2" type="textarea" default="" label="hr_lateness_sms_2" must="1" />
+		<param name="hr_lateness_sms_chief" type="textarea" default="" label="hr_lateness_sms_chief" must="1" />
+		<param name="msg_bdays" type="radio" default="1"  must="1" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="msg_bdays_hour" type="rangenumber" default="13" start="00" end="23"  must="1"/>
+		<param name="msg_bdays_template" type="msgtemplates" default="0" label="MSG_BDAYS_TEMPLATE" must="" T="1" />
+	</params>
+	<params group="details">
+		<param name="" type="spacer" default="Contracts Alerts Config" label="" description="" />
+		<param name="contracts_alerts" type="radio" default="0"  must="1" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<group>
+			<param name="contracts_alerts_day1" type="number" default="30" label="contracts_alerts_day1" description="" min="1" max="55" />
+			<param name="contracts_alerts_day1_msg" type="msgtemplates" default="0" label="contracts_alerts_day1_msg" must="" T="1"/>
+		</group>
+		<group>
+			<param name="contracts_alerts_day2" type="number" default="15" label="contracts_alerts_day2" description="" min="1" max="55" />
+			<param name="contracts_alerts_day2_msg" type="msgtemplates" default="0" label="contracts_alerts_day2_msg" must="" T="1"/>
+		</group>
+		<group>
+			<param name="contracts_alerts_day3" type="number" default="1" label="contracts_alerts_day3" description="" min="1" max="55" />
+			<param name="contracts_alerts_day3_msg" type="msgtemplates" default="0" label="contracts_alerts_day3_msg" must="" T="1"/>
+		</group>
+		<param name="contracts_alerts_hour" type="rangenumber" default="13" start="00" end="23"  must="1"/>
+		<!--<param name="contracts_alerts_hour" type="number" default="10" label="contracts_alerts_hour" description="" min="0" max="23"/>-->
+		<param name="contracts_alerts_mails" type="textarea" default="" label="contracts_alerts_mails" description="contracts alerts enter comma separated list" />
+
+		<param name="" type="spacer" default="WORKER_AUTO_DISMISSION" label="" description="" />
+		<param name="worker_auto_dismission" type="radio" default="0"  must="1" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<group>
+			<param name="worker_auto_dismission_hour" type="rangenumber" default="13" start="00" end="23"  must="1"/>
+			<param name="worker_auto_dismission_msg" type="msgtemplates" default="0" label="WORKER_AUTO_DISMISSION_MSG" must="" T="1"/>
+		</group>
+		<param name="dismission_release_type" type="releasetypes" default="" label="RELEASE_TYPE" must="1" />
+		<param name="dismission_alerts_mails" type="textarea" default="" label="contracts_alerts_mails" description="contracts alerts enter comma separated list" />
+
+	</params>
+</install>

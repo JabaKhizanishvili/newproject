@@ -1,0 +1,61 @@
+
+function toolbarmagic() {
+    //Fixed Menu on scroll
+    if ($('*', '.toolbar').length > 0 && $(window).width() > 1200)
+    {
+        $(window).load(function () {
+            $(function () {
+                $('.page_title').wrap('<div id="page_title"></div>');
+                var $height = 52 /*parseInt($('.page_title').css('padding-top'))
+                        + parseInt($('.page_title').css('margin-top'))
+                        + parseInt($('.page_title').css('height'))
+                        + parseInt($('.page_title').css('padding-bottom'))
+                        + parseInt($('.page_title').css('margin-bottom'))*/;
+                var $LogoSRC = $('.main_logo img').attr('src');
+                $('.page_title').prepend('<a class="fix_logo" href="?ref=Logo"><img src="'+$LogoSRC+'" alt=""></a>');
+
+                $('<span class="fixedheaderbut"><i class="bi bi-chevron-down"></i><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></span>').insertAfter(".fixedpagetitle");
+
+                $('.fixedheaderbut').click(function () {
+
+                    if (!$('#mainmenu').hasClass("activated")) {
+                        $('#mainmenu').addClass('activated');
+                        $(this).addClass('onbut');
+                    } else {
+                        $("#mainmenu").removeClass('activated');
+                        $(this).removeClass('onbut');
+                    }
+
+                });
+
+                $('#page_title').wrap('<div id="page_title_block_tools" style="min-height:' + $height + 'px"></div>');
+                $('.page_title').wrap('<div class="page_title_block_tools"></div>');
+                var $el = $('#page_title');
+                var top = $('.page_title').position().top;
+
+                var header = $('#mainmenu');
+
+                var $window = $(window);
+
+                $window.bind("scroll resize", function () {
+                    var scrollTop = $window.scrollTop();
+                    if (scrollTop > top) {
+                        $el.addClass("page_title_fixed");
+                        header.addClass("fixed");
+                    } else {
+                        $el.removeClass("page_title_fixed");
+                        header.removeClass("fixed");
+                    }
+                }).scroll();
+            });
+        });
+    }
+
+}
+
+$(document).ready(function () {
+    toolbarmagic();
+
+});
+
+window.addEventListener('resize load', toolbarmagic, false);

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://apps.magticom.ge/pda/defines/xml/table.dtd">
+<table name="hrs_black_list" history="yes">
+	<columns>
+		<column name="id" type="number" null="n" />
+		<column name="worker" type="number" null="n" />
+		<column name="listed_date" type="date" />
+		<column name="expiry_date" type="date" />
+		<column name="client_id" type="number" default="00" />
+		<column name="modify_user" type="number" />
+          <column name="modify_date" type="date" />
+	</columns>
+	<history>
+		<column name="worker" type="number" null="n" />
+		<column name="listed_date" type="date" />
+		<column name="expiry_date" type="date" />
+		<column name="modify_user" type="number" />
+          <column name="modify_date" type="date" />
+	</history>
+	<sequence  name="sqs_hrs_black_list" />
+	<histsequence  name="sqs_black_list_hist" />
+</table>

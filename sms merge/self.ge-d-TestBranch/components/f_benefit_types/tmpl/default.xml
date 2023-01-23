@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="page_filter_block" type="h">
+		<filter name="lib_title" type="stext" default="" label="name" class="kbd" />
+		<filter name="category" type="benefits" default="-1" label="benefit"/>
+		<filter name="regularity" type="state" default="-1" label="regularity">
+			<option value="-1">select category</option>
+			<option value="1">regular</option>
+			<option value="2">Irregular</option>
+			<option value="3">both</option>
+		</filter>
+		<filter name="type" type="state" default="-1" label="type">
+			<option value="-1">select category</option>
+			<option value="1">Supplement</option>
+			<option value="2">loss</option>
+		</filter>
+		<filter name="class" type="state" default="-1" label="class">
+			<option value="-1">select category</option>
+			<option value="1">regular_term_benefit</option>
+		</filter>
+		<filter name="active" type="state" default="-1" label="State">
+			<option value="-1">Select State</option>
+			<option value="0">Inactive</option>
+			<option value="1">Active Status</option>
+		</filter>
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="number" default="" label="#" rclass="text-center" hclass="text-center"/>
+		<param order="" type="checkall" default="" label="" rclass="text-center"   />
+		<param order="t.lib_title" type="editlink" label="Title" key="LIB_TITLE" rclass="text-left" T="1"/>
+		<param order="t.lib_desc" type="print" label="Description" key="LIB_DESC" rclass="text-left" />
+		<param order="t.type" type="switch" label="TYPE" key="TYPE">
+			<option value="1">Supplement</option>
+			<option value="2">loss</option>
+		</param>
+		<param order="t.cost" type="print" label="cost" key="COST" rclass="text-left" />
+		<param order="t.company_share" type="print" label="COMPANY_SHARE" key="COMPANY_SHARE" rclass="text-left" />
+		<param order="t.worker_share" type="print" label="WORKER_SHARE" key="WORKER_SHARE" rclass="text-left" />
+		<param order="t.regularity" type="switch" label="REGULARITY" key="REGULARITY" rclass="text-left" >
+			<option value="1">regular</option>
+			<option value="2">Irregular</option>
+			<option value="3">both</option>
+		</param>
+		<param order="t.benefit" type="benefits" label="BENEFIT" key="BENEFIT" rclass="text-left" />
+		<param order="t.start_date" type="date" format="%d-%m-%Y" label="START_DATE" key="START_DATE" rclass="text-left" />
+		<param order="t.end_date" type="date" format="%d-%m-%Y" label="END_DATE" key="END_DATE" rclass="text-left" />
+		<param order="t.class" type="switch" label="CLASS" key="CLASS" rclass="text-left" >
+			<option value="1">regular_term_benefit</option>
+		</param>
+		<param order="t.active" type="state" label="State" rclass="text-center" state_id='ID' state_key="ACTIVE" />
+		<param order="t.ordering" type="print" label="ordering" key="ORDERING" rclass="text-center" />
+		<param order="t.id" type="print" label="ID" key="ID" rclass="text-center" hclass="text-center"/>
+	</params>
+</install>

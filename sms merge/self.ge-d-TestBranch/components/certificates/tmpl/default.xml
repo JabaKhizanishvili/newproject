@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE install SYSTEM "http://apps.magticom.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="page_filter_block" type="h">
+		<filter name="firstname" type="stext" default="" label="firstname" class="kbd" />
+		<filter name="lastname" type="stext" default="" label="lastname" class="kbd" />
+		<filter name="cert_number" type="text" default="" label="cert_number"  class="kbd" />
+		<filter name="cert_date" type="range" default="" label="cert_date"  class="kbd" />
+		<filter name="cert_due" type="range" default="" label="cert_due"  class="kbd" />
+		<filter name="status" type="state" default="-1" label="State">
+			<option value="-1">-</option>
+			<option value="0">expired</option>
+			<option value="1">active_item</option>
+			<option value="2">expiring</option>
+		</filter>
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="number" default="" label="#" rclass="text-center" hclass="text-center" />
+		<param order="" type="checkall" default="" label="" rclass="text-center"   />
+		<param order="w.firstname" type="editlink" label="firstname" key="FIRSTNAME" rclass="text-left" />
+		<param order="w.lastname" type="editlink" label="lastname" key="LASTNAME" rclass="text-left" />
+		<param order="w.private_number" type="print" label="private_number" key="PRIVATE_NUMBER" rclass="text-center" />
+		<param order="t.cert_number" type="print" label="cert_number" key="CERT_NUMBER" rclass="text-center" />
+		<param order="t.cert_date" type="print" label="cert_date" key="CERT_DATE" rclass="text-center" />
+		<param order="t.cert_due" type="print" label="cert_due" key="CERT_DUE" rclass="text-center" />
+		<param order="t.active" type="switch" label="State" key="ACTIVE" rclass="text-center" >
+			<option value="0">
+				<![CDATA[
+				<span style="color:red">ვადაგასული</span>
+				]]>
+			</option>
+			<option value="1">
+				<![CDATA[
+				<span style="color:green">აქტიური</span>
+				]]>
+			</option>
+			<option value="2">
+				<![CDATA[
+				<span style="color:purple">გასდის ვადა</span>
+				]]>
+			</option>
+		</param>
+		<param order="t.id" type="print" label="ID" key="ID" rclass="text-center" />
+	</params>
+</install>

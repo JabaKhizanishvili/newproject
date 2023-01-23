@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<param name="FROM_TEXT" type="print" default="" label="FROM_TEXT" T="0"/>
+		<param name="TO_TEXT" type="print" default="" label="TO_TEXT" />
+		<param name="LIB_FROM" type="printlang" default="" label="LIB_FROM" />
+		<param name="LIB_TO" type="printlang" default="" label="LIB_TO" />
+	</params>
+	<params group="add">
+		<param name="EDIT_TEXT" type="text" default="" label="EDIT_TEXT" must="1"/>
+		<param name="ID" type="hidden" default="" />
+		<param name="HASH" type="hidden" default="" />
+	</params>
+</install>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<param name="LIB_TITLE" type="text" default="" label="Title" must="1"  geokbd="1" />
+		<param name="LIB_DESC" type="textarea" default="" label="Description" geokbd="1" />
+		<group>
+			<param name="ACTIVE" type="radio" default="1">
+				<option value="1">Active Status</option>
+				<option value="0">Inactive</option>
+			</param>
+			<param name="ORDERING" type="text" default="999" label="ORDERING"  />
+		</group>
+		<param name="ID" type="hidden" default="" />
+	</params>
+	<params group="details">
+		<param name="PERIOD_TYPE" type="list" default="-1" label="PERIOD_TYPE" must="1">
+			<option value="-1">select category</option>
+			<!--<option value="1">Weekly</option>-->
+			<option value="2">once a month</option>
+			<!--<option value="3">Twice a month</option>-->
+			<!--<option value="4">Quarterly</option>-->
+			<!--<option value="5">once in a year</option>-->
+		</param>
+		<param name="PERIOD_START" type="bound" subtype="rangenumber"  boundto="PERIOD_TYPE" when="2" label="SALARY_DAY" default="0" start="1" end="31" must="1"/>
+		<param name="YEARLY_DAY_PERIOD_START" type="bound" subtype="rangenumber"  boundto="PERIOD_TYPE" when="5" label="SALARY_DAY" default="0" start="1" end="31" must="1"/>
+		<param name="FIRST_PERIOD_START" type="bound" subtype="rangenumber"  boundto="PERIOD_TYPE" when="3" label="FIRST_SALARY_DAY" default="0" start="1" end="31" must="1"/>
+		<param name="SECOND_PERIOD_START" type="bound" subtype="rangenumber" boundto="PERIOD_TYPE" when="3" label="SECOND_SALARY_DAY" default="0" start="1" end="31" must="1"/>
+		<param name="QUARTER_DAY_START" type="bound" subtype="rangenumber" boundto="PERIOD_TYPE" when="4" label="SALARY_DAY" default="1" start="1" end="31" must="1"/>
+		<group>
+			<param name="FIRST_QUARTER_OF_YEAR_MONTH" type="bound" subtype="month" boundto="PERIOD_TYPE" when="4" label="MONTH_START" default="1" start="1" end="12" must="1"/>
+			<param name="SECOND_QUARTER_OF_YEAR_MONTH" type="bound" subtype="month" boundto="PERIOD_TYPE" when="4" label="MONTH_START" default="1" start="1" end="12" must="1"/>
+		</group>
+		<group>
+			<param name="THIRD_QUARTER_OF_YEAR_MONTH" type="bound" subtype="month" boundto="PERIOD_TYPE" when="4" label="MONTH_START" default="1" start="1" end="12" must="1"/>
+			<param name="FOURTH_QUARTER_OF_YEAR_MONTH" type="bound" subtype="month" boundto="PERIOD_TYPE" when="4" label="MONTH_START" default="1" start="1" end="12" must="1"/>
+		</group>
+		<param name="NAME_OF_YEAR_MONTH" type="bound" subtype="month" boundto="PERIOD_TYPE" when="5" label="MONTH_START" default="1" start="1" end="12" must="1"/>
+		<param name="PERIOD_GENERATOR" type="rangenumber" default="10" label="PERIOD_GENERATOR" must="1" start="1" end="60" />
+	</params>
+</install>

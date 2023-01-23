@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<!--<param name="FILE" type="file" default="" label="File" must="1" />-->
+		<param name="DATA" type="textarea" default="" label="Data" class="form-control" rows="10" cols="50" must="1" />
+		<param name="ID" type="hidden" default="" />
+	</params>
+</install>

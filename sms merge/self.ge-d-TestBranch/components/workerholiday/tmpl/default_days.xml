@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="number" default="" label="#" rclass="text-center" hclass="text-center" />
+		<param order="" type="org" label="org" key="ORG" rclass="text-left" T="1"/>
+		<param order="" type="print" label="DATE" key="REAL_DATE" rclass="text-center" />
+		<param order="" type="print" label="START_TIME" key="START_TIME" rclass="text-center" />
+		<param order="" type="print" label="END_TIME" key="END_TIME" rclass="text-center" />
+		<param order="" type="replacers" label="replacing_workers" rclass="text-left" key="REPLACING_WORKERS" T="1" Tscope="person" />
+	</params>
+</install>

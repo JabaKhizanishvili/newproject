@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<params class="table table-bordered table-condensed table-hover table-striped exporttable" id="exportable" name="WorkerHolidays">
+		<param order="" type="number" default="" label="#" rclass="text-center" />
+		<param order="" type="printm" label="worker" key="WFIRSTNAME, WLASTNAME" rclass="text-left" T="1" Tscope="person" />
+		<param order="" type="print" label="PRIVATE_NUMBER" key="PRIVATE_NUMBER" rclass="text-left" />
+		<param order="" type="org" label="org" rclass="text-center" key="ORG"  T="1"/>
+		<param order="" type="workerUnits" label="org_place" key="WORKER_ID" rclass="text-left" T="1"/>
+		<param order="" type="print" label="HOLIDAY INFORMATION" key="HTITLE" rclass="text-left" T="1"/>
+		<param order="" type="htype" label="HTYPE" key="HTYPE" rclass="text-left" />
+		<param order="" type="approve" label="status" rclass="text-left" state_id='ID' state_key="STATUS" />
+		<param order="" type="print" label="Holiday Start G" key="START_DATE" rclass="text-center" />
+		<param order="" type="print" label="Holiday End G" key="END_DATE" rclass="text-center" />
+		<param order="" type="print" label="DAY COUNT G" rclass="text-center" key="DAY_COUNT" />
+		<param order="" type="fpersons" label="replacing_workers" rclass="text-left" key="REPLACING_WORKERS" T="1"/>
+		<param order="" type="printm" label="APPROVER" rclass="text-left" key="AFIRSTNAME, ALASTNAME" T="1" Tscope="person"/>
+		<param order="" type="print" label="APPROVE_DATE" rclass="text-left" key="APPROVE_DATE" />
+		<param order="" type="print" label="comment" key="W_HOLIDAY_COMMENT" rclass="text-center" />
+		<param order="" type="print" label="REC_DATE" key="REC_DATE" rclass="text-left" />
+		<param order="" type="wworker" label="AUTHOR" key="REC_USER" rclass="text-left" T="1"/>
+		<param order="" type="print" label="ID" key="ID" rclass="text-center" />
+	</params>
+</install>

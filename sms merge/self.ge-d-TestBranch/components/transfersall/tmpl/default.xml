@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="page_filter_block" type="h">
+		<filter name="firstname" type="stext" default="" label="firstname" class="kbd" />
+		<filter name="lastname" type="stext" default="" label="lastname" class="kbd" />
+		<!--		<filter name="start_date" type="calendar" default="" label="start date" />
+		<filter name="end_date" type="calendar" default="" label="end date" />-->
+		<!--<filter name="year" type="year" default="" label="year" />-->
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="number" default="" label="#" rclass="text-center" />
+		<!--<param order="" type="checkall" default="" label="" rclass="text-center"   />-->
+		<param order="worker_name" type="print" label="worker" key="WORKER_NAME" rclass="text-left" />
+		<param order="w.position" type="print" label="position" key="OLD_POSITION" rclass="text-left" />
+		<param order="rec_user_name" type="print" label="rec_user_name" key="REC_USER_NAME" rclass="text-left" />
+		<param order="t.rec_date" type="print" label="REC_DATE" key="REC_DATE_V" rclass="text-center" />
+		<param order="t.position" type="print" label="new_position" key="POSITION" rclass="text-left" />
+		<param order="chief_name" type="print" label="CHIEF_NAME_NEW" rclass="text-center" key="CHIEF_NAME" />
+		<param order="t.org_place" type="unit" label="org_place" key="ORG_PLACE" rclass="text-left" />
+		<param order="t.work_type" type="worktype" label="work_type" key="WORK_TYPE" rclass="text-left" />
+		<!--<param order="approver_name" type="print" label="APPROVER" rclass="text-center" key="APPROVER_NAME" />-->
+		<param order="t.approve_date" type="print" label="APPROVE_DATE" rclass="text-center" key="APPROVE_DATE_V" />
+		<param order="t.transfer_date" type="print" label="TRANSFER_DATE" rclass="text-center" key="TRANSFER_DATE_V" />
+		<param order="t.ccomment" type="print" label="comment" rclass="text-center" key="CCOMMENT" />
+		<param order="t.status" type="approve" label="status" rclass="text-center" state_id='ID' state_key="STATUS" />
+		<param order="t.id" type="print" label="ID" key="ID" rclass="text-center" />
+	</params>
+</install>

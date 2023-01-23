@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Created by Irakli Gzirishvili 28-10-2021-->
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="lib_app_categories" history="yes">
+	<columns>
+		<column name="id" type="number" null="n" />
+		<column name="lib_title" type="varchar2" length="500" />
+		<column name="lib_desc" type="varchar2" length="4000" />
+		<column name="active" type="number" null="n" default="1" />
+		<column name="ordering" type="number" null="n" default="999" />
+		<column name="color" type="varchar2"  length="20" />
+		<column name="client_id" type="number" default="00" />
+	     <column name="modify_user" type="number" />
+          <column name="modify_date" type="date" />
+     </columns>
+	<history>
+		<column name="lib_title" type="varchar2" length="500" />
+		<column name="lib_desc" type="varchar2" length="4000" />
+		<column name="active" type="number" null="n" default="1" />
+		<column name="ordering" type="number" null="n" default="999" />
+		<column name="color" type="varchar2"  length="20" />
+	     <column name="modify_user" type="number" />
+          <column name="modify_date" type="date" />
+     </history>
+	<sequence  name="library" />
+	<histsequence  name="sqs_app_categories_hist" />
+</table>

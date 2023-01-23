@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<param name="WORKER" type="workerprint" default="" wtype="worker" label="WORKER" />
+		<param name="START_DATE" type="print" default="" label="START_DATE" />
+		<param name="END_DATE" type="print" default="" label="END_DATE" />
+	</params>
+	<params group="details">
+		<param name="DAY_WORKED_TIME" type="number" default="" step="0.1" label="WORKERDHOUR_DAY" must="1" />
+		<param name="NIGHT_WORKED_TIME" type="number" default="" step="0.1" label="WORKERDHOUR_NIGHT" must="1" />
+		<param name="ID" type="hidden" default="" />
+	</params>
+</install>

@@ -1,0 +1,67 @@
+
+.bfh-timepicker-popover {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 100px;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-clip: padding-box;
+	float: none !important;
+}
+
+.bfh-timepicker-popover > table {
+  /*width: 180px;*/
+  margin: 0;
+}
+
+.bfh-timepicker-popover > table > tbody > tr > td {
+  text-align: center;
+  border: 0;
+}
+
+.bfh-timepicker-popover > table > tbody > tr > td.separator {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 28px;
+}
+
+.bfh-timepicker-popover > table > tbody > tr > td > div > input {
+  width: 80px !important;
+  text-align: center;
+}
+
+.bfh-timepicker {
+  position: relative;
+}
+
+.bfh-timepicker-toggle {
+  *margin-bottom: -3px;
+}
+
+.bfh-timepicker-toggle > input[readonly] {
+  cursor: inherit;
+  background-color: inherit;
+}
+
+.open > .bfh-timepicker-popover {
+  display: block;
+}
+
+.input-group > .bfh-number {
+  border-right: 0;
+}
+.bfh-number-btn
+{
+	cursor: pointer;
+}
+.input-group > .bfh-number-btn:hover {
+  background-color: #cccccc;
+}

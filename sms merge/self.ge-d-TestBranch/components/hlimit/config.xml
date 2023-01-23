@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/component.config.dtd">
+<config>
+	<defaultTask value="add" />
+	<tasks>
+		<task name="add" default="1" label="add" />
+		<task name="edit" default="1" label="edit" />
+		<task name="delete" default="1" label="delete" />
+		<task name="generation" default="1" label="confirm" />
+		<task name="periodedit" default="1" label="Period Edit" />
+		<task name="trigger_holidays_cron" default="1" label="TRIGGER_HOLIDAYS_CRON" />
+		<task name="nextgeneration" default="1" label="nextgeneration" />
+	</tasks>
+	<allowTasks>
+		<task name="cancel" default="1" label="cancel" />
+		<task name="save" default="1" label="save" />
+	</allowTasks>
+</config>

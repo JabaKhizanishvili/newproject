@@ -1,0 +1,49 @@
+<table name="hrs_graph" title="Graphs" >
+	<columns>
+		<column name="worker" alias="w_id" />
+		<column name="gt_day" />
+		<column name="gt_year" />
+		<!--<column name="time_id" />-->
+		<column name="real_date" />
+		<column name="org" alias="org_id" />
+		<column name="lib_title" alias="title" />
+		<column name="lib_desc" alias="description" />
+		<column name="start_time" />
+		<column name="end_time" />
+		<column name="start_break" />
+		<column name="end_break"  />
+		<column name="color" />
+		<column name="rest_type" />
+		<column name="rest_minutes" />
+		<column name="rest_time" />
+ 		<!--<column name="change_woker" />-->
+ 		<!--<column name="change_date" />-->
+ 		<!--<column name="vacation_index" />-->
+ 		<!--<column name="working_time"  />-->
+ 		<!--<column name="night_time" />-->
+		<!--<column name="modify_user" />-->
+		<!--<column name="modify_date" />-->
+	</columns>
+	<request>
+		<item name="start" type="number" required="0">
+			<value>
+				<v name="min" value="0" />
+				<v name="max" value="Unlimited" />
+				<v name="default" value="0" />
+			</value>
+		</item>
+		<item name="limit" type="number" required="0">
+			<value>
+				<v name="min" value="0" />
+				<v name="max" value="500" />
+				<v name="default" value="50" />
+			</value>
+		</item>
+	</request>
+	<response>
+		<item name="start" type="number" />
+		<item name="limit" type="number" />
+		<item name="count" type="number" />
+	</response>
+	<order by="real_date" type="asc" />
+</table>

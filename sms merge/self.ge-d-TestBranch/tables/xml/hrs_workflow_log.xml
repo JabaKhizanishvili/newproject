@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="hrs_workflow_log">
+	<columns>
+		<column name="log_flow" type="number" />
+		<column name="log_task" type="number" />
+		<column name="log_type" type="varchar2" length="100" />
+		<column name="log_title" type="varchar2" length="4000" />
+		<column name="log_user" type="number" />
+		<column name="log_date" type="date" />
+		<column name="log_id" type="number" />
+		<column name="modify_user" type="number" />
+		<column name="modify_date" type="date" />
+	</columns>
+	<sequence name="sqs_workflow_log" />
+</table>

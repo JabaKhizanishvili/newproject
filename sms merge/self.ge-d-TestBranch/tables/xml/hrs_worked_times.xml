@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="hrs_worked_times" history="yes">
+	<columns>
+		<column name="id" type="number" />
+		<column name="worker" type="number" />
+		<column name="org" type="number" />
+		<column name="org_place" type="number" />
+		<column name="time_id" type="number" />
+		<column name="office" type="number" />
+		<column name="status" type="number" default="00" />
+		<column name="worked_time" type="number" />
+		<column name="day_worked_time" type="number" />
+		<column name="night_worked_time" type="number" />
+		<column name="start_date" type="date" />
+		<column name="end_date" type="date" />
+		<column name="start_pic" type="varchar2" length="4000" />
+		<column name="end_pic" type="varchar2" length="4000" />
+		
+		<column name="create_date" type="date" />
+		<column name="modify_user" type="number" />
+		<column name="modify_date" type="date" />
+		<column name="del_user" type="number"  />
+		<column name="del_date" type="date" />
+	</columns>
+	<history>
+		<column name="status" type="number" default="00" />
+		<column name="worked_time" type="number" />
+		<column name="day_worked_time" type="number" />
+		<column name="night_worked_time" type="number" />
+		<column name="start_date" type="date" />
+		<column name="end_date" type="date" />
+		<column name="modify_user" type="number" />
+		<column name="modify_date" type="date" />
+		<column name="del_user" type="number"  />
+		<column name="del_date" type="date" />
+	</history>
+	<sequence  name="sqs_hrs_worked_times" />
+	<histsequence  name="sqs_hrs_worked_times_hist" />
+</table>

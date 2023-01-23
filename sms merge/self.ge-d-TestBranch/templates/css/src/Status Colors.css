@@ -1,0 +1,48 @@
+.cl_blue {
+	color: #0000ff;
+	font-weight: bolder;
+}
+.cl_black {
+	color: #000;
+	font-weight: bolder;
+}
+.cl_orange {
+	color: #ff6600;
+	font-weight: bolder;
+}
+.cl_808000 {
+	color: #808000;
+	font-weight: bolder;
+}
+.st_not_in {
+	color: red;
+	font-weight: bolder;
+}
+.cl_9400D3 {
+	color: #9400d3;
+	font-weight: bolder;
+}
+.st_day_off {
+	color: #999999;
+	font-weight: bolder;
+}
+.st_staff_in {
+	color: green;
+	font-weight: bolder;
+}
+.cl_yellow {
+	color: #ffbf00;
+	font-weight: bolder;
+}
+.cl_grey {
+	color: #ff1fff;
+	font-weight: bolder;
+}
+.cl_FFBF00 {
+	color: #ffbf00;
+	font-weight: bolder;
+}
+.cl_coffe {
+	color: #bf8080;
+	font-weight: bolder;
+}

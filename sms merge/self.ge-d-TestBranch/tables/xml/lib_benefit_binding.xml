@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Created by Irakli Gzirishvili 28-10-2021-->
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="lib_benefit_binding" history="yes">
+	<columns>
+		<column name="id" type="number" null="n"/>
+		<column name="worker" type="number"/>
+		<column name="person" type="number"/>
+		<column name="orgpid" type="number"/>
+		<column name="org" type="number"/>
+		<column name="benefit" type="number"/>
+		<column name="identifier" type="varchar2" length="4000" />
+		<column name="start_date" type="date"/>
+		<column name="end_date" type="date"/>
+		<column name="active" type="number"/>
+		<column name="modify_user" type="number" />
+		<column name="modify_date" type="date" />
+	</columns>
+	<sequence  name="sqs_benefit_binding" />
+</table>

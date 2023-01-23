@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<group>
+			<param name="ID" type="printworker" label="WORKER" />
+			<param name="ORG" type="orgprint" default="" label="ORG" />
+		</group>
+	</params>
+	<params group="more">
+		<param name="OPERATION_COMMENT" type="textarea" default="" label="COMMENT" geokbd="1" />
+		<param name="ID" type="hidden"/>
+	</params>
+</install>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Created by Irakli Gzirishvili 28-10-2021-->
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="lib_f_salary_types" history="yes">
+	<columns>
+		<column name="id" type="number" null="n" />
+		<column name="lib_title" type="varchar2" length="500" Ti="1" />
+		<column name="lib_desc" type="varchar2" length="4000" />
+		<column name="active" type="number" null="n" default="1 " />
+		<column name="ordering" type="number" null="n" default="999" />
+		<column name="client_id" type="number" default="00" />
+		
+		<column name="payment_type" type="number" default="00"/>
+<!--		<column name="gross_net" type="number" default="00"/>-->
+		<column name="accuracy_period" type="number" default="00"/>
+		<column name="taxes_yn" type="number"/>
+	     <column name="modify_user" type="number" />
+          <column name="modify_date" type="date" />
+     </columns>
+	<sequence  name="sqs_f_salary_types" />
+</table>

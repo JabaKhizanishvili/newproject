@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/edit.dtd">
+<install type="component" version="1.5.0">
+	<params>
+		<param name="U_PASSWORD" type="password" default="" label="Current Password" must="1" />
+		<param name="NEW_PASSWORD" type="password" default="" label="New Password" must="1" />
+		<param name="NEW_PASSWORD_CONFIRMATION" type="password" default="" label="Confirm New Password" must="1" />
+	</params>
+</install>

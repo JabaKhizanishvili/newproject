@@ -1,0 +1,87 @@
+.Georgian1
+{
+	font-size: 12px;
+	line-height: 14px;
+	margin-bottom: 5px;
+	color: #0a1085;
+}
+.Georgian2
+{
+	font-size: 14px;
+	line-height: 14px;
+	margin-bottom: 5px;
+	color: #0a1085;
+}
+.Georgian3
+{
+	font-size: 16px;
+	line-height: 16px;
+	margin-bottom: 5px;
+	color: #0a1085;
+}
+.table-custom
+{
+	width: 100%;
+}
+.table-filter-vertical .page_filter_caption
+{
+	text-align: right;
+}
+.filter-block
+{
+	padding-bottom: 20px;
+}
+
+@media print {
+	.menu_block,
+	.table-filter-vertical,
+	#page_title_block,
+	.toolbar,
+	.help_c,
+	.footer_wrapper,
+	.filter-block,
+	div.debug_navigation,
+	.submenu_block
+	{
+		display:none;
+	}
+	body .report_page_result
+	{
+		display:block;
+	}
+	.content_wrapper div.menu_box_wrapper,
+	div.shadow
+	{
+		border:none;
+	}
+	div.content_main
+	{
+		margin-bottom: 0px;
+		padding: 0px;
+	}
+	body div.content_wrapper
+	{
+		margin: 0 auto;
+		min-width: fit-content;
+		padding-bottom: 0;
+		width: 100%;
+	}
+	body div.top
+	{
+		min-height: fit-content;
+		width: 100%;
+	}
+	*
+	{
+		height:auto !important;
+	}
+	body
+	{
+		background: none !important;
+	}
+	a[href]:after 
+	{
+		content: none !important;
+	}	
+}
+

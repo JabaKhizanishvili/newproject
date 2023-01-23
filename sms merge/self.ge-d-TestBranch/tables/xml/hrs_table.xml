@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://apps.magticom.ge/pda/defines/xml/table.dtd">
+<table name="hrs_table" history="yes">
+	<columns>
+		<column name="id" type="number" null="n" />
+		<column name="worker" type="number" null="n" />
+		<column name="bill_id" type="number" null="n" />
+		<column name="day01" type="number" default="00" />
+		<column name="day02" type="number" default="00" />
+		<column name="day03" type="number" default="00" />
+		<column name="day04" type="number" default="00" />
+		<column name="day05" type="number" default="00" />
+		<column name="day06" type="number" default="00" />
+		<column name="day07" type="number" default="00" />
+		<column name="day08" type="number" default="00" />
+		<column name="day09" type="number" default="00" />
+		<column name="day10" type="number" default="00" />
+		<column name="day11" type="number" default="00" />
+		<column name="day12" type="number" default="00" />
+		<column name="day13" type="number" default="00" />
+		<column name="day14" type="number" default="00" />
+		<column name="day15" type="number" default="00" />
+		<column name="daysum01" type="number" default="00" />
+		<column name="day16" type="number" default="00" />
+		<column name="day17" type="number" default="00" />
+		<column name="day18" type="number" default="00" />
+		<column name="day19" type="number" default="00" />
+		<column name="day20" type="number" default="00" />
+		<column name="day21" type="number" default="00" />
+		<column name="day22" type="number" default="00" />
+		<column name="day23" type="number" default="00" />
+		<column name="day24" type="number" default="00" />
+		<column name="day25" type="number" default="00" />
+		<column name="day26" type="number" default="00" />
+		<column name="day27" type="number" default="00" />
+		<column name="day28" type="number" default="00" />
+		<column name="day29" type="number" default="00" />
+		<column name="day30" type="number" default="00" />
+		<column name="day31" type="number" default="00"  />
+		<column name="daysum02" type="number"  default="00" />
+		<column name="daysum" type="number" default="00" />
+		<column name="sumhour" type="number" default="00" />
+		<column name="overtimehour" type="number" default="00" />
+		<column name="nighthour" type="number" default="00" />
+		<column name="holidayhour" type="number" default="00" />
+		<column name="otherhour" type="number" default="00" />
+		<column name="bulletins" type="number" default="00" />
+		<column name="holiday" type="number" default="00" />
+		<column name="nholiday" type="number"  default="00"/>
+		<column name="other" type="number" default="00" />
+		<column name="holidays" type="number" default="00" />	
+		<column name="status" type="number" default="00" />
+		<column name="change_woker" type="number" default="00" />
+		<column name="change_date" type="date" />
+		<column name="approve" type="number" default="00"/>
+		<column name="approve_date" type="date" />
+		<column name="org"  type="number" default="00"/>
+		<column name="client_id" type="number" default="00" />
+	</columns>
+	<history>
+		<column name="worker" type="number" null="n" />
+		<column name="bill_id" type="number" null="n" />
+		<column name="day01" type="number" default="00" />
+		<column name="day02" type="number" default="00" />
+		<column name="day03" type="number" default="00" />
+		<column name="day04" type="number" default="00" />
+		<column name="day05" type="number" default="00" />
+		<column name="day06" type="number" default="00" />
+		<column name="day07" type="number" default="00" />
+		<column name="day08" type="number" default="00" />
+		<column name="day09" type="number" default="00" />
+		<column name="day10" type="number" default="00" />
+		<column name="day11" type="number" default="00" />
+		<column name="day12" type="number" default="00" />
+		<column name="day13" type="number" default="00" />
+		<column name="day14" type="number" default="00" />
+		<column name="day15" type="number" default="00" />
+		<column name="daysum01" type="number" default="00" />
+		<column name="day16" type="number" default="00" />
+		<column name="day17" type="number" default="00" />
+		<column name="day18" type="number" default="00" />
+		<column name="day19" type="number" default="00" />
+		<column name="day20" type="number" default="00" />
+		<column name="day21" type="number" default="00" />
+		<column name="day22" type="number" default="00" />
+		<column name="day23" type="number" default="00" />
+		<column name="day24" type="number" default="00" />
+		<column name="day25" type="number" default="00" />
+		<column name="day26" type="number" default="00" />
+		<column name="day27" type="number" default="00" />
+		<column name="day28" type="number" default="00" />
+		<column name="day29" type="number" default="00" />
+		<column name="day30" type="number" default="00" />
+		<column name="day31" type="number" default="00"  />
+		<column name="daysum02" type="number"  default="00" />
+		<column name="daysum" type="number" default="00" />
+		<column name="sumhour" type="number" default="00" />
+		<column name="overtimehour" type="number" default="00" />
+		<column name="nighthour" type="number" default="00" />
+		<column name="holidayhour" type="number" default="00" />
+		<column name="otherhour" type="number" default="00" />
+		<column name="bulletins" type="number" default="00" />
+		<column name="holiday" type="number" default="00" />
+		<column name="nholiday" type="number"  default="00"/>
+		<column name="other" type="number" default="00" />
+		<column name="holidays" type="number" default="00" />	
+		<column name="status" type="number" default="00" />
+		<column name="change_woker" type="number" default="00" />
+		<column name="change_date" type="date" />
+		<column name="approve" type="number" default="00"/>
+		<column name="approve_date" type="date" />
+		<column name="org"  type="number" default="00"/>
+	</history>
+	<sequence  name="library" />
+	<histsequence  name="sqs_table_hist" />
+</table>

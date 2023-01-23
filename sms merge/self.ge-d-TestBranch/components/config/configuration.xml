@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params name="Global Configuration" ordering="1" >
+		<param name="" type="spacer" default="basic Config" label="" description="" />
+		<param name="system_org" type="text" default="" label="system_org" must="1" geokbd="1" />
+<!--		<param name="system_tin" type="text" default="" label="system_tin" must="1" />-->
+		<param name="system_logo"
+			   width="160"
+			   height="80"
+			   viewport-width="320"
+			   viewport-height="160"
+			   boundary-width="340"
+			   boundary-height="180"
+			   responsive-viewport-width="320"
+			   responsive-viewport-height="160"
+			   responsive-boundary-width="340"
+			   responsive-boundary-height="180"
+			   type="cropphoto"
+			   default=""
+			   label="system_logo"
+			   must="1" />
+		<param name="system_email" type="text" default="" label="system_email"  />
+		<param name="system_address" type="text" default="" label="system_address" />
+		<param name="system_contact" type="text" default="" label="system_contact"  />
+		<param name="" type="spacer" default="Access Control Config" label="" description="" />
+		<param name="access_click_ip" type="textarea" default="" label="access_click_ip" description="enter comma separated list" />
+		<param name="access_excluded_workers" type="slfstaff" case="1"  default="" label="access_excluded_workers" description="" />
+		<param name="" type="spacer" default="LOGS CONFIG" label="" description="" />
+		<param name="save_ip_in_logs" type="radio" default="1"  must="1" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+<!--		<param name="" type="spacer" default="Latenes Config" label="" description="" />-->
+		<!--<param name="hr_user_role" type="userrole" default="" label="hr_user_role" must="1" />-->
+		<!--<param name="head_user_role" type="userrole" default="" label="head_user_role" must="1" />-->
+		<!--<param name="hr_private_time_limit" type="text" default="1000" label="hr_private_time_limit" must="1" />-->
+		<!--		<param name="" type="spacer" default="Private Time Config" label="" description="" />
+		<param name="hr_holiday_before_minutes" type="text" default="15" label="hr_holiday_before_minutes" must="1" />-->
+		<!--<param name="hr_free_minutes" type="text" default="10" label="hr_free_minutes" must="1" />-->
+		<!--<param name="hr_decret_minutes" type="text" default="60" label="hr_decret_minutes" must="1" />-->
+		<!--<param name="" type="spacer" default="Call Center Config" label="" description="" />-->
+		<!--<param name="call_center_number" type="text" default="" label="call_center_number" must="1" />-->
+		<!--<param name="" type="spacer" default="AutoPark" label="" description="" />-->
+		<!--<param name="autopark_manager" type="userroles" default="" label="new_ldap_user_role" must="1" />-->
+	</params>
+	<params group="details">
+		<param name="" type="spacer" default="Cron Job Config" label="" description="" />
+		<param name="hr_excuse_minutes" type="text" default="60" label="hr_excuse_minutes" must="1" />
+		<param name="hr_logout_hours" type="text" default="6" label="hr_logout_hours" must="1" />
+
+		<param name="run_logout" type="radio" default="0"  must="1" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="run_logout_alert" type="radio" default="0"  must="1" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="run_logout_set_lateness" type="radio" default="0"  must="1" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="run_sms" type="radio" default="0"  must="1" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<!--<param name="" type="spacer" default="Holiday Restart Config" label="" description="" />-->
+		<!--<param name="holiday_restart_day" type="rangenumber" default="1" start="1" end="28"  must="1" />-->
+		<!--<param name="holiday_restart_month" type="month" default="1" start="1" end="12"  must="1" />-->
+		<!--<param name="holiday_start_limit" type="list" default="0"  must="1" >-->
+		<!--<option value="1">Full Day Holiday</option>-->
+		<!--<option value="2">partial accounting</option>-->
+		<!--<option value="3">After 11 month accounting</option>-->
+		<!--</param>-->
+		<!--		<param name="" type="spacer" default="GPS Config" label="" description="" />
+		<param name="holiday_gps_enable" type="radio" default="0"  must="1" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>-->
+		<param name="" type="spacer" default="DUPLICATE_IN_OUT_CONFIG" label="" description="" />
+		<param name="duplicate_in_out" type="radio" default="0"  must="1" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+	</params>
+</install>

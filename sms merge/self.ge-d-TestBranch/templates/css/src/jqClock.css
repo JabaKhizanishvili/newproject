@@ -1,0 +1,10 @@
+.display .digits
+{
+	overflow: hidden;
+	margin: 0px auto;
+	text-align: center;
+}
+.digits span
+{
+	font-size:22px;
+}

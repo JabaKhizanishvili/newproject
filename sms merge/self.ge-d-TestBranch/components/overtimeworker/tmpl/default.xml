@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<param name="WORKER_ID" type="slfstaff" case="9" default="" label="Worker" must="1" />
+		<param name="START_DATE" type="calendar" default="now" label="Private Time Date" must="1" />
+		<!--		<param name="DAY_COUNT" type="number"  dec="2" default="0" label="OVERTIME_HOURS" must="1" min="0" max="24"  step="0.01"/>-->
+		<param name="DAY_COUNT" maxhours="24"  minhours="1"   maxminute="60" minminute="1" type="entertime" default=""  dec="2" class="kbd"  label="OVERTIME_HOURS" stepforhrsmin="1" step="0.01" must="1" />
+		<param name="INFO" type="text" default="" label="INFO" class="kbd"   />
+		<param name="ID" type="hidden" default="" />
+
+	</params>
+</install>

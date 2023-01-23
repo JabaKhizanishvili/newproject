@@ -1,0 +1,10 @@
+.apilink-data i
+{
+	float: right;
+	font-size: 20px;
+	cursor: pointer;
+}
+div.clone-head-table-wrap
+{
+	top: 82px !important;
+}

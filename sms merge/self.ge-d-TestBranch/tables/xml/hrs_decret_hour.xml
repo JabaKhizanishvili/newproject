@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="hrs_decret_hour" history="yes">
+	<columns>
+		<column name="id" type="number" null="n" />
+		<column name="worker" type="number" null="n" />
+		<column name="type" type="number" null="n" />
+		<column name="start_date" type="date" />
+		<column name="end_date" type="date" />
+		<column name="rec_date" type="date" />
+		<column name="status" type="number" null="n" />
+		<column name="approve" type="number" null="n" />
+		<column name="approve_date" type="date" />
+		<column name="del_user" type="number" null="n"  />
+		<column name="del_date" type="date" />
+		<column name="ucomment" type="varchar2" length="4000"  />
+		<column name="client_id" type="number" default="00" />
+	</columns>
+	<history>
+		<column name="worker" type="number" null="n" />
+		<column name="type" type="number" null="n" />
+		<column name="start_date" type="date" />
+		<column name="end_date" type="date" />
+		<column name="rec_date" type="date" />
+		<column name="status" type="number" null="n" />
+		<column name="approve" type="number" null="n" />
+		<column name="approve_date" type="date" />
+		<column name="del_user" type="number" null="n"  />
+		<column name="del_date" type="date" />
+		<column name="ucomment" type="varchar2" length="4000"  />
+	</history>
+	<sequence  name="sqs_applications" />
+	<histsequence  name="sqs_decret_hour_hist" />
+</table>

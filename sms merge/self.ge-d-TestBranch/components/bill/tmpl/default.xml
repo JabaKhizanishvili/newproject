@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://apps.magticom.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="table table-bordered table-condensed table-filter-vertical" type="v">
+		<filter name="start_date" type="calendar" default="now -1 month" label="Start Date" />
+		<filter name="end_date" type="calendar" default="now" label="End Date" />
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+</install>

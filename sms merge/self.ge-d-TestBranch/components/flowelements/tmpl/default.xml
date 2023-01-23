@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="page_filter_block" type="h">
+		<filter name="title" type="text" default="" label="Title" class="kbd" />
+		<filter name="FLOW" type="flow" default="" label="application" />
+		<filter name="active" type="state" default="-1" label="State">
+			<option value="-1">Select State</option>
+			<option value="0">Inactive</option>
+			<option value="1">Active</option>
+		</filter>
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="number" default="" label="#" rclass="text-center" hclass="text-center" />
+		<param order="" type="checkall" default="" label="" rclass="text-center"   />
+		<param order="t.lib_title" type="editlink" label="Title" key="LIB_TITLE" rclass="td_left" T="1" />
+		<!--<param order="t.lib_key" type="print" label="marker" key="LIB_KEY" rclass="td_left" />-->
+		<param order="t.lib_desc" type="print" label="Description" key="LIB_DESC" rclass="td_left" T="1" />
+		<param order="t.flow" type="print" label="application" key="FLOWTITLE" rclass="td_left" T="1" />
+		<param order="t.lib_level" type="print" label="LEVEL" key="LIB_LEVEL" rclass="td_left" />
+		<!--<param order="t.ordering" type="print" label="ordering" key="ORDERING" rclass="td_left" />-->
+		<!--<param order="" type="print" label="DURATION"  key="DURATION" rclass="text-center"  />-->
+		<!--<param order="" type="attributes" label="Attributes" rclass="td_left" />-->
+		<!--<param order="" type="actions" label="actions" rclass="td_left" />-->
+		<param order="t.lib_group" type="print"  key="LIB_GROUP" label="Workers group" />
+		<param order="t.active" type="state" label="State" rclass="text-center" state_id='ID' state_key="ACTIVE" />
+		<!--<param order="" type="joinprint" label="PARALEL" key="PARALEL" rclass="text-center" patern="PARALEL - PARALEL_TYPE" />-->
+		<!--<param order="tk.LIB_FILE" type="print" label="FILE" key="LIB_FILE" rclass="td_left" />-->
+		<!--<param order="" type="print" label="IF" key="IF" rclass="td_left" />-->
+		<param order="t.id" type="print" label="ID" key="ID" rclass="text-center" hclass="text-center"/>
+	</params>
+</install>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<param name="" type="spacer" default="PRIVATE INFORMATION" label="" description="" />
+		<group>
+			<param name="FIRSTNAME" type="text" default="" label="FIRSTNAME" must="1"  geokbd="1" />
+			<param name="LASTNAME" type="text" default="" label="LASTNAME" must="1" geokbd="1" />
+			<param name="FATHER_NAME" type="text" default="" label="FATHER_NAME" geokbd="1" />
+		</group>
+		<param name="PRIVATE_NUMBER" type="mask" default="" label="PRIVATE_NUMBER"   mask="00000000000" placeholder="___________" must="1" />
+		<param name="BIRTHDATE" type="calendar" default="" label="BIRTHDATE" must="1" />
+		<param name="GENDER" type="radio" default="1" label="GENDER" must="1">
+			<option value="1">Male</option>
+			<option value="2">FeMale</option>
+		</param>		
+		<param name="NATIONALITY" type="radio" default="1" label="NATIONALITY" must="1" >
+			<option value="1">Georgia</option>
+			<option value="0">Other Country</option>
+		</param>	
+		<param name="MOBILE_PHONE_NUMBER" type="mask" default="" label="MOBILE_PHONE_NUMBER"  mask="000-00-00-00" placeholder="___-__-__-__" />
+		<param name="EMAIL" type="text" default="" label="EMAIL" />
+		<param name="LEGAL_ADDRESS" type="text" default="" label="LEGAL_ADDRESS" geokbd="1" />
+		<param name="ACTUAL_ADDRESS" type="text" default="" label="ACTUAL_ADDRESS" geokbd="1" />
+		<param name="U_COMMENT" type="textarea" default="" label="COMMENT" geokbd="1" />
+		<param name="PHOTO" type="photo" default="" label="PHOTO" must="1"  />
+		<param name="ACTIVE" type="radio" default="1" label="Status">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+	</params>
+	<params group="system">
+		<param name="" type="spacer" default="SYSTEM INFORMATION" label="" description="" />
+		<param name="PERMIT_ID" type="text" default="" label="PERMIT_ID"   mask="0000000000" placeholder="__________" />
+		<param name="ACCOUNTING_OFFICE" type="officeschosen" label="ACCOUNTING_OFFICE"  />
+		<param name="ACCESSS_TYPE" type="accesslist" default="-1" label="ACCESSS_TYPE"  />
+		<param name="LDAP_USERNAME" type="text" default="" label="LDAP USERNAME" must="1" />
+		<param name="USER_ROLE" type="userrole" default="" label="USER_ROLE"  must="1" />
+		<param name="COUNTING_TYPE" type="radio" default="0" label="Counting System Type">
+			<option value="0">Cards</option>
+			<option value="1">System Buttons</option>
+		</param>
+		<param name="TIMECONTROL" type="radio" default="1">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="LIVELIST" type="radio" default="1" label="LIVELIST Control" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="SMS_REMINDER" type="radio" default="1" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="SMS_WORKER_LATENESS" type="radio" default="1" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="ID" type="hidden" default="" />
+	</params>
+</install>

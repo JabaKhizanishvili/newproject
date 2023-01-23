@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="lib_graph_times" history="yes">
+	<columns>
+		<column name="id" type="number" null="n" />
+		<column name="lib_title" type="varchar2" length="500" Ti="1" />
+		<column name="lib_desc" type="varchar2" length="4000" />
+		<column name="owner" type="number" null="n" />
+		<column name="start_time" type="varchar2"  length="20" />
+		<column name="end_time"  type="varchar2"  length="20" />
+		<column name="start_break"  type="varchar2"  length="20"  />
+		<column name="end_break" type="varchar2"  length="20" />
+		<column name="new_day" type="varchar2"  length="20" />
+		<column name="active" type="number" null="n" default="1" />
+		<column name="color" type="varchar2"  length="20" />
+		<column name="groups" type="varchar2"  length="4000" />
+		<column name="rest_type" type="number" default="1"   />
+		<column name="rest_minutes" type="number" default="00"   />
+		<column name="org" type="number"  />
+		<column name="vacation_index" type="number" default="1" />
+		<column name="working_time" type="number" default="00"   />
+		<column name="rest_time" type="number" default="00"   />
+		<column name="client_id" type="number" default="00" />
+		<column name="holiday_yn" type="number" />
+		<column name="checksum" type="varchar2" length="4000" />
+		<column name="modify_user" type="number" />
+		<column name="modify_date" type="date" />
+		<column name="time_code" type="varchar2" length="4000" />
+		<column name="type" type="number" default="00" />
+		<column name="min_working_hour" type="number" default="00" />
+		<column name="max_working_hour" type="number" default="00" />
+	</columns>
+	<history>
+		<column name="lib_title" type="varchar2" length="500" />
+		<column name="lib_desc" type="varchar2" length="4000" />
+		<column name="owner" type="number" null="n" />
+		<column name="start_time" type="varchar2"  length="20" />
+		<column name="end_time"  type="varchar2"  length="20" />
+		<column name="start_break"  type="varchar2"  length="20"  />
+		<column name="end_break" type="varchar2"  length="20" />
+		<column name="new_day" type="varchar2"  length="20" />
+		<column name="active" type="number" null="n" default="1" />
+		<column name="color" type="varchar2"  length="20" />
+		<column name="groups" type="varchar2"  length="4000" />
+		<column name="rest_type" type="number" default="1"   />
+		<column name="rest_minutes" type="number" default="00"   />
+		<column name="org" type="number"  />
+		<column name="vacation_index" type="number" default="1" />
+		<column name="working_time" type="number" default="00"   />
+		<column name="rest_time" type="number" default="00"   />
+		<column name="holiday_yn" type="number" />
+		<column name="checksum" type="varchar2" length="4000" />
+		<column name="modify_user" type="number" />
+		<column name="modify_date" type="date" />
+		<column name="time_code" type="varchar2" length="4000" />
+	</history>
+	<sequence  name="library" />
+	<histsequence  name="sqs_graph_times_hist" />
+</table>

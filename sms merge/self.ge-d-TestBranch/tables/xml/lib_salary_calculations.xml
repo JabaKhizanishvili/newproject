@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Created by Irakli Gzirishvili 28-10-2021-->
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="lib_salary_calculations" history="yes">
+	<columns>
+		<column name="id" type="number" />
+		<column name="sheet_id" type="number" default="00" />
+		<column name="worker" type="number" default="00" />
+		<column name="data_type" type="number" default="00" />
+		<column name="data_id" type="number" default="00" />
+		<column name="net" type="number" default="00" />
+		<column name="company_share" type="number" default="00" />
+		<column name="worker_share" type="number" default="00" />
+		<column name="worker_share_type" type="number" default="00" />
+		<column name="salary_sum" type="number" default="00" />
+		<column name="worker_income" type="number" default="00" />
+		<column name="worker_pension" type="number" default="00" />
+		<column name="company_pension" type="number" default="00" />
+
+		<column name="not_penalty" type="number" default="00" />
+		<column name="tax_base" type="number" default="00" />
+		<column name="real_income_tax" type="number" default="00" />
+		<column name="real_worker_pension" type="number" default="00" />
+		<column name="real_company_pension" type="number" default="00" />
+		<column name="cash" type="number" default="00" />
+		<column name="gen_hash" type="varchar2" length="500" />
+	</columns>
+	<sequence  name="sqs_salary_calculations" />
+</table>

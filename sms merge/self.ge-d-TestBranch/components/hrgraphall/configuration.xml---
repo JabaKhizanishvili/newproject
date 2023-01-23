@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params name="Graph Configuration" ordering="1500" >
+		<param name="" type="spacer" default="Graph Configuration" label="" description="" />
+		<param name="graph_show_week_times" type="radio" default="0"  must="1" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="graph_show_week_times_alert" type="radio" default="0"  must="1" >
+			<option value="0">Off</option>
+			<option value="1">Only Alert</option>
+			<option value="2">Disabled</option>
+		</param>
+		<param name="graph_show_selected_row_and_columns" type="radio" default="0"  must="1" >
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+	</params>
+	<params group="details">
+		
+		<param name="graph_autoovertime_week_start_day" type="weekday" default="1" label="graph_autoovertime_week_start_day" description="" />
+		<!--<param name="" type="spacer" default="Profile Page Config" label="" description="" />-->
+		<param name="" type="spacer" default="GRAPH CONFIG" label="" description="" />
+		<param name="graph_change_limit" type="list" default="0"  must="1" >
+			<option value="-60">GRAPH_CHANGE_LIMIT-60</option>
+			<option value="-45">GRAPH_CHANGE_LIMIT-45</option>
+			<option value="-30">GRAPH_CHANGE_LIMIT-30</option>
+			<option value="-15">GRAPH_CHANGE_LIMIT-15</option>
+			<option value="0">GRAPH_CHANGE_LIMIT0</option>
+			<option value="60">GRAPH_CHANGE_LIMIT60</option>
+			<option value="120">GRAPH_CHANGE_LIMIT120</option>
+			<option value="180">GRAPH_CHANGE_LIMIT180</option>
+			<option value="240">GRAPH_CHANGE_LIMIT240</option>
+			<option value="300">GRAPH_CHANGE_LIMIT300</option>
+		</param>
+		<param name="sub_graph_fill_day_back" type="rangenumber" default="2" start="2" end="15"  must="1"/>
+		<param name="standard_graph_days" type="rangenumber" default="7" start="1" end="30"  must=""/>
+		<param name="" type="spacer" default="night_hours" ydescription="" />
+		<param name="night_start_time" type="time" default="22:00"  description="" />
+		<param name="night_end_time" type="time" default="06:00" description="" />
+	</params>
+</install>

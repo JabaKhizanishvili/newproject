@@ -1,0 +1,273 @@
+/* 
+    Created on : Sep 27, 2016, 4:25:45 PM
+    Author     : ROMA
+*/
+
+@media only screen and (min-width : 320px) {
+
+}
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1199px) {
+	.navbar-header {
+		float: none;
+		height: 80px;
+	}
+	.navbar-left,.navbar-right {
+		float: none !important;
+	}
+	.navbar-toggle {
+		display: block;
+		margin: 25px 10px 0;
+	}
+	.navbar-collapse {
+		border-top: 1px solid transparent;
+		box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+	}
+	.navbar-fixed-top {
+		top: 0;
+		border-width: 0 0 1px;
+	}
+	.navbar-collapse.collapse {
+		display: none!important;
+	}
+	.navbar-nav {
+		float: none!important;
+		margin-top: 7.5px;
+	}
+	.navbar-nav>li {
+		float: none;
+	}
+	.navbar-nav>li>a {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	.collapse.in{
+		display:block !important;
+	}
+
+
+
+	/* === CUSTOMS ==== */
+
+	/* PIRVELI DONE */
+
+	ul.main_menu > li {
+		float: none;
+	}
+
+	ul.main_menu li.menu_item > a {
+		border: none;
+		font-size: 14px;
+		line-height: 30px;
+	}
+	ul.main_menu > li.havechild a .menu_title::after {
+		content: "\f282";
+		font-family: 'bootstrap-icons';
+		font-style: normal;
+		font-weight: 400;
+		margin-left: 5px;
+	}
+	ul.main_menu > li.menu_item_clicked  a .menu_title::after,
+	ul.main_menu > li.menu_item_active  a .menu_title::after {
+		content: "\f286";
+	}
+
+	/*	ul.main_menu > li.havechild.menu_item_clicked > a::after,
+		ul.main_menu > li.havechild.menu_item_active > a::after
+		{
+			content: "\f286";
+		}*/
+
+	.navbar-default {
+		float: none;
+	}
+
+	.main_menu li.menu_item ul {
+		/*display: block !important;*/
+		position: static !important;
+		/*height:  auto !important;*/
+		background: none;
+		border: none;
+	}
+
+
+	ul.main_menu li.menu_item ul.submenu {
+		display: none;
+		visibility: visible;
+		opacity: 1;
+		transition: none;
+		background:none;
+		border: none;
+		width: auto;
+	}
+
+	/*    ul.main_menu li.menu_item_clicked ul.submenu,*/
+	ul.main_menu li.menu_item_active ul.submenu
+	{
+		display: block;
+	}
+
+	.main_menu li.menu_item ul.submenu li {
+		border: none;
+	}
+
+	.main_menu li.menu_item ul.submenu li a {
+		color: #fff;
+		padding: 10px 30px;
+	}
+	.main_menu li.menu_item ul.submenu li a:hover {
+		color: #FFFFFF;
+		background: none;
+	}
+	ul.main_menu li.menu_item_active > a
+	{
+		color: #8AD7BC;
+	}
+
+	ul.main_menu li.menu_item > a:hover,
+	ul.main_menu li.menu_item_active > a {
+		background: none;
+	}
+
+	.menu_item_hover
+	{
+		background: none;
+	}
+
+	.menu_subitem_active a {
+		background: none;
+	}
+
+	.info_logout {
+		position: absolute;
+		top:20px;
+		right: 65px;
+	}
+
+	.info_logout > ul {
+		margin-right: -7px;
+		width: 250px;
+		right: 0;
+	}
+
+
+
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 991px) {
+	.page-narrow
+	{
+		margin: 30px 20% 40px;
+		padding: 40px 30px;
+	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px) {
+	div.content_wrapper
+	{
+		/*padding-bottom: 230px;*/
+	}
+	.lity-iframe-container {
+		height: 100%;
+	}
+	.lity-iframe-container iframe {
+		height: 100%;
+	}
+	div.footer_wrapper
+	{
+		clear: both;
+		position: relative;
+		background-color: #373656;
+		color: #FFFFFF;
+	}
+	div.footer .footer_left {
+		text-align: center;
+	}
+	div.footer .footer_right {
+		padding-top: 15px;
+		text-align: center;
+	}
+
+	div.footer  div.flcopy
+	{
+		width: 100%;
+		float: none;
+		padding: 10px 0 0;
+	}
+	div.footer  div.company-info
+	{
+		width: 100%;
+		float: none;
+		margin: 0;
+		padding: 10px 0 0;
+	}
+	div.footer  div.footer-soc
+	{
+		width: 100%;
+		float: none;
+		margin: 0;
+		padding: 10px 0 0;
+	}
+	.page-narrow
+	{
+		margin: 30px 15% 40px;
+		padding: 40px 20px;
+	}
+}
+
+@media only screen and (max-width : 550px) {
+	div.footer ul.contacts li {
+		float: none;
+		margin-bottom: 5px;
+	}
+	.page-narrow
+	{
+		margin: 30px 5% 40px;
+		padding: 40px 20px;
+	}
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 479px) {
+	.profile_private_value
+	{
+		font-size: 12px;
+		font-weight: bold;
+		float: right;
+		width: 50%;
+	}
+
+	.info_logout > ul {
+		width: 220px;
+	}
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 319px) {
+
+}
+
+
+/* .col-xs-$	Extra Small	Phones Less than 768px
+.col-sm-$	Small Devices	Tablets 768px and Up
+.col-md-$	Medium Devices	Desktops 992px and Up
+.col-lg-$	Large Devices	Large Desktops 1200px and Up*/ 

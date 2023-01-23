@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<param name="ORG" type="orgprint" default="" label="org" />
+		<param name="WORKER" type="printworker" case="2" tmpl="single" label="WORKER" must="1"/>
+		<param name="BENEFIT_ID" type="benefitprint" search="1" default="-1" label="BENEFIT" key_field="ID" value_field="LIB_TITLE" query="select id, lib_title from LIB_F_BENEFIT_TYPES where REGULARITY in (2,3) order by lib_title" select_label="-" class="" must="1" />
+		<param name="PERIOD_ID" type="payperiodswtime" label="PERIOD" must="1"/>
+		<param name="COST" type="number" label="COST" must="1"/>
+		<param name="WORKER" type="hidden" />
+		<param name="ID" type="hidden" />
+	</params>
+	<params group="details">
+	</params>
+</install>

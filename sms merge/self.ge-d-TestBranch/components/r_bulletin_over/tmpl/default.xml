@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="table table-bordered table-condensed table-filter-vertical" type="v">
+		<filter name="day" type="text" default="7" label="day count"  />
+		<filter name="firstname" type="stext" default="" label="firstname" class="kbd"  />
+		<filter name="lastname" type="stext" default="" label="lastname" class="kbd"  />
+		<filter name="cat_id" type="category" default="0" label="category"  />
+		<!--<filter name="sphere" type="sphere" default="" label="sphere" />-->
+		<!--<filter name="department" type="department" default="" label="department" />-->
+		<!--<filter name="chapter" type="chapter" default="" label="chapter" />-->
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="number" default="" label="#" rclass="text-center" />
+		<param order="w.firstname" type="print" label="firstname" key="FIRSTNAME" rclass="text-left" T="1" Tscope="person" />
+		<param order="w.lastname" type="print" label="lastname" key="LASTNAME" rclass="text-left" T="1" Tscope="person" />
+		<param order="t.start_date" type="print" label="start date" rclass="text-center" key="START_DATE" />
+		<param order="diff" type="print" label="day diff" key="DIFF" rclass="text-center" />
+		<param order="w.sphere" type="sphere" label="sphere" rclass="text-left" key="SPHERE" />
+		<param order="w.department" type="department" label="department" rclass="text-left" key="DEPARTMENT" />
+		<param order="w.chapter" type="chapter" label="chapter" rclass="text-left" key="CHAPTER" />
+		<!--<param order="t.id" type="print" label="ID" key="ID" rclass="text-center" />-->
+	</params>
+</install>

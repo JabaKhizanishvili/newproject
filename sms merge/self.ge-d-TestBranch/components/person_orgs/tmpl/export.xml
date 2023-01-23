@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<params class="table table-bordered table-condensed table-hover table-striped exporttable" id="exportable" name="workers" >
+		<param order="" type="number" default="" label="#" rclass="text-center" />
+		<param order="pr.firstname" type="print" label="FIRSTNAME" key="FIRSTNAME" rclass="text-left" T="1" Tscope="person" />
+		<param order="pr.lastname" type="print" label="LASTNAME" key="LASTNAME" rclass="text-left" T="1" Tscope="person" />
+		<param order="t.org" type="org" label="ORG" key="ORG" rclass="text-left"  T="1"/>
+		<param order="" type="mainunit" label="MAINUNIT" key="ORG_PLACE" tipkey="MAINUNIT" rclass="text-left"  T="1"/>
+		<param order="un.lib_title" type="print" label="STRUCTURE" key="ORG_PLACE_NAME" rclass="text-left"  T="1"/>
+		<param order="t.staff_schedule" type="staffschedule" label="staffschedule" key="STAFF_SCHEDULE" rclass="text-left" T="1"/>
+		<param order="lss.position" type="position" label="position" key="POSITION" rclass="text-left" T="1"/>
+		<param order="t.contract_type" type="switch" label="CONTRACT_TYPE" key="CONTRACT_TYPE" rclass="text-left">
+			<option value="1">Standard Contract</option>
+		</param>
+		<param order="t.contracts_date" type="date" format="%Y-%m-%d" label="CONTRACTS_DATE" key="CONTRACTS_DATE" rclass="text-left"  />
+		<param order="t.contract_end_date"  type="date" format="%Y-%m-%d" label="CONTRACT_END_DATE" key="CONTRACT_END_DATE" rclass="text-left"  />
+		<!--		<param order="pr.change_date"  type="date" format="%Y-%m-%d" label="ASSIGNMENT_DATE" key="CHANGE_DATE" rclass="text-left"  />-->
+		<param order="lss.chief_schedule" type="staffschedule" label="CHIEF_SCHEDULE" rclass="text-center" key="CHIEF_SCHEDULE" T="1"/>
+		<param order="assignment_date" type="date" format="%Y-%m-%d" label="ASSIGNMENT_DATE" rclass="text-center" key="ASSIGNMENT_DATE" />
+		<param order="t.active" type="wstatus" label="STATUS" rclass="text-center" key="ACTIVE" />
+		<param order="t.release_files" type="fileprint" label="RELEASE_FILES" key="RELEASE_FILES" rclass="text-center" />
+		<param order="" type="print" label="changing" rclass="text-center" />
+		<param order="t.id" type="print" label="ID" key="ID" rclass="text-center" />
+	</params>
+</install>

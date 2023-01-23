@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://apps.magticom.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="number" label="#" key="" rclass="text-center" />
+		<param order="a.hist_start_date" type="print" label="HIST_START_DATE" key="HIST_START_DATE" rclass="text-left" />
+		<param order="a.hist_end_date" type="print" label="HIST_END_DATE" key="HIST_END_DATE" rclass="text-left" />
+		<param order="" type="print" label="graphtitle" key="GRAPHTITLE" rclass="text-left" />
+		<param order="" type="print" label="graphtitle" key="GRAPHTITLE" rclass="text-left" />
+		<param order="" type="print" label="changeremployee" key="CHANGEREMPLOYEE" rclass="text-left" />
+		<param order="" type="print" label="changedate" key="CHANGEDATE" rclass="text-left" />
+	</params>
+</install>

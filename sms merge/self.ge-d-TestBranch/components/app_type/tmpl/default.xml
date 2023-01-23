@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<param name="LIB_TITLE" type="text" default="" label="Title" must="1"  geokbd="1" />
+		<param name="LIB_DESC" type="textarea" default="" label="Description" geokbd="1" />
+		<param name="PERIODICITY" type="list" default="-1" label="PERIODICITY"  must="1">
+			<option value="-1">SELECT CATEGORY</option>
+			<option value="1">MONTH</option>
+			<option value="2">QUARTER</option>
+			<option value="3">YEAR</option>
+		</param>
+		<param name="LIMIT" type="number" default="" label="LIMIT" must="1" />
+		<!--<param name="WAGE_TYPE" type="apptype" label="type"  must="1" />-->
+		<param name="WAGE_TYPE" type="list" label="type" default="-1"  must="1" >
+			<option value="-1">SELECT CATEGORY</option>
+			<option value="0">WAGES</option>
+			<option value="1">WAGELESS</option>
+		</param>
+		<param name="CATEGORY" type="appcategories" label="APP_CATEGORY" default="-1"  must="" />
+		<param name="" type="spacer" default="RESTART_DATE" label="" description="" />
+		<param name="HOLIDAY_RESTART_DAY" type="rangenumber" default="1" start="1" end="28"  must="1"/>
+		<param name="HOLIDAY_RESTART_MONTH" type="month" default="1" start="1" end="12"  must="1" />
+		<param name="HOLIDAY_START_LIMIT" type="list" default="0"  must="1" >
+			<option value="1">Full Day Holiday</option>
+			<option value="2">partial accounting</option>
+		</param>
+		
+		<param name="" type="spacer" default="MORE_FIELDS" label="" description="" />
+		<!--<param name="MORE_FIELDS" type="morefields" default="" label="MORE_FIELDS" />-->
+		<param name="REPLACER_FIELD" type="list" default="0"  must="" >
+			<option value="0">NO</option>
+			<option value="1">MUST</option>
+			<option value="2">NOTMUST</option>
+			<option value="3">MUST GRAPH</option>
+			<option value="4">NOTMUST GRAPH</option>
+		</param>
+		<param name="COMMENT_FIELD" type="list" default="0"  must="" >
+			<option value="0">NO</option>
+			<option value="1">MUST</option>
+			<option value="2">NOTMUST</option>
+		</param>
+		<param name="FILES_FIELD" type="list" default="0"  must="" >
+			<option value="0">NO</option>
+			<option value="1">MUST</option>
+			<option value="2">NOTMUST</option>
+		</param>
+		<param name="" type="print" default="" label="" description="" />
+		<param name="ORG" type="myorgsapps" default="" label="org" must="1"  allorgs="1" T="1" />
+		<param name="SHOW_ON_PROFILE" type="radio" default="1">
+			<option value="1">YES</option>
+			<option value="0">NO</option>
+		</param>
+		<!--<group>-->
+		<param name="ACTIVE" type="radio" default="1">
+			<option value="1">Active Status</option>
+			<option value="0">Inactive</option>
+		</param>
+		<param name="FLOW" type="radio" default="0">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="ORDERING" type="text" default="999" label="ORDERING"  />
+		<!--</group>-->
+		<param name="ID" type="hidden" default="" />
+	</params>
+
+<params group="msg_sending">
+	<param name="" type="spacer" default="PREPERIOD" label="" description="" />
+		<param name="PREPERIOD" type="radio" default="0">
+			<option value="1">YES</option>
+			<option value="0">NO</option>
+		</param>
+		<param name="USETYPE" type="list" default="0"  must="" >
+			<option value="0">APP_TYPE_PREVIOUS_PERIOD_USE</option>
+			<option value="1">APP_TYPE_CURRENT_PERIOD_USE</option>
+			<option value="2">APP_TYPE_SUM_USE</option>
+		</param>
+		<param name="EXPIRED_DATE" type="rangenumber" default="1" start="1" end="360"  must="1"/>
+		<param name="TR_VACATION_MAX" type="number" default="" label="TR_VACATION_MAX" must="" T="1" />-->
+</params>
+
+<!--	<params group="msg_sending">-->
+<!--		<param name="" type="spacer" default="PERSONAL APPLICATION REGISTERING MSG" label="" description="" />-->
+<!--		<param name="TO_EMPLOYEE_A" type="msgtemplates" default="" label="TO_EMPLOYEE" must="" T="1" />-->
+<!--		<param name="TO_LEADER_A" type="msgtemplates" default="" label="TO_LEADER" must="" T="1" />-->
+<!--		<param name="TO_ADMIN_A" type="msgtemplates" default="" label="TO_ADMIN" must="" T="1" />-->
+
+<!--		<param name="" type="spacer" default="SUB EMPLOYEE REGISTERING MSG" label="" description="" />-->
+<!--		<param name="TO_EMPLOYEE_B" type="msgtemplates" default="" label="TO_EMPLOYEE" must="" T="1" />-->
+<!--		<param name="TO_LEADER_B" type="msgtemplates" default="" label="TO_LEADER" must="" T="1" />-->
+<!--		<param name="TO_ADMIN_B" type="msgtemplates" default="" label="TO_ADMIN" must="" T="1" />-->
+
+<!--		<param name="" type="spacer" default="EMPLOYEE REGISTERING BY ADMIN MSG" label="" description="" />-->
+<!--		<param name="TO_EMPLOYEE_C" type="msgtemplates" default="" label="TO_EMPLOYEE" must="" T="1" />-->
+<!--		<param name="TO_LEADER_C" type="msgtemplates" default="" label="TO_LEADER" must="" T="1" />-->
+<!--		<param name="TO_ADMIN_C" type="msgtemplates" default="" label="TO_ADMIN" must="" T="1" />-->
+
+<!--		<param name="" type="spacer" default="CONFIRMATION BY CHIEF MSG" label="" description="" />-->
+<!--		<param name="TO_EMPLOYEE_D" type="msgtemplates" default="" label="TO_EMPLOYEE" must="" T="1" />-->
+<!--		<param name="TO_LEADER_D" type="msgtemplates" default="" label="TO_LEADER" must="" T="1" />-->
+<!--		<param name="TO_ADMIN_D" type="msgtemplates" default="" label="TO_ADMIN" must="" T="1" />-->
+
+<!--		<param name="" type="spacer" default="CONFIRMATION BY ADMIN MSG" label="" description="" />-->
+<!--		<param name="TO_EMPLOYEE_E" type="msgtemplates" default="" label="TO_EMPLOYEE" must="" T="1" />-->
+<!--		<param name="TO_LEADER_E" type="msgtemplates" default="" label="TO_LEADER" must="" T="1" />-->
+<!--		<param name="TO_ADMIN_E" type="msgtemplates" default="" label="TO_ADMIN" must="" T="1" />-->
+<!--	</params>-->
+</install>

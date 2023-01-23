@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<param name="ORG" type="orgprint" default="" label="ORG" key="ID" />
+		<param name="WORKERS" type="slfstaff" case="2" label="PERSON" must="1"/>
+		<param name="CHANGE_DATE" type="calendar" default="" label="RELEASE_DATE"  must="1" />
+		<param name="RELEASE_TYPE" type="releasetypes" default="" label="RELEASE_TYPE" must="1" />
+	</params>
+	<params group="ask">
+		<param name="AUTO_PERSON_STATUS_STOP" type="radio" default=""  >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+	</params>
+	<params group="more">
+		<param name="RELEASE_COMMENT" type="textarea" default="" label="COMMENT" geokbd="1" />
+		<param name="RELEASE_FILES" type="files" default="" label="FILES" />
+	</params>
+
+</install>

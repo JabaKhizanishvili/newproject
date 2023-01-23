@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="page_filter_block" type="h">
+		<filter name="firstname" type="stext" default="" label="firstname" class="kbd" />
+		<filter name="lastname" type="stext" default="" label="lastname" class="kbd" />
+		<filter name="org" type="org" default="" label="org" />
+		<filter name="hperiod" type="hperiod" default="" label="hperiod"/>
+		<filter name="htype" type="apptype" default="-1" label="HOLIDAY INFORMATION" class="kbd" />
+		<filter name="active" type="state" default="-1" label="worker_status">
+			<option value="-1">Select State</option>
+			<option value="1">current contract</option>
+			<option value="-2">Canceled Contract</option>
+		</filter>
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="number" default="" label="#" rclass="text-center" hclass="text-center"/>
+		<param order="" type="checkall" default="" label="" rclass="text-center"   />
+		<param order="w.firstname" type="editlink" label="FIRSTNAME" key="FIRSTNAME" rclass="text-left" T="1" Tscope="person" />
+		<param order="w.lastname" type="editlink" label="LASTNAME" key="LASTNAME" rclass="text-left" T="1" Tscope="person" />
+		<param order="w.org_name" type="print" label="org" key="ORG_NAME" rclass="text-left" T="1"/>
+		<param order="htitle" type="print" label="HOLIDAY INFORMATION" key="HTITLE" rclass="text-left" T="1"/>
+		<param order="l.htype" type="htype" label="HTYPE" key="WAGE_TYPE" rclass="text-center" />
+		<!--<param order="l.count" type="print" label="COUNT" key="COUNT" rclass="text-center" />-->
+		<param order="l.count" type="print" label="C_COUNT" key="COUNT" rclass="text-center" />
+		<param order="l.c_limit" type="print" label="C_LIMIT" key="C_LIMIT" rclass="text-center" />
+		<param order="l.start_date" type="date" label="start_date" key="START_DATE" rclass="text-left" format="%d-%m-%Y" />
+		<param order="l.end_date" type="date" label="end_date" key="END_DATE" rclass="text-left" format="%d-%m-%Y" />
+		<!--<param order="l.year" type="print" label="YEAR" key="YEAR" rclass="text-left" />-->
+		<param order="w.id" type="print" label="ID" key="ID" rclass="text-center" />
+	</params>
+</install>

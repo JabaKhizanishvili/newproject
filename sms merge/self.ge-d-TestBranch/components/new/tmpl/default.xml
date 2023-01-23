@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<param name="TITLE" type="text" default="" label="TITLE" must="1" geokbd="1" />
+		<param name="INTROTEXT" type="textarea" default="" label="INTROTEXT" must="1" rows="5" colls="100" geokbd="1" />
+		<param name="PUBLISH_DATE" type="calendar" default="now" label="PUBLISH_DATE" must="1" />
+		<param name="UNPUBLISH_DATE" type="calendar" default="" label="UNPUBLISH_DATE"  />
+		<param name="ACTIVE" type="radio" default="1">
+			<option value="1">On</option>
+			<option value="0">Off</option>
+		</param>
+	</params>
+	<params group="details">
+		<param name="IMAGE"
+			   type="cropphoto"
+			   width="800"
+			   height="500"
+			   viewport-width="700"
+			   viewport-height="400"
+			   boundary-width="800"
+			   boundary-height="500"
+			   responsive-viewport-width="300"
+			   responsive-viewport-height="150"
+			   responsive-boundary-width="320"
+			   responsive-boundary-height="170"
+			   default=""
+			   label="IMAGE"  />
+		<param name="TEXT" type="editor" default="" label="TEXT" must="1" rows="20" geokbd="1" />
+		<param name="ID" type="hidden" default="" />
+	</params>
+</install>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="page_filter_block" type="h">
+		<filter name="firstname" type="stext" default="" label="firstname" class="kbd" />
+		<filter name="lastname" type="stext" default="" label="lastname" class="kbd" />
+		<filter name="start_date" type="calendar" default="" label="start date" />
+		<filter name="end_date" type="calendar" default="" label="end date" />
+		<filter name="year" type="year" default="" label="year" />
+		<filter name="sphere" type="sphere" default="" label="sphere" />
+		<filter name="department" type="department" default="" label="department" />
+		<filter name="chapter" type="chapter" default="" label="chapter" />
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="number" default="" label="#" rclass="text-center" />
+		<param order="" type="checkall" default="" label="" rclass="text-center"   />
+		<param order="wfirstname" type="editlink" label="worker" key="WFIRSTNAME, WLASTNAME" rclass="text-left" T="1" Tscope="person" />
+		<param order="t.status" type="approve" label="status" rclass="text-center" state_id='ID' state_key="STATUS" />
+		<param order="w.org" type="org" label="org" rclass="text-left" key="ORG" T="1" />
+		<param order="t.start_date" type="print" label="Holiday Start G" key="START_DATE" rclass="text-center" />
+		<param order="t.end_date" type="print" label="Holiday End G" key="END_DATE" rclass="text-center" />
+		<!--<param order="t.day_count" type="print" label="DAY COUNT G" rclass="text-center" key="DAY_COUNT" />-->
+		<!--<param order="t.type" type="htype" label="HType" rclass="text-center" key="TYPE" />-->
+		<param order="afirstname" type="printm" label="APPROVER" rclass="text-center" key="AFIRSTNAME, ALASTNAME" T="1" Tscope="person" />
+		<param order="t.approve_date" type="print" label="APPROVE_DATE" rclass="text-center" key="APPROVE_DATE" />
+		<param order="t.rec_date" type="print" label="REC_DATE" rclass="text-center" key="REC_DATE" />
+		<param order="t.id" type="print" label="ID" key="ID" rclass="text-center" />
+	</params>
+</install>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="page_filter_block" type="h">
+		<filter name="lib_title" type="text" default="" label="lib_title" class="kbd" />
+		<filter name="lib_desc" type="text" default="" label="lib_desc" class="kbd" />
+		<filter name="workingorder" type="text" default="" label="workingorder" class="kbd" />
+		<filter name="maintenance_start" type="calendar" default="" label="maintenance_start" />
+		<filter name="active" type="active" default="" label="ACTIVE" />
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="number" default="" label="#" rclass="text-center" hclass="text-center" />
+		<param order="" type="checkall" default="" label="" rclass="text-center"   />
+		<param order="t.id" type="print" label="ID" key="ID" rclass="text-center" />
+		<!--		<param order="" type="checkall" default="" label="" rclass="text-center"   />-->
+		<param order="t.lib_title" type="editlink" label="Title" key="LIB_TITLE" rclass="text-left" T="1" />
+<!--		<param order="t.vnumber" type="print" label="VNUMBER" key="VNUMBER" rclass="text-left" />-->
+		<param order="t.lib_desc" type="print" label="Description" key="LIB_DESC" rclass="text-left" T="1" />
+		<param order="t.item_working_principes" type="print" label="item_working_principes" key="ITEM_WORKING_PRINCIPES" rclass="text-left" T="1" />
+		<param order="t.item_location" type="print" label="item_location" key="ITEM_LOCATION" rclass="text-left" T="1" />
+		<param order="t.workingorder" type="print" label="workingorder" key="WORKINGORDER" rclass="text-left" T="1" />
+		<param order="t.maintenance_start" type="print" label="maintenance_start" key="MAINTENANCE_START" rclass="text-left" T="1" />
+		<param order="t.active" type="state" label="State" rclass="text-center" state_id='ID' state_key="ACTIVE" />
+		<param order="t.ordering" type="print" label="ordering" key="ORDERING" rclass="text-center" />
+		<param order="t.maintenance_repeat" type="print" label="maintenance_repeat" key="MAINTENANCE_REPEAT" rclass="text-center" />
+	</params>
+</install>

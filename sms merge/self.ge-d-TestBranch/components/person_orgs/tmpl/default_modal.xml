@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="page_filter_block" type="h">
+		<filter name="firstname" type="stext" default="" label="firstname" class="kbd" />
+		<filter name="lastname" type="stext" default="" label="lastname" class="kbd" />
+		<filter name="private_number" type="text" default="" label="private_number" />
+		<filter name="position" type="stext" default="" label="position" class="kbd" />
+		<filter name="tablenum" type="text" default="" label="TABLENUM" />
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+	<params class="table table-bordered table-condensed table-hover table-striped" >
+		<param order="" type="number" default="" label="#" rclass="text-center" />
+		<param order="pr.firstname" type="print" label="FIRSTNAME" key="FIRSTNAME" rclass="text-left" T="1" Tscope="person" />
+		<param order="pr.lastname" type="print" label="LASTNAME" key="LASTNAME" rclass="text-left" T="1" Tscope="person" />
+		<param order="t.tablenum" type="print" label="TABLENUM" key="TABLENUM" rclass="text-left" />
+		<param order="pr.private_number" type="print" label="PRIVATE_NUMBER" key="PRIVATE_NUMBER" rclass="text-left" />
+		<param order="t.org" type="org" label="ORG" key="ORG" rclass="text-left"  T="1"/>
+		<param order="" type="mainunit" label="MAINUNIT" key="ORG_PLACE" tipkey="MAINUNIT" rclass="text-left"  T="1"/>
+		<param order="un.lib_title" type="print" label="STRUCTURE" key="ORG_PLACE_NAME" rclass="text-left"  T="1"/>
+		<param order="t.staff_schedule" type="staffschedule" label="staffschedule" key="STAFF_SCHEDULE" rclass="text-left" T="1"/>
+		<param order="lss.position" type="position" label="position" key="POSITION" rclass="text-left" T="1"/>
+		<param order="t.salary" type="print" label="SALARY" key="SALARY" rclass="text-left" />
+		<param order="t.contract_type" type="switch" label="CONTRACT_TYPE" key="CONTRACT_TYPE" rclass="text-left">
+			<option value="1">Standard Contract</option>
+		</param>
+		<param order="t.contracts_date" type="date" format="%Y-%m-%d" label="CONTRACTS_DATE" key="CONTRACTS_DATE" rclass="text-left"  />
+		<param order="t.contract_end_date"  type="date" format="%Y-%m-%d" label="CONTRACT_END_DATE" key="CONTRACT_END_DATE" rclass="text-left"  />
+		<param order="lss.chief_schedule" type="staffschedule" label="CHIEF_SCHEDULE" rclass="text-center" key="CHIEF_SCHEDULE" T="1"/>
+		<param order="t.active" type="wstatus" label="STATUS" rclass="text-center" key="ACTIVE" />
+	</params>
+</install>

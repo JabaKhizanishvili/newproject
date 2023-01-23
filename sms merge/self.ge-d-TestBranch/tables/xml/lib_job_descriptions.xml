@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Created by Irakli Gzirishvili 29-10-2021-->
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="lib_job_descriptions" history="yes">
+	<columns>
+		<column name="id" type="number" null="n"/>
+		<column name="lib_title" type="varchar2" length="4000" Ti="1"/>
+		<column name="lib_goal" type="varchar2" length="4000"/>
+	
+		<column name='v_functions0' type='varchar2' length='4000'/>
+		<column name='v_functions1' type='varchar2' length='4000'/>
+		<column name='v_functions2' type='varchar2' length='4000'/>
+		<column name='v_functions3' type='varchar2' length='4000'/>
+		<column name='v_functions4' type='varchar2' length='4000'/>
+		<column name='v_functions5' type='varchar2' length='4000'/>
+		<column name='v_functions6' type='varchar2' length='4000'/>
+		<column name='v_functions7' type='varchar2' length='4000'/>
+		<column name='v_functions8' type='varchar2' length='4000'/>
+		<column name='v_functions9' type='varchar2' length='4000'/>
+
+		<column name='v_tasks0' type='varchar2' length='4000'/>
+		<column name='v_tasks1' type='varchar2' length='4000'/>
+		<column name='v_tasks2' type='varchar2' length='4000'/>
+		<column name='v_tasks3' type='varchar2' length='4000'/>
+		<column name='v_tasks4' type='varchar2' length='4000'/>
+		<column name='v_tasks5' type='varchar2' length='4000'/>
+		<column name='v_tasks6' type='varchar2' length='4000'/>
+		<column name='v_tasks7' type='varchar2' length='4000'/>
+		<column name='v_tasks8' type='varchar2' length='4000'/>
+		<column name='v_tasks9' type='varchar2' length='4000'/>
+
+		<column name="responsibilities0" type="varchar2" length="4000"/>
+		<column name="responsibilities1" type="varchar2" length="4000"/>
+		<column name="responsibilities2" type="varchar2" length="4000"/>
+		<column name="responsibilities3" type="varchar2" length="4000"/>
+		<column name="responsibilities4" type="varchar2" length="4000"/>
+		<column name="responsibilities5" type="varchar2" length="4000"/>
+		<column name="responsibilities6" type="varchar2" length="4000"/>
+		<column name="responsibilities7" type="varchar2" length="4000"/>
+		<column name="responsibilities8" type="varchar2" length="4000"/>
+		<column name="responsibilities9" type="varchar2" length="4000"/>
+
+		<column name="requirements0" type="varchar2" length="4000"/>
+		<column name="requirements1" type="varchar2" length="4000"/>
+		<column name="requirements2" type="varchar2" length="4000"/>
+		<column name="requirements3" type="varchar2" length="4000"/>
+		<column name="requirements4" type="varchar2" length="4000"/>
+		<column name="requirements5" type="varchar2" length="4000"/>
+		<column name="requirements6" type="varchar2" length="4000"/>
+		<column name="requirements7" type="varchar2" length="4000"/>
+		<column name="requirements8" type="varchar2" length="4000"/>
+		<column name="requirements9" type="varchar2" length="4000"/>
+
+		<column name="ordering" type="number" null="n" default="999" />
+		<column name="active" type="number" null="n" default="1 " />
+		<column name="v_file" type="varchar2" length="4000"/>
+		<column name="client_id" type="number" default="00" />
+	     <column name="modify_user" type="number" />
+          <column name="modify_date" type="date" />
+     </columns>
+	<history>
+		<column name="lib_title" type="varchar2" length="4000"/>
+		<column name="lib_goal" type="varchar2" length="4000"/>
+	
+		<column name='v_functions0' type='varchar2' length='4000'/>
+		<column name='v_functions1' type='varchar2' length='4000'/>
+		<column name='v_functions2' type='varchar2' length='4000'/>
+		<column name='v_functions3' type='varchar2' length='4000'/>
+		<column name='v_functions4' type='varchar2' length='4000'/>
+		<column name='v_functions5' type='varchar2' length='4000'/>
+		<column name='v_functions6' type='varchar2' length='4000'/>
+		<column name='v_functions7' type='varchar2' length='4000'/>
+		<column name='v_functions8' type='varchar2' length='4000'/>
+		<column name='v_functions9' type='varchar2' length='4000'/>
+
+		<column name='v_tasks0' type='varchar2' length='4000'/>
+		<column name='v_tasks1' type='varchar2' length='4000'/>
+		<column name='v_tasks2' type='varchar2' length='4000'/>
+		<column name='v_tasks3' type='varchar2' length='4000'/>
+		<column name='v_tasks4' type='varchar2' length='4000'/>
+		<column name='v_tasks5' type='varchar2' length='4000'/>
+		<column name='v_tasks6' type='varchar2' length='4000'/>
+		<column name='v_tasks7' type='varchar2' length='4000'/>
+		<column name='v_tasks8' type='varchar2' length='4000'/>
+		<column name='v_tasks9' type='varchar2' length='4000'/>
+
+		<column name="responsibilities0" type="varchar2" length="4000"/>
+		<column name="responsibilities1" type="varchar2" length="4000"/>
+		<column name="responsibilities2" type="varchar2" length="4000"/>
+		<column name="responsibilities3" type="varchar2" length="4000"/>
+		<column name="responsibilities4" type="varchar2" length="4000"/>
+		<column name="responsibilities5" type="varchar2" length="4000"/>
+		<column name="responsibilities6" type="varchar2" length="4000"/>
+		<column name="responsibilities7" type="varchar2" length="4000"/>
+		<column name="responsibilities8" type="varchar2" length="4000"/>
+		<column name="responsibilities9" type="varchar2" length="4000"/>
+
+		<column name="requirements0" type="varchar2" length="4000"/>
+		<column name="requirements1" type="varchar2" length="4000"/>
+		<column name="requirements2" type="varchar2" length="4000"/>
+		<column name="requirements3" type="varchar2" length="4000"/>
+		<column name="requirements4" type="varchar2" length="4000"/>
+		<column name="requirements5" type="varchar2" length="4000"/>
+		<column name="requirements6" type="varchar2" length="4000"/>
+		<column name="requirements7" type="varchar2" length="4000"/>
+		<column name="requirements8" type="varchar2" length="4000"/>
+		<column name="requirements9" type="varchar2" length="4000"/>
+
+		<column name="ordering" type="number" null="n" default="999" />
+		<column name="active" type="number" null="n" default="1 " />
+		<column name="v_file" type="varchar2" length="4000"/>
+	     <column name="modify_user" type="number" />
+          <column name="modify_date" type="date" />
+     </history>
+	<sequence  name="library" />
+	<histsequence  name="sqs_job_descriptions_hist" />
+</table>

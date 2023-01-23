@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="number" default="" label="#" rclass="text-center" />
+		<param order="wfirstname" type="printm" label="worker" key="WFIRSTNAME, WLASTNAME" rclass="text-left" T="1" Tscope="person" />
+		<param order="log_date" type="print" label="LOGING_DATE" key="LOGING_DATE" rclass="text-left" />
+		<param order="LOG_FROM" type="print" label="LOG_PHONE" key="LOG_PHONE" rclass="text-left" />
+		<param order="" type="print" label="LOG_MSG" key="LOG_TEXT" rclass="text-left" length="3" limit_type="1" />
+		<param order="" type="print" label="LOG_RESULT" key="LOG_RESPONSE" rclass="text-left"  length="3" limit_type="1" />
+	</params>
+</install>

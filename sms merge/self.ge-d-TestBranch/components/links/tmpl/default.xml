@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="page_filter_block" type="h">
+		<filter name="title" type="text" default="" label="Title" class="kbd" />
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+	<params class="tablegrid">
+		<param order="" type="number" default="" label="#" rclass="td_centered" />
+		<param order="" type="checkall" default="" label="" rclass="list_header_select"   />
+		<param order="t.title" type="editlink" label="Title" key="TITLE" rclass="td_left" />
+		<param order="" type="link" label="Link" key="LINK" rclass="td_centered" />
+		<param order="t.id" type="print" label="ID" key="ID" rclass="td_centered" />
+	</params>
+</install>

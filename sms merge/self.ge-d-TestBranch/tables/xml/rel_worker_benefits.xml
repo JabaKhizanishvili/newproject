@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="rel_worker_benefits">
+	<column name="worker" type="number" />
+	<column name="benefit" type="number" />
+	<column name="benefit_bind" type="number" />
+</table>

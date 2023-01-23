@@ -1,0 +1,98 @@
+/* Help Styles*/
+.help_content
+{
+    background-color: #FFFFFF;
+    padding-top: 20px;
+}
+.help_c
+{
+    width: auto;
+    height: 60px;
+    position: absolute;
+    z-index: 999;
+    top: 5px;
+    right: 5px;
+}
+.help_c a
+{
+    background-image: url("../../templates/images/help.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+    padding: 45px 0 0;
+    color: #FFFFFF;
+    display: block;
+    font-size: 13px;
+}
+.help_block
+{
+    margin: 30px auto 10px;
+    width: 950px;
+    background-image: url("../../templates/images/help-middle.png");
+    background-position: center;
+    background-repeat: repeat-y;
+}
+.help_bot
+{
+    background-image: url("../../templates/images/help-bottom.png");
+    background-position: 0 bottom;
+    background-repeat: no-repeat;
+
+}
+.help_top
+{
+    background-image: url("../../templates/images/help-top.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    min-height: 100px;
+    position: relative;
+}
+.help_tiltle
+{  
+    line-height: 30px;
+    padding: 15px 10px 8px 65px;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+.help_body
+{
+    padding: 9px 17px 50px;
+    line-height: 20px;
+}
+.help_body ul
+{
+    margin: 5px 0;
+    padding: 0 0 0 40px;
+}
+.help_close_ct
+{
+    width: 24px;
+    height: 23px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+.help_close
+{
+    width: 24px;
+    height: 23px;
+    background-image: url("../../templates/images/close.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    cursor: pointer;
+}
+.close_tooltip
+{
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    width: 87px;
+    height: 34px;
+    line-height: 28px;
+    text-align: center;
+    color: #FFFFFF;
+    background-image: url("../../templates/images/close_tt.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    margin: 0 0 0 -44px;
+}
+/* Help Styles*/

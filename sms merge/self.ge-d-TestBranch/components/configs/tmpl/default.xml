@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="page_filter_block" type="h">
+		<filter name="name" type="stext" default="" label="name" class="kbd" />
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="number" default="" label="#" rclass="text-center" hclass="text-center"/>
+		<param order="" type="checkall" default="" label="" rclass="text-center"   />
+		<param order="" type="configlink" label="Name" key="NAME" rclass="text-left" />
+		<param order="" type="print" label="MENU" key="MENU" rclass="text-left" T="1" />
+		<param order="" type="print" label="ID" key="UID" rclass="text-left" />
+	</params>
+</install>

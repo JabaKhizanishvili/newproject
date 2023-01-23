@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="system_sms_log">
+	<column name="log_date" type="date" />
+	<column name="log_phone" type="varchar2" length="40" />
+	<column name="log_msg" type="varchar2" length="4000" />
+	<column name="log_result" type="varchar2" length="4000" />
+	<column name="log_id" type="number"  />
+	<column name="log_reference" type="varchar2" length="4000" />
+	<column name="log_status" type="varchar2" length="400" />
+	<column name="log_status_data" type="varchar2" length="4000" />
+	<column name="log_status_date" type="date" />
+	<column name="client_id" type="number" default="00" />
+</table>

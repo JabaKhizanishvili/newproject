@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="page_filter_block" type="h">
+		<filter name="org" type="org" default="" label="org" />
+		<filter name="period_type" type="periods" default="0" label="period_type" />
+		<filter name="period_type_code" type="payperiods"  label="PERIOD" />
+		<filter name="data_type" type="multilist" default="-1" label="data_type" >
+			<option value="0">collected salary</option>
+			<option value="1">regular_benefit</option>
+			<option value="2">iregular_benefit</option>
+		</filter>
+		<filter name="category" type="benefits"  label="benefit" />
+		<filter name="benefit" type="benefittypes"  label="benefit_id" />
+		<filter name="status" type="list" default="-1" label="status" >
+			<option value="-1">select category</option>
+			<option value="0">data_inserted</option>
+			<option value="1">for_approve</option>
+			<option value="2">approved</option>
+		</filter>
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="number" default="" label="#" rclass="text-center" hclass="text-center"/>
+		<param order="" type="checkall" default="" label="" rclass="text-center"/>
+		<param order="" type="salarysheet" label="view" action="modal" rclass="text-center" key="ID" />
+		<param order="t.lib_title" type="editlink" label="LIB_TITLE" key="LIB_TITLE" rclass="text-left" />
+		<param order="t.org" type="ORG" label="ORG" key="ORG" rclass="text-left" />
+		<param order="period_name" type="print" label="PERIOD" key="PERIOD_NAME" rclass="text-left" />
+		<param order="t.generation_type" type="switch" label="GENERATION_TYPE" key="GENERATION_TYPE" rclass="text-left" >
+			<option value="0">total_generation</option>
+			<option value="1">proportional_generation</option>
+		</param>
+		<param order="t.data_type" type="salarydatatype" label="DATA_TYPE" key="DATA_TYPE" rclass="text-left" >
+			<option value="0">collected salary</option>
+			<option value="1">regular_benefit</option>
+			<option value="2">iregular_benefit</option>
+		</param>
+		<param order="t.regular_benefit" type="benefit" label="REGULAR_BENEFIT" key="REGULAR_BENEFIT" rclass="text-left" />
+		<param order="t.iregular_benefit" type="benefit" label="IREGULAR_BENEFIT" key="IREGULAR_BENEFIT" rclass="text-left" />
+		<param order="t.rec_user" type="wworker" label="REC_USER" key="REC_USER" rclass="text-left" />
+		<param order="t.rec_date" type="print" label="CREATION_DATE" key="RECORD_DATE" rclass="text-left" />
+		<param order="t.status" type="switch" label="status" key="STATUS" rclass="text-left" >
+			<option value="0" color="text-danger">data_inserted</option>
+			<option value="1" color="text-warning">for_approve</option>
+			<option value="2" color="text-success">approved</option>
+		</param>
+		<param order="t.id" type="print" label="ID" rclass="text-center" key="ID" />
+	</params>
+</install>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="table table-bordered table-condensed table-filter-vertical" type="v">
+		<filter name="firstname" type="stext" default="" label="firstname" class="kbd"  />
+		<filter name="lastname" type="stext" default="" label="lastname" class="kbd"  />
+		<filter name="private_number" type="stext" default="" label="private_number" class="kbd"  />
+		<filter name="position" type="stext" default="" label="position" class="kbd" />
+		<filter name="reason" type="state" default="0" label="Reason">
+			<option value="0">Select Reason</option>
+			<option value="1">? - Unknown</option>
+			<option value="2">Private Time</option>
+		</filter>
+		<filter name="cat_id" type="category" default="-1" label="category"  />
+		<filter name="start_date" type="calendar" default="now" label="Start Date" />
+		<filter name="end_date" type="calendar" default="now" label="End Date" />
+		<filter name="orgid" type="org" default="" label="org" />
+		<filter name="org_place" type="unit" default="" label="unit"  elementid="orgid" />
+		<filter name="staff_schedule" type="stext" default="" label="staff_schedule" class="kbd"  />
+		<filter name="minutes_from" type="text" default="" label="FILTER_MINUTES_FROM" />
+		<filter name="minutes_to" type="text" default="" label="FILTER_MINUTES_TO" />
+		<!--<filter name="c_resolution" type="state" default="0" label="status">
+			<option value="-1">select category</option>
+			<option value="0">PENDING</option>
+			<option value="1">ACCEPTED</option>
+			<option value="2">DECLINED</option>
+		</filter>-->
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="print" label="LOGING_DATE" key="EVENT_DATE_DAY" rclass="text-center" />
+		<param order="" type="print" label="Worker" key="WORKER" rclass="text-center"   />
+		<param order="" type="print" label="PRIVATE_NUMBER" key="PRIVATE_NUMBER" rclass="text-left" />
+		<param order="" type="print" label="ORG" key="ORG_NAME" rclass="text-left" />
+		<param order="" type="print" label="UNIT" key="ORG_PLACE" rclass="text-center"  />
+		<param order="" type="print" label="STAFF_SCHEDULE" key="STAFF_SCHEDULE" rclass="text-left" />
+		<param order="" type="print" label="POSITION" key="POSITION" rclass="text-center"  />
+		<param order="" type="print" label="DELAY_MINUTES" key="TIME_MIN" rclass="text-center"   />
+		<param order="" type="print" label="Lateness Reason" key="TIME_COMMENT" rclass="text-center"  />
+		<param order="" type="print" label="Time" key="EVENT_DATES" rclass="text-center" />
+	</params>
+
+</install>

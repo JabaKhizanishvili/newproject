@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://apps.magticom.ge/pda/defines/xml/edit.dtd">
+<install type="component" version="1.5.0">
+	<params>
+		<group>
+			<param name="START_DATE" type="calendar" default="" label="START_DATE_INC" must="1" />
+			<param name="END_DATE" type="calendar" default="" label="END_DATE_INC" must="1" />
+		</group>
+		<group>
+			<param name="COPY_START_DATE" type="calendar" default="" label="COPY_START_DATE" must="1" />
+			<param name="COPY_ITERATION" type="list" default="1">
+				<option value="1">1 times</option>
+				<option value="2">2 times</option>
+				<option value="3">3 times</option>
+				<option value="4">4 times</option>
+				<option value="5">5 times</option>
+				<option value="6">6 times</option>
+				<option value="7">7 times</option>
+				<option value="8">8 times</option>
+				<option value="9">9 times</option>
+				<option value="10">10 times</option>
+			</param>
+		</group>
+	</params>
+</install>

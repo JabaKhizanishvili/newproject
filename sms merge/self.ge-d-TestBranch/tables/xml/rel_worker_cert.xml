@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://apps.magticom.ge/pda/defines/xml/table.dtd">
+<table name="rel_worker_cert">
+	<column name="id" type="number" null="n" />
+	<column name="worker" type="number" null="n" />
+	<column name="cert_date" type="date" />
+	<column name="cert_due" type="date" />
+	<column name="cert_number" type="varchar2" length="4000" />
+	<column name="active" type="number" null="n" default="1" />
+</table>

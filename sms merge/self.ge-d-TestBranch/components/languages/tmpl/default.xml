@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://apps.magticom.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="page_filter_block" type="h">
+		<filter name="text" type="stext" default="" label="name" class="" />
+		<!--<filter name="lib_code" type="stext" default="" label="lib_code"  class="" />-->
+<!--		<filter name="active" type="state" default="-1" label="Status">
+			<option value="-1">Select State</option>
+			<option value="1">On</option>
+			<option value="0">Off</option>
+			<option value="-2">Deleted</option>
+		</filter>-->
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="number" default="" label="#" rclass="text-center" hclass="text-center"/>
+		<param order="" type="checkall" default="" label="" rclass="text-center"   />
+		<param order="t.lib_title" type="print" label="LIB_TITLE" key="LIB_TITLE" rclass="text-left" />
+		<!--<param order="t.lib_code" type="print" label="LIB_CODE" key="LIB_CODE" rclass="text-left" />-->
+		<!--<param order="t.lib_desc" type="print" label="LIB_DESC" key="LIB_DESC" rclass="text-left" />-->
+		<param order="t.state" type="switch" label="ACTIVE" key="ACTIVE" rclass="text-center">
+			<option value="1" color="green">On</option>
+			<option value="0" color="red">Off</option>
+		</param>
+		<param order="t.capital" type="switch" label="DEF_LANG" key="DEF_LANG" rclass="text-center">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param order="t.id" type="print" label="ID" key="ID" rclass="text-center"  hclass="text-center"/>
+	</params>
+</install>

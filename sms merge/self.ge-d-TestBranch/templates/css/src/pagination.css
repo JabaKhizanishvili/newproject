@@ -1,0 +1,98 @@
+
+.pagination
+{
+	padding: 0px;
+	text-align: center;
+	width: 100%;
+	margin: 0 auto;
+}
+.pagination_span_pn,
+.pagination_active,
+.pagination_span,
+.pagination_inp_span,
+.pagination_link,
+.pagination_link_pna
+{
+	border: 1px solid #CCCCCC;
+	display: block;
+	float: left;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 5px 0;
+	width: 45px;
+	margin: 1px;
+	cursor: default;
+}
+.pagination a
+{
+	cursor: pointer;
+}
+.pagination_inp_span
+{
+	position: relative;
+	cursor: pointer;
+}
+/*.pagination_inp
+{
+        padding:6px 0px;
+        border: none;
+        text-align: center;
+}*/
+.pagination a:hover
+{
+	border-color: #000000;
+}
+.pagination_span
+{
+	color: #DDDDDD;
+}
+.pagination_link_pn, 
+.pagination_span_pn
+{
+	width: 90px;
+	color: #DDDDDD;
+}
+.pagination_link_pna
+{
+	width: 90px;
+}
+.pagination_active
+{
+	border-color: #12541C;
+}
+.pagination_items
+{
+	width: auto;
+	display: table;
+	margin: 0 auto;
+	margin-bottom: 15px;
+}
+.pagination_pages,
+.pagination_rows
+{
+	text-align: center;
+	font-weight: bold;
+	line-height: 25px;
+}
+.pagination_drop_list
+{
+	display: none;
+	overflow: auto;
+	max-height: 250px;
+	min-width: 45px;
+	position: absolute;
+	bottom: -1px;
+	background: #FFFFFF;
+	border: 1px solid #CCCCCC;
+	left: -1px;
+}
+.pagination_link_list
+{
+	display: block;
+	padding: 5px 0;
+	text-align: center;
+}
+.pagination_link_list:hover
+{
+	text-decoration: underline;
+}

@@ -1,0 +1,23 @@
+.key_row .key_val
+{
+	white-space: nowrap;
+	display: block;
+	padding: 2px 0;
+}
+.key_row .key_val:last-child
+{
+	border-bottom: none;
+}
+.key_row .my_tooltip,
+.key_row .key_div
+{
+	white-space: nowrap;
+	border-bottom: 1px dashed #090909;
+	display: block;
+	padding: 2px 0;
+}
+.key_row .my_tooltip:last-child,
+.key_row .key_div:last-child
+{
+	border-bottom: none;
+}

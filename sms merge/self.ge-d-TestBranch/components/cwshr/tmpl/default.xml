@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="page_filter_block" type="h">
+		<filter name="firstname" type="stext" default="" label="firstname" class="kbd" />
+		<filter name="lastname" type="stext" default="" label="lastname" class="kbd" />
+		<filter name="private_number" type="text" default="" label="private_number" />
+		<filter name="org" type="org" default="" label="org" class="kbd" />
+		<!--<filter name="org_place" type="unit" default="" label="org_place" class="kbd" />-->
+		<filter name="hperiod" type="hperiod" default="now" label="hperiod"/>
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="number" default="" label="#" rclass="text-center" />
+		<param order="w.lastname" type="printm" label="worker" key="WFIRSTNAME, WLASTNAME" rclass="text-left" T="1" Tscope="person" />
+		<param name="w.mobile_phone_number" type="print" default="" rclass="text-center"  label="MOBILE_PHONE_NUMBER"  key="MOBILE_PHONE_NUMBER" />
+		<param order="w.private_number" type="print" label="private_number" key="PRIVATE_NUMBER" rclass="text-left" />
+		<param order="w.org" type="org" label="org" key="ORG" rclass="text-left" T="1"/>
+		<param order="" type="utime" label="UNKNOWN TIME" key="ID" rclass="text-center" />
+		<param order="" type="chiefs"  label="CHIEFS" key="ORGPID" org="ORG" rclass="text-center" T="1"/>
+		<!--<param order="" type="wholiday" label="WAGE HOLIDAY COUNT" key="ID" rclass="text-center" />-->
+		<!--<param order="" type="wlholiday" label="WAGELESS HOLIDAY COUNT" key="ID" rclass="text-center" />-->
+	</params>
+</install>

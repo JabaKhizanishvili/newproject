@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+    <params name="Operation Configuration" ordering="1" >
+        <param name="assignment_hour" type="rangenumber" label="Operation Hour" default="13" start="00" end="23"  must="1"/>
+        <param name="RESPONSIBLE_PERSONS" type="slfstaff" case="1"  default="" description="" />
+    </params>
+</install>

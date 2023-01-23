@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Edited by Irakli Gzirishvili 21-10-2021-->
+<!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="page_filter_block" type="h">
+		<filter name="author" type="stext" default="" label="AUTHOR" class="kbd" />
+		<filter name="worker" type="stext" default="" label="WORKER" class="kbd" />
+		<filter name="start_date" type="calendar" default="" label="Start Date" />
+		<filter name="end_date" type="calendar" default="" label="End Date"/>
+		<filter name="org" type="org" default="" label="org" />
+		<filter name="staffschedule" type="staffschedule" default="" label="STAFF_SCHEDULE_UNIT" elementid="org" />
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+
+	<params class="table table-bordered table-condensed table-hover table-striped exporttable" id="exportable">
+		<param order=""   type="number" default="" label="#" rclass="text-center" hclass="text-center"/>
+		<!--<param order="" type="checkall" default="" label="" rclass="text-center"  hclass="text-center" />-->
+		<param order="wfirstname" type="printm" label="worker" key="WFIRSTNAME, WLASTNAME" rclass="text-left" T="1" Tscope="person" />
+		<param order="ww.org" type="org" label="ORG" key="ORG" rclass="text-left" T="1"/>
+		<param order="ww.staff_schedule" type="staffschedule" label="STAFF_SCHEDULE" key="STAFF_SCHEDULE" rclass="text-left" T="1"/>
+		<param order="t.action" type="switch" label="ACTION" key="ACTION" rclass="text-left" >
+			<option value="1">o_In</option>
+			<option value="2">o_Out</option>
+		</param>
+		<param order="t.rec_user" type="slfstaff" label="AUTHOR" key="REC_USER" rclass="text-left" T="1" Tscope="person" />
+		<param order="t.rec_date" type="print" label="ACTION DATE" key="REC_DATE" rclass="text-left" />
+		<param order="t.log_date" type="print" label="DATE" key="LOG_DATE" rclass="text-left" />
+	</params>
+</install>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/edit.dtd">
+<install type="component" version="1.5.0">
+	<params>
+		<param name="LIB_TITLE" type="text" default="" label="Title" must="1" geokbd="1" />
+		<param name="LIB_DESC" type="text" default="" label="Description" geokbd="1" />
+		<group>
+			<param name="ACTIVE" type="radio" default="1">
+				<option value="1">Active Status</option>
+				<option value="0">Inactive</option>
+			</param>
+			<param name="ORDERING" type="text" default="" label="ORDERING" />
+		</group>
+		<param name="mfa_status" type="radio" default="0">
+			<option value="1" color="green">On</option>
+			<option value="0" color="red">Off</option>
+		</param>
+	</params>
+	<params group="menu">
+		<param name="LIB_REL_MENUS" type="menurel" default="" label="Select Menu Items" description="Select Menu Items desc"/>
+		<param name="ID" type="hidden" default="" />
+	</params>
+</install>

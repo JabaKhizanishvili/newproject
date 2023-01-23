@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<params name="Workers">
+		<param order="wfirstname" type="printm" label="worker" key="WFIRSTNAME, WLASTNAME" rclass="text-left" T="1" Tscope="person" />
+		<param order="" type="orgorg" multy="1" label="ORG" key="ORG.ORG" rclass="text-left"  />
+		<param order="" type="staffschedule" multy="1" label="STAFF_SCHEDULE" rclass="text-left" key="ORG.STAFF_SCHEDULE" />
+		<param order="" type="position" multy="1" label="POSITION" rclass="text-left" key="ORG.POSITION" />
+		<param order="p.iban" type="print" multy="e" label="IBAN" key="ORG.IBAN" rclass="text-left" />
+		<param order="" type="print" multy="e" label="MAINUNIT" key="ORG.MAINUNIT" rclass="text-left"  />
+		<param order="" type="unit" multy="e" label="org_place" key="ORG.ORG_PLACE" rclass="text-left" />
+		<param order="" type="date" multy="e" format="%d-%m-%Y"  default="" rclass="text-left"  label="CONTRACTS_DATE"  key="ORG.CONTRACTS_DATE" />
+		<param order="" type="date" multy="e" format="%d-%m-%Y" default="" rclass="text-left"  label="CONTRACT_END_DATE"  key="ORG.CONTRACT_END_DATE" />
+		<param order="" type="print" multy="e" label="SALARY" key="ORG.SALARY" rclass="text-left" />
+		<param order=""   type="switch" multy="e" label="CALCULUS_TYPE" key="ORG.CALCULUS_TYPE" rclass="text-center" >
+			<option value="1">Digital</option>
+			<option value="2">Material</option>
+			<option value="3">Excluded</option>
+		</param>
+		<param order=""   type="switch" multy="e" label="SALARY_PAYMENT_TYPE" key="ORG.SALARY_PAYMENT_TYPE" rclass="text-center" >
+			<option value="1">Cash</option>
+			<option value="2">Card</option>
+		</param>
+		<param order=""   type="print" multy="e" label="TABLENUM" key="ORG.TABLENUM" rclass="text-center" />
+		<param order="" type="switch" multy="e"  label="CONTRACT_TYPE" key="ORG.CONTRACT_TYPE">
+			<option value="-1">-</option>
+			<option value="1">Standard Contract</option>
+		</param>
+		<param order=""   type="category" multy="e" label="CATEGORY_ID" key="ORG.CATEGORY_ID" rclass="text-left" />
+		<param order=""   type="graphtype" multy="e" label="GRAPHTYPE" key="ORG.GRAPHTYPE" rclass="text-center" />
+		<param order="" type="office"  multy="e" label="ACCOUNTING_OFFICES" key="ORG.ACCOUNTING_OFFICES" rclass="text-center" />
+		<param order="" type="multychiefs"  label="CHIEFS" key="ORG" rclass="text-center" />
+		
+		<param order=""   type="switch" label="COUNTING SYSTEM TYPE" key="COUNTING_TYPE" rclass="text-center" >
+			<option value="0">Cards</option>
+			<option value="1">System Buttons</option>
+			<option value="2">SYSTEM BUTTONS AND GPS</option>
+		</param>
+		<param order="p.permit_id" type="print" label="permit_id" key="PERMIT_ID" rclass="text-left" />
+		<param order="p.private_number" type="print" label="private_number" key="PRIVATE_NUMBER" rclass="text-left" />
+		<param order="" type="print" label="father_name" key="FATHER_NAME" rclass="text-left" />
+		<param order="email" type="print" default="" rclass="text-left"  label="EMAIL"  key="EMAIL" />
+		<param order="mobile_phone_number" type="print" default="" rclass="text-left"  label="MOBILE_PHONE_NUMBER"  key="MOBILE_PHONE_NUMBER" />
+		<param order="p.gender" type="switch" label="GENDER" key="GENDER" rclass="text-left" >
+			<option value="1">Male</option>
+			<option value="2">FeMale</option>
+		</param>
+		<param order="p.birthdate" type="date" format="%d-%m-%Y" label="BIRTHDATE" key="BIRTHDATE" rclass="text-left" />
+		<param order="p.nationality" type="switch" label="NATIONALITY" key="NATIONALITY" rclass="text-left" >
+			<option value="1">Georgia</option>
+			<option value="0">Other Country</option>
+		</param>
+		<param order="lc.lib_title" type="print" label="COUNTRY_CODE" key="COUNTRY" rclass="text-left" />
+		<param order="p.actual_address" type="print" label="ACTUAL_ADDRESS" key="ACTUAL_ADDRESS" rclass="text-left" />
+		<param order="p.legal_address" type="print" label="LEGAL_ADDRESS" key="LEGAL_ADDRESS" rclass="text-left" />
+		<param order="p.ldap_username" type="print" label="LDAP_USERNAME" key="LDAP_USERNAME" rclass="text-left" />
+		<param order="user_role"   type="userrole"  label="USER_ROLE" key="USER_ROLE" rclass="text-center" />
+		<param order="p.u_comment" type="print" label="COMMENT" key="U_COMMENT" rclass="text-left" />
+	</params>
+</install>

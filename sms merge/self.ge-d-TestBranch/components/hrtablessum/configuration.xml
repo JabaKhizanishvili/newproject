@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params name="WorkerHours">
+		<param name="" type="spacer" default="WORKED TIME CONFIG" label="" description="" />
+		<param name="htable_identificator" type="radio" default="0"  must="1" >
+			<option value="1">PRIVATE_NUMBER</option>
+			<option value="0">TABLENUM</option>
+		</param>
+		<param name="run_close_tabel" type="radio" default="0"  must="1" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="run_close_tabel_day" type="rangenumber" default="1" start="1" end="28"  must="1"/>
+		<param name="run_close_tabel_hour" type="rangenumber" default="1" start="00" end="23"  must="1"/>
+		<param name="run_close_tabel_chief" type="slfstaff" case="1" default="0" must="1"/>
+	</params>
+	<params group="details">
+		<param name="show_employee_personal_work_time" inline="1" type="radio" default="0"  must="1" >
+			<option value="0">After the report was generated</option>
+			<option value="1">After sending to the head</option>
+			<option value="2">After approval personal work time</option>
+		</param>
+		<param name="tabel_format" type="radio" default="0"  must="1" >
+			<option value="0">Old Format</option>
+			<option value="1">New Format</option>
+		</param>
+		
+		<param name="" type="spacer" default="Events Recalculation" label="" description="" />
+		<param name="run_old_events_recalculation" type="radio" default="0" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+	</params>
+</install>

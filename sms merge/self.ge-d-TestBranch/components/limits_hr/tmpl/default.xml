@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="page_filter_block" type="h">
+		<filter name="firstname" type="stext" default="" label="firstname" class="kbd" />
+		<filter name="lastname" type="stext" default="" label="lastname" class="kbd" />
+		<filter name="org" type="org" default="" label="org" />
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="number" default="" label="#" rclass="text-center" />
+		<param order="t.firstname" type="print" label="FIRSTNAME" key="FIRSTNAME" rclass="text-left" Tscope="person" />
+		<param order="t.lastname" type="print" label="LASTNAME" key="LASTNAME" rclass="text-left" Tscope="person" />
+		<param order="" type="print" label="WAGE HOLIDAY COUNT" key="HWAGE" rclass="text-center" />
+		<param order="" type="print" label="WAGELESS HOLIDAY COUNT" key="HWAGELESS" rclass="text-center" />
+		<param order="" type="tooltip" label="CHIEFS" key="ALL_CHIEFS" rclass="text-left" length="4" />
+		<param order="t.org" type="org" label="org" rclass="text-center" key="ORG"  />
+		<param order="" type="unit" label="ORG_PLACE" key="ORG_PLACE" rclass="text-left" length="4" />
+		<param order="t.user_type" type="usertype" label="user_type" key="USER_TYPE" rclass="text-left" />
+		<param order="t.id" type="print" label="ID" key="ID" rclass="text-center" />
+	</params>
+</install>

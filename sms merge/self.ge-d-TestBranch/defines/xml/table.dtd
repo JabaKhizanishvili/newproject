@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!--
+    TODO define vocabulary identification
+    PUBLIC ID: -//Kevlishvili//TABLE//EN
+    SYSTEM ID: http://web.magti.ge/pda/defines/xml/table.dtd
+
+-->
+
+<!--
+    An example how to use this DTD from your XML document:
+
+    <?xml version="1.0"?>
+
+    <!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+
+    <table>
+    ...
+    </table>
+-->
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT table (column)*>
+<!ATTLIST table
+    name CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT column EMPTY>
+<!ATTLIST column
+    comment CDATA #IMPLIED
+    default CDATA #IMPLIED
+    length CDATA #IMPLIED
+    null CDATA #IMPLIED
+    type CDATA #IMPLIED
+    name CDATA #IMPLIED
+  >

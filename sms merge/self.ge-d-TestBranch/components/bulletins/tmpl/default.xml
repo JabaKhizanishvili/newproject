@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="page_filter_block" type="h">
+		<filter name="firstname" type="stext" default="" label="firstname" class="kbd" />
+		<filter name="lastname" type="stext" default="" label="lastname" class="kbd" />
+		<filter name="private_number" type="stext" default="" label="private_number" class="kbd" />
+		<filter name="org" type="org" default="" label="org" />
+		<filter name="org_place" type="unit" default="" label="unit" />
+		<filter name="state" type="state" default="-1" label="State">
+			<option value="-1">Select State</option>
+			<option value="1">BL_CURRENT</option>
+			<option value="2">BL_CLOSE</option>
+			<option value="3">BL_CONFIRMED</option>
+		</filter>
+		<filter name="year" type="year" default="" label="year" />
+		<filter name="start_date" type="calendar" default="" label="start date" />
+		<filter name="end_date" type="calendar" default="" label="end date" />
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="number" default="" label="#" rclass="text-center" />
+		<param order="" type="checkall" default="" label="" rclass="text-center"   />
+		<param order="wfirstname" type="editlink" label="worker" key="WFIRSTNAME, WLASTNAME" rclass="text-left" T="1" Tscope="person" />
+		<param order="app.private_number" type="print" label="PRIVATE_NUMBER" key="PRIVATE_NUMBER" rclass="text-left" />
+		<param order="" type="task" label="Actions" rclass="text-center" default="1"  key="ID">
+			<option value="confirm">confirm</option>
+		</param>
+		<param order="t.org" type="org" label="org" rclass="text-center" key="ORG"  T="1"/>
+		<param order="" type="workerUnits" label="org_place" key="WORKER_ID" rclass="text-left" />
+		<param order="t.status" type="bulletintype" label="status" rclass="text-center" state_id='ID' state_key="STATUS" />
+		<param order="t.day_count" type="print" label="DAY COUNT G" rclass="text-center" key="DAY_COUNT" />
+		<param order="t.ucomment" type="print" label="UComment" rclass="text-left" key="UCOMMENT" limit="3" />
+		<param order="w.mobile_phone_number" type="print" label="mobile_phone_number" rclass="text-center" key="MOBILE_PHONE_NUMBER" />
+		<param order="t.start_date" type="print" label="Bulletins Start G" key="START_DATE" rclass="text-center" />
+		<param order="t.end_date" type="print" label="Bulletins End G" key="END_DATE" rclass="text-center" />
+		<param order="approver" type="wworker" label="approver" rclass="text-center" key="APPROVE" T="1" />
+		<param order="t.approve_date" type="print" label="APPROVE_DATE" key="APPROVE_DATE" rclass="text-left" />
+		<param order="t.additional_status" type="switch" label="additional_status" rclass="text-center" key="ADDITIONAL_STATUS" >
+			<option value="1">yes</option>
+			<option value="0"></option>
+		</param>
+		<param order="t.files" type="fileprint" label="files" key="FILES" rclass="text-left" />
+		<param order="t.rec_date" type="print" label="REC_DATE" key="REC_DATE" rclass="text-left" />
+		<param order="t.rec_user" type="wworker" label="AUTHOR" key="REC_USER" rclass="text-left" T="1" />
+		<param order="t.id" type="print" label="ID" key="ID" rclass="text-center" />
+	</params>
+</install>

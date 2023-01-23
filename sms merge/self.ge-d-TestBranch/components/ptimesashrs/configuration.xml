@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params name="PRIVATE_DATE_HIST">
+		<param name="private_date" type="radio" default="0"  label="PRIVATE_DATE" must="" >
+			<option value="1">on</option>
+			<option value="0">off</option>
+		</param>
+		<param name="private_date_limit" type="number" default="" label="PRIVATE_DATE_LIMIT" must=""/>
+		<param name="private_date_period" type="list" default="-1" label="PRIVATE_DATE_PERIOD"  must="">
+			<option value="-1">SELECT CATEGORY</option>
+			<option value="1">MONTH</option> 
+			<option value="2">QUARTER</option>
+			<option value="3">YEAR</option>
+		</param>
+		<param name="private_date_show" type="radio" default="0"  label="PRIVATE_DATE_SHOW" must="" >
+			<option value="1">yes</option>
+			<option value="0">no</option>
+		</param>
+	</params>
+	<params group="details">
+		<param name="private_date_after_limit_registration_disable" type="radio" default="0" must="" >
+			<option value="1">yes</option>
+			<option value="0">no</option>
+		</param>
+		<param name="private_date_consider_lateness" type="radio" default="0" must="" >
+			<option value="1">yes</option>
+			<option value="0">no</option>
+		</param>
+		<param name="private_date_auto_approved" type="radio" default="0" must="" >
+			<option value="1">yes</option>
+			<option value="2">yes, but with limit</option>
+			<option value="0">no</option>
+		</param>
+		<param name="private_date_orgs" type="ogrsradio" default="0" must="" label="ORG"/>
+	</params>
+</install>

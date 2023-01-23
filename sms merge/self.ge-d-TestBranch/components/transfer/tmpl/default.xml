@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<param name="ORG" type="orgset" limitorg="1" task="add" label="ORG" />
+	</params>
+	<params group="worker">
+		<param name="WORKER" type="chiefworkers" default="" limitorg="1" label="Worker" must="1" />
+		<param name="CHIEF" type="chiefs" mode="1" default="" label="NEWCHIEF" must="1" />
+		<param name="INFO" type="textarea" default="" geokbd="1" />
+		<param name="ID" type="hidden" default="" />
+		<param name="ORG" type="hidden" default="" />
+		<param name="STATUS" type="hidden" default="0" />
+		<param name="APPROVE" type="hidden" default="0" />
+		<param name="SYNC" type="hidden" default="0" />
+		<param name="DEL_USER" type="hidden" default="0" />
+		<param name="ACCOUNTING_OFFICE" type="hidden" label=""  must=""/>
+	</params>
+	<params group="orgprint">
+		<param name="ORG" type="orgprint" default="" label="ORG" />
+		<param name="WORKER" type="workerprint" default="" label="WORKER" />
+	</params>
+</install>

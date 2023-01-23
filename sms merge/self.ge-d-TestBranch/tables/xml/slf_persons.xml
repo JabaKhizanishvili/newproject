@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="slf_persons" history="yes">
+	<columns>
+		<!--user-->
+		<column name="id" type="number" null="n" />
+		<column name="firstname" type="varchar2" length="255" Ti="1" />
+		<column name="lastname" type="varchar2" length="255" Ti="1" />
+		<column name="father_name" type="varchar2" length="255" Ti="1" />
+		<column name="private_number" type="varchar2" length="500" default="00" />
+		<column name="birthdate" type="date" />
+		<column name="gender" type="number" default="1" />
+		<column name="nationality" type="number" default="00" />
+		<column name="mobile_phone_number" type="varchar2" length="50" />
+		<column name="email" type="varchar2" length="60" />
+		<column name="legal_address" type="varchar2" length="500" />
+		<column name="actual_address" type="varchar2" length="500" />
+		<column name="u_comment" type="varchar2" length="4000"  />
+		<column name="photo" type="varchar2" length="400" />
+		<!--system-->
+		<column name="permit_id" type="varchar2" length="4000" />
+		<column name="accounting_offices" type="varchar2" length="1000" />
+		<column name="accesss_type" type="number" default="00" />
+		<column name="ldap_username" type="varchar2" length="60" />
+		<column name="user_role" type="number" default="00" />
+		<column name="counting_type" type="number" default="00" />
+		<column name="timecontrol" type="number" default="1" />
+		<column name="livelist" type="number" default="1" />
+		<column name="sms_reminder" type="number" default="1" />
+		<column name="sms_worker_lateness" type="number" />
+		<!--default-->
+		<column name="change_date" type="date" />
+		<column name="delete_date" type="date" />
+		<column name="active" type="number" default="00" />
+		<column name="client_id" type="number"  default="00"/>
+		<!--<more>-->
+		<column name="u_password" type="varchar2" length="500" />
+	
+		<column name="iban" type="varchar2" length="1000"  />
+		<column name="country_code" type="number" default="00" />
+		
+		<column name="files" type="varchar2" length="4000"  />
+		<column name="pay_pension" type="number" />
+		<column name="bday_show" type="number" default="1" />
+		<column name="attributes" type="varchar2" length="4000" />
+		<column name="extra_number" type="varchar2" length="50" />
+	</columns>
+	<sequence  name="sqs_slf_person" />
+</table>

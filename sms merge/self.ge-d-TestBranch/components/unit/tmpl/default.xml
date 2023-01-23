@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<param name="LIB_TITLE" type="text" default="" label="Title" must="1" geokbd="1" />
+		<param name="TYPE" type="unittype" default="" label="Unit Type" must="1" />
+		<param name="PARENT_ID" type="unit" default="" label="Parent Unit" must="1" parent="units" />
+		<!--<param name="ORG" type="org" default="" label="ORG" must="1" />-->
+		<param name="LIB_DESC" type="textarea" default="" label="Description"  geokbd="1"/>
+		<param name="UNIT_CODE" type="text" default="" label="UNIT_CODE" must="" geokbd="" />
+		<group>
+			<param name="ACTIVE" type="radio" default="1">
+				<option value="1">Active Status</option>
+				<option value="0">Inactive</option>
+			</param>
+			<param name="ORDERING" type="text" default="999" label="PRIORITY"  />
+		</group>
+		<param name="ID" type="hidden" default="" />
+	</params>
+</install>

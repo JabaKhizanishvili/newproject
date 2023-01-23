@@ -1,0 +1,26 @@
+@media print {
+	.scrollBox
+	{
+		overflow: visible !important;
+	}
+	#info_logout
+	{
+		display: none;
+	}
+	div.top,
+	.content-container
+	{
+		padding: 0px !important;
+		margin: 0px !important;
+	}
+	.page-container
+	{
+		box-shadow: none !important;
+	}
+	tfoot,
+	#footer
+	{
+		display: none;
+	}
+	
+}

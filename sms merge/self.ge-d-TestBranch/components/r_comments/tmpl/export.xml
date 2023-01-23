@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://apps.magticom.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<params name="r_comments">
+		<param order="" type="number" default="" label="#" rclass="text-center" />
+		<param order="" type="print" key="EVENT_DATE" default="" label="DATE" rclass="text-left" />
+		<param order="" type="editlink" key="WFIRSTNAME, WLASTNAME" default="" label="FIRSTNAME_LASTNAME" rclass="text-left" />
+		<param order="" type="print" label="ORG" rclass="text-left" key="ORG_NAME" />
+		<param order="" type="print" key="STAFF_SCHEDULE" default="" label="ORG_PLACE" rclass="text-left" />
+		<param order="" type="print" label="ACTION" rclass="text-left" key="EVENT_NAME" />
+		<param order="" type="print" label="TIME" rclass="text-left" key="EVENT_TIME" />
+		<param order="" type="print" label="DELAY_MINUTES" rclass="text-left" key="TIME_MIN" />
+		<param order="" type="print" label="USER COMMENT/REASON" rclass="text-left" key="U_COMMENT" />
+		<param order="" type="print" label="DICISION_OF_CHIEF" rclass="text-left" key="DICISION_OF_CHIEF" />
+		<param order="" type="print" label="CHIEF" rclass="text-left" key="CHIEF" />
+	</params>
+</install>

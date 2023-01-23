@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="rel_access_manager">
+	<column name="access_id" type="number" null="n" />
+	<column name="controller" type="number" null="n" />
+	<column name="client_id" type="number" default="00" />
+</table>

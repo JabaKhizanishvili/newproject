@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://apps.magticom.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<params name="overtimeworkers">
+		<param order="" type="number" default="" label="#" rclass="text-center" />
+		<param order="" type="printm" label="worker" key="WFIRSTNAME, WLASTNAME" rclass="text-left" T="1" Tscope="person" />
+		<param order="" type="print" label="ORG" key="ORG_NAME" rclass="text-left" T="1"/>
+		<param order="" type="staffschedule" label="staff_schedule" key="STAFF_SCHEDULE" rclass="text-left" T="1"/>
+		<param order="" type="print" label="org_place" key="ORG_PLACE_NAME" rclass="text-left" T="1"/>
+		<param order="" type="print" label="Date" key="START_DATE" rclass="text-center" />
+		<param order="" type="numberprint" dec="2" label="OVERTIME_HOURS" key="DAY_COUNT" rclass="text-center" />
+		<param order="" type="print" label="INFO" key="INFO" rclass="text-left" />
+		<param order="" type="print" label="APPROVER" rclass="text-center" key="APPROVER" T="1"/>
+		<param order="" type="print" label="APPROVE_DATE" rclass="text-center" key="APPROVE_DATE" />
+		<param order="" type="print" label="REC_DATE" key="REC_DATE" rclass="text-left" />
+		<param order="" type="wworker" label="AUTHOR" key="REC_USER" rclass="text-left" T="1"/>
+		<param order="" type="approve" label="status" rclass="text-center" state_id='ID' state_key="STATUS" />
+		<param order="" type="print" label="ID" key="ID" rclass="text-center" />
+	</params>
+</install>

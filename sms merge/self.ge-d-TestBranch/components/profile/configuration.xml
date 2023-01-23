@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params name="Profile Configuration" ordering="2" >
+		<param name="" type="spacer" default="Profile Page Config" label="" description="" />
+		<param name="show_user_documentation" type="radio" default="0"  must="1" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="show_user_holidays" type="radio" default="1"  must="1" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="show_server_time" type="radio" default="1"  must="1" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+	</params>
+	<params group="details">
+		<param name="show_bdays" type="radio" default="1"  must="1" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="bday_range" type="rangenumber" default="2" start="00" end="15"  must=""/>
+		<param name="show_news" type="radio" default="1"  must="1" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="show_user_tasks" type="radio" default="0"  must="1" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+	</params>
+</install>

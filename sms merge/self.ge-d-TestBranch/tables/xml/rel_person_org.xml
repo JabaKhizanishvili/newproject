@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="rel_person_org">
+	<columns>
+		<column name="id" type="number" null="n" />
+		<column name="person" type="number" />
+		<column name="org" type="number" />
+
+		<column name="assignment_date" type="date" />
+		<column name="active" type="number" default="1" />
+		<column name="release_date" type="date" />
+	</columns>
+	<sequence  name="sqs_rel_person_org" />
+</table>

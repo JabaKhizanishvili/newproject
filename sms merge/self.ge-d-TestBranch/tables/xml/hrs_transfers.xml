@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="hrs_transfers" history="yes">
+	<columns>
+		<column name="id" type="number" null="n" />
+		<column name="worker" type="number" null="n" />
+		<column name="chief" type="number" null="n" />
+		<column name="info" type="varchar2" length="4000"  />
+		<column name="rec_user" type="number" null="n" default="00"  />
+		<column name="rec_date" type="date" />
+		<column name="status" type="number" null="n" />
+		<column name="approve" type="number" null="n" default="00"  />
+		<column name="approve_date" type="date" />
+		<column name="del_user" type="number" null="n" default="00"   />
+		<column name="del_date" type="date" />
+		<column name="transfer_date" type="date" />	
+		<column name="org" type="number" null="n" default="00"  />
+		<column name="org_place" type="number" null="n" default="00"  />
+		<column name="position" type="varchar2" length="4000"  />
+		<column name="work_type" type="number" null="n" default="00"  />	
+		<column name="ccomment" type="varchar2" length="4000"  />
+		<column name="accounting_office" type="number" />
+		<column name="graphtype" type="number" default="00" />
+		<column name="graphgroup" type="number" default="00" />
+		<column name="client_id" type="number" default="00" />
+	</columns>
+	<history>
+		<column name="worker" type="number" null="n" />
+		<column name="chief" type="number" null="n" />
+		<column name="info" type="varchar2" length="4000"  />
+		<column name="rec_user" type="number" null="n" default="00"  />
+		<column name="rec_date" type="date" />
+		<column name="status" type="number" null="n" />
+		<column name="approve" type="number" null="n" default="00"  />
+		<column name="approve_date" type="date" />
+		<column name="del_user" type="number" null="n" default="00"   />
+		<column name="del_date" type="date" />
+		<column name="transfer_date" type="date" />	
+		<column name="org" type="number" null="n" default="00"  />
+		<column name="org_place" type="number" null="n" default="00"  />
+		<column name="position" type="varchar2" length="4000"  />
+		<column name="work_type" type="number" null="n" default="00"  />	
+		<column name="ccomment" type="varchar2" length="4000"  />
+		<column name="accounting_office" type="number" />
+		<column name="graphtype" type="number" default="00" />
+		<column name="graphgroup" type="number" default="00" />
+	</history>
+	<sequence  name="library" />
+	<histsequence  name="sqs_transfers_hist" />
+</table>

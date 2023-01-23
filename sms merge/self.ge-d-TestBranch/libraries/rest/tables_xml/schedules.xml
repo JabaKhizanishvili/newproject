@@ -1,0 +1,45 @@
+<table name="lib_staff_schedules" title="schedules" >
+	<columns>
+		<column name="id" alias="staff_schedule_id" />
+		<column name="lib_title" alias="title" />
+		<column name="lib_desc" alias="description" />
+		<column name="position" alias="position_id" />
+		<column name="quantity" />
+		<column name="salary" />
+		<column name="active" alias="status" />
+		<column name="org" alias="org_id" />
+		<column name="org_place" alias="unit_id" />
+		<column name="chief_schedule" alias="chief_schedule_id" />
+		<column name="working_rate" alias="working_rate_id" />
+<!--		<column name="jd" />-->
+<!--		<column name="ordering" />-->
+<!--		<column name="replace_schedule" />-->
+<!--		<column name="iban" />-->
+<!--		<column name="auto_overtime" />-->
+<!--		<column name="schedule_code" />-->
+	     <!--<column name="modify_user" />-->
+          <!--<column name="modify_date" />-->
+	</columns>
+	<request>
+		<item name="start" type="number" required="0">
+			<value>
+				<v name="min" value="0" />
+				<v name="max" value="Unlimited" />
+				<v name="default" value="0" />
+			</value>
+		</item>
+		<item name="limit" type="number" required="0">
+			<value>
+				<v name="min" value="0" />
+				<v name="max" value="500" />
+				<v name="default" value="50" />
+			</value>
+		</item>
+	</request>
+	<response>
+		<item name="start" type="number" />
+		<item name="limit" type="number" />
+		<item name="count" type="number" />
+	</response>
+	<order by="ordering" type="asc" />
+</table>

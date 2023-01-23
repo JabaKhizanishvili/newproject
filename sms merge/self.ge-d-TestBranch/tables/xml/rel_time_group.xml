@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://apps.magticom.ge/pda/defines/xml/table.dtd">
+<table name="rel_time_group">
+	<column name="time_id" type="number" null="n" />
+	<column name="group_id" type="number" null="n"  />
+	<column name="client_id" type="number" default="00" />
+</table>

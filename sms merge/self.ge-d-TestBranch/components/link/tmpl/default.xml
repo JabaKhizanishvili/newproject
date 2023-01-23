@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+    <params>
+        <param name="TITLE" type="text" default="" label="Title" must="1" />
+        <param name="LINK" type="text" default="" label="Link" must="1" />
+        <param name="ID" type="hidden" default="" />
+    </params>
+</install>

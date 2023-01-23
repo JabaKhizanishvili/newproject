@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<param name="LIB_TITLE" type="text" default="" label="Title" must="1"  geokbd="1" />
+		<param name="LIB_DESC" type="textarea" default="" label="Description" geokbd="1" />
+		<param name="MAIN_DOMAIN" type="text" default="" label="main_domain" must="1"  />
+		<param name="DOMAIN" type="text" default="" label="domain" must=""  />
+		<param name="SUB_DOMAIN" type="text" default="" label="subdomain" must=""  />
+		<param name="MULTY_SYSTEM" type="radio" default="0">
+			<option value="1">yes</option>
+			<option value="0">no</option>
+		</param>
+		<param name="EXPIRED_DATE" type="calendar" default="now" label="expired_date" must="1" />
+		<param name="ACTIVE" type="radio" default="1">
+			<option value="1">Active Status</option>
+			<option value="0">Inactive</option>
+		</param>
+		<param name="ORDERING" type="text" default="999" label="ORDERING"  />
+		<param name="ID" type="hidden" default="" />
+	</params>
+</install>

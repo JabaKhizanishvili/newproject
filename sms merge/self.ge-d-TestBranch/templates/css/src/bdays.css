@@ -1,0 +1,103 @@
+.bday_item
+{
+	width: 80%;
+	min-width: 60%;
+	margin: 0px auto;
+}
+.bday_item_photo img
+{
+	width: auto;
+	max-height: 60px;
+	border-radius: 50%;
+}
+.bday_item_photo
+{
+	text-align: center;
+}
+.bday_item_name
+{
+	padding: 3px 0px;
+	font-weight: bold;
+	font-size: 14px;
+}
+.bday_item_position
+{
+	font-size: 10px;
+	font-style: italic;
+}
+.bday_item_date
+{
+	font-size: 10px;
+}
+.news-text *,
+.news-text
+{
+	font-size: 18px !important;
+}
+.news-text img
+{
+	float: left;
+	max-width: 300px;
+	margin: 0 15px 5px 0;
+}
+.bday-item
+{
+	border-bottom: 1px solid #CCCCCC;
+	padding: 15px 00px 15px;
+	margin: 0px 10px;
+}
+.bday_item_type1
+{
+	background-color: #f1f5f5;
+}
+.bday-item:last-child
+{
+	border-bottom: none;
+	/*padding: 15px 10px 15px;*/
+}
+.bday-type
+{
+	text-align: right;
+	font-weight: bold;
+}
+.bday-type .bday-red
+{
+	color: #a01578;
+}
+.bday-type .bday-green
+{
+	color: #00756A;
+}
+
+
+
+.news_item_photo img
+{
+	max-height: 100px;
+	width: auto; 
+	border-radius: 10%;
+}
+.news_item_photo
+{
+	text-align: center;
+}
+.news_item_name
+{
+	padding: 3px 0px;
+	font-weight: bold;
+	font-size: 14px;
+}
+.news_item_position
+{
+	font-size: 10px;
+	font-style: italic;
+}
+.news_item_date
+{
+	font-size: 10px;
+}
+.news_item_date a
+{
+	color: #00756A;
+	font-weight: bold;
+}

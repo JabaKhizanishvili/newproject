@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="rel_worker_device_id">
+	<column name="worker" type="number" null="n" />
+	<column name="device_id" type="number" null="n"  />
+	<column name="permit_id" type="varchar2" length="1000"  />
+</table>

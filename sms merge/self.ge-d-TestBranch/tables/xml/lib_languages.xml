@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="lib_languages" history="yes">
+	<columns>
+		<column name="id" type="number" />
+		<column name="lib_code" type="varchar2" length="50" />
+		<column name="lib_title" type="varchar2" length="4000" Ti="1" />
+		<column name="active" type="number" />
+		<column name="change_date" type="date" />
+		<column name="change_user" type="number" />
+		<column name="lib_desc" type="varchar2" length="4000" />
+		<column name="def_lang" type="number" default="00" />
+	     <column name="modify_user" type="number" />
+          <column name="modify_date" type="date" />
+     </columns>
+	<history>
+		<column name="lib_code" type="varchar2"  />
+		<column name="lib_title" type="varchar2"/>
+		<column name="active" type="number" />
+		<column name="lib_desc" type="varchar2" length="4000" />
+		<column name="def_lang" type="number" />
+	     <column name="modify_user" type="number" />
+          <column name="modify_date" type="date" />
+     </history>
+	<sequence  name="sqs_lib_languages" />
+	<histsequence  name="sqs_lib_languages_hist" />
+</table>

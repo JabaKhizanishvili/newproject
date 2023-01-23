@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://apps.magticom.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="page_filter_block" type="h">
+		<filter name="org" type="myorg" default="" label="org" />
+		<filter name="start_date" type="calendar" default="" label="start date" />
+		<filter name="end_date" type="calendar" default="" label="end date" />
+		<filter name="year" type="year" default="" label="year" />
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="number" default="" label="#" rclass="text-center" />
+		<param order="" type="checkall" default="" label="" rclass="text-center"   />
+		<param order="wfirstname" type="printm" label="worker" key="WFIRSTNAME, WLASTNAME" rclass="text-left" T="1" Tscope="person"/>
+		<param order="org" type="org" label="org" key="ORG" rclass="text-left" T="1"/>
+		<param order="t.status" type="bulletintype" label="status" rclass="text-center" state_id='ID' state_key="STATUS" />
+		<param order="t.day_count" type="print" label="DAY COUNT G" rclass="text-center" key="DAY_COUNT" />
+		<param order="t.ucomment" type="print" label="UCOMMENT" rclass="text-left" key="UCOMMENT" limit="3" />
+		<param order="t.start_date" type="print" label="Bulletins Start G" key="START_DATE" rclass="text-center" />
+		<param order="t.end_date" type="print" label="Bulletins End G" key="END_DATE" rclass="text-center" />
+		<param order="afirstname" type="printm" label="APPROVER" rclass="text-center" key="AFIRSTNAME, ALASTNAME" T="1"/>
+		<param order="t.files" type="fileprint" limit_type="1" label="FILES" rclass="text-left" key="FILES" />
+		<param order="t.rec_date" type="print" label="REC_DATE" key="REC_DATE" rclass="text-left" />
+		<param order="t.rec_user" type="wworker" label="AUTHOR" key="REC_USER" rclass="text-left" T="1" Tscope="person" />
+	</params>
+</install>

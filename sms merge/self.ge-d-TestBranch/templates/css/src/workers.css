@@ -1,0 +1,127 @@
+div.WorkersBlock,
+div.ChiefsBlock
+{
+	border-top: 1px dashed #cccccc;
+	/*width: 300px;*/
+}
+div.WorkersBlock *,
+div.ChiefsBlock *
+{
+	float: none;
+}
+.WorkersContainer,
+.ChiefsContainer,
+.WorkerContainer
+{
+	width: 100%;
+	margin: 0px 0px 10px;
+}
+.WorkerContainerNew
+{
+	width: 100%;
+	min-height: 25px;
+	margin-bottom: 3px;
+	border-bottom: 1px dashed #cccccc;
+}
+.WorkersBlockFilter .WorkerContainerNew
+{
+	border: 1px solid #e4e4e4;
+}
+div.WorkertItem
+{
+	padding: 2px;
+	float: none;
+	clear: both;
+	font-size: 15px;
+}
+div.WorkerItem_name
+{
+	float: left;
+	white-space: nowrap;
+	width: 100%;
+	font-weight: bold;
+	font-size: 12px;
+	overflow: hidden;
+}
+div.ContractItem
+{
+	padding: 2px 0 2px 5px;
+	border-bottom: 1px dashed #cccccc;
+	float: none;
+	clear: both;
+	font-size: 15px;
+}
+div.WorkertItem small,
+div.ContractItem small
+{
+	color: #cccccc;
+}
+div.ContractItem:hover
+{
+	background-color: #ffffcc;
+}
+div.ContractItem_name
+{
+	float: left;
+	white-space: nowrap;
+	width: 80%;
+	font-weight: bold;
+	font-size: 13px;
+	overflow: hidden;
+}
+div.Contracttools
+{
+	float: right;
+	width: 20%;
+	text-align: right;
+}
+div.Contracttools span
+{
+	display: block;
+	float: right;
+	width: 16px;
+	cursor: pointer;
+	margin: 2px;
+	line-height: normal;
+}
+div.ContractItem_name a
+{
+	display: block;
+}
+.worker_item_order
+{
+	width: 25px;
+	padding: 2px;
+	margin-top: -10px;
+	text-align: center;
+}
+
+.WorkerContainer,
+.WorkersContainer,
+.ChiefsContainer
+{
+	min-height: 30px;
+}
+.tk_i_scroll
+{
+	height: 10px;
+	background-image: url(../../templates/images/divider.png );
+	background-repeat: repeat-x;
+	background-position: center;
+	background-color: #b6d2e8;
+	cursor: move;
+}
+.tk_i_no_scroll
+{
+	height: 10px;
+}
+
+div.ChiefsBlock .input-group,
+div.ChiefsBlock .text-right {
+	margin-bottom: 10px;
+}
+
+div.WorkersBlock .input-group,
+div.WorkersBlock .text-right {
+	margin-bottom: 10px;
+}

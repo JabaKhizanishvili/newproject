@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="hrs_translations" history="yes">
+	<columns>
+		<column name="id" type="number" />
+		<column name="lib_from" type="varchar2" length="50" />
+		<column name="lib_to" type="varchar2" length="50" />
+		<column name="from_text" type="varchar2" length="4000" />
+		<column name="to_text" type="varchar2" length="4000" />
+		<column name="from_text_hash" type="varchar2" length="4000" />
+		<column name="rec_date" type="date" />
+		<column name="rec_user" type="number" />
+		<column name="change_date" type="date" />
+		<column name="change_user" type="number" />
+		<column name="active" type="number"/>
+		<column name="edit_text" type="varchar2" length="4000" />
+		<column name="modify_user" type="number" />
+		<column name="modify_date" type="date" />
+	</columns>
+	<history>
+		<column name="lib_from" type="varchar2" />
+		<column name="lib_to" type="varchar2" />
+		<column name="from_text" type="varchar2" />
+		<column name="to_text" type="varchar2" />
+		<column name="from_text_hash" type="varchar2" />
+		<column name="edit_text" type="varchar2" length="4000" />
+		<column name="modify_user" type="number" />
+		<column name="modify_date" type="date" />
+	</history>
+	<sequence  name="sqs_hrs_translations" />
+	<histsequence  name="sqs_hrs_translations_hist" />
+</table>

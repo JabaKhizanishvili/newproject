@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="page_filter_block" type="h">
+		<filter name="lib_title" type="stext" default="" label="TEXT_SEARCH" class="kbd" />
+		<filter name="active" type="state" default="-1" label="State">
+			<option value="-1">Select State</option>
+			<option value="0">Inactive</option>
+			<option value="1">Active Status</option>
+		</filter>
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="number" default="" label="#" rclass="text-center" hclass="text-center"/>
+		<param order="" type="checkall" default="" label="" rclass="text-center"   />
+		<param order="t.lib_title" type="editlink" label="Title" key="LIB_TITLE" rclass="text-left" T="1" />
+		<param order="t.lib_desc" type="print" label="Description" key="LIB_DESC" rclass="text-left" />
+		<param order="t.controller_code" type="print" label="controller_code" key="CONTROLLER_CODE" rclass="text-left" />
+		<param order="t.alert" type="switch" label="alert" rclass="text-center" key="ALERT" >
+			<option value="1">Active Status</option>
+			<option value="0">Inactive</option>
+		</param>
+		<param order="" type="office" label="office" key="OFFICE" rclass="text-left" T="1" />
+		<param order="connection" type="switch" label="connection_status" key="CONNECTION" rclass="text-center" >
+			<option value="1" color="green">on</option>
+			<option value="0" color="red">off</option>
+		</param>
+		<param order="t.active" type="state" label="State" rclass="text-center" state_id='ID' state_key="ACTIVE" />
+		<param order="t.id" type="controllerhistory" label="history" action="modal" rclass="text-center" key="ID" />
+		<param order="t.id" type="controllerhistory" label="monitoring" action="monitor" rclass="text-center" key="ID" />
+		<param order="t.ordering" type="print" label="ordering" key="ORDERING" rclass="text-center" />
+		<param order="t.id" type="print" label="ID" key="ID" rclass="text-center" hclass="text-center"/>
+	</params>
+</install>

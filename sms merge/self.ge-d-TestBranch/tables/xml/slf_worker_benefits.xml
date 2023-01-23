@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Created by Irakli Gzirishvili 28-10-2021-->
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="slf_worker_benefits" history="yes">
+	<columns>
+		<column name="id" type="number" null="n"/>
+		<column name="worker" type="number"/>
+		<column name="rec_date" type="date"/>
+		<column name="calc_date" type="date"/>
+		<column name="benefit_id" type="number"/>
+		<column name="class" type="number"/>
+		<column name="regularity" type="number"/>
+		<column name="share_type" type="number"/>
+		<column name="worker_share" type="number"/>
+		<column name="company_share" type="number"/>
+		<column name="gross_tax_type" type="number"/>
+		<column name="ACCRUAL_TYPE" type="number"/>
+		<column name="TYPE" type="number"/>
+		<column name="PERIODICITY" type="number"/>
+		<column name="cost" type="number"/>
+		<column name="worker_minus" type="number"/>
+		<column name="worker_plus" type="number"/>
+		<column name="company_plus" type="number"/>
+		<column name="accrued_income" type="number"/>
+		<column name="accrued_pension" type="number"/>
+		<column name="period_id" type="number"/>
+		<column name="status" type="number" default="00"/>
+		<column name="org" type="number"/>
+		<column name="sheet_id" type="number"/>
+		<column name="gen_hash" type="varchar2" length="500" />
+	</columns>
+	<sequence  name="sqs_worker_benefits" />
+</table>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<filters class="page_filter_block" type="h">
+		<filter name="firstname" type="stext" default="" label="firstname" class="kbd" />
+		<filter name="lastname" type="stext" default="" label="lastname" class="kbd" />
+		<!--<filter name="position" type="stext" default="" label="position" class="kbd" />-->
+		<filter name="org" type="org" default="" label="org" />
+		<filter name="unit" type="unit" active="1" default="" label="unit"  elementid="org" />
+		<filter name="staffschedule" type="staffschedule" label="staffschedule"  default="-1" elementid="org" />
+		<filter name="start_date" type="calendar" default="now" label="Start Date" format="%d-%m-%Y" />
+		<filter name="end_date" type="calendar" default="now" label="End Date" format="%d-%m-%Y" />
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+	<params class="table table-bordered table-condensed table-hover table-striped" >
+		<!--<param order="" type="number" default="" label="#" rclass="text-center" />-->
+		<param order="" type="checkall" default="" label="" rclass="text-center"   />
+		<param order="p.lastname" type="joinprint" label="Worker" patern="FIRSTNAME LASTNAME" rclass="text-left" T="1"/>
+		<param order="lss.lib_title" type="staffschedule" label="staffschedule" key="STAFF_SCHEDULE" rclass="text-left" T="1"/>
+		<param order="u.lib_title" type="print" label="STRUCTURE" key="ORG_PLACE_TITLE" rclass="text-left"  T="1"/>
+		<param order="" type="_DATA_" rclass="text-center" />
+		<param order="" type="_DATA_" rclass="text-center" />
+		<param order="" type="_DATA_" rclass="text-center" />
+		<param order="" type="_DATA_" rclass="text-center" />
+		<param order="" type="_DATA_" rclass="text-center" />
+		<param order="" type="_DATA_" rclass="text-center" />
+		<param order="" type="_DATA_" rclass="text-center" />
+		<param order="" type="_DATA_" rclass="text-center" />
+		<param order="" type="_DATA_" rclass="text-center" />
+		<param order="" type="_DATA_" rclass="text-center" />
+		<param order="" type="_DATA_" rclass="text-center" />
+		<param order="" type="_DATA_" rclass="text-center" />
+		<param order="" type="_DATA_" rclass="text-center" />
+		<param order="" type="_DATA_" rclass="text-center" />
+		<param order="" type="_DATA_" rclass="text-center" />
+		<param order="" type="_DATA_" rclass="text-center" />
+		<param order="" type="_DATA_" rclass="text-center" />
+		<param order="" type="_DATA_" rclass="text-center" />
+		<param order="" type="_DATA_" rclass="text-center" />
+		<param order="" type="_DATA_" rclass="text-center" />
+		<param order="" type="_DATA_" rclass="text-center" />
+		<param order="" type="_DATA_" rclass="text-center" />
+		<param order="" type="_DATA_" rclass="text-center" />
+		<param order="" type="_DATA_" rclass="text-center" />
+		<param order="" type="_DATA_" rclass="text-center" />
+		<param order="" type="_DATA_" rclass="text-center" />
+		<param order="" type="_DATA_" rclass="text-center" />
+		<param order="" type="_DATA_" rclass="text-center" />
+		<param order="" type="_DATA_" rclass="text-center" />
+		<param order="" type="_DATA_" rclass="text-center" />
+		<param order="" type="_DATA_" rclass="text-center" />
+		<param order="" type="_DATA_" rclass="text-center" />
+		<param order="" type="_DATA_" rclass="text-center" />
+		<param order="" type="_DATA_" rclass="text-center" />
+		<param order="" type="_DATA_" rclass="text-center" />
+		<param order="" type="_DATA_" rclass="text-center" />
+		<param order="" type="_DATA_" rclass="text-center" />
+	</params>
+</install>

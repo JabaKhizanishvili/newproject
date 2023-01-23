@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://apps.magticom.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="table table-bordered table-condensed table-filter-vertical" type="h">
+		<filter name="firstname" type="stext" default="" label="firstname" class="kbd"  />
+		<filter name="lastname" type="stext" default="" label="lastname" class="kbd"  />
+		<filter name="org" type="org" default="" label="org" />
+		<filter name="org_place" type="unit" default="" label="unit" />
+		<filter name="start_date" type="calendar" default="" label="End Date" />
+		<filter name="end_date" type="calendar" default="" label="End Date" />
+		<filter name="status" type="state" default="-1" label="status" >
+			<option value="-1"> - </option>
+			<option value="0">not Confirmed</option>
+			<option value="1">Confirmed</option>
+			<option value="-2">deleted</option>
+		</filter>
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="number" default="" label="#" rclass="text-center" />
+		<param order="" type="checkall" default="" label="" rclass="text-center" key="ID"  />
+		<param order="wt.start_date" type="editlink" label="date" key="GRAPH_DAY" rclass="text-left"/>
+		<param order="lastname" type="joinprint" label="worker" patern="LASTNAME FIRSTNAME" rclass="text-left" T="1" Tscope="person" />
+		<param order="private_number" type="print" label="private_number" key="PRIVATE_NUMBER" rclass="text-left"/>
+		<param order="sw.tablenum" type="print" label="TABLENUM" key="TABLENUM" rclass="text-left"/>
+		<param order="position" type="print" label="POSITION" key="POSITION" rclass="text-left"/>
+		<param order="" type="mainunit" label="MAINUNIT" key="ORG_PLACE" tipkey="MAINUNIT" rclass="text-left"  T="1"/>
+		<param order="office" type="office" label="ACOUNTUNIT" key="OFFICE"  rclass="text-left"  T="1"/>
+		<param order="" type="print" label="WORKERDHOUR_DAY" key="DAY_WORKED_TIME"  rclass="text-left" />
+		<param order="" type="print" label="WORKERDHOUR_NIGHT" key="NIGHT_WORKED_TIME"  rclass="text-left" />
+		<param order="" type="print" label="WORKERDHOUR" key="WORKED_TIME"  rclass="text-left"  T="1"/>
+		<param order="wt.status" type="switch" label="STATUS" key="STATUS"  rclass="text-center">
+			<option value="0" color="red" >not Confirmed</option>
+			<option value="1" color="green" >Confirmed</option>
+			<option value="-2" color="yellow" >deleted</option>
+		</param>
+		<param order="" type="print" label="START_TIME" key="START_TIME"  rclass="text-left" />
+		<param order="" type="pic" label="START_TIME_PIC" key="START_PIC"  rclass="text-left" />
+		<param order="" type="print" label="END_TIME" key="END_TIME"  rclass="text-left" />
+		<param order="" type="pic" label="END_TIME_PIC" key="END_PIC"  rclass="text-left" />
+		<param order="wt.org" type="org" label="org" rclass="text-center" key="ORG"  T="1"/>
+		<param order="wt.org_place" type="orgplace" label="org_place" key="ORG_PLACE" rclass="text-left" T="1"/>
+		<param order="wt.ID" type="print" label="ID" key="ID" rclass="text-left"/>
+	</params>
+</install>

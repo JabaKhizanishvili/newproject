@@ -1,0 +1,23 @@
+.docs-block
+{
+	background-color: #FFFFFF;
+}
+.docs-block a
+{
+	color: #5c5d5d;
+}
+.docs-block a:hover
+{
+	color: #49477a;
+}
+.news-image,
+.docs-image
+{
+	margin: 0px 7px;
+}
+.docs-image i,
+.news-image i
+{
+	font-size: 25px;
+	color: #00756A;
+}

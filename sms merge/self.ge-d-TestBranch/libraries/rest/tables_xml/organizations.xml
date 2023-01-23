@@ -1,0 +1,35 @@
+<table name="lib_unitorgs" title="Organizations" >
+	<columns>
+		<column name="id" alias="org_id"/>
+		<column name="lib_title" alias="title"/>
+		<column name="lib_desc" alias="description"/>
+		<column name="active" alias="status"/>
+		<!--<column name="ordering" />-->
+		<column name="lib_tin" alias="org_in" />
+		<!--<column name="modify_user" type="number" />-->
+		<!--<column name="modify_date" type="date" />-->
+	</columns>
+	<request>
+		<item name="start" type="number" required="0">
+			<value>
+				<v name="min" value="0" />
+				<v name="max" value="Unlimited" />
+				<v name="default" value="0" />
+			</value>
+		</item>
+		<item name="limit" type="number" required="0">
+			<value>
+				<v name="min" value="0" />
+				<v name="max" value="500" />
+				<v name="default" value="50" />
+			</value>
+		</item>
+	</request>
+	<response>
+		<item name="start" type="number" />
+		<item name="limit" type="number" />
+		<item name="count" type="number" />
+	</response>
+	<order by="lib_title" type="asc" />
+	<where><![CDATA[ active = 1 ]]></where>
+</table>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="number" default="" label="#" rclass="text-center" />
+		<param order="" type="checkall" default="" label="" rclass="text-center"   />
+		<param order="wfirstname" type="editlink" label="worker" key="WFIRSTNAME, WLASTNAME" rclass="text-left" T="1" Tscope="person" />
+		<param order="t.org" type="org" label="ORG" key="ORG" rclass="text-left" T="1"/>
+		<param order="ww.staff_schedule" type="staffschedule" label="staff_schedule" key="STAFF_SCHEDULE" rclass="text-left" T="1"/>
+		<param order="ww.org_place_name" type="print" label="org_place" key="ORG_PLACE_NAME" rclass="text-left" T="1"/>
+		<param order="t.status" type="approve" label="status" rclass="text-center" state_id='ID' state_key="STATUS" />
+		<param order="t.start_date" type="print" label="Date" key="START_DATE" rclass="text-center" />
+		<param order="t.day_count" type="timeprint" dec="2" label="OVERTIME_HOURS" key="DAY_COUNT" rclass="text-center" />
+		<param order="t.info" type="print" label="INFO" key="INFO" rclass="text-left" />
+		<param order="afirstname" type="printm" label="APPROVER" rclass="text-center" key="AFIRSTNAME, ALASTNAME" T="1" Tscope="person" />
+		<param order="t.approve_date" type="print" label="APPROVE_DATE" rclass="text-center" key="APPROVE_DATE" />
+		<param order="t.rec_date" type="print" label="REC_DATE" key="REC_DATE" rclass="text-left" />
+		<param order="t.rec_user" type="wworker" label="AUTHOR" key="REC_USER" rclass="text-left" T="1"/>
+		<param order="t.id" type="print" label="ID" key="ID" rclass="text-center" />
+	</params>
+</install>

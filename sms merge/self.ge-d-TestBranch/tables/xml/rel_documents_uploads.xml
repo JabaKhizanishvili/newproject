@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="rel_documents_uploads">
+    <columns>
+        <column name="doc_id" type="number" />
+        <column name="worker" type="number" />
+    </columns>
+</table>

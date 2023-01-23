@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://apps.magticom.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="table table-bordered table-condensed table-filter-vertical" type="v">
+		<filter name="doors" type="doors" default="" label="doors" />
+		<filter name="firstname" type="stext" default="" label="firstname" class="kbd"  />
+		<filter name="lastname" type="stext" default="" label="lastname" class="kbd"  />
+		<filter name="org" type="org" default="" label="org" />
+		<filter name="org_place" type="unit" default="" label="unit" />
+		<filter name="card_id" type="stext" default="" label="card_id"  />
+		<filter name="start_date" type="calendar" default="now" label="Start Date" />
+		<filter name="end_date" type="calendar" default="now" label="End Date" />
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="number" default="" label="#" rclass="text-center" />
+		<param order="firstname" type="print" label="firstname" key="FIRSTNAME" rclass="text-left Georgian1" T="1" Tscope="person" />
+		<param order="lastname" type="print" label="lastname" key="LASTNAME" rclass="text-left Georgian1" T="1" Tscope="person" />
+		<param order="t.rec_date" type="print" label="date" key="REC_DATE" rclass="text-left"/>
+		<param order="w.permit_id" type="print" label="Worker PERMIT_ID" key="PERMIT_ID" rclass="text-left"/>
+		<param order="ww.org" type="org" label="org" rclass="text-center" key="ORG"  T="1"/>
+		<param order="" type="workerUnits" label="org_place" key="WORKER_ID" rclass="text-left" T="1"/>
+		<param order="t.card_id" type="print" label="Fix CARD_ID" key="CARD_ID" rclass="text-left"/>
+		<param order="d.lib_title" type="print" label="Door" key="LIB_TITLE" rclass="text-left" T="1"/>
+		<param type="print" label="ID" key="ID" rclass="text-left"/>
+	</params>
+	<params class="table table-bordered table-condensed table-hover table-striped" group="picture">
+		<param order="" type="number" default="" label="#" rclass="text-center" />
+		<param order="firstname" type="print" label="firstname" key="FIRSTNAME" rclass="text-left Georgian1" T="1" Tscope="person" />
+		<param order="lastname" type="print" label="lastname" key="LASTNAME" rclass="text-left Georgian1" T="1" Tscope="person" />
+		<param order="t.rec_date" type="print" label="date" key="REC_DATE" rclass="text-left"/>
+		<param order="w.permit_id" type="print" label="Worker PERMIT_ID" key="PERMIT_ID" rclass="text-left" />
+		<param order="" type="pic" label="Photo" key="CARDNAME" rclass="text-left" class="img_listing"/>
+		<param order="ww.org" type="org" label="org" rclass="text-center" key="ORG"  T="1"/>
+		<param order="" type="workerUnits" label="org_place" key="WORKER_ID" rclass="text-left" T="1"/>
+		<param order="t.card_id" type="print" label="Fix CARD_ID" key="CARD_ID" rclass="text-left"/>
+		<param order="d.lib_title" type="print" label="Door" key="LIB_TITLE" rclass="text-left" T="1"/>
+		<param type="print" label="ID" key="ID" rclass="text-left"/>
+	</params>
+</install>

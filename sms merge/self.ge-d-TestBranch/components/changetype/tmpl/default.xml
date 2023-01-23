@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<param name="LIB_TITLE" type="text" default="" label="Title" must="1"  geokbd="1" />
+		<param name="LIB_DESC" type="textarea" default="" label="Description" geokbd="1" />
+		<param name="FIELDS" type="multy" size="7" default="-1" label="FIELDS" >
+			<option value="SALARY">SALARY</option>
+			<option value="IBAN">IBAN</option>
+			<option value="SALARY_PAYMENT_TYPE">SALARY_PAYMENT_TYPE</option>
+			<option value="CHIEFS">CHIEFS</option>
+			<option value="TABLENUM">TABLENUM</option>
+			<option value="CONTRACTS_DATE">CONTRACTS_DATE</option>
+			<option value="CONTRACT_END_DATE">CONTRACT_END_DATE</option>
+			<option value="ACCOUNTING_OFFICE">ACCOUNTING_OFFICE</option>
+			<option value="AUTO_OVERTIME">AUTO_OVERTIME</option>
+			<option value="CALCULUS_TYPE">CALCULUS_TYPE</option>
+			<option value="CALCULUS_REGIME">CALCULUS_REGIME</option>
+			<option value="CATEGORY_ID">CATEGORY_ID</option>
+			<option value="GRAPHTYPE">GRAPHTYPE</option>
+			<option value="P_CODE">P_CODE</option>
+			<option value="SALARYTYPE">SALARYTYPE</option>
+			<option value="BENEFIT_TYPES">BENEFIT_TYPES</option>
+			<!--<option value="14">CHANGE_DATE</option>-->
+		</param>
+		<!--<group>-->
+		<param name="ACTIVE" type="radio" default="1">
+			<option value="1">Active Status</option>
+			<option value="0">Inactive</option>
+		</param>
+		<param name="ORDERING" type="text" default="999" label="ORDERING"  />
+		<!--</group>-->
+		<param name="ID" type="hidden" default="" />
+	</params>
+</install>

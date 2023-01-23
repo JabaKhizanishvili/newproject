@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/component.config.dtd">
+<install type="component" version="1.5.0">
+	<params name="Overtimes">
+		<param name="" type="spacer" default="After Working Day AutoOvertime Configuration" label="" description="" />
+		<param name="autoovertime_on" type="radio" default="0"  must="1" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="autoovertime_min_hour" type="number" default="1" label="autoovertime_min_hour" description="" min="1" max="8" step="0.1" />
+		<param name="autoovertime_max_hour" type="number" default="6" label="autoovertime_max_hour" description="" min="1" max="8" step="0.1" />
+		<param name="autoovertime_after_day" type="rangenumber" default="4" label="autoovertime_after_day" description="" start="2" end="15"  />
+		<param name="autoovertime_alert" type="msgtemplates" default="" label="autoovertime_alert" must="1" T="1" />
+		<param name="graph_autoovertime_identificator" type="radio" default="0"  must="1" >
+			<option value="1">PRIVATE_NUMBER</option>
+			<option value="0">TABLENUM</option>
+			<option value="2">Both</option>
+		</param>
+		<param name="OVERTIMEWORKERS_DECIMAL_TO_HRS_MIN" label="OVERTIMEWORKERS_DECIMAL_TO_HRS_MIN" type="radio" default="0"  must="1" >
+			<option value="0">OVERTIMEWORKERS_DECIMAL</option>
+			<option value="1">OVERTIMEWORKERS_HRS_AND_MIN</option>
+		</param>
+	</params>
+	<params group="details">
+		<param name="" type="spacer" default="Before Working Day AutoOvertime Configuration" label="" description="" />
+		<param name="before_autoovertime_on" type="radio" default="0"  must="1" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="before_autoovertime_min_hour" type="number" default="1" label="before_autoovertime_min_hour" description="" min="1" max="8" step="0.1" />
+		<param name="before_autoovertime_max_hour" type="number" default="4" label="before_autoovertime_max_hour" description="" min="1" max="8" step="0.1" />
+		<param name="before_autoovertime_after_day" type="rangenumber" default="1" label="before_autoovertime_after_day" description="" start="0" end="15"  />
+		<param name="before_autoovertime_alert" type="msgtemplates" default="" label="before_autoovertime_alert" must="1" T="1" />
+		<param name="" type="spacer" default="Graph Auto Overtime Configuration" label="" description="" />
+		<param name="graph_weekovertime_on" type="radio" default="0"  must="1" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="graph_weekovertime_auto_confirm" type="radio" default="0"  must="1" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>`
+		<param name="graph_weekovertime_alert" type="radio" default="0"  must="1" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="graph_weekovertime_after_day" type="rangenumber" default="3" label="graph_weekovertime_after_day" description="" start="2" end="20"  />
+	</params>
+</install>

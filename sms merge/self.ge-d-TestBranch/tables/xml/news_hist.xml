@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="news_hist">
+	<column name="hist_id" type="number" null="n" />
+	<column name="hist_start_date" type="date" />
+	<column name="hist_end_date" type="date" />
+	<column name="id" type="number" null="n" />
+	<column name="title"  type="varchar2" length="4000" />
+	<column name="introtext"  type="varchar2" length="4000" />
+	<column name="text0"  type="varchar2" length="4000" />
+	<column name="text1"  type="varchar2" length="4000" />
+	<column name="text2"  type="varchar2" length="4000" />
+	<column name="text3"  type="varchar2" length="4000" />
+	<column name="text4"  type="varchar2" length="4000" />
+	<column name="text5"  type="varchar2" length="4000" />
+	<column name="text6"  type="varchar2" length="4000" />
+	<column name="text7"  type="varchar2" length="4000" />
+	<column name="text8"  type="varchar2" length="4000" />
+	<column name="text9"  type="varchar2" length="4000" />
+	<column name="modify_date" type="date" />
+	<column name="modify_user" type="number" />
+	<column name="publish_date" type="date" />
+	<column name="unpublish_date" type="date" />
+	<column name="image"  type="varchar2" length="4000" />
+	<column name="active" type="number" />
+	<column name="record_date" type="date" />
+	<column name="client_id" type="number" default="00" />
+</table>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/edit.dtd">
+<install type="component" version="1.5.0">
+	<params>
+		<param name="WORKERNAME" type="print" default="" label="Worker" />
+		<param name="YEAR" type="print" default="" label="YEAR" />
+		<param name="HTYPE" type="pswitch" default="0" label="HTYPE">
+			<option value="0">wages</option>
+			<option value="1">wageless</option>
+		</param>
+		<param name="C_LIMIT" type="number" default="0" label="C_LIMIT" must="1"/>
+		<param name="ID" type="hidden" default="" />
+	</params>
+</install>

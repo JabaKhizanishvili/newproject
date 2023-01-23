@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="page_filter_block" type="h">
+		<filter name="firstname" type="stext" default="" label="firstname" class="kbd" />
+		<filter name="lastname" type="stext" default="" label="lastname" class="kbd" />
+		<filter name="private_number" type="text" default="" label="private_number" />
+		<filter name="gender" type="gender" default="" label="gender" />
+		<filter name="nationality" type="state" default="-1" label="nationality" >
+			<option value="-1">select category</option>
+			<option value="1">Georgia</option>
+			<option value="0">Other Country</option>
+		</filter>
+		<filter name="ldap_username" type="stext" default="" label="ldap_username" class="kbd" />
+		<filter name="permit_id" type="text" default="" label="permit_id" />
+		<filter name="accounting_offices" type="offices" default="0" label="accounting_office"  />
+		<filter name="counting_type" type="state" default="-1" label="Counting System Type">
+			<option value="-1">select category</option>
+			<option value="0">Cards</option>
+			<option value="1">System Buttons</option>
+			<option value="2">SYSTEM BUTTONS AND GPS</option>
+		</filter>
+		<filter name="attributes" type="attributes" destinations="1,3" default="0" label="Attributes" />
+		<filter name="pay_pension" type="state" default="-1" label="PAY_PENSION">
+			<option value="-1">select category</option>
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</filter>
+		<filter name="userrole" type="userrole" default="0" label="user_role" />
+		<filter name="active" type="active" default="1" label="active" />
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="number" default="" label="#" rclass="text-center" />
+		<param order="" type="checkall" default="" label="" rclass="text-center"   />
+		<param order="t.firstname" type="editlink" label="FIRSTNAME" key="FIRSTNAME" rclass="text-left" T="1" Tscope="person" />
+		<param order="t.lastname" type="editlink" label="LASTNAME" key="LASTNAME" rclass="text-left" T="1" Tscope="person" />
+		<param order="t.photo" type="photo" label="PHOTO" key="PHOTO" rclass="text-center" class="img_listing" />
+		<param order="t.private_number" type="print" label="PRIVATE_NUMBER" key="PRIVATE_NUMBER" rclass="text-left"/>
+		<param order="t.gender" type="switch" label="GENDER" key="GENDER" rclass="text-left">
+			<option value="1">Male</option>
+			<option value="2">FeMale</option>
+		</param>
+		<param order="t.mobile_phone_number" type="print" label="MOBILE_PHONE_NUMBER" key="MOBILE_PHONE_NUMBER" rclass="text-left" />
+		<param order="t.email" type="print" label="EMAIL" key="EMAIL" rclass="text-left" />
+		<param order="t.nationality" type="switch" label="NATIONALITY" key="NATIONALITY" rclass="text-left" >
+			<option value="1">Georgia</option>
+			<option value="0">Other Country</option>
+		</param>
+		<param order="" type="attributes" label="Attributes" length="2" word-separator=", " rclass="text-left" key="ATTRIBUTES" T="1" tscope="content"/>
+		<param order="t.pay_pension" type="switch" label="pay_pension" rclass="text-center" key="PAY_PENSION" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param order="t.active" type="switch" label="STATUS" rclass="text-center" key="ACTIVE" >
+			<option value="1" color="green">Current Contract</option>
+			<option value="0" color="yellow">OFF_state</option>
+			<option value="-2" color="tred">Canceled Contract</option>
+		</param>
+		<param order="" type="print" label="profile" rclass="text-center" />
+		<param order="t.id" type="print" label="ID" key="ID" rclass="text-center" />
+	</params>
+</install>

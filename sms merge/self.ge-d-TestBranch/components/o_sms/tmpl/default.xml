@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>      
+		<param name="FIRSTNAME" type="disabled" default="" label="FIRSTNAME"  />
+		<param name="LASTNAME" type="disabled" default="" label="LASTNAME"  />
+		<param name="MOBILE_PHONE_NUMBER" type="text" default="" label="MOBILE_PHONE_NUMBER" must="1" />
+		<param name="SMS" type="sms" default="" label="SMS" must="1" />
+	</params>
+</install>

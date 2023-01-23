@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/edit.dtd">
+<install type="component" version="1.5.0">
+	<params>
+		<param name="PHOTO" type="cropphoto" crop-type="circle" high-quality="0" default="" label="PHOTO" must="1" />
+	</params>
+</install>

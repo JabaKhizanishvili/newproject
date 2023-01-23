@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<param name="ORG" type="orgprint" default="" label="ORG" />
+		<param name="LIB_TITLE" type="text" default="" label="Title" must="1" geokbd="1" />
+		<param name="SCHEDULE_CODE" type="text" default="" label="schedule_code" />
+		<param name="LIB_DESC" type="textarea" default="" label="Description"  geokbd="1"/>
+		<group>
+			<param name="ACTIVE" type="radio" default="1">
+				<option value="1">Active Status</option>
+				<option value="0">Inactive</option>
+			</param>
+			<param name="ORDERING" type="text" default="999" label="ORDERING"  />
+		</group>
+	</params>
+	<params group="details">
+		<param name="ORG_PLACE" type="unit" default="" label="structure" must="1" />
+		<param name="POSITION" type="position" default="0" label="POSITIONS" must="1" >
+			<option value="-1">Add new position</option>
+			<option value="-2">Same as schedule name</option>
+		</param>
+		<param name="POSITION_ADD" type="bound" boundto="POSITION" when="-1" default="" label="POSITION_ADD"/>
+		<param name="JD" type="jd" default="" label="JD" must="0" />
+		<param name="WORKING_RATE" type="workingrate" default="" label="WORKING_RATE" must="" />
+		<param name="CHIEF_SCHEDULE" type="staffschedule" selfexclude="1" default="-1" label="CHIEF_SCHEDULE" key="ID"  />
+		<param name="REPLACE_SCHEDULE" type="staffschedule" selfexclude="1" default="-1" label="REPLACE_SCHEDULE" key="ID"  />
+		<param name="OFFICE" type="office" default="" label="OFFICE" T="1" />
+		<param name="QUANTITY" type="text" default="1" label="COUNT" must="1" />
+		<param name="SALARY" type="text" default="0" label="SALARY"  />
+		
+		<param name="ORG" type="hidden" default="" label="org"  />
+		<param name="ID" type="hidden" default="" />
+	</params>
+</install>

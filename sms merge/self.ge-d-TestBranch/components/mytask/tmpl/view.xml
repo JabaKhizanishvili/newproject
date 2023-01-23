@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<params class="pagetable">
+		<param name="" type="spacer" default="Task Data"/>		
+		<param type="print" label="TASK_TITLE" key="TASK_TITLE" />
+		<!--<param type="print" label="TASK_DESCRIPTION" key="TASK_DESCRIPTION" />-->
+		<!--<param type="print" label="TASK_CREATORNAME" key="TASK_CREATORNAME" />-->
+		<param type="print" label="TASK_CREATE_DATE" key="TASK_CREATE_DATE" />
+		<param type="print" label="TASK_DUE_DATE" key="TASK_DUE_DATE" />
+		<!--	<param type="priority" label="priority" key="PRIORITY" />
+		<param type="completed" label="PERCENT_COMPLETED" key="PERCENT_COMPLETED" />
+		<param type="estimate" label="ESTIMATE_TIME" key="ESTIMATE_TIME" />-->
+		<param name="" type="spacer" default=""/>
+		<param name="" type="spacer" default="WorkFlow Data"/>
+		<param type="print" label="Contract ID" key="WORKFLOW_ID" />
+		<param type="print" label="TITLE" key="TITLE"  label-class="LABEL-PROCESS-TITLE" value-class="VALUE-PROCESS-TITLE"/>
+		<param type="wfstatus" label="Status" key="STATUS" />
+		<param type="print" label="DESCRIPTION" key="DESCRIPTION"   label-class="LABEL-PROCESS-DESCRIPTION" value-class="VALUE-PROCESS-DESCRIPTION" />
+		<param type="print" label="CREATORNAME" key="CREATORNAME"  label-class="LABEL-PROCESS-AUTHOR" value-class="VALUE-PROCESS-AUTHOR"/>
+		<param type="print" label="CREATE_DATE" key="CREATE_DATE" />
+		<param type="print" label="CONTACT ESTIMATE END DATE" key="END_DATE" />
+		<param type="copy" label="" key="FLOW" />
+		<param type="wflink" label="LINK" key="FLOW"   label-class="LABEL-PROCESS-LINK" value-class="VALUE-PROCESS-LINK" />
+		<param type="chartlink" label="" key="WORKFLOW_ID" />
+		<param type="printlink" label="" key="WORKFLOW_ID"  />
+		<param name="" type="spacer" default=""/>
+		<param type="related" label="RELATED WorkFlows" key="ID" />
+		<param name="" type="spacer" default=""/>
+		<param type="due" label="OTHER_DUE_TASKS" key="WORKFLOW_ID" />
+		<!--<param name="" type="spacer" default="Task Attributes"/>-->
+		<!--<param type="editworkflow" label="" key="ID" />-->
+	</params>
+</install>

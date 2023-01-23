@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://apps.magticom.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="page_filter_block" type="h">
+		<filter name="from_text" type="stext" default="" label="FROM_TEXT" class="" />
+		<filter name="to_text" type="stext" default="" label="TO_TEXT" class="" />
+		<filter name="edit_text" type="stext" default="" label="edit_text" class="" />
+		<!--<filter name="lib_from" type="sql" default="" label="lib_from" key_field="LIB_CODE" value_field="LIB_TITLE" query="select w.lib_code, w.lib_title from lib_languages w where w.active = 1 order by w. lib_title asc" select_label=" - " />-->
+		<!--<filter name="lib_to" type="sql" default="" label="lib_to" key_field="LIB_CODE" value_field="LIB_TITLE" query="select w.lib_code, w.lib_title from lib_languages w where w.active = 1 order by w. lib_title asc" select_label=" - " />-->
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="number" default="" label="#" rclass="text-center" hclass="text-center"/>
+		<param order="" type="checkall" default="" label="" rclass="text-center"   />
+		<param order="w.from_text" type="editlink" label="FROM_TEXT" key="FROM_TEXT" rclass="text-left" />
+		<param order="w.to_text" type="editlink" label="TO_TEXT" key="TO_TEXT" rclass="text-left" />
+		<param order="w.edit_text" type="editlink" label="EDIT_TEXT" key="EDIT_TEXT" rclass="text-left" />
+		<param order="w.lib_from" type="print" label="LIB_FROM" key="LIB_FROM" rclass="text-left" />
+		<param order="w.lib_to" type="print" label="LIB_TO" key="LIB_TO" rclass="text-left" />
+		<param order="w.id" type="print" label="ID" key="ID" rclass="text-center" hclass="text-center"/>
+	</params>
+</install>

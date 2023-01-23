@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="page_filter_block" type="h">
+		<filter name="name" type="stext" default="" label="title" class="kbd" />
+		<filter name="ORG" type="myorg" default="" label="org" />
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="number" default="" label="#" rclass="text-center" hclass="text-center"/>
+		<param order="" type="checkall" default="" label="" rclass="text-center"   />
+		<param order="t.lib_title" type="editlink" label="Title" key="LIB_TITLE" rclass="text-left" T="1"/>
+		<param order="t.lib_desc" type="print" label="Description" key="LIB_DESC" rclass="text-left" />
+		<param order="t.time_code" type="print" label="code" key="TIME_CODE" rclass="text-left" />
+		<param order="" type="color" label="COLOR" key="COLOR" rclass="text-left" />
+		<param order="t.org" type="org" label="org" key="ORG" rclass="text-left" T="1"/>
+		<param order="t.start_time" type="print" label="START_TIME" key="START_TIME" rclass="text-center" />
+		<param order="t.end_time" type="print" label="END_TIME" key="END_TIME" rclass="text-center" />
+		<param order="t.rest_type" type="switch" label="REST_TYPE" key="REST_TYPE" rclass="text-left">
+			<option value="0">No Rest</option>
+			<option value="1">Fixed</option>
+			<option value="2">Dynamic</option>
+			<option value="4">By Minutes And Time Ranges</option>
+		</param>
+		<param order="t.start_break" type="print" label="START_BREAK" key="START_BREAK" rclass="text-center" />
+		<param order="t.end_break" type="print" label="END_BREAK" key="END_BREAK" rclass="text-center" />
+		<param order="t.working_time" type="print" label="WORKING_TIME" key="WORKING_TIME" rclass="text-center" />
+		<param order="t.rest_time" type="print" label="REST_TIME" key="REST_TIME" rclass="text-center" />
+		<!--		<param order="t.night_time" type="print" label="NIGHT_TIME" key="NIGHT_TIME" rclass="text-center" />-->
+		<param order="t.vacation_index" type="print" label="VACATION_INDEX" key="VACATION_INDEX" rclass="text-center" />
+		<param order="t.holiday_yn" type="switch" label="HOLIDAY_YN" key="HOLIDAY_YN" rclass="text-left" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param order="t.active" type="state" label="State" rclass="text-center" state_id='ID' state_key="ACTIVE" hclass="text-center"/>
+		<param order="t.id" type="print" label="ID" key="ID" rclass="text-center" hclass="text-center"/>
+	</params>
+</install>

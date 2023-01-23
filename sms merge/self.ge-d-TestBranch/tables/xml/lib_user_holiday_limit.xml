@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://apps.magticom.ge/pda/defines/xml/table.dtd">
+<table name="lib_user_holiday_limit" history="yes">
+	<columns>
+		<column name="id" type="number" null="n" />
+		<column name="worker" type="number" null="n" />
+		<column name="year" type="number" null="n" />
+		<column name="count" type="number" null="n" />
+		<column name="htype" type="number" null="n" />
+		<column name="aworker" type="number"  default="00" />
+		<column name="client_id" type="number" default="00" />
+		<column name="start_date" type="date"  />
+		<column name="end_date" type="date"  />
+		<column name="c_limit" type="number"  />
+		<column name="org" type="number"  />
+	     <column name="modify_user" type="number" />
+          <column name="modify_date" type="date" />
+     </columns>
+	<history>
+		<column name="id" type="number" null="n" />
+		<column name="worker" type="number" null="n" />
+		<column name="year" type="number" null="n" />
+		<column name="count" type="number" null="n" />
+		<column name="htype" type="number" null="n" />
+		<column name="aworker" type="number"  default="00" />
+		<column name="start_date" type="date"  />
+		<column name="end_date" type="date"  />
+		<column name="c_limit" type="number"  />
+	
+		<column name="org" type="number"  />
+		<column name="client_id" type="number" default="00" />
+	     <column name="modify_user" type="number" />
+          <column name="modify_date" type="date" />
+     </history>
+	<sequence  name="sqs_lib_user_holiday_limit" />
+	<histsequence  name="sqs_holiday_limit_hist" />
+</table>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<param name="WORKER" type="printworker" default="" label="Worker" must="1" />
+		<param name="ID" type="hidden" default="" />
+		<param name="STATUS" type="hidden" default="0" />
+		<param name="BILL_ID" type="hidden" default="0" />
+		<param name="WORKER" type="hidden" default="0" />
+	</params>
+</install>

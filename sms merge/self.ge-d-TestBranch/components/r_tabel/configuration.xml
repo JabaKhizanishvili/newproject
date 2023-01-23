@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params name="WorkerTimeReport">
+		<!--ტაბელის კონფიგურაცია-->
+		<param name="" type="spacer" default="TABEL_CONFIG" label="" description="" />
+		<param name="worked_hours" type="radio" default="0"  must="" >
+			<option value="1">WITH_REST</option>
+			<option value="0">WITH_NO_REST</option>
+		</param>
+		
+		<!--ნორმირებული სამუშაო დრო-->
+		<param name="" type="spacer" default="NORMALIZED_TIME" label="" description="" />
+		<param name="normalized_time" type="radio" default="0"  label="NORMALIZED_TIME" must="" >
+			<option value="1">YES</option>
+			<option value="0">NO</option>
+		</param>
+		<param name="marked_holidays" type="radio" default="0"  label="Marked holidays" must="" >
+			<option value="1">YES</option>
+			<option value="0">NO</option>
+		</param>
+		<param name="week_days" type="weekdays" default=""  label="WEEK_DAYS" must="" />
+<!--		<param name="" type="print" default="" label="" description="" />-->
+		<param name="work_duration" type="text" default="8"  label="WORK_DURATION" must="" />
+	</params>
+	<params group="details">
+		<!--ტაბელის სვეტები-->
+		<param name="" type="spacer" default="TABEL_COLUMNS" label="" description="" />
+		<param name="r_tabel_htable_identificator" type="radio" default="0"  must="1" label="show_tablenum" >
+			<option value="1">PRIVATE_NUMBER</option>
+			<option value="0">TABLENUM</option>
+		</param>
+		<param name="show_private_number" type="radio" default="0"  must="1" label="show_private_number" >
+			<option value="1">PRIVATE_NUMBER</option>
+			<option value="0">TABLENUM</option>
+		</param>
+		<param name="salary_col" type="radio" default="1" label="SALARY"  must="" >
+			<option value="1">YES</option>
+			<option value="0">NO</option>
+		</param>
+		<param name="work_days_col" type="radio" default="1" label="Graph Worked Days"  must="" >
+			<option value="1">YES</option>
+			<option value="0">NO</option>
+		</param>
+		<param name="real_days_col" type="radio" default="1" label="REAL WORK DAY"  must="" >
+			<option value="1">YES</option>
+			<option value="0">NO</option>
+		</param>
+		<param name="missed_days_col" type="radio" default="1" label="MISSED DAY"  must="" >
+			<option value="1">YES</option>
+			<option value="0">NO</option>
+		</param>
+		<param name="graph_full_time_col" type="radio" default="1" label="GRAPH FULL TIME"  must="" >
+			<option value="1">YES</option>
+			<option value="0">NO</option>
+		</param>
+		<param name="full_worked_col" type="radio" default="1" label="FULL WORKED TIME"  must="" >
+			<option value="1">YES</option>
+			<option value="0">NO</option>
+		</param>
+		<param name="stand_whours_col" type="radio" default="1" label="STANDARD WORKED HOURS"  must="" >
+			<option value="1">YES</option>
+			<option value="0">NO</option>
+		</param>
+		<param name="mission_col" type="radio" default="1" label="MISSION"  must="" >
+			<option value="1">YES</option>
+			<option value="0">NO</option>
+		</param>
+		<param name="hol_mission_col" type="radio" default="1" label="HOLIDAY MISSION"  must="" >
+			<option value="1">YES</option>
+			<option value="0">NO</option>
+		</param>
+		<param name="paid_missed_col" type="radio" default="1" label="PAID MISSED HOURS"  must="" >
+			<option value="1">YES</option>
+			<option value="0">NO</option>
+		</param>
+		<param name="not_paid_missed_col" type="radio" default="1" label="NOT PAID MISSED HOURS"  must="" >
+			<option value="1">YES</option>
+			<option value="0">NO</option>
+		</param>
+		<param name="mission_sum_col" type="radio" default="1" label="MISSION SUM"  must="" >
+			<option value="1">YES</option>
+			<option value="0">NO</option>
+		</param>
+		<param name="time_code_show" type="radio" default="1" label="show time code"  must="" >
+			<option value="1">YES</option>
+			<option value="0">NO</option>
+		</param>
+		<param name="show_schedule_code" type="radio" default="0" label="show_schedule_code"  must="" >
+			<option value="1">YES</option>
+			<option value="0">NO</option>
+		</param>
+		<param name="show_unit_code" type="radio" default="0" label="show_unit_code"  must="" >
+			<option value="1">YES</option>
+			<option value="0">NO</option>
+		</param>
+		<param name="show_worker_code" type="radio" default="0" label="show_worker_code"  must="" >
+			<option value="1">YES</option>
+			<option value="0">NO</option>
+		</param>
+	</params>
+</install>

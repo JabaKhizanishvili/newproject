@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="rel_worker_chief_ext">
+	<column name="worker" type="number" default="00"/>
+	<column name="chief" type="number" default="00" />
+	<column name="org" type="number" default="00" />
+	<column name="type" type="number" default="00" />
+	<column name="client_id" type="number" default="00" />
+</table>

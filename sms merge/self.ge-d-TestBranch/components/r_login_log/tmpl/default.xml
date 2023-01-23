@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Edited by Irakli Gzirishvili 21-10-2021-->
+<!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="page_filter_block" type="h">
+		<filter name="log_ip" type="stext" default="" label="IP" class="kbd" />
+		<filter name="browser_name" type="stext" default="" label="BROWSER" class="kbd" />
+		<filter name="os_name" type="stext" default="" label="OS NAME" class="kbd" />
+		<filter name="log_prev_user_name" type="stext" default="" label="PREV USERNAME" class="kbd" />
+		<filter name="log_user_name" type="stext" default="" label="USERNAME" class="kbd" />
+		<filter name="start_date" type="calendar" default="" label="start date" />
+		<filter name="end_date" type="calendar" default="" label="end date" />
+		<filter name="login_ident" type="state" default="-1" label="LOGIN" class="kbd">
+			<option value="-1">Select State</option>
+			<option value="1">PRIVATE</option>
+			<option value="0">OTHER USER</option>
+		</filter>	
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+
+	<params class="table table-bordered table-condensed table-hover table-striped exporttable" id="exportable">
+		<param order=""   type="number" default="" label="#" rclass="text-center" hclass="text-center"/>
+		<param order="w.log_ip" type="print" label="IP" key="LOG_IP" rclass="text-center" />
+		<param order="w.browser_name" type="print" label="BROWSER" key="BROWSER_NAME" rclass="text-center" />
+		<param order="w.os_name" type="print" label="OS NAME" key="OS_NAME" rclass="text-center" />
+		<param order="w.log_prev_user_name" type="print" label="PREV USERNAME" key="LOG_PREV_USER_NAME" rclass="text-center" />
+		<param order="w.log_user_name" type="print" label="USERNAME" key="LOG_USER_NAME" rclass="text-center" />
+		<param order="w.log_date" type="print" label="DATE" key="LOG_DATE" rclass="text-center" />
+	</params>
+
+</install>

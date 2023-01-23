@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Created by Irakli Gzirishvili 28-10-2021-->
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="slf_api_controllers" history="no">
+	<columns>
+		<column name="id" type="number" null="n" />
+		<column name="device_id" type="number" />
+		<column name="controller_code" type="varchar2" length="1000" />
+		<column name="controler_model" type="varchar2" length="1000" />
+		<column name="system_load" type="number" />
+		<column name="uptime_start" type="date" />
+		<column name="memory_usage" type="number" />
+		<column name="disc_usage" type="number" />
+		<column name="card_sync_service" type="number" />
+		<column name="card_count" type="number" />
+		<column name="reader_service" type="number" />
+		<column name="upload_service" type="number" />
+		<column name="upload_count" type="number" />
+		<column name="local_ip" type="number" />
+		<column name="cpu_temp" type="number" />
+		<column name="controler_date" type="date" />
+		<column name="rec_date" type="date" />
+		<column name="ip" type="varchar2" length="500" />
+		<column name="registered" type="number" default="00" />
+	</columns>
+	<sequence  name="sqs_api_controllers" />
+</table>

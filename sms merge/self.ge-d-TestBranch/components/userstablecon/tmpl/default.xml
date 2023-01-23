@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://apps.magticom.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="page_filter_block" type="h">
+		<filter name="BILL_ID" type="billid" default="" label="BILL_ID" must="" />
+		<filter name="firstname" type="stext" default="" label="firstname" class="kbd" />
+		<filter name="lastname" type="stext" default="" label="lastname" class="kbd" />
+		<filter name="position" type="stext" default="" label="position" class="kbd" />
+		<filter name="org" type="org" default="" label="org" />
+		<filter name="unit" type="unit" default="" label="ORG_PLACE" elementid="org"  />
+		<filter name="staffschedule" type="staffschedule" default="" label="STAFF_SCHEDULE_UNIT" elementid="org"/>
+		<!--<filter name="private_number" type="stext" default="" label="private_number" class="kbd" />-->
+		<!--<filter name="tablenum" type="stext" default="" label="tablenum" class="kbd" />-->
+		<filter name="status" type="state" default="1" label="status">
+			<option value="-1">Select State</option>
+			<option value="1">For Approve</option>
+			<option value="2">Approved</option>
+			<option value="3">Sent</option>
+		</filter>
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="number" default="" label="#" rclass="text-center" />
+		<param order="" type="checkall" default="" label="" rclass="text-center"   />
+		<param order="wfirstname" type="editbill" label="worker" key="WFIRSTNAME, WLASTNAME" rclass="text-left" T="1" Tscope="person" />
+		<param order="w.org" type="org" label="org" rclass="text-center" key="ORG" T="1"/>
+		<param order="w.org_place" type="unit" label="org_place" rclass="text-center" key="ORG_PLACE" T="1"/>
+		<param order="w.private_number" type="print" label="private_number" rclass="text-center" key="PRIVATE_NUMBER" />
+		<param order="w.tablenum" type="print" label="tablenum" rclass="text-center" key="TABLENUM" />
+		<param order="staff_schedule" type="print" label="staff_schedule" rclass="text-center" key="STAFF_SCHEDULE" T="1"/>
+		<param order="w.position" type="print" label="position" rclass="text-center" key="POSITION" T="1"/>
+		<param order="" type="bill" label="BILL_ID" rclass="text-center" key="BILL_ID" />
+		<!--<param order="t.type" type="htype" label="HwType" rclass="text-left" key="TYPE" />-->
+		<!--<param order="t.start_date" type="print" label="Holiday Start G" key="START_DATE" rclass="text-center" />-->
+		<!--<param order="t.end_date" type="print" label="Holiday End G" key="END_DATE" rclass="text-center" />-->
+		<param order="t.status" type="switch" label="status" rclass="text-center" state_id='ID' key="STATUS" >
+			<option value="-1">No Data</option>
+			<option value="0">filled Data</option>
+			<option value="1">For Approve</option>
+			<option value="2">Approved</option>
+			<option value="3">Sent</option>
+		</param>
+		<param order="afirstname" type="printm" label="APPROVER" rclass="text-center" key="AFIRSTNAME, ALASTNAME" T="1" Tscope="person" />
+		<param order="t.approve_date" type="print" label="APPROVE_DATE" rclass="text-center" key="APPROVE_DATE" />
+		
+		
+		<!--here-->
+		<param order="t.daysum" type="print" label="SUMHOUR" rclass="text-center" key="SUMHOUR" />
+		<param order="t.holiday" type="print" label="WAGE HOLIDAY DAY" rclass="text-center" key="HOLIDAY"/>
+		<param order="t.bulletins" type="print" label="BULLETIN" rclass="text-center" key="BULLETINS"/>
+		<param order="t.overtimehour" type="print" label="OVERTIME HOUR" rclass="text-center" key="OVERTIMEHOUR"/>
+		<!--here-->
+		
+		
+		<param order="" type="billlink" label="View Times" rclass="text-center" key="IDX" />
+		<!--<param order="t.id" type="print" label="ID" key="ID" rclass="text-center" />-->
+	</params>
+</install>

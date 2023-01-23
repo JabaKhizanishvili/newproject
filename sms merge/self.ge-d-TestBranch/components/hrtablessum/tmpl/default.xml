@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://apps.magticom.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="page_filter_block" type="h">
+		<filter name="bill_id" type="billid" default="" label="bill_id" must="" />
+		<filter name="org" type="org" default="" label="org" />
+		<filter name="unit" type="unit" default="0" label="ORG_PLACE" elementid="org"  />
+		<filter name="firstname" type="stext" default="" label="firstname" class="kbd" />
+		<filter name="lastname" type="stext" default="" label="lastname" class="kbd" />
+		<filter name="position" type="stext" default="" label="position" class="kbd" />
+		<filter name="category" type="sql" default="" label="CATEGORY_ID" key_field="ID" value_field="LIB_TITLE" query="select id, lib_title from lib_categories t where t.active=1 order by t. lib_title asc" select_label="Select Category" must="" />
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="number" default="" label="#" rclass="text-center" />
+		<param order="" type="checkall" default="" label="" rclass="text-center"   />
+		<param order="workername" type="editbill" label="worker" key="WORKERNAME, WLASTNAME" rclass="text-left" T="1" Tscope="person" />
+		<param order="" type="print" label="private_number" rclass="text-center" key="PRIVATE_NUMBER" />
+		<param order="" type="print" label="BILL_ID" rclass="text-center" key="BILL_ID" />
+		<!--<param order="t.type" type="htype" label="HType" rclass="text-left" key="TYPE" />-->
+		<!--<param order="t.start_date" type="print" label="Holiday Start G" key="START_DATE" rclass="text-center" />-->
+		<!--<param order="t.end_date" type="print" label="Holiday End G" key="END_DATE" rclass="text-center" />-->
+		<param order="t.status" type="switch" label="status" rclass="text-center" state_id='ID' key="STATUS" >
+			<option value="-1">No Data</option>
+			<option value="0">filled Data</option>
+			<option value="1">For Approve</option>
+			<option value="2">Approved</option>
+			<option value="3">Sent</option>
+		</param>
+		<param order="approver" type="print" label="APPROVER" rclass="text-center" key="APPROVER" />
+		<param order="t.approve_date" type="print" label="APPROVE_DATE" rclass="text-center" key="APPROVE_DATE" />
+		<param order="" type="billlink" label="View Times" rclass="text-center" key="" />
+		<!--<param order="t.id" type="print" label="ID" key="ID" rclass="text-center" />-->
+	</params>
+</install>

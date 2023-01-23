@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="page_filter_block" type="h">
+		<filter name="org" type="org" default="" label="org" />
+		<filter name="accuracy_period" type="periods" label="ACCURACY_PERIOD"/>
+		<filter name="period_type_code" type="accuracycodeperiods"  label="PERIOD" elementid="accuracy_period"/>
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+</install>

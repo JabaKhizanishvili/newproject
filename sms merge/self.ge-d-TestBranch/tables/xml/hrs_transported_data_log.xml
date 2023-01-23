@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="hrs_transported_data_log" history="no">
+	<columns>
+		<column name="id" type="number" />
+		<column name="rec_user" type="number" />
+		<column name="rec_date" type="date" />
+		<column name="user_id" type="number" />
+		<column name="action" type="number" />
+		<column name="log_date" type="date" />
+		<column name="modify_user" type="number" />
+		<column name="modify_date" type="date" />
+	</columns>
+	<sequence  name="sqs_logs" />
+</table>

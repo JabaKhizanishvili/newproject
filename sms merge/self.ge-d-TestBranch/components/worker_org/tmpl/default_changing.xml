@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<param name="WORKERS" type="batchworkers" default="" label="WORKERS" key="ID" />
+		<param name="STAFF_SCHEDULE" type="staffschedule" default="-1" label="STAFF_SCHEDULE_UNIT" key="ID" />
+		<param name="SALARY" type="number" default="" label="SALARY" />
+		<param name="CONTRACTS_DATE" type="calendar" default="" label="CONTRACTS_DATE" must="1" />
+		<param name="TEST_DATE" type="calendar" default="" label="TEST_DATE" must="" />
+		<filter name="CATEGORY_ID" type="sql" default="" label="CATEGORY_ID" key_field="ID" value_field="LIB_TITLE" query="select id, lib_title from lib_categories t where t.active=1 order by t. lib_title asc" select_label="Select Category" must="1" />
+		<param name="CALCULUS_REGIME" type="radio" default="1">
+			<option value="1">Office</option>
+			<option value="2">Distance</option>
+		</param>
+		<param name="GRAPHGROUP" type="graphgroup" default="" label="GRAPHGROUP" />
+		<param name="O_COMMENT" type="textarea" label="COMMENT"  />
+		<param name="CHANGING_DATE" type="calendar" default="" label="CHANGING_DATE" must="1" />
+	</params>
+</install>

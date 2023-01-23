@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<params name="r_worker">
+		<param order="LOGING_DATE" type="print" key="EVENT_DATE_DAY" default="" label="LOGING_DATE" rclass="text-center" />
+		<param order="WORKER" type="editlink" label="worker" key="WORKER" rclass="text-left"  />
+		<param order="PRIVATE_NUMBER" type="print" label="PRIVATE_NUMBER" key="PRIVATE_NUMBER" rclass="text-left" />
+		<param order="ORG_NAME" type="print" label="org" rclass="text-center" key="ORG_NAME" />
+		<param order="ORG_PLACE" type="print" label="ORG_PLACE" rclass="text-center" key="ORG_PLACE" />
+		<param order="STAFF_SCHEDULE" type="print" label="STAFF_SCHEDULE" rclass="text-left" key="STAFF_SCHEDULE"  />
+		<param order="POSITION" type="print" label="POSITION" rclass="text-left" key="POSITION"  />
+		<param order="TIME_MIN" type="print" label="DELAY_MINUTES" rclass="text-left" key="TIME_MIN"  />
+		<param order="TIME_COMMENT" type="print" label="REASON" rclass="text-left" key="TIME_COMMENT"  />
+		<param order="EVENT_DATE" type="print" label="TIME" rclass="text-left" key="EVENT_DATES"  />
+	</params>
+</install>

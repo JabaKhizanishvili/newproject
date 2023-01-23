@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="lib_staff_schedules" history="yes">
+	<columns>
+		<column name="id" type="number" null="n" />
+		<column name="lib_title" type="varchar2" length="500" Ti="1" />
+		<column name="lib_desc" type="varchar2" length="4000" />
+		<column name="org" type="number" null="n" />
+		<column name="org_place" type="number" null="n" />
+		<column name="position" type="number" null="n" />
+		<column name="jd" type="number" null="n" />
+		<column name="quantity" type="number" null="n" />
+		<column name="salary" type="number" null="n" />
+		<column name="active" type="number" null="n" default="1 " />
+		<column name="ordering" type="number" null="n" default="999" />
+		<column name="client_id" type="number" default="00" />
+		<column name="chief_schedule" type="number" />
+		<column name="replace_schedule" type="number" />
+		<column name="iban" type="varchar2" length="1000"  />
+		<column name="auto_overtime" type="number" />
+		<column name="working_rate" type="number" />
+		<column name="schedule_code" type="varchar2" length="500" />
+		<column name="modify_user" type="number" />
+		<column name="modify_date" type="date" />
+		<column name="lft" type="number" null="n" default="00" />
+		<column name="rgt" type="number" null="n" default="00" />
+		<column name="ulevel" type="number" null="n" default="00" />
+		<column name="office" type="number" />
+	</columns>
+	<history>
+		<column name="id" type="number" null="n" />
+		<column name="lib_title" type="varchar2" length="500" Ti="1" />
+		<column name="lib_desc" type="varchar2" length="4000" />
+		<column name="org" type="number" null="n" />
+		<column name="org_place" type="number" null="n" />
+		<column name="position" type="number" null="n" />
+		<column name="jd" type="number" null="n" />
+		<column name="quantity" type="number" null="n" />
+		<column name="salary" type="number" null="n" />
+		<column name="active" type="number" null="n" default="1 " />
+		<column name="ordering" type="number" null="n" default="999" />
+		<column name="client_id" type="number" default="00" />
+		<column name="chief_schedule" type="number" />
+		<column name="replace_schedule" type="number" />
+		<column name="iban" type="varchar2" length="1000"  />
+		<column name="auto_overtime" type="number" />
+		<column name="working_rate" type="number" />
+		<column name="schedule_code" type="varchar2" length="500" />
+		<column name="modify_user" type="number" />
+		<column name="modify_date" type="date" />
+		<column name="office" type="number" />
+	</history>
+	<histsequence  name="sqs_staff_schedule_hist" />
+</table>

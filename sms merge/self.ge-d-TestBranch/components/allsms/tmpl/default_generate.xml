@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<param name="ORG" type="orgprint" default="" label="ORG" />
+		<param name="SMS" type="textarea" default="" label="SMS_TEXT" must="1" />
+	</params>
+	<params group="details">
+		<param name="" type="spacer" default="Workers exclude Criteriums" label="" description="" />
+		<param name="IE_TYPE" type="radio" default="1"  label="IE_TYPE" must="1">
+			<option value="1">include</option>
+			<option value="2">exclude</option>
+		</param>
+		<param name="WORKERS" type="slfstaff" case="2" label="EXCLUDED_WORKERS"  />
+		<param name="UNIT" type="units" label="STRUCTURE"  />
+		<param name="SCHEDULE" type="schedules" label="STAFF_SCHEDULE"  />
+		<param name="ORG" type="hidden" default="" label="ORG" />
+	</params>
+</install>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="page_filter_block" type="h">
+		<filter name="firstname" type="stext" default="" label="firstname" class="kbd" />
+		<filter name="lastname" type="stext" default="" label="lastname" class="kbd" />
+		<filter name="private_number" type="text" default="" label="private_number" />
+		<filter name="org" type="org" default="" label="org" class="kbd" />
+		<filter name="org_place" type="unit" default="" label="org_place" class="kbd" />
+		<filter name="start_date" type="calendar" default="" label="start date" />
+		<filter name="end_date" type="calendar" default="" label="end date" />
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="number" default="" label="#" rclass="text-center" />
+		<param order="" type="checkall" default="" label="" rclass="text-center"   />
+		<param order="wfirstname" type="editlink" label="worker" key="WFIRSTNAME, WLASTNAME" rclass="text-left" T="1" Tscope="person" />
+		<param order="w.private_number" type="print" label="private_number" key="PRIVATE_NUMBER" rclass="text-left" />
+		<param order="w.org" type="org" label="org" key="ORG" rclass="text-left" T="1" />
+		<param order="" type="orgplaces" label="org_place" key="WORKER_ID" org="ORG" rclass="text-center" T="1"/>
+		<param order="t.status" type="approve" label="status" rclass="text-center" state_id='ID' state_key="STATUS" />
+		<param order="day" type="print" label="DATE" key="DAY" rclass="text-center" />
+		<param order="t.start_date" type="print" label="PTime Start" key="START_DATE" rclass="text-center" />
+		<param order="t.end_date" type="print" label="PTime End" key="END_DATE" rclass="text-center" />
+		<param order="t.ucomment" type="print" label="UCOMMENT" rclass="text-left" key="UCOMMENT" />
+		<param order="afirstname" type="printm" label="APPROVER" rclass="text-center" key="AFIRSTNAME, ALASTNAME" T="1" Tscope="person" />
+		<param order="t.approve_date" type="print" label="APPROVE_DATE" rclass="text-center" key="APPROVE_DATE" />
+		<param order="t.rec_date" type="print" label="REC_DATE" rclass="text-left" key="REC_DATE" />
+		<param order="t.rec_user" type="wworker" label="AUTHOR" key="REC_USER" rclass="text-center" T="1"/>
+		<param order="t.id" type="print" label="ID" key="ID" rclass="text-center" />
+	</params>
+</install>

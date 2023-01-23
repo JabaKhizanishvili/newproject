@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<param name="LIB_TITLE" type="text" default="" label="Title" must="1"  geokbd="1" />
+		<param name="LIB_DESC" type="textarea" default="" label="Description" geokbd="1" />
+		<group>
+			<param name="ACTIVE" type="radio" default="1">
+				<option value="1">Active Status</option>
+				<option value="0">Inactive</option>
+			</param>
+			<param name="ORDERING" type="text" default="999" label="ORDERING"  />
+		</group>
+		<param name="ID" type="hidden" default="" />
+	</params>
+	<params group="details">
+		<param name="ACCOUNTING_CODE" type="text" default="" label="ACCOUNTING_CODE" must="1"  geokbd="1" />
+		<param name="FIELDS" type="multy" size="7" default="-1" label="FIELDS" >
+			<option value="WORKER_SHARE">WORKER_SHARE</option>
+			<option value="COMPANY_SHARE">COMPANY_SHARE</option>
+			<option value="COST">COST</option>
+			<option value="PENSION">PENSION</option>
+			<option value="INCOME">INCOME</option>
+			<option value="ABSOLUTE_COST">ABSOLUTE_COST</option>
+		</param>
+		<param name="IDENTIFIER" type="list" default="0" label="IDENTIFIER" >
+			<option value="0">NO</option>
+			<option value="1">MUST</option>
+			<option value="2">NOTMUST</option>
+		</param>
+		<param name="BENEFIT_END_DATE" type="list" default="0" label="BENEFIT_END_DATE" >
+			<option value="0">NO</option>
+			<option value="1">MUST</option>
+			<option value="2">NOTMUST</option>
+		</param>
+	</params>
+</install>

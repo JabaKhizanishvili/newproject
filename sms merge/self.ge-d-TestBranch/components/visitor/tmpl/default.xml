@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<param name="CODE" type="text" default="" label="CODE"  mask="000:00000" placeholder="___:_____"   />
+		<param name="LIB_TITLE" type="text" default="" label="Title" must="1"  class="kbd" />
+		<param name="LIB_DESC" type="text" default="" label="Description"  class="kbd"  />
+		<param name="ACTIVE" type="radio" default="1">
+			<option value="1">Active</option>
+			<option value="0">Inactive</option>
+		</param>
+		<param name="ID" type="hidden" default="" />
+	</params>
+</install>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="number" default="" label="#" rclass="text-center" hclass="text-center"/>
+		<param order="" type="editlink" label="Title" key="LIB_TITLE" rclass="text-left" />
+		<param order="" type="print" label="controller_code" key="CONTROLLER_CODE" rclass="text-left" />
+		<param order="" type="print" label="off_date" rclass="text-center" key="OFF_DATE" />
+		<param order="" type="print" label="on_date" rclass="text-center" key="ON_DATE" />
+	</params>
+</install>

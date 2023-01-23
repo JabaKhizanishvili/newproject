@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="page_filter_block" type="h">
+		<filter name="name" type="stext" default="" label="title" class="kbd" />
+		<filter name="ORG" type="orguser" default="" label="org" />
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="number" default="" label="#" rclass="text-center" />
+		<param order="" type="checkall" default="" label="" rclass="text-center"   />
+		<param order="t.lib_title" type="editlink" label="Title" key="LIB_TITLE" rclass="text-left" T="1"/>
+		<param order="t.lib_desc" type="print" label="Description" key="LIB_DESC" rclass="text-left" />
+		<param order="t.org" type="org" label="org" rclass="text-center" key="ORG"  T="1"/>
+		<param order="" type="persons" tooltip="1" input="workers" label="workers" key="WORKERS" rclass="td_left" T="1" Tscope="person"/>
+		<!--<param order="t.active" type="state" label="State" rclass="text-center" state_id='ID' state_key="ACTIVE" />-->
+		<!--<param order="" type="graphedit" label="details" rclass="text-center" key="ID" option="graph" link_title="graph" />-->
+		<param order="t.id" type="print" label="ID" key="ID" rclass="text-center" />
+	</params>
+</install>

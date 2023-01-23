@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<param name="OVERTIMEHOUR" type="text" default="" label="OVERTIMEHOUR" must="1" />
+		<param name="NIGHTHOUR" type="text" default="" label="NIGHTHOUR" must="1" />
+		<param name="HOLIDAYHOUR" type="text" default="" label="HOLIDAYHOUR" must="1" />
+		<param name="OTHERHOUR" type="text" default="" label="OTHERHOUR" must="1" />
+	</params>
+</install>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="page_filter_block" type="h">
+		<filter name="lib_title" type="stext" default="" label="TEXT_SEARCH" class="kbd" />
+		<filter name="period_type" type="state" default="-1" label="period_type">
+			<option value="-1">select category</option>
+			<option value="1">Weekly</option>
+			<option value="3">once a month</option>
+			<option value="4">Twice a month</option>
+			<option value="5">Quarterly</option>
+			<option value="6">once in a year</option>
+		</filter>
+		<filter name="active" type="state" default="-1" label="State">
+			<option value="-1">Select State</option>
+			<option value="0">Inactive</option>
+			<option value="1">Active Status</option>
+		</filter>
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="number" default="" label="#" rclass="text-center" hclass="text-center" />
+		<param order="" type="checkall" default="" label="" rclass="text-center"   />
+		<param order="t.lib_title" type="editlink" label="Title" key="LIB_TITLE" rclass="text-left" />
+		<param order="t.lib_desc" type="print" label="Description" key="LIB_DESC" rclass="text-left" />
+		
+		<param order="t.period_type" type="switch" label="PERIOD_TYPE" key="PERIOD_TYPE" rclass="text-left" >
+			<option value="-1">select category</option>
+			<option value="1">Weekly</option>
+			<option value="2">once a month</option>
+			<option value="3">Twice a month</option>
+			<option value="4">Quarterly</option>
+			<option value="5">once in a year</option>
+		</param>
+
+		<param order="t.period_generator" type="print"  label="PERIOD_GENERATOR_SHORT" key="PERIOD_GENERATOR"/>
+		<param order="t.active" type="state" label="State" rclass="text-center" state_id='ID' state_key="ACTIVE" />
+		<param order="t.ordering" type="print" label="ordering" key="ORDERING" rclass="text-center" />
+		<param order="t.id" type="print" label="ID" key="ID" rclass="text-center" />
+	</params>
+</install>

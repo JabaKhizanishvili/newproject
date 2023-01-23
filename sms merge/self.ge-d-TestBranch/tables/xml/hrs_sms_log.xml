@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="hrs_sms_log">
+	<column name="log_id" type="number" />
+	<column name="log_date" type="date" />
+	<column name="log_client_id" type="varchar2" length="100" />
+	<column name="log_service_id" type="varchar2" length="100" />
+	<column name="log_message_id" type="varchar2" length="100" />
+	<column name="log_from" type="varchar2" length="100" />
+	<column name="log_text" type="varchar2" length="4000" />
+	<column name="log_ip" type="varchar2" length="100" />
+	<column name="log_response" type="varchar2" length="4000" />
+	<column name="client_id" type="number" default="00" />
+	<column name="modify_user" type="number" />
+	<column name="modify_date" type="date" />
+</table>

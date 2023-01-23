@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params name="App Configuration" ordering="4" >
+		<param name="" type="spacer" default="Applications Configuration" label="" description="" />
+
+		<param name="mission_mission_approve" type="radio" default="1"  must="1" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="apps_mission_auto_period" type="radio" default="1"  must="1" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="apps_mission_msg_to_chief" type="msgtemplates" default="0" label="APPS_MISSION_MSG_TO_CHIEF" must="" T="1" />
+		<param name="apps_mission_msg_to_worker" type="msgtemplates" default="0" label="APPS_MISSION_MSG_TO_WORKER" must="" T="1"/>
+		<param name="show_private_number_in_vacation_limits" type="radio" default="0"  must="1" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+	</params>
+	<params group="details">
+		<param name="apps_mission_approve" type="radio" default="1"  must="1" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="apps_mission_add_type" type="radio" default="0"  must="1" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="apps_worker_identificator" type="radiolist" default="1"  must="1" >
+			<option value="private_number">private_number</option>
+			<option value="mobile_phone_number">mobile_phone_number</option>
+			<option value="birthdate">birthdate</option>
+			<option value="father_name">father_name</option>
+			<option value="tablenum">tablenum</option>
+		</param>
+	</params>
+</install>

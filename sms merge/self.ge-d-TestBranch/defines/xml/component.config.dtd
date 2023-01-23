@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!--
+    TODO define vocabulary identification
+    PUBLIC ID: -//vendor//vocabulary//EN
+    SYSTEM ID: http://server/path/component.config.dtd
+
+-->
+
+<!--
+    An example how to use this DTD from your XML document:
+
+    <?xml version="1.0"?>
+
+    <!DOCTYPE config SYSTEM "component.config.dtd">
+
+    <config>
+    ...
+    </config>
+-->
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT config (defaultTask|tasks)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT defaultTask EMPTY>
+<!ATTLIST defaultTask
+    value CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT tasks (task)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT task EMPTY>
+<!ATTLIST task
+    name CDATA #IMPLIED
+    default CDATA #IMPLIED
+    label CDATA #IMPLIED
+  >

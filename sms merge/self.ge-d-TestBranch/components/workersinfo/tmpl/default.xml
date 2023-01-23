@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="page_filter_block_vertical" type="v">
+		<filter name="text" type="text" default="" label="name, surname" class="kbd" />
+		<filter name="position" type="text" default="" label="position" class="kbd" />
+		<filter name="mobile" type="text" default="" label="MOBILE_PHONE_NUMBER" />
+		<filter type="buttons" default="" submit_label="Search" reset_label="Clear" show_reset= "1" />
+	</filters>
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="number" default="" label="#" rclass="text-center" />
+		<param order="wfirstname" type="printm" label="worker" key="WFIRSTNAME, WLASTNAME" rclass="text-left" T="1" Tscope="person" />
+		<param order="" type="photo" label="PHOTO" key="PHOTO" rclass="text-center" />
+		<param order="" type="position" multy="1" label="POSITION" rclass="text-left" key="ORG.POSITION" T="1"/>
+		<!--<param order="" type="workerstatus" label="workerstatus" rclass="text-center"  />-->
+		<param order="mobile_phone_number" type="print" label="MOBILE_PHONE_NUMBER" key="MOBILE_PHONE_NUMBER" rclass="text-center" />
+		<param order="extra_number" type="print" label="EXTRA NUMBER" key="EXTRA_NUMBER" rclass="text-center" />
+		<param order="email" type="email" label="email" key="EMAIL" rclass="text-left" />
+	</params>
+</install>

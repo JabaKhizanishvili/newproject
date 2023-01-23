@@ -1,0 +1,84 @@
+image: php:7.4-cli
+
+stages:
+  - Build
+  - TestingDeploy
+  - TestingDeploy2
+  - ProdDeploy
+
+before_script:
+  - apt-get update
+  - apt-get install -y zip openssh-client rsync curl tzdata
+  - mkdir -p ~/.ssh
+  - eval $(ssh-agent -s)
+  - mkdir -p ~/.ssh
+  - chmod 700 ~/.ssh
+  - ssh-keyscan -t rsa self.ge >> ~/.ssh/known_hosts
+  - chmod 644 ~/.ssh/known_hosts
+  - ssh-add <(echo "$STAGING_PRIVATE_KEY")
+  - export TZ="Asia/Tbilisi"
+  - date
+   
+Build:
+  stage: Build
+  only:
+    - TestBranch
+    - GRAPH_EDIT
+    - main
+  script:
+    - php libraries/xmap.php
+
+      
+TestingDeploy:
+  stage: TestingDeploy
+  only:
+    - TestBranch
+  artifacts:
+    paths:
+      - ./
+    expire_in: 1 day 
+  script:
+    - php libraries/xmap.php
+    - sleep 1
+    - VERSION=$(date +'%Y%m%d-%H')
+    - curl --request POST "https://logs.self.ge/api/hooks/release/builtin/74/12c06fdc3259fcc4196341ce9ac1af23ebd401eb34c911448abf833dce58f4af/" --header 'Content-Type:application/json' --data '{"version":"'${VERSION}'"}'
+    - sed "s/{RELEASE}/${VERSION}/" Release.php -i
+    
+    - rsync -avp -e ssh --exclude='.git/' --exclude='.gitlab-ci.yml' --exclude='.gitignore' --exclude='.gitkeep'  ./ pp@self.ge:/var/www/ge.self.ppd/
+    - rsync -avp --delete-during -e ssh --exclude='.git/' --exclude='.gitlab-ci.yml' --exclude='.gitignore' --exclude='.gitkeep'  ./tables/ pp@self.ge:/var/www/ge.self.ppd/tables/
+    - rsync -avp --delete-during -e ssh --exclude='.git/' --exclude='.gitlab-ci.yml' --exclude='.gitignore' --exclude='.gitkeep'  ./components/ pp@self.ge:/var/www/ge.self.ppd/components/
+    - rsync -avp --delete-during -e ssh --exclude='.git/' --exclude='.gitlab-ci.yml' --exclude='.gitignore' --exclude='.gitkeep'  ./libraries/ pp@self.ge:/var/www/ge.self.ppd/libraries/
+    - rsync -avp --delete-during -e ssh --exclude='.git/' --exclude='.gitlab-ci.yml' --exclude='.gitignore' --exclude='.gitkeep'  ./language/ pp@self.ge:/var/www/ge.self.ppd/language/
+    - rsync -avp --delete-during -e ssh --exclude='.git/' --exclude='.gitlab-ci.yml' --exclude='.gitignore' --exclude='.gitkeep'  ./cronjob/ pp@self.ge:/var/www/ge.self.ppd/cronjob/
+    - rsync -avp --delete-during -e ssh --exclude='.git/' --exclude='.gitlab-ci.yml' --exclude='.gitignore' --exclude='.gitkeep'  ./cron/ pp@self.ge:/var/www/ge.self.ppd/cron/
+    - rsync -avp --delete-during -e ssh --exclude='.git/' --exclude='.gitlab-ci.yml' --exclude='.gitignore' --exclude='.gitkeep'  ./templates/ pp@self.ge:/var/www/ge.self.ppd/templates/
+    - rsync -avp --delete-during -e ssh --exclude='.git/' --exclude='.gitlab-ci.yml' --exclude='.gitignore' --exclude='.gitkeep'  ./override/ pp@self.ge:/var/www/ge.self.ppd/override/
+    - sleep 3
+    - curl "https://ppd.self.ge/cronjob/tables.php"
+    
+ProdDeploy:
+  stage: ProdDeploy
+  only:
+    - main
+  artifacts:
+    paths:
+      - ./
+    expire_in: 1 day 
+  script:
+#    - rsync --dry-run -avp -e ssh --exclude='.git/' --exclude='.gitlab-ci.yml' --exclude='.gitignore' --exclude='.gitkeep'  ./ pp@self.ge:/var/www/ge.self.s/
+    - php libraries/xmap.php
+    - VERSION=$(date +'%Y%m%d-%H')
+    - curl --request POST "https://logs.self.ge/api/hooks/release/builtin/72/466d9626a0b44be1c80c85b574de8441e47baa852f98e94c1ed3259ddc7ce860/" --header 'Content-Type:application/json' --data '{"version":"'${VERSION}'"}'
+    - sed "s/{RELEASE}/${VERSION}/" Release.php -i
+    
+    - rsync -avp -e ssh --exclude='.git/' --exclude='.gitlab-ci.yml' --exclude='.gitignore' --exclude='.gitkeep'  ./ pp@self.ge:/var/www/ge.self.dd/
+    - rsync -avp --delete-during -e ssh --exclude='.git/' --exclude='.gitlab-ci.yml' --exclude='.gitignore' --exclude='.gitkeep'  ./tables/ pp@self.ge:/var/www/ge.self.dd/tables/
+    - rsync -avp --delete-during -e ssh --exclude='.git/' --exclude='.gitlab-ci.yml' --exclude='.gitignore' --exclude='.gitkeep'  ./components/ pp@self.ge:/var/www/ge.self.dd/components/
+    - rsync -avp --delete-during -e ssh --exclude='.git/' --exclude='.gitlab-ci.yml' --exclude='.gitignore' --exclude='.gitkeep'  ./libraries/ pp@self.ge:/var/www/ge.self.dd/libraries/
+    - rsync -avp --delete-during -e ssh --exclude='.git/' --exclude='.gitlab-ci.yml' --exclude='.gitignore' --exclude='.gitkeep'  ./language/ pp@self.ge:/var/www/ge.self.dd/language/
+    - rsync -avp --delete-during -e ssh --exclude='.git/' --exclude='.gitlab-ci.yml' --exclude='.gitignore' --exclude='.gitkeep'  ./cronjob/ pp@self.ge:/var/www/ge.self.dd/cronjob/
+    - rsync -avp --delete-during -e ssh --exclude='.git/' --exclude='.gitlab-ci.yml' --exclude='.gitignore' --exclude='.gitkeep'  ./cron/ pp@self.ge:/var/www/ge.self.dd/cron/
+    - rsync -avp --delete-during -e ssh --exclude='.git/' --exclude='.gitlab-ci.yml' --exclude='.gitignore' --exclude='.gitkeep'  ./templates/ pp@self.ge:/var/www/ge.self.dd/templates/
+    - rsync -avp --delete-during -e ssh --exclude='.git/' --exclude='.gitlab-ci.yml' --exclude='.gitignore' --exclude='.gitkeep'  ./override/ pp@self.ge:/var/www/ge.self.dd/override/
+    - sleep 3
+    - curl "https://sss.self.ge/cronjob/tables.php"

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params group="default">
+		<param name="LIB_TITLE" type="text" default="" label="lib_title" must="1" />
+		<param name="ORG" type="org" default="" label="ORG" must="1" />
+		<param name="PERIOD" type="payperiods" default="" label="PERIOD" must="1" />
+		<param name="GENERATION_TYPE" type="radio" default="0" must="1" >
+			<option value="0">total_generation</option>
+			<option value="1">proportional_generation</option>
+		</param>
+	</params>
+	<params group="print">
+		<param name="LIB_TITLE" type="text" default="" label="lib_title" must="1" />
+		<param name="ORG" type="orgprint" default="" label="ORG" must="1" />
+		<param name="PERIOD" type="payperiods" print="1" default="" label="PERIOD" must="1" />
+		<param name="GENERATION_TYPE" type="radio" default="0" must="1" >
+			<option value="0">total_generation</option>
+			<option value="1">proportional_generation</option>
+		</param>
+	</params>
+	<params group="details">
+		<param name="DATA_TYPE" type="datatypebenefits" must="1" />
+		<param name="ID" type="hidden" default="" />
+	</params>
+</install>

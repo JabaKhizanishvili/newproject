@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="number" default="" label="#" rclass="text-center" />
+		<param order="" type="checkall" default="" label="" rclass="text-center"   />
+		<!--<param order="worker" type="editlink" label="worker" key="WORKER" rclass="text-left" />-->
+		<param order="t.start_date" type="print" label="START_DATE" key="START_DATE" rclass="text-center" />
+		<param order="t.end_date" type="print" label="END_DATE" key="END_DATE" rclass="text-center" />
+		<param order="t.info" type="print" label="OVERTIME INFO" key="INFO" rclass="text-left" length="4" limit_type="1" />
+		<param order="t.day_count" type="print" label="HOURS" key="DAY_COUNT" rclass="text-center" />
+		<param order="t.type" type="switch" label="OVERTIME_TYPE_GRID" key="TYPE" rclass="text-center"  >
+			<option value="1">Salary Alternative</option>
+			<option value="2">RestTime Alternative</option>
+		</param>
+		<param order="t.resolution" type="switch" label="RESOLUTION" key="RESOLUTION" rclass="text-center"  >
+			<option value="0" color="red" >For Approve</option>
+			<option value="1" color="green" >Approved</option>
+		</param>
+		<param order="user_approver" type="print" label="USER_APPROVER" rclass="text-center" key="USER_APPROVER" />
+		<param order="t.user_approve_date" type="print" label="USER_APPROVE_DATE" rclass="text-center" key="USER_APPROVE_DATE" />
+		<param order="chief_approver" type="print" label="CHIEF_APPROVER" rclass="text-center" key="CHIEF_APPROVER" />
+		<param order="t.chief_approve_date" type="print" label="CHIEF_APPROVE_DATE" rclass="text-center" key="CHIEF_APPROVE_DATE" />
+		<param order="create_user" type="print" label="CREATE_USER" rclass="text-center" key="CREATE_USER" />
+		<param order="t.create_date" type="print" label="CREATE_DATE" rclass="text-center" key="CREATE_DATE" />
+		<!--<param order="t.status" type="approve" label="status" rclass="text-center" state_id='ID' state_key="STATUS" />-->
+		<param order="t.id" type="print" label="ID" key="ID" rclass="text-center" />
+	</params>
+</install>

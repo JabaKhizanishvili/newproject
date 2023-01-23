@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<param name="WORKER" type="slfstaff" case="8" default="" label="Worker" must="1" />
+		<param name="TYPE" type="applimittype" label="HTYPE"  must="1" />
+		<param name="START_DATE" type="calendar" default="" label="Holiday Start" must="1" />
+		<param name="END_DATE" type="calendar" default="" label="Holiday End" must="1" />
+		<param name="REPLACING_WORKERS" type="slfstaff" case="1" default="" label="replacing_workers" description="" must="1" />
+		<param name="W_HOLIDAY_COMMENT" type="textarea" default="" label="comment" geokbd="1"  must="1"/>
+		<param name="FILES" type="files" default="" label="FILES" must="1" />
+		<param name="ID" type="hidden" default="" />
+		<param name="STATUS" type="hidden" default="0" />
+		<param name="APPROVE" type="hidden" default="0" />
+		<param name="SYNC" type="hidden" default="0" />
+		<param name="DEL_USER" type="hidden" default="0" />
+	</params>
+</install>

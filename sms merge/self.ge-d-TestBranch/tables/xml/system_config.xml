@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="system_config">
+	<column name="key" type="varchar2" length="500" null="n" />
+	<column name="value" type="varchar2" length="4000" />
+	<column name="c_scope" type="varchar2" default="config" length="100" />
+	<column name="client_id" type="number" default="00" />
+	<column name="modify_user" type="number" />
+	<column name="modify_date" type="date" />
+</table>

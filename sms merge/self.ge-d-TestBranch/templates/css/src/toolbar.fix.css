@@ -1,0 +1,77 @@
+.page_title_fixed
+{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+
+	width: 100%;
+	z-index: 888;
+
+	background: url(../../templates/images/menubg.png) center 50%;
+	background-color: #1B284D;
+
+	-webkit-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+
+}
+
+
+.page_title_fixed .page_title_block_tools .page_title
+{
+	padding: 10px 0 0;
+	line-height: 30px;
+}
+.page_title_fixed .page_title_block_tools .page_title .toolbar
+{
+	padding: 0px 25px 0 10px ;
+}
+.page_title_fixed .page_title_block_tools
+{
+	width: 100%;
+}
+
+
+.page_title_fixed  .fix_logo
+{
+	display: block;
+	float: left;
+	margin-top: -10px;
+	width: 130px;
+	padding: 8px 8px 8px 15px;
+}
+
+.fix_logo img
+{
+	max-height: 36px;
+	max-width: 106px;
+	height: auto;
+}
+
+.fix_logo
+{
+	display: none;
+}
+
+
+.page_title_fixed .page_title
+{
+	color: #fff;
+	/*background:url(../../templates/images/fixed_bg.png);*/
+	background-repeat: repeat-x;
+	/*border-right: 2px solid #bdbdbd;*/
+	overflow: hidden;
+	margin-bottom: 0;
+}
+
+.fixedpagetitle {
+	font-size: 24px;
+	line-height: 26p;
+}
+
+.page_title_fixed .page_title .fixedpagetitle
+{
+	display: inline-block;
+	padding: 10px 8px;
+	font-size: 16px;
+}

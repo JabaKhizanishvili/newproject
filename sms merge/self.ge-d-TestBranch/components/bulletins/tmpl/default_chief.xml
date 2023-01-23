@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://apps.magticom.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="page_filter_block" type="h">
+		<filter name="firstname" type="stext" default="" label="firstname" class="kbd" />
+		<filter name="lastname" type="stext" default="" label="lastname" class="kbd" />
+		<filter name="org" type="org" default="" label="org" />
+		<filter name="state" type="state" default="-1" label="State">
+			<option value="-1">Select State</option>
+			<option value="1">BL_CURRENT</option>
+			<option value="2">BL_CLOSE</option>
+			<option value="3">BL_CONFIRMED</option>
+		</filter>
+		<filter name="year" type="year" default="" label="year" />
+		<filter name="start_date" type="calendar" default="" label="start date" />
+		<filter name="end_date" type="calendar" default="" label="end date" />
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="number" default="" label="#" rclass="text-center" />
+		<param order="" type="checkall" default="" label="" rclass="text-center"   />
+		<param order="wfirstname" type="printm" label="worker" key="WFIRSTNAME, WLASTNAME" rclass="text-left" T="1" Tscope="person"/>
+		<param order="" type="task" label="Actions" rclass="text-center" default="1"  key="ID" show_key="STATUS" >
+			<option value="continue" show="2">continue</option>
+			<!--<option value="confirm">confirm</option>-->
+		</param>
+		<param order="t.org" type="org" label="org" rclass="text-center" key="ORG" T="1" />
+		<param order="t.day_count" type="print" label="DAY COUNT G" rclass="text-center" key="DAY_COUNT" />
+		<param order="t.ucomment" type="print" label="Comment" rclass="text-left" key="UCOMMENT" limit="3" />
+		<param order="w.mobile_phone_number" type="print" label="mobile_phone_number" rclass="text-center" key="MOBILE_PHONE_NUMBER" />
+		<param order="t.start_date" type="print" label="Bulletins Start G" key="START_DATE" rclass="text-center" />
+		<param order="t.end_date" type="print" label="Bulletins End G" key="END_DATE" rclass="text-center" />
+		<param order="t.files" type="fileprint" label="files" key="FILES" rclass="text-left" />
+		<param order="approver" type="print" label="Author" rclass="text-center" key="APPROVER" T="1"/>
+		<param order="t.rec_date" type="print" label="BULLETIN_REC_DATE" rclass="text-center" key="REC_DATE" />
+		<param order="t.status" type="bulletintype" label="status" rclass="text-center" state_id='ID' state_key="STATUS" />
+		<param order="t.id" type="print" label="ID" key="ID" rclass="text-center" />
+	</params>
+</install>

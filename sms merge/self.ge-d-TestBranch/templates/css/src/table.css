@@ -1,0 +1,62 @@
+.table-small-font
+{
+	border-color: #000!important;
+	margin-top: 10px;
+}
+.table-add-tables
+{
+	border-color: #000!important;
+	margin-top: 10px;
+}
+.table-add-tables td
+{
+	border: 1px solid #000000;
+	text-align: center;
+	padding: 10px;
+}
+.table-small-font td,
+.table-small-font th
+{
+	border-color: #000!important;
+	font-size: 10px!important;
+}
+.table_form_title
+{
+	font-size: 20px;
+	letter-spacing:5px;
+	font-weight: bold;
+	text-align: center;
+	padding: 10px;
+}
+.table_org_title
+{
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	border-bottom: 1px solid #000;
+	padding: 10px;
+}
+.table_title_desc
+{
+	text-align: center;
+	font-size: 9px;
+	margin-bottom: 10px;
+	padding: 3px;
+}
+.c-row
+{
+	margin-bottom: 25px;
+	clear: both;
+}
+.table-add-tables-right
+{
+	float: right;
+}
+.table-page
+{
+	margin: 20px 15px;
+}
+.table-position
+{
+	font-size: 9px;
+}

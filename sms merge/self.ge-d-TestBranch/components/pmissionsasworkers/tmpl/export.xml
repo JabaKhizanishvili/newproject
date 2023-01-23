@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://apps.magticom.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<params name="pmissionsasworkers">
+		<param order="" type="number" default="" label="#" rclass="text-center" hclass="text-center"/>
+		<param order="" type="print" label="worker" key="WORKER" rclass="text-left" T="1"/>
+		<param order="" type="editlink" label="worker" key="WFIRSTNAME, WLASTNAME" rclass="text-left" T="1" Tscope="person" />
+		<param order="" type="print" label="PRIVATE_NUMBER" key="PRIVATE_NUMBER" rclass="text-left" />
+		<param order="" type="org" label="org" key="ORG" rclass="text-left" T="1"/>
+		<param order="" type="workerUnits" label="org_place" key="WORKER_ID" rclass="text-left" T="1"/>
+		<param order="" type="print" label="PTime Start" key="START_DATE" rclass="text-center" />
+		<param order="" type="print" label="PTime End" key="END_DATE" rclass="text-center" />
+		<param order="" type="printm" label="APPROVER" rclass="text-center" key="AFIRSTNAME, ALASTNAME" T="1" Tscope="person" />
+		<param order="" type="print" label="APPROVE_DATE" rclass="text-center" key="APPROVE_DATE" />
+		<param order="" type="print" label="UCOMMENT" rclass="text-left" key="UCOMMENT" />
+		<param order="" type="print" label="REC_DATE" key="REC_DATE" rclass="text-left" />
+		<param order="" type="wworker" label="AUTHOR" key="REC_USER" rclass="text-left" T="1"/>
+		<param order="" type="approve" label="status" rclass="text-center" state_id='ID' state_key="STATUS" />
+		<param order="" type="print" label="ID" key="ID" rclass="text-center" />
+	</params>
+</install>

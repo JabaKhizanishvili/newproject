@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params name="Controller alert config" ordering="4" >
+		<param name="" type="spacer" default="Controller alert config" label="" description="" />
+		<param name="controller_check_interval" type="rangenumber" default="10" start="5" step="5" end="60"  must="1"/>
+		<param name="controller_min_callback" type="rangenumber" default="50" start="0" step="10" end="80"  must="1"/>
+		<param name="controller_alert_resolved_subject" type="text" />
+		<param name="controller_alert_critical_subject" type="text" />
+	</params>
+	<params group="details">
+		<param name="controller_alert_email_switch" type="radio" default="1" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="controller_alert_email" type="text" label="EMAIL" description="contracts alerts enter comma separated list" />
+		
+		<param name="controller_alert_sms_switch" type="radio" default="0" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="controller_alert_sms" type="text" label="Mobile_phone_number" description="contracts alerts enter comma separated list" />
+	</params>
+</install>

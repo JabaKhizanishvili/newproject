@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<param name="WORKER_ID" type="slfstaff" case="10" default="" label="Worker" must="1" />
+		<param name="START_DATE" type="calendar" default="now" label="Private Time Date" must="1" />
+		<param name="INFO" type="text" default="" label="INFO" class="kbd"   />
+		<param name="ID" type="hidden" default="" />
+	</params>
+
+	<params group="lock">
+		<param name="WORKER_ID" type="printworker" label="Worker"/>
+		<param name="START_DATE" type="calendar" default="now" label="Private Time Date" must="1" />
+		<param name="INFO" type="text" default="" label="INFO" class="kbd"   />
+		<param name="ID" type="hidden" default="" />
+	</params>
+</install>

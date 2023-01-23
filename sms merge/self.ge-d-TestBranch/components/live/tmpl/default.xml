@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="page_filter_block" type="h">
+		<filter name="firstname" type="stext" default="" label="firstname" class="kbd" />
+		<filter name="lastname" type="stext" default="" label="lastname" class="kbd" />
+		<filter name="category" type="sql" default="" label="CATEGORY_ID" key_field="ID" value_field="LIB_TITLE" query="select id, lib_title from lib_categories t where t.active=1 order by t. lib_title asc" select_label="All Categories" must="" />
+		<param name="refreshtime" type="mask" default="1" label="refresh time (minutes)" mask="00" placeholder="__" />
+		<filter name="orgid" type="org" default="" label="org" />
+		<filter name="org_place" type="unit" default="" label="unit"  elementid="orgid" />
+		<filter name="refresh" type="switch" default="" label="AUtoupdate"  yes="Yes" no="No" />
+		<filter name="alerts" type="switch" default="" label="Alerts"  yes="Yes" no="No" />
+		<filter name="staffschedule" type="staffschedule" default="" label="STAFF_SCHEDULE_UNIT" />
+		<filter type="buttons" default="" submit_label="set" reset_label="Clear" show_reset= "1" />
+	</filters>
+</install>

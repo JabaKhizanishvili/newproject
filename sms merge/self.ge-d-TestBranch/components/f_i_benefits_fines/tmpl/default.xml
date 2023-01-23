@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="page_filter_block" type="h">
+		<filter name="org" type="org" default="" label="org" must="1" />
+		<filter name="unit" type="unit" default="" label="unit"  elementid="org" />
+		<filter name="staff_schedule" type="staffschedule" default="" label="STAFF_SCHEDULE_UNIT" elementid="org" />
+		<filter name="position" type="stext" default="" label="position"/>
+		<filter name="period_type" type="periods" default="0" label="period_type" />
+		<filter name="period_type_code" type="payperiods"  label="PERIOD" />
+		<filter name="private_number" type="stext" default="" label="private_number"/>
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="number" default="" label="#" rclass="text-center" hclass="text-center"/>
+		<param order="" type="checkall" default="" label="" rclass="text-center" />
+		<param order="w.firstname" type="editlink" label="worker" key="FIRSTNAME, LASTNAME" rclass="text-left" T="1" Tscope="person"/>
+		<param order="w.org_place" type="unit" label="ORG_PLACE" key="ORG_PLACE" rclass="text-left"  />
+		<param order="w.staff_schedule" type="staffschedule" label="staff_schedule" key="STAFF_SCHEDULE" rclass="text-left" />
+		<param order="w.position" type="print" label="position" key="POSITION" rclass="text-left" />
+		<param order="period_id" type="print" label="PERIOD" key="PERIOD" rclass="text-left" />
+		<param order="category" type="print" label="benefit" rclass="text-center" key="CATEGORY" />
+		<param order="benefit" type="print" label="benefit_id" rclass="text-center" key="BENEFIT" />
+		<param order="w.private_number" type="print" label="private_number" rclass="text-center" key="PRIVATE_NUMBER" />
+		<param order="t.type" type="switch" label="TYPE" key="TYPE">
+			<option value="1">Supplement</option>
+			<option value="2">loss</option>
+		</param>
+		<param order="w.org" type="org" label="ORG" key="ORG" rclass="text-left"  />
+		<param order="t.worker_share" type="print" label="worker_share" key="WORKER_SHARE" rclass="text-left"  />
+		<param order="t.company_share" type="print" label="company_share" key="COMPANY_SHARE" rclass="text-left"  />
+		<param order="t.cost" type="print" label="cost" key="COST" rclass="text-left"  />
+		<param order="t.accrued_income" type="print" label="accrued_income" key="ACCRUED_INCOME" rclass="text-left"  />
+		<param order="t.accrued_pension" type="print" label="accrued_pension" key="ACCRUED_PENSION" rclass="text-left"  />
+		<param order="w.id" type="print" label="ID" key="ID" rclass="text-center" hclass="text-center" />
+	</params>
+</install>

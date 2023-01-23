@@ -1,0 +1,62 @@
+<table name="slf_changes"  title="changes">
+	<columns>
+		<column name="id" alias="change_id" />
+		<column name="org" alias="org_id" />
+		<column name="person" alias="p_id" />
+		<column name="staff_schedule" alias="staff_schedule_id" />
+		<column name="salary" />
+		<column name="chiefs" alias="chiefs_p_id" />
+		<column name="tablenum" />
+		<column name="contracts_date" alias="contract_start_date" />
+		<column name="contract_end_date" />
+		<column name="calculus_regime" />
+		<column name="category_id" />
+		<column name="graphtype" />
+		<column name="accounting_offices" />
+		<column name="release_date" />
+		<column name="start_date" />
+		<column name="end_date" />
+		<column name="change_date" />
+		<column name="change_type" />
+		<column name="change_sub_type" />
+		<column name="o_comment" alias="w_comment" />
+		<column name="worker_id" alias="w_id" />
+		<column name="contract_type" />
+		<column name="status" />
+		<column name="iban" />
+		<column name="auto_overtime" />
+		<column name="calculus_type" />
+		<column name="working_rate" />
+		<column name="country_code" />
+		<column name="salary_payment_type" />
+		<column name="release_type" />
+		<column name="release_comment" />
+		<column name="release_files" />
+		<column name="p_code" alias="w_code" />
+		<column name="salarytype" />
+		<column name="operation_comment" />
+	</columns>
+	<request>
+		<item name="start" type="number" required="0">
+			<value>
+				<v name="min" value="0" />
+				<v name="max" value="Unlimited" />
+				<v name="default" value="0" />
+			</value>
+		</item>
+		<item name="limit" type="number" required="0">
+			<value>
+				<v name="min" value="0" />
+				<v name="max" value="500" />
+				<v name="default" value="50" />
+			</value>
+		</item>
+	</request>
+	<response>
+		<item name="start" type="number" />
+		<item name="limit" type="number" />
+		<item name="count" type="number" />
+	</response>
+	<order by="change_date" type="desc"  />
+	<where><![CDATA[ status = 1 ]]></where>
+</table>

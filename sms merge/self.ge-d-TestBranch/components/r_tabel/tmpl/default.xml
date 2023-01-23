@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="table table-bordered table-condensed table-filter-vertical" type="v">
+		<filter name="firstname" type="stext" default="" label="firstname" class="kbd"  />
+		<filter name="lastname" type="stext" default="" label="lastname" class="kbd"  />
+		<filter name="private_number" type="stext" default="" label="private_number" class="kbd"  />
+		<filter name="position" type="stext" default="" label="position" class="kbd" />
+		<filter name="org" type="org" default="" label="ORG" />
+		<filter name="unit" type="unit" default="-1" label="ORG_PLACE" />
+		<filter name="staffschedule" type="staffschedule" default="" label="STAFF_SCHEDULE_UNIT" elementid="org" />
+		<filter name="cat_id" type="category" default="-1" label="category"  />
+		<!--
+		<filter name="state" type="state" default="-1" label="State">
+			<option value="-1">Select State</option>
+			<option value="0">BL_CURRENT</option>
+			<option value="1">BL_CLOSE</option>
+			<option value="2">BL_CONFIRMED</option>
+		</filter>
+		-->
+		<filter name="start_date" type="calendar" default="first day of last month" label="Start Date" />
+		<filter name="end_date" type="calendar" default="last day of last month" label="End Date" />
+		<!--		<filter name="sphere" type="sphere" default="" label="sphere" />
+		<filter name="department" type="department" default="" label="department" />
+		<filter name="chapter" type="chapter" default="" label="chapter" />-->
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+
+</install>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Created by Irakli Gzirishvili 28-10-2021-->
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="slf_daily_salary" history="yes">
+	<columns>
+		<column name="id" type="number" null="n"/>
+		<column name="worker" type="number"  default="00"/>
+		<column name="period_id" type="number"/>
+		<column name="salary_type" type="number"/>
+		<column name="payment_type" type="number"/>
+		<column name="salary" type="number"/>
+		<column name="taxes_yn" type="number"/>
+		<column name="pay_pension" type="number"/>
+		<column name="salary_sum" type="number"  default="00"/>
+		<column name="rec_date" type="date"/>
+		<column name="status" type="number"/>
+		<column name="change_user" type="number"/>
+		<column name="change_date" type="number"/>
+		<column name="data_day" type="date"/>
+
+		<!--Generated Columns-->
+		<column name="g_net" type="number"/>
+		<column name="g_income_tax" type="number"/>
+		<column name="g_pension_person" type="number"/>
+		<column name="g_pension_org" type="number"/>
+		<column name="org" type="number"/>
+		<column name="sheet_id" type="number"/>
+		<column name="gen_hash" type="varchar2" length="500" />
+	</columns>
+	<sequence  name="sqs_daily_salary" />
+</table>

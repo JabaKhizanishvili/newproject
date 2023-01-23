@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params name="Session And Base Auth Configuration" ordering="20"  menu="Login" >
+		<param name="" type="spacer" default="Session Config" label="" description="" />
+		<param name="standard_session_duration" type="number" default="30" label="standard_session_duration" must="1" />		
+		<param name="extended_session_use" type="radio" default="1"  must="1" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="extended_session_duration" type="number" default="43200" label="extended_session_duration" must="1" description="" />
+		<param name="session_autologout" type="radio" label="run_logout_alert" default="0"  must="1" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="sessioncountdown" type="rangenumber" default="10" start="00" end="60"  must="1"/>
+		<param name="system_mfa_status" type="radio" default="0"  must="1" >
+			<option value="1">On</option>
+			<option value="0">Off</option>
+		</param>
+		<!--		<param name="" type="spacer" default="Azure SSO Config" label="" description="" />
+		<param name="" type="spacer" default="Documentations" label="" description="" />
+		<param name="azure_sso_on" type="radio" default="0"  must="1" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="azure_tennant_id" type="text" default=""  must=""/>
+		<param name="azure_app_id" type="pass" default="" must=""/>
+		<param name="azure_secret_key" type="pass" default=""   must=""/>
+		<param name="azure_sso_ident_key" type="list" default="id"  must="1" >
+			<option value="id">Worker id</option>
+			<option value="userPrincipalName">userPrincipalName</option>
+		</param>
+		<param name="azure_auth_button_name" type="text" default="Azure Single Sign ON" label="azure_auth_button_name"  />
+		<param name="azure_auth_tab_name" type="text" default="Azure SSO" label="azure_auth_tab_name"  />
+		<param name="common_auth_tab_name" type="text" default="სისტემური ავტენთიფიკაცია" label="common_auth_tab_name"  />-->
+
+		<param name="" type="spacer" default="System Access Check By IP" label="" description="" />
+		<param name="denied_by_ip" type="radio" default="0" >
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="denied_ip_list" type="textarea" default="" label="Deny System Access By IP" description="enter comma separated list" />
+		<param name="denied_ip_list_title" type="text" default="" label="Title" />
+		<param name="denied_ip_list_description" type="textarea" default="" label="Description" />
+		<param name="redirect_denied_ip_to_other_page" type="radio" default="0" >
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="denied_ip_redirect_time" type="number" min="5" default="5" label="Redirect Time" />
+		<param name="denied_ip_redirect_to_url" type="text" label="Redirect URL" />
+	</params>
+	<params group="details">
+		<param name="" type="spacer" default="Auth Config" label="" description="" />
+		<param name="common_auth_tab_name" type="text" default="სისტემური ავტენთიფიკაცია" label="common_auth_tab_name"  />
+		
+		<param name="" type="spacer" default="Azure SAML SSO Config" label="" description="" />
+		<param name="azure_saml_sso_on" type="radio" default="0"  must="1" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="azure_saml_sso_service" type="text" default=""  must="1"/>
+		<param name="azure_saml_entity_id" type="text" default=""  must="1"/>
+		<param name="azure_saml_sso_logout_service" type="text" default=""  must="1"/>
+		<param name="azure_saml_sso_x509cert" type="textarea" default=""  must="1"/>
+		<param name="azure_saml_sso_ident_key" type="list" default="id"  must="1" >
+			<option value="objectidentifier">objectidentifier</option>
+			<option value="name">emailaddress</option>
+		</param>
+		<param name="azure_saml_auth_button_name" type="text" default="Azure SAML Single Sign ON" label="azure_saml_auth_button_name"  />
+		<param name="azure_saml_auth_tab_name" type="text" default="Azure SAML SSO" label="azure_saml_auth_tab_name"  />
+		
+		<param name="" type="spacer" default="Azure SAML SSO API Config" label="" description="" />
+		<param name="azure_saml_sso_metakey" type="apilink" default="api/SAML/MetaData" label="azure_saml_Identifier"  />
+		<param name="azure_saml_reply_url" type="apilink" default="api/SAML/ACS" label="azure_saml_reply_url"  />
+		<param name="azure_saml_logout_url" type="apilink" default="api/SAML/SLO" label="azure_saml_logout_url"  />
+	</params>
+</install>

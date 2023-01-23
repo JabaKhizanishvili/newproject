@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!--
+    TODO define vocabulary identification
+    PUBLIC ID: -//vendor//vocabulary//EN
+    SYSTEM ID: http://server/path/edit.dtd
+
+-->
+
+<!--
+    An example how to use this DTD from your XML document:
+
+    <?xml version="1.0"?>
+
+    <!DOCTYPE install SYSTEM "edit.dtd">
+
+    <install>
+    ...
+    </install>
+-->
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT install (params)*>
+<!ATTLIST install
+    type CDATA #IMPLIED
+    version CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT params (param|filter)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT param (option)*>
+<!ATTLIST param
+    name CDATA #IMPLIED
+    type CDATA #IMPLIED
+    default CDATA #IMPLIED
+    label CDATA #IMPLIED
+    must CDATA #IMPLIED
+    geokbd CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT option (#PCDATA)>
+<!ATTLIST option
+    value CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT filter EMPTY>
+<!ATTLIST filter
+    name CDATA #IMPLIED
+    type CDATA #IMPLIED
+    default CDATA #IMPLIED
+    label CDATA #IMPLIED
+    key_field CDATA #IMPLIED
+    value_field CDATA #IMPLIED
+    query CDATA #IMPLIED
+    select_label CDATA #IMPLIED
+    must CDATA #IMPLIED
+  >

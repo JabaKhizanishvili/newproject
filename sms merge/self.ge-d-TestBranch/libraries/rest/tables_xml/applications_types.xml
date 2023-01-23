@@ -1,0 +1,32 @@
+<table name="v_lib_applications_types" title="applications_types" >
+	<columns>
+		<column name="id" alias="app_type_id" />
+		<column name="type" alias="app_type" />
+		<column name="lib_title" alias="title" />
+		<column name="lib_desc" alias="description"/>
+		<column name="active" alias="status" />
+	</columns>
+	<request>
+		<item name="start" type="number" required="0">
+			<value>
+				<v name="min" value="0" />
+				<v name="max" value="Unlimited" />
+				<v name="default" value="0" />
+			</value>
+		</item>
+		<item name="limit" type="number" required="0">
+			<value>
+				<v name="min" value="0" />
+				<v name="max" value="500" />
+				<v name="default" value="50" />
+			</value>
+		</item>
+	</request>
+	<response>
+		<item name="start" type="number" />
+		<item name="limit" type="number" />
+		<item name="count" type="number" />
+	</response>
+	<order by="id" type="asc" />
+	<where><![CDATA[ active = 1 ]]></where>
+</table>

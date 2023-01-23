@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="rel_worker_chief">
+	<column name="worker_pid" type="number" />
+	<column name="worker_opid" type="number" />
+	<column name="worker" type="number" />
+	<column name="org" type="number" />
+	<column name="chief" type="number"  />
+	<column name="chief_opid" type="number"  />
+	<column name="chief_pid" type="number"  />
+	<column name="clevel" type="number"  />
+</table>

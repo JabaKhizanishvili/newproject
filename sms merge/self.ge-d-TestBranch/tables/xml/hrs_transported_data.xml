@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="hrs_transported_data">
+	<column name="id" type="varchar2" length="50" />
+	<column name="rec_date" type="date" />
+	<column name="access_point_code" type="varchar2" length="50" />
+	<column name="card_id" type="varchar2" length="4000" />
+	<column name="user_id" type="number" />
+	<column name="door_type" type="number" />
+	<column name="cardname"  type="varchar2" length="4000" />
+	<column name="parent_id" type="number" />
+	<column name="client_id" type="number" default="00" />
+	<column name="time_id" type="number" default="00" />
+</table>

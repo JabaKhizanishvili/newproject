@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="page_filter_block" type="h">
+		<filter name="firstname" type="stext" default="" label="firstname" class="kbd" />
+		<filter name="lastname" type="stext" default="" label="lastname" class="kbd" />
+		<filter name="orgid" type="org" default="" label="org" />
+		<filter name="org_place" type="unit" default="" label="unit"  elementid="orgid" />
+		<filter name="category" type="sql" default="" label="CATEGORY_ID" key_field="ID" value_field="LIB_TITLE" 
+						query="select id, lib_title from lib_categories t where t.active=1 order by t. lib_title asc" select_label="Select Category"  />
+		<filter name="user_role" type="userrole" default="" label="User_Role" />
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+	<params class="table table-bordered table-condensed table-hover table-striped exporttable" id="exportable">
+		<param order="" type="number" default="" label="#" rclass="text-center"  hclass="text-center"/>
+		<param order="wfirstname" type="printm" label="worker" key="WFIRSTNAME, WLASTNAME" rclass="text-left" T="1" Tscope="person" />
+		<param order="" type="orgorg" label="ORG" key="ORG.ORG" rclass="text-left" T="1" />
+		<param order="" type="staffschedule" multy="1" label="STAFF_SCHEDULE" rclass="text-left" key="ORG.STAFF_SCHEDULE" T="1"/>
+		<param order="" type="switch" multy="1" key="ORG.CALCULUS_TYPE" default="-1" label="CALCULUS_TYPE"  rclass="text-left" >
+			<option value="1">Digital</option>
+			<option value="2">Material</option>
+			<option value="3">Excluded</option>
+		</param>
+		<param order="" type="multychiefs"  label="CHIEFS" key="ORG" rclass="text-center" T="1"/>
+		<param order=""   type="graphtype" multy="1" label="GRAPHTYPE" key="ORG.GRAPHTYPE" rclass="text-center" T="1"/>
+		<param order="" type="print" multy="1" label="GRAPHGROUP" key="ORG.GRAPH_GROUP" rclass="text-center" T="1"/>
+		<param order="email" type="positivereadonly" label="EMAIL" key="EMAIL" rclass="text-center" />
+		<param order="dum.mobile_phone_number" type="positivereadonly" label="MOBILE_PHONE_NUMBER" key="MOBILE_PHONE_NUMBER" rclass="text-center" />
+		<param order="dum.ldap_username" type="print" label="LDAP_USERNAME" key="LDAP_USERNAME" rclass="text-left" />
+		<param order="TIMECONTROL"  key="TIMECONTROL" type="switch" default="-1" label="TIMECONTROL"  rclass="text-center">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param order="SMS_REMINDER" key="SMS_REMINDER" type="switch" label="SMS_REMINDER" rclass="text-center" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param order="dum.permit_id" type="print" label="PERMIT_ID" key="PERMIT_ID" rclass="text-left" />
+		
+	</params>
+</install>

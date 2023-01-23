@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<params name="Staff schedule">
+		<param order="" type="number" default="" label="#" rclass="text-center" />
+		<param order="" type="print" label="staff_schedule" key="TITLE" rclass="text-left" />
+		<param order="" type="org" label="ORG" key="ORG" rclass="text-left" T="1"/>
+		<param order="" type="unit" label="UNIT" key="ORG_PLACE" rclass="text-left" T="1"/>
+		<param order="" type="print" label="QUANTITY" key="QUANTITY" rclass="text-center" />
+		<param order="" type="print" label="assigned_worker_quantity" key="S_COUNT" rclass="text-center" />
+		<param order="" type="numberdiff" label="plus" n1="S_COUNT" n2="QUANTITY" polus="1" color="red" rclass="text-center" />
+		<param order="" type="numberdiff" label="minus" n2="S_COUNT" n1="QUANTITY" polus="1" color="red" rclass="text-center" />
+		<param order="" type="print" label="SALARY" key="SALARY" rclass="text-center" />
+		<param order="" type="print" label="SUMSALARY" key="SUMSALARY" rclass="text-center" />
+		<param order="" type="print" label="REAL_SALARY" key="REAL_SALARY" rclass="text-center" />
+		<param order="" type="print" label="MID_SALARY" key="MID_SALARY" rclass="text-center" />
+		<param order="" type="numberdiff" label="SALARY_PLUS" n1="REAL_SALARY" n2="SUMSALARY" polus="1" color="red" rclass="text-center" />
+		<param order="" type="numberdiff" label="SALARY_MINUS" n1="SUMSALARY" n2="REAL_SALARY" polus="1" color="red" rclass="text-center" />
+	</params>
+</install>

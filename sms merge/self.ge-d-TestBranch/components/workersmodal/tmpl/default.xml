@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="page_filter_block" type="h">
+		<filter name="firstname" type="text" default="" label="firstname" class="kbd" />
+		<filter name="lastname" type="text" default="" label="lastname" class="kbd" />
+		<filter name="position" type="text" default="" label="position" class="kbd"  />
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="number" default="" label="#" rclass="text-center" />
+		<param order="" type="checkall" default="" label="" rclass="text-center"   />
+		<param order="wfirstname" type="workers" label="worker" key="WFIRSTNAME, WLASTNAME" id='ID' rclass="text-left" T="1" Tscope="person"/>
+		<param order="u.staff_schedule" type="staffschedule" label="staff_schedule_unit" key="STAFF_SCHEDULE" rclass="text-left" T="1"/>
+		<param order="u.position" type="print" label="position" key="POSITION" rclass="text-left" T="1"/>
+		<param order="u.org_place" type="unit" label="org_place" key="ORG_PLACE" rclass="text-center" T="1"/>
+		<!--<param order="u.user_type" type="usertype" label="user_type" key="USER_TYPE" rclass="text-center" />-->
+		<param order="u.id" type="print" label="ID" key="ID" rclass="text-center" />
+	</params>
+</install>

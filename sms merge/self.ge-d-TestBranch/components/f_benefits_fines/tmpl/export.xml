@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+		<params class="table table-bordered table-condensed table-hover table-striped">
+			<param order="" type="number" default="" label="#" rclass="text-center" hclass="text-center"/>
+			<param order="pr.firstname" type="print" label="FIRSTNAME" key="FIRSTNAME" rclass="text-left" Tscope="person" />
+			<param order="pr.lastname" type="print" label="LASTNAME" key="LASTNAME" rclass="text-left" Tscope="person" />
+			<param order="" type="print" label="private_number" rclass="text-center" key="PRIVATE_NUMBER" />
+			<param order="t.org" type="org" label="ORG" key="ORG" rclass="text-left"  />
+			<param order="t.staff_schedule" type="staffschedule" label="staffschedule" key="STAFF_SCHEDULE" rclass="text-left"/>
+			<param order="ls.position" type="position" label="position" key="POSITION" rclass="text-left"/>
+			<param key="PERIODTITLE" type="print"  label="PERIOD" rclass="text-left" />
+			<param key="PERIOD" type="print" label="ACCURACY_PERIOD" />
+			<param order="" type="print" label="benefit_fine" key="BENEFIT_FINE" rclass="text-left"/>
+		</params>
+</install>

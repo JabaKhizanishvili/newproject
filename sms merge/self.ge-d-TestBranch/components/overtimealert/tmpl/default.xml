@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<param name="START_DATE" type="calendar" default="now" label="START_DATE" must="1" />
+		<param name="END_DATE" type="calendar" default="now" label="END_DATE" must="1" />
+		<param name="INFO" type="textarea" default="" label="OVERTIME INFO" class="kbd" must="1"  />
+		<param name="DAY_COUNT" type="number" default="0" label="Expected OVERTIME_HOURS" min="0" max="100" />
+		<param name="TYPE" type="radio" default="0" label="OVERTIME_TYPE"  must="1"  >
+			<option value="1">Salary Alternative</option>
+			<option value="2">RestTime Alternative</option>
+		</param>
+		<param name="ID" type="hidden" default="" />
+	</params>
+</install>

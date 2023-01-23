@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<filter name="CATEGORY_ID" type="sql" default="" label="CATEGORY_ID" key_field="ID" value_field="LIB_TITLE" query="select id, lib_title from lib_categories t where t.active=1 order by t. lib_title asc" select_label="Select Category" must="1" />
+		<param name="WORKERS" type="batchworkers" default="" label="WORKERS" key="ID" />
+	</params>
+</install>

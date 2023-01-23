@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="table table-bordered table-condensed table-filter-vertical" type="v">
+		<filter name="start_date" type="calendar" default="now" label="Start Date" />
+		<filter name="end_date" type="calendar" default="now" label="End Date" />
+		<!--<filter name="org" type="myorg" default="" label="org" />-->
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="number" default="" label="#" rclass="text-center" />
+		<param order="card_id" type="print" label="CARD_ID" key="CARD_ID" rclass="text-left" />
+		<param order="t.rec_date" type="print" label="rec date" key="REC_DATE" rclass="text-left" />
+		<param order="t.cardname" type="print" label="Device cardname" key="CARDNAME" rclass="text-left" T="1"/>
+		<param order="t.access_point_code" type="print" label="access_point_code" key="ACCESS_POINT_CODE" rclass="text-left" />
+		<param order="wfirstname" type="printm" label="System CARDNAME" key="WFIRSTNAME, WLASTNAME" rclass="text-left" T="1" Tscope="person" />
+		<param order="door" type="print" label="System door" rclass="text-left" key="DOOR" T="1"/>
+		<param order="t.door_type" type="switch" label="System door Type" rclass="text-left" key="DOOR_TYPE" >
+			<option value="1">In Door</option>
+			<option value="2">Out Door</option>
+			<option value="3">In/Out Door</option>
+			<option value="5">Additional Door In</option>
+			<option value="6">Additional Door Out</option>
+		</param>
+	</params>
+</install>

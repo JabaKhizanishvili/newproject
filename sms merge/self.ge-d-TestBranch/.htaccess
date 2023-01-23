@@ -1,0 +1,47 @@
+RewriteEngine On
+#RewriteCond %{HTTP:Authorization} !=""
+#RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+#RewriteBase /pda
+
+#RewriteCond %{SERVER_PORT} 80 
+#RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+# If the requested path and file is not /index.php and the request
+# has not already been internally rewritten to the index.php script
+RewriteCond %{REQUEST_URI} \/rest\/*
+# and the requested path and file doesn't directly match a physical file
+RewriteCond %{REQUEST_FILENAME} !-f
+# and the requested path and file doesn't directly match a physical folder
+RewriteCond %{REQUEST_FILENAME} !-d
+# internally rewrite the request to the index.php script
+RewriteRule .* /rest/index.php [L]
+
+
+# If the requested path and file is not /index.php and the request
+# has not already been internally rewritten to the index.php script
+RewriteCond %{REQUEST_URI} \/status\/*
+# and the requested path and file doesn't directly match a physical file
+RewriteCond %{REQUEST_FILENAME} !-f
+# and the requested path and file doesn't directly match a physical folder
+RewriteCond %{REQUEST_FILENAME} !-d
+# internally rewrite the request to the index.php script
+RewriteRule .* /status/index.php [L]
+
+#Header add X-Test "Testing"
+#
+SetOutputFilter DEFLATE
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf|ICO|PDF|FLV|JPG|JPEG|PNG|GIF|JS|CSS|SWF|eot|woff|svg|ttf|woff2)$">
+Header set Expires "Thu, 16 Jan 2025 00:00:01 GMT"
+Header unset Last-Modified
+</FilesMatch>
+# 30 DAYS
+<FilesMatch "\.(xml|txt|css|js)$">
+Header set Cache-Control "max-age=2592000, proxy-revalidate"
+</FilesMatch>
+<FilesMatch "\.(png|ico|PNG|ICO)$">
+Header set Cache-Control "max-age=2592000, proxy-revalidate"
+</FilesMatch>
+
+Header unset ETag
+FileETag None
+#Header set Strict-Transport-Security: "max-age=31536000 ;  includeSubDomains; preload;" env=HTTPS 
+Header set Access-Control-Allow-Origin "*"

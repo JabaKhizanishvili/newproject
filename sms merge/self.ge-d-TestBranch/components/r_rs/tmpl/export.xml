@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<params name="RS">
+		<!--<param order="" type="number" default="" label="#" rclass="text-center" />-->
+		<param order="w.private_number" type="print" label="W_PRIVATE_NUMBER" key="PRIVATE_NUMBER" rclass="text-left" />
+		<param order="w.firstname" type="print" label="W_FIRSTNAME" key="FIRSTNAME" rclass="text-left" Tscope="person" />
+		<param order="w.lastname" type="print" label="W_LASTNAME" key="LASTNAME" rclass="text-left" Tscope="person" />
+		<!--<param order="w.org_name" type="print" label="ORG" key="ORG_NAME" rclass="text-left"  />-->
+		<param order="w.gender" type="print" label="-" key="GENDER" rclass="text-left" />
+		<param order="w.gender" type="switch" label="W_GENDER" key="GENDER" rclass="text-left" >
+			<option value="1">Male</option>
+			<option value="2">FeMale</option>
+		</param>
+		<param order="w.nationality" type="switch" label="W_NATIONALITY" key="NATIONALITY" rclass="text-left" >
+			<option value="1">Georgia</option>
+			<option value="0">Other Country</option>
+		</param>
+		<param order="w.birthdate" type="print" label="W_BIRTHDATE_EXT" key="BIRTHDATE" rclass="text-left" />
+		<param order="w.mobile_phone_number" type="print" label="W_MOBILE_PHONE_NUMBER" key="MOBILE_PHONE_NUMBER" rclass="text-left" />
+		<param order="work_type" type="print" label="-" rclass="text-center" key="WORK_TYPE" />
+		<param order="work_type" type="switch" label="W_WORK_TYPE" rclass="text-center" key="WORK_TYPE" >
+			<option value="1">Full Time</option>
+			<option value="2">Part Time</option>
+		</param>
+		
+		<param order="contract_state" type="print" label="-" rclass="text-center" key="CONTRACT_STATE" />
+		<param order="contract_state" type="switch" label="STATE" rclass="text-center" key="CONTRACT_STATE" >
+			<option value="1">Current Contract</option>
+			<option value="0">Paused Contract</option>
+			<option value="-1">Canceled Contract</option>
+		</param>
+		<param order="country_code" type="print" label="W_COUNTRY_CODE" rclass="text-center" key="COUNTRY_CODE" />
+	</params>
+</install>

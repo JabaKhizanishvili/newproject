@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="lib_flow_elements" history="yes">
+	<columns>
+		<column name="id" type="number" null="n" />
+		<column name="lib_title" type="varchar2" length="500" Ti="1" />
+		<column name="lib_desc" type="varchar2" length="4000"/>
+		<column name="lib_group" type="number" />
+		<column name="lib_task" type="number" />
+		<column name="flow" type="number" />
+		<column name="lib_level" type="number"  />
+		<column name="ordering" type="number"  />
+		<column name="active" type="number" null="n" />
+	     <column name="modify_user" type="number" />
+          <column name="modify_date" type="date" />
+     </columns>
+	<history>
+		<column name="lib_title" type="varchar2" length="500" />
+		<column name="lib_desc" type="varchar2" length="4000"/>
+		<column name="lib_group" type="number" />
+		<column name="lib_task" type="number" />
+		<column name="flow" type="number" />
+		<column name="lib_level" type="number"  />
+		<column name="ordering" type="number"  />
+		<column name="active" type="number" null="n" />
+	     <column name="modify_user" type="number" />
+          <column name="modify_date" type="date" />
+     </history>
+	<sequence  name="library" />
+	<histsequence  name="sqs_flow_elements_hist" />
+</table>

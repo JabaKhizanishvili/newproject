@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<params name="HolidayLimits">
+		<param order="" type="number" default="" label="#" rclass="text-center" hclass="text-center"/>
+		<param order="w.firstname" type="print" label="FIRSTNAME" key="FIRSTNAME" rclass="text-left" T="1" Tscope="person" />
+		<param order="w.lastname" type="print" label="LASTNAME" key="LASTNAME" rclass="text-left" T="1" Tscope="person" />
+		<param order="w.org_name" type="print" label="org" key="ORG_NAME" rclass="text-left" T="1"/>
+		<param order="htitle" type="print" label="HOLIDAY INFORMATION" key="HTITLE" rclass="text-left" T="1"/>
+		<param order="l.htype" type="htype" label="HTYPE" key="WAGE_TYPE" rclass="text-center" />
+		<!--<param order="l.count" type="print" label="COUNT" key="COUNT" rclass="text-center" />-->
+		<param order="l.count" type="print" label="C_COUNT" key="COUNT" rclass="text-center" />
+		<param order="l.c_limit" type="print" label="C_LIMIT" key="C_LIMIT" rclass="text-center" />
+		<param order="l.start_date" type="date" label="start_date" key="START_DATE" rclass="text-left" format="%d-%m-%Y" />
+		<param order="l.end_date" type="date" label="end_date" key="END_DATE" rclass="text-left" format="%d-%m-%Y" />
+		<!--<param order="l.year" type="print" label="YEAR" key="YEAR" rclass="text-left" />-->
+		<param order="w.id" type="print" label="ID" key="ID" rclass="text-center" />
+	</params>
+</install>

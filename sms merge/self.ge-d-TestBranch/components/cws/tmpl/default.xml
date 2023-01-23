@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="page_filter_block" type="h">
+		<filter name="firstname" type="stext" default="" label="firstname" class="kbd" />
+		<filter name="lastname" type="stext" default="" label="lastname" class="kbd" />
+		<filter name="org" type="myorg" default="" label="org" />
+		<filter name="position" type="stext" default="" label="position" class="kbd" />
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="number" default="" label="#" rclass="text-center" />
+		<param order="wfirstname," type="printm" label="name, surname" key="WFIRSTNAME, WLASTNAME" rclass="text-left" T="1" Tscope="person" />
+		<param order="" type="orgorg" label="ORG" key="ORG.ORG" rclass="text-left"  T="1"/>
+		<param order="" type="staffschedule" multy="1" label="STAFF_SCHEDULE" rclass="text-left" key="ORG.STAFF_SCHEDULE" T="1"/>
+		<param order="" type="position" multy="1" label="POSITION" rclass="text-left" key="ORG.POSITION" T="1"/>
+		<param order="email" type="print" default="" rclass="text-left"  label="EMAIL"  key="EMAIL" />
+		<param order="mobile_phone_number" type="print" default="" rclass="text-left"  label="MOBILE_PHONE_NUMBER"  key="MOBILE_PHONE_NUMBER" />
+		<param order="" type="print" multy="1" default="" rclass="text-left"  label="CONTRACTS_DATE"  key="ORG.CONTRACTS_DATE" />
+		<param order="" type="print" multy="1" default="" rclass="text-left"  label="CONTRACT_END_DATE"  key="ORG.CONTRACT_END_DATE" />
+		<!--<param order="" type="wholiday" label="WAGE HOLIDAY COUNT" key="ID" rclass="text-center" />-->
+		<!--<param order="" type="wlholiday" label="WAGELESS HOLIDAY COUNT" key="ID" rclass="text-center" />-->
+		<!--<param order="contract_end_date" type="print" default="" rclass="text-left"  label="CONTRACT_END_DATE"  key="S_CONTRACT_END_DATE" />-->
+		<!--<param order="" type="tooltip" label="CHIEFS" key="ALL_CHIEFS" rclass="text-left" length="2" />-->
+	</params>
+</install>

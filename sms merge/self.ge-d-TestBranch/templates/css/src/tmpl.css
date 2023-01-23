@@ -1,0 +1,18 @@
+.tmpl_container
+{
+	margin:0 0 10px;
+}
+.tmpl_key
+{
+	padding: 5px;
+	border: 1px dashed #1e1e1e;
+	cursor: pointer;
+	margin:0 5px 0;
+	display: block;
+	float: left;
+}
+.tmpl_key:hover
+{
+	background-color: #00cc66;
+	color: #FFFFFF;
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+    <params name="Bulletins Configuration" ordering="2" >
+        <param name="" type="spacer" default="Bulletins Configuration" label="" description="" />
+        <param name="SENDING_BULLETIN_LIMIT_OF_MISCONDUCT_MESSAGES" type="radio" default="0" must="1" >
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </param>
+        <group>
+            <param name="THE_FIRST_LIMIT_TO_SEND_A_MESSAGE" type="number" default="30" />
+            <param name="THE_FIRST_LIMIT_TO_SEND_A_MESSAGE_TEMPLATE" type="msgtemplates" default="0" label="contracts_alerts_day1_msg" must="" T="1"/>
+        </group>
+        <group>
+            <param name="THE_SECOND_LIMIT_TO_SEND_A_MESSAGE" type="number" default="50" />
+            <param name="THE_SECOND_LIMIT_TO_SEND_A_MESSAGE_TEMPLATE" type="msgtemplates" default="0" label="contracts_alerts_day1_msg" must="" T="1"/>
+        </group>
+        <group>
+            <param name="THE_THIRD_LIMIT_TO_SEND_A_MESSAGE" type="number" default="60" />
+            <param name="THE_THIRD_LIMIT_TO_SEND_A_MESSAGE_TEMPLATE" type="msgtemplates" default="0" label="contracts_alerts_day1_msg" must="" T="1"/>
+        </group>
+    </params>
+    <params group="details">
+        <param name="BULLETIN_MAIN_OPENED_DURATION" type="number" default="40" must="1" />
+        <param name="NOTIFICATION_SEND_TIME" type="rangenumber" default="13" start="00" end="23"  must="1" />
+        <param name="EMAILS_TO_SEND_NOTIFICATION" type="textarea" must="1" description="enter comma separated emails as list" />
+    </params>
+</install>

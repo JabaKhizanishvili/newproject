@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<param name="WORKERS" type="batchworkers" default="" label="WORKERS" key="ID" />
+		<param name="ORG" type="orgprint" default="" label="ORG" key="ID" />
+		<param name="CONTRACT_END_DATE" type="calendar" default="now" label="CONTRACT_END_DATE"  must="1" />
+		<param name="RELEASE_TYPE" type="releasetypes" default="" label="RELEASE_TYPE" geokbd="1" />
+		<param name="RELEASE_COMMENT" type="textarea" default="" label="COMMENT" geokbd="1" />
+		<param name="RELEASE_FILES" type="files" default="" label="FILES" />
+	</params>
+</install>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<param name="LIB_TITLE" type="text" default="" label="Title" must="1"  geokbd="1" />
+		<param name="LIB_GOAL" type="textarea" default="" label="LIB_GOAL" rows="5" colls="100" geokbd="1"/>
+		<param name="V_FILE" type="files" default="" label="FILES" />
+		<group>
+			<param name="ACTIVE" type="radio" default="1">
+				<option value="1">Active Status</option>
+				<option value="0">Inactive</option>
+			</param>
+			<param name="ORDERING" type="text" default="999" label="ORDERING"  />
+		</group>
+		<param name="ID" type="hidden" default="" />
+	</params>
+	<params group="details">	
+		<param name="V_FUNCTIONS" type="editor" default="" label="FUNCTIONS" rows="20" geokbd="1" />
+		<param name="V_TASKS" type="editor" default="" label="TASKS" rows="20" geokbd="1" />
+		<param name="RESPONSIBILITIES" type="editor" default="" label="RESPONSIBILITIES" rows="20" geokbd="1" />
+		<param name="REQUIREMENTS" type="editor" default="" label="REQUIREMENTS" rows="20" geokbd="1" />
+	</params>
+</install>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="table table-bordered table-condensed table-filter-vertical" type="h">
+		<filter name="firstname" type="stext" default="" label="firstname" class="kbd"  />
+		<filter name="lastname" type="stext" default="" label="lastname" class="kbd"  />
+		<filter name="org" type="org" default="0" label="org" />
+		<filter name="from_date" type="calendar" default="now - 30 days" label="Start Date" />
+		<filter name="to_date" type="calendar" default="now" label="End Date" />
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="number" default="" label="#" rclass="text-center" />
+		<param order="wfirstname" type="printm" label="worker" key="WFIRSTNAME, WLASTNAME" rclass="text-left" T="1" Tscope="person" />
+		<param order="" type="print" label="ORG" key="ORG_NAME" rclass="text-left" T="1"/>
+		<param order="log_date" type="print" label="LOGING_DATE" key="LOGING_DATE" rclass="text-left" />
+		<param order="LOG_PHONE" type="print" label="LOG_PHONE" key="LOG_PHONE" rclass="text-left" />
+		<param order="" type="print" label="LOG_MSG" key="LOG_MSG" rclass="text-left" length="7" limit_type="1" />
+		<param order="" type="print" label="LOG_RESULT" key="LOG_RESULT" rclass="text-left" />
+	</params>
+</install>

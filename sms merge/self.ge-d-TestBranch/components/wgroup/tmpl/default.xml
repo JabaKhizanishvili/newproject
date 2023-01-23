@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<param name="LIB_TITLE" type="text" default="" label="Title" must="1" geokbd="1" />
+		<param name="LIB_DESC" type="textarea" default="" label="Description" geokbd="1" />
+		<param name="WORKERS" type="gpersonsall" default="" label="WORKERS" must="1"  />
+	</params>
+	<params group="system">
+		<param name="ACTIVE" type="radio" default="1"  label="STATE">
+			<option value="1">On</option>
+			<option value="0">Off</option>
+		</param>
+		<param name="EMAILTO" type="list" default="6"  label="EMAILTO">		
+			<!--<option value="5">one to all, email To None</option>-->
+			<option value="6">one to all, email By Ordering</option>
+			<option value="7">one to all, email To Al</option>
+			<!--<option value="8">one by one, To None</option>-->
+			<option value="9">one by one, To All</option>
+			<option value="10">one To one, To One</option>
+		</param>
+		<param name="ORDERING" type="text" default="999"  label="ORDERING"  />
+		<!--<param name="RESET_TIME" type="time" default="00:00"  label="Reset TIME"  />-->
+		<!--<param name="CHAPTERS" type="chapters" default="" label="CHAPTER"   />-->
+		<!--		<param name="CHAPTERS_TYPE" type="radio" default="1">
+			<option value="1">Include</option>
+			<option value="0">Exclude</option>
+		</param>-->
+		<!--<param name="POSITIONS" type="positions" default="" label="POSITIONS"   />-->
+		<!--<param name="POSITIONS_TYPE" type="radio" default="1">-->
+		<!--<option value="1">Include</option>-->
+		<!--<option value="0">Exclude</option>-->
+		<!--</param>-->
+		<!--<param name="ROLE_REL" type="rolerelgroup" default="999"  label="ROLE_REL"  />-->
+		<param name="ID" type="hidden" default="" />
+	</params>
+</install>

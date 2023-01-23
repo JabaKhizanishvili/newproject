@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<params name="R_SMS">
+		<param order="" type="number" default="" label="#" rclass="text-center" />
+		<param order="" type="printm" label="worker" key="WFIRSTNAME, WLASTNAME" rclass="text-left" T="1" Tscope="person" />
+		<param order="" type="print" label="ORG" key="ORG_NAME" rclass="text-left" T="1"/>
+		<param order="" type="print" label="LOGING_DATE" key="LOGING_DATE" rclass="text-left" />
+		<param order="" type="print" label="LOG_PHONE" key="LOG_PHONE" rclass="text-left" />
+		<param order="" type="print" label="LOG_MSG" key="LOG_MSG" rclass="text-left" length="7" limit_type="1" />
+		<param order="" type="print" label="LOG_RESULT" key="LOG_RESULT" rclass="text-left" />
+	</params>
+</install>

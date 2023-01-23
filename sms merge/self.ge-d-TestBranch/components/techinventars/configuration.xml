@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params name="Car Configuration" ordering="1" >
+		<param name="" type="spacer" default="basic Car Config" label="" description="" />
+		<param name="system_org" type="text" default="" label="system_org" must="1" geokbd="1" />
+		<param name="system_logo"
+					 width="160"
+					 height="80"
+					 viewport-width="320"
+					 viewport-height="160"
+					 boundary-width="340"
+					 boundary-height="180"
+					 responsive-viewport-width="320"
+					 responsive-viewport-height="160"
+					 responsive-boundary-width="340"
+					 responsive-boundary-height="180"
+					 type="cropphoto"
+					 default=""
+					 label="system_logo"
+					 must="1" />
+		<param name="system_email" type="text" default="" label="system_email"  />
+		<param name="system_address" type="text" default="" label="system_address" />
+		<param name="system_contact" type="text" default="" label="system_contact"  />
+	</params>
+	<params group="details">
+		<param name="" type="spacer" default="Cron Job Config" label="" description="" />
+		<param name="hr_excuse_minutes" type="text" default="60" label="hr_excuse_minutes" must="1" />
+		<param name="hr_logout_hours" type="text" default="6" label="hr_logout_hours" must="1" />
+	</params>
+</install>

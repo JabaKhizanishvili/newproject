@@ -1,0 +1,58 @@
+<table name="slf_persons"  title="Persons">
+	<columns>
+		<column name="id" type="number" alias="p_id" />
+		<column name="firstname"/>
+		<column name="lastname"/>
+		<column name="father_name"/>
+		<column name="private_number"/>
+		<column name="birthdate"/>
+		<column name="gender"/>
+		<column name="nationality"/>
+		<column name="mobile_phone_number" type="string"/>
+		<column name="email"/>
+		<column name="legal_address"/>
+		<column name="actual_address"/>
+		<column name="u_comment" alias="p_comment"/>
+		<!--<column name="photo"/>-->
+		<column name="permit_id" alias="card_number" />
+		<!--<column name="accounting_offices"/>-->
+		<column name="accesss_type"/>
+		<column name="ldap_username" alias="username" />
+		<!--<column name="user_role"/>-->
+		<!--<column name="counting_type"/>-->
+		<!--<column name="timecontrol"/>-->
+		<!--<column name="livelist"/>-->
+		<!--<column name="sms_reminder"/>-->
+		<!--<column name="sms_worker_lateness"/>-->
+		<!--<column name="change_date"/>-->
+		<!--<column name="delete_date"/>-->
+		<!--<column name="active"/>-->
+		<column name="iban"/>
+		<column name="country_code"/>
+		<!--<column name="files"/>-->
+		<!--<column name="pay_pension"/>-->
+	</columns>
+	<request>
+		<item name="start" type="number" required="0">
+			<value>
+				<v name="min" value="0" />
+				<v name="max" value="Unlimited" />
+				<v name="default" value="0" />
+			</value>
+		</item>
+		<item name="limit" type="number" required="0">
+			<value>
+				<v name="min" value="0" />
+				<v name="max" value="500" />
+				<v name="default" value="50" />
+			</value>
+		</item>
+	</request>
+	<response>
+		<item name="start" type="number" />
+		<item name="limit" type="number" />
+		<item name="count" type="number" />
+	</response>
+	<order by="id" type="asc" />
+	<where><![CDATA[ active = 1 ]]></where>
+</table>

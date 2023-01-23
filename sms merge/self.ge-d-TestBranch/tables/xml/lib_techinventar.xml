@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://apps.magticom.ge/pda/defines/xml/table.dtd">
+<table name="lib_techinventar" history="yes">
+	<columns>
+		<column name="id" type="number" null="n" />
+		<column name="lib_title" type="varchar2" length="4000" Ti="1" />
+		<column name="lib_desc" type="varchar2" length="4000" Ti="1"/>
+		<column name="item_working_principes" type="varchar2" length="4000"/>
+		<column name="intolerable" type="varchar2" length="4000"/>
+		<column name="item_location" type="varchar2" length="4000"/>
+		<column name="active" type="number" null="n" default="1" />
+		<column name="ordering" type="number" />
+		<column name="create_user" type="number" />
+		<column name="create_date" type="number" />
+		<column name="modify_user" type="number" />
+		<column name="modify_date" type="date" />
+		<column name="workingorder" type="varchar2" length="4000" Ti="1"/>
+		<column name="safety" type="varchar2" length="4000"/>
+		<column name="maintenance_start" type="date" />
+		<column name="maintenance_repeat" type="number" />
+     </columns>
+	<history>
+		<column name="lib_title" type="varchar2" length="4000" Ti="1" />
+		<column name="lib_desc" type="varchar2" length="4000" Ti="1"/>
+		<column name="item_working_principes" type="varchar2" length="4000"/>
+		<column name="intolerable" type="varchar2" length="4000"/>
+		<column name="item_location" type="varchar2" length="4000"/>
+		<column name="active" type="number" null="n" default="1" />
+		<column name="ordering" type="number" />
+		<column name="workingorder" type="varchar2" length="4000" Ti="1"/>
+		<column name="safety" type="varchar2" length="4000"/>
+		<column name="maintenance_start" type="date"/>
+		<column name="maintenance_repeat" type="number" />
+	</history>
+	<sequence  name="library" />
+	<histsequence  name="sqs_cars_hist" />
+</table>

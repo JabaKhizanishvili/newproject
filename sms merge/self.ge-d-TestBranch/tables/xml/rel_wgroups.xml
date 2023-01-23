@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="rel_wgroups">
+    <column name="group_id" type="number" null="n" />
+    <column name="worker" type="number" null="n" />
+    <column name="ordering" type="number" null="n" />
+    <column name="w_hidden" type="number" default="00" />
+</table>

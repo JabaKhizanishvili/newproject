@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+    <filters class="page_filter_block" type="h">
+        <filter name="group_id" type="groupsc" default="" label="Groups" />
+        <filter name="start_date" type="calendar" default="now" label="Start Date" format="%d-%m-%Y" />
+        <filter name="end_date" type="calendar" default="now" label="End Date" format="%d-%m-%Y" />
+        <filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "0" />
+    </filters>
+</install>

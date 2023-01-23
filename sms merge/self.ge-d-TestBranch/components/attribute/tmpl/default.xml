@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<param name="LIB_TITLE" type="text" default="" label="Title" must="1"  geokbd="1" T="1" />
+		<param name="LIB_DESC" type="textarea" default="" label="Description" geokbd="1" T="1" />
+		<param name="COLOR" type="color" default="#990000" label="COLOR"  must="1" />
+		<param name="DESTINATION" type="list" label="Destination" default="-1"  must="1" >
+			<option value="-1">Select Destination</option>
+			<option value="1">Person Attribute</option>
+			<option value="2">Organization Worker Attribute</option>
+			<option value="3">Both</option>
+		</param>
+	</params>
+	<params group="details">
+		<param name="SHOW_IN_PROFILE" type="radio" default="1" must="1">
+			<option value="1">YES</option>
+			<option value="0">NO</option>
+		</param>
+		<param name="ACTIVE" type="radio" default="1">
+			<option value="1">Active Status</option>
+			<option value="0">Inactive</option>
+		</param>
+		<param name="ORDERING" type="text" default="999" label="ORDERING" />
+		<param name="ID" type="hidden"/>
+	</params>
+</install>

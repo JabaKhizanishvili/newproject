@@ -1,0 +1,358 @@
+.tk_fix
+{
+	width: 220px;
+	border-right: 3px solid #990000;
+	float: left;
+	padding-bottom: 25px;
+}
+.new_graph .tk_fix
+{
+	width: 600px;
+	border-right: 3px solid #990000;
+	float: left;
+	padding-bottom: 25px;
+}
+.tk_scroll_block
+{
+	margin-left: 222px;
+	padding-bottom: 25px;
+}
+.new_graph .tk_scroll_block
+{
+	margin-left: 602px;
+	padding-bottom: 25px;
+}
+.tk_list_worker_x,
+.tk_list_header_x
+{
+	float: left;
+	width: 28px;
+	height: 32px;
+}
+div.tk_list_worker_x div.radio
+{
+	padding-top: 5px !important;
+}
+div.tk_list_header_x div.radio
+{
+	padding-top: 15px !important;
+}
+.tk_scroll_a,
+.tk_scroll
+{
+	width: 100%;
+	padding-bottom: 25px;
+}
+.tk_scroll_in_a,
+.tk_scroll_in
+{
+	width: 5000px;
+	border-left: 3px #990000 dashed;
+	border-right: 3px #990000 dashed;
+	margin-bottom: 17px;
+}
+.tk_i,
+.tk_head
+{
+	width: 120px;
+	float: left;
+	position: relative;
+}
+.tk_user,
+.header_workers
+{
+	overflow: hidden;
+}
+.header_workers_in,
+.tk_head_time_sum,
+.tk_head_in_a,
+.tk_head_in_t,
+.tk_head_in
+{
+	height: 50px;
+	border: 2px solid #f0f0f0;
+	text-align: center;
+	font-weight: bold;
+	line-height: 25px;
+	background-color: #f8f8f8;
+	margin: 1px;
+}
+.new_graph .header_workers_in
+{
+	margin: 0px;
+}
+
+.new_graph .header_workers_in,
+.new_graph .tk_head_time_sum,
+.new_graph .tk_head_in_a,
+.new_graph .tk_head_in_t,
+.new_graph .tk_head_in
+{
+	height: 50px;
+	border: 2px solid #f0f0f0;
+	text-align: center;
+	font-weight: bold;
+	line-height: 25px;
+	background-color: #f8f8f8;
+}
+.tk_head_time_sum
+{
+	line-height: normal;
+	padding: 5px;
+	font-size: 10px;
+}
+.header_workers_in
+{
+	line-height: 50px;
+	color: #212121;
+	font-size: 18px;
+	font-weight: bold;
+}
+.tk_i_in_a,
+.tk_i_in_d,
+.tk_i_in_a_d,
+.tk_i_in_t,
+.tk_i_in,
+.tk_i_in_time_sum,
+.tk_user_in_a,
+.tk_user_in
+{
+	height: 30px;
+	border: 2px solid #f0f0f0;
+	text-align: right;
+	font-weight: bold;
+	line-height: 30px;
+	background-color: #f8f8f8;
+	margin: 1px;
+	position: relative;
+}
+.new_graph .tk_user_in
+{
+	height: 28px;
+	border: 2px solid #f0f0f0;
+	font-weight: bold;
+	line-height: 26px;
+	background-color: #f8f8f8;
+	margin: 1px;
+	position: relative;
+}
+.tk_i_in_a,
+.tk_i_in_d,
+.tk_i_in_a_d,
+.tk_i_in_t,
+.tk_i_in
+{
+	text-align: left;
+	font-weight: bold;
+	line-height: 30px;
+	padding: 0 0 0 3px;
+	cursor: pointer;
+}
+.tk_i_in_t,
+.tk_i_in_d,
+.tk_i_in_a_d,
+.tk_i_in_a
+{
+	cursor: default;
+}
+.tk_head_in
+{
+	cursor: pointer;
+}
+div.hoverRowFix,
+div.hoverRow
+{
+	background: #FFFFDD;
+	border: 2px solid #990000;
+}
+.tk_user_in_a,
+.tk_user_in
+{
+	padding: 0 10px 0 0;
+}
+#timeGraph
+{
+	display: none;
+}
+.tk_graph_times_overlay
+{
+	position: absolute;
+	background-color: #990000;
+	top: 0;
+	left: 0;
+	z-index: 9999997;
+}
+.tk_graph_times
+{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 350px;
+	margin: -30px 0 0 -175px;
+	z-index: 9999999;
+}
+.tk_graph_times_close
+{
+	position: absolute;
+	z-index: 993;
+	width: 24px;
+	height: 23px;
+	background-image: url(../../templates/images/close.png);
+	right: -12px;
+	top: -10px;
+}
+.tk_graph_times_items
+{
+	max-height: 500px;
+	overflow-y: scroll;
+}
+.tk_graph_holiday,
+.tk_graph_time
+{
+	padding: 5px 10px;
+	border-top: 1px dashed #777777;
+	text-align: left;
+	line-height: 25px;
+	font-size: 14px;
+	font-weight: bold;
+	cursor: pointer;
+}
+.tk_graph_holiday
+{
+	border-top: none;
+}
+.tk_i_in_a span,
+.tk_i_in_d span,
+.tk_i_in_a_d span,
+.tk_i_in_t span,
+.tk_i_in span
+{
+	height: 28px;
+	display: block;
+	overflow: hidden;
+	font-size: 9px;
+}
+.tk_i_in_t span
+{
+	font-size: 20px;
+	text-align: center;
+	font-weight: bold;
+}
+.tk_i_separator
+{
+	height: 35px;
+}
+.tk_hd_img
+{
+	position: absolute;
+	top: 1px;
+	right: 0px;
+}
+.tk_update_times
+{
+	padding: 20px;
+	text-align: center;
+}
+.tk_update_times .btnt
+{
+	padding: 10px 20px;
+}
+.tip_title
+{
+	display: block;
+	padding: 0 0 5px;
+	font-weight: bold;
+	text-align: center;
+}
+.tip_item
+{
+	display: block;
+	padding: 0 0 5px;
+}
+.tk_rest_img
+{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	z-index: 99;
+}
+.week-day-0 > *
+{
+	background-color: #00B3A1 !important;
+}
+
+.week-day-6 > *
+{
+	background-color: #00E0CA !important;
+}
+
+.calendar-icon
+{
+	color: #00FFFF;
+	font-size: 18px;
+	position: absolute;
+	top: 16px;
+	right: 6px;
+}
+.tk_list_header_fix
+{
+	position: sticky !important;
+	top: 83px;
+	background-color: #FFFFFF;
+	z-index: 10;
+}
+.tk_header
+{
+	position: sticky !important;
+	background-color: #FFFFFF;
+	z-index: 10;
+	height: 62px;
+}
+.tk_i_block
+{
+	height: 32px;
+}
+.tk_list_worker_x,
+.tk_list_header_x
+{
+	float: left;
+	width: 28px;
+	height: 32px;
+}
+div.tk_list_worker_x div.radio
+{
+	padding-top: 5px !important;
+}
+div.tk_list_header_x div.radio
+{
+	padding-top: 15px !important;
+}
+.week-day-0 > *
+{
+	background-color: #00B3A1 !important;
+}
+
+.week-day-6 > *
+{
+	background-color: #00E0CA !important;
+}
+.time_sum_danger
+{
+	background: red;
+	color: white;
+}
+.calendar-icon
+{
+	color: #00FFFF;
+	font-size: 18px;
+	position: absolute;
+	top: 16px;
+	right: 6px;
+}
+.fixed-block
+{
+	overflow: hidden;
+	white-space:nowrap;
+	text-overflow: ellipsis;
+	text-align: left;
+}

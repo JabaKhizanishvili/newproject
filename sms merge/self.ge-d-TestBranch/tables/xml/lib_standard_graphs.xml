@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="lib_standard_graphs" history="yes">
+	<columns>
+		<column name="id" type="number" null="n" />
+		<column name="lib_title" type="varchar2" length="500" Ti="1" />
+		<column name="lib_desc" type="varchar2" length="4000"/>
+		<column name="active" type="number" null="n" />
+		<column name="monday" type="number" />
+		<column name="tuesday" type="number" />
+		<column name="wednesday" type="number" />
+		<column name="thursday" type="number" />
+		<column name="friday" type="number" />
+		<column name="saturday" type="number" />
+		<column name="sunday" type="number" />
+		<column name="client_id" type="number" default="00" />
+		<column name="checksum" type="varchar2" length="4000"/>
+	     <column name="modify_user" type="number" />
+          <column name="modify_date" type="date" />
+     </columns>
+	<history>
+		<column name="lib_title" type="varchar2" length="500" />
+		<column name="lib_desc" type="varchar2" length="4000"/>
+		<column name="active" type="number" null="n" />
+		<column name="monday" type="number" />
+		<column name="tuesday" type="number" />
+		<column name="wednesday" type="number" />
+		<column name="thursday" type="number" />
+		<column name="friday" type="number" />
+		<column name="saturday" type="number" />
+		<column name="sunday" type="number" />
+		<column name="checksum" type="varchar2" length="4000"/>
+	     <column name="modify_user" type="number" />
+          <column name="modify_date" type="date" />
+     </history>
+	<sequence  name="library" />
+	<histsequence  name="sqs_standard_graphs_hist" />
+</table>

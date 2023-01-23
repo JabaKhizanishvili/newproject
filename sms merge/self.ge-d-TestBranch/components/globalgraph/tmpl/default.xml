@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/edit.dtd">
+<install type="component" version="1.5.0">
+	<params>
+		<param name="LIB_TITLE" type="text" default="" label="Title" must="1" geokbd="1" />
+		<param name="LIB_DESC" type="text" default="" label="Description" geokbd="1" />
+		<param name="ID" type="hidden" default="" />
+		<param name="ACTIVE" type="hidden" default="1" />
+	</params>
+	<params group="details">
+		<param name="MONDAY" type="globalgraphtime" default="-1" label="MONDAY"  must="1" />
+		<param name="TUESDAY" type="globalgraphtime" default="-1" label="TUESDAY"  must="1" />
+		<param name="WEDNESDAY" type="globalgraphtime" default="-1" label="WEDNESDAY"  must="1" />
+		<param name="THURSDAY" type="globalgraphtime" default="-1" label="THURSDAY"  must="1" />
+		<param name="FRIDAY" type="globalgraphtime" default="-1" label="FRIDAY"  must="1" />
+		<param name="SATURDAY" type="globalgraphtime" default="-1" label="SATURDAY"  must="1" />
+		<param name="SUNDAY" type="globalgraphtime" default="-1" label="SUNDAY"  must="1" />
+	</params>
+</install>

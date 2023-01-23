@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<param name="ORG" type="org" default="-1" label="ORG" must="1"/>
+		<param name="WORKER" type="sworker" default="-1" label="WORKER" must="1"/>
+		<param name="STAFF_SCHEDULE" type="staffschedule" default="-1" label="STAFF_SCHEDULE_UNIT" key="ID" />
+		<param name="SALARY" type="number" default="" label="SALARY" />
+		<param name="CHIEFS" type="chiefs" default="" label="CHIEFS" />
+		<param name="TABLENUM" type="text" default="" label="TABLENUM"  mask=""  />
+		<param name="CONTRACTS_DATE" type="calendar" default="" label="CONTRACTS_DATE" must="1" />
+		<param name="CONTRACT_END_DATE" type="calendar" default="" label="CONTRACT_END_DATE" must="1" />
+		<param name="TEST_DATE" type="calendar" default="" label="TEST_DATE" must="" />
+		<param name="CALCULUS_REGIME" type="radio" default="1">
+			<option value="1">Office</option>
+			<option value="2">Distance</option>
+		</param>
+		<filter name="CATEGORY_ID" type="sql" default="" label="CATEGORY_ID" key_field="ID" value_field="LIB_TITLE" query="select id, lib_title from lib_categories t where t.active=1 order by t. lib_title asc" select_label="Select Category" must="1" />
+		<param name="GRAPHTYPE" type="graphtype" default="" label="GRAPHTYPE" must="1" />
+		<param name="GRAPHGROUP" type="graphgroup" default="" label="GRAPHGROUP" />
+		<param name="ID" type="hidden" default="" />
+	</params>
+</install>

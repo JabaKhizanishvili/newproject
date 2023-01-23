@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>      
+		<param name="WORKER" type="slfstaff" case="9" tmpl="multy" default="" label="Worker" must="1" />
+		<param name="P_DATE" type="calendar" default="now" label="Date" must="1" />
+		<param name="P_TIME" type="time" default="now" label="Time" must="1" />
+	</params>
+</install>

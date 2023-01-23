@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<param name="LIB_TITLE" type="text" default="" label="Title" must="1" geokbd="1" />
+		<param name="LIB_DESC" type="textarea" default="" label="Description" geokbd="1" />
+		<!--<param name="LIB_TASK" type="task" default="" label="task" />-->
+		<param name="LIB_LEVEL" type="level" default="1"  label="TASK LEVEL" />
+	</params>
+	<params group="system">
+		<param name="LIB_GROUP" type="group" default="" label="Workers group" T="1" />
+		<!--<param name="LIB_GROUP_SELECT" type="selectgroup" default="" label="Select Workers From group" />-->
+		<!--<param name="LIB_GROUP_ALT" type="element" default="" label="Alternative Task" />-->		
+		<!--<param name="LIB_GROUP_ATTR" type="taskattribute" default="" label="LIB_ATTRIBUTE" />-->	
+		<!--		<param name="ALTER_TYPE" type="radio" default="0" label="ALTER_TYPE">
+			<option value="0">None</option>
+			<option value="1">Workers</option>
+			<option value="2">Groups</option>
+			<option value="3">Workers and Groups</option>
+			<option value="4">Subscriber</option>
+		</param>-->
+		<!--<param name="GROUP_CONDITION" type="text" default=""  label="GROUP_CONDITION" />-->
+		<!--<param name="DURATION" type="duration" default="1"  label="TASK DURATION" />-->
+		<param name="ORDERING" type="text" default="999" label="ORDERING" />
+
+		<!--<param name="PARALEL" type="paralel" default="0"  label="PARALEL TASK NUMBER" />-->
+		<!--<param name="PARALEL_TYPE" type="paraleltype" default="0"  label="PARALEL TASK  TYPE" />-->
+		<!--<param name="SUBPROCESS" type="flow" default="0"  label="SUBPROCESS FLOW" />-->
+		<param name="FLOW" type="flow" default="0"  label="application" T="1" />
+		<param name="ID" type="hidden" default="" />
+		<!--		<param name="POSITION" type="list" default="0" label="POSITION On Chart">
+			<option value="0">Auto</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+		</param>-->
+		<!--<param name="IF" type="if" default="" label="IF" />-->
+		<!--<param name="" type="spacer" default="Status Change" label="" description="" />-->
+		<!--		<param name="SCHANGE" type="radio" default="0" label="SCHANGE">
+			<option value="0">No Change</option>
+			<option value="1">On Create Task</option>
+			<option value="2">On View Task</option>
+			<option value="3">On Complete Task</option>
+		</param>
+		<param name="CSTATUS" type="statuses" default="0" label="CSTATUS" />	-->
+		<param name="ACTIVE" type="radio" default="1">
+			<option value="1">Active Status</option>
+			<option value="0">Inactive</option>
+		</param>
+		<!--		<param name="ROLLBACK_POINT" type="radio" default="0"  label="rollback_point">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="MUSTCOMMENT" type="radio" default="0"  label="MUSTCOMMENT">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>-->
+	</params>
+</install>

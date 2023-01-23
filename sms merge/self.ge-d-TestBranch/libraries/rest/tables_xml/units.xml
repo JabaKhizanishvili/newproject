@@ -1,0 +1,41 @@
+<table name="lib_units" title="Units" >
+	<columns>
+		<column name="id" alias="unit_id" />
+		<column name="parent_id" alias="parent_unit_id" />
+		<!--<column name="type" />-->
+		<!--<column name="ulevel" alias="level" />-->
+		<!--<column name="lft" />-->
+		<!--<column name="rgt" />-->
+		<column name="lib_title" alias="title" />
+		<column name="lib_desc" alias="description" />
+		<column name="active" alias="status" />
+<!--		<column name="ordering" />-->
+		<column name="org" alias="org_id" />
+		<column name="unit_code" />
+	     <!--<column name="modify_user" />-->
+          <!--<column name="modify_date" />-->
+	</columns>
+	<request>
+		<item name="start" type="number" required="0">
+			<value>
+				<v name="min" value="0" />
+				<v name="max" value="Unlimited" />
+				<v name="default" value="0" />
+			</value>
+		</item>
+		<item name="limit" type="number" required="0">
+			<value>
+				<v name="min" value="0" />
+				<v name="max" value="500" />
+				<v name="default" value="50" />
+			</value>
+		</item>
+	</request>
+	<response>
+		<item name="start" type="number" />
+		<item name="limit" type="number" />
+		<item name="count" type="number" />
+	</response>
+	<order by="ordering" type="asc" />
+	<where><![CDATA[ active = 1 ]]></where>
+</table>

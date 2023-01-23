@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://apps.magticom.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="table table-bordered table-condensed table-filter-vertical" type="v">
+		<filter name="target_lng" type="sql" disable_submit="1" default="0" must="1" label="language" key_field="LIB_CODE" value_field="LIB_TITLE" query="select w.lib_code, w.lib_title from lib_languages w where w.active = 1 order by w. lib_title asc" select_label=" - " />
+		<filter name="term" type="text" default="" label="term" />
+		<filter name="search_type" type="list" default="0" label="search_type" class="">
+			<option value="0">contains</option>
+			<option value="1">equals</option>
+		</filter>
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="number" default="" label="#" rclass="text-center" hclass="text-center"/>
+		<param order="" type="edittranslate" label="FROM_TEXT" key="Input" val="Hash" rclass="text-left" />
+		<param order="" type="edittranslate" label="TO_TEXT" key="Output" val="Hash" rclass="text-left" />
+		<param order="" type="print" label="LIB_FROM" key="From" rclass="text-left" />
+		<param order="" type="print" label="LIB_TO" key="To" rclass="text-left" />
+	</params>
+</install>

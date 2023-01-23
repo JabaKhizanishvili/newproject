@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params name="Missing Configuration" ordering="4" >
+		<param name="" type="spacer" default="Applications Configuration" label="" description="" />
+		<param name="missing_app_auto_confirm_msg" type="radio" default="0"  must="1" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="missing_app_auto_confirm" type="radio" default="0"  must="1" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="missing_app_auto_confirm_percent" type="rangenumber" default="1" start="1" end="100"  must="1"/>
+		<param name="missing_app_auto_confirm_msg_to_chief" type="radio" default="0"  must="1" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="missing_app_day_back" type="rangenumber" default="2" start="2" end="15"  must="1"/>
+	</params>
+</install>

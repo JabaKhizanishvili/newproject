@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="page_filter_block" type="h">
+		<filter name="operation_type" type="operationtypes" default="-1" label="operation_type" />
+		<filter name="firstname" type="stext" default="" label="FIRSTNAME" class="kbd" />
+		<filter name="lastname" type="stext" default="" label="LASTNAME" class="kbd" />
+		<filter name="org" type="org" default="" label="org" />
+		<filter name="unit" type="unit" default="" label="unit"  elementid="org" />
+		<filter name="staffschedule" type="staffschedule" default="" label="STAFF_SCHEDULE_UNIT" />
+		<filter name="privnumber" type="stext" default="" label="PRIVATE_NUMBER" class="kbd" />
+		<filter name="creator" type="stext" default="" label="AUTHOR" class="kbd" />
+		<filter name="start_date" type="calendar" default="" label="Start Date" />
+		<filter name="end_date" type="calendar" default="" label="End Date" />
+		<filter name="status" type="state" default="-1" label="status">
+			<option value="-1">Select category</option>
+			<option value="1">done</option>
+			<option value="0">pending</option>
+			<option value="-2">stopped</option>
+			<option value="-6">rollbacked</option>
+		</filter>
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="number" default="" label="#" rclass="text-center" />
+		<param order="" type="checkall" default="" label="" rclass="text-center"   />
+		<param order="wfirstname" type="editlink" label="PERSON" key="WFIRSTNAME, WLASTNAME" rclass="text-left" T="1" Tscope="person" />
+		<param order="t.change_type" type="switch" label="operation_type" key="CHANGE_TYPE" rclass="text-left" >
+			<option value="1">assignment</option>
+			<option value="2">changing</option>
+			<option value="3">release</option>
+			<option value="4">benefits</option>
+			<option value="5">new_schedulechanging</option>
+			<option value="6">rollback</option>
+			<option value="7">schedulechanging</option>
+		</param>
+		<param order="t.org" type="org" label="ORG" key="ORG" rclass="text-left" T="1"/>
+		<param order="lss.org_place" type="unit" label="UNIT" key="ORG_PLACE" rclass="text-left" T="1"/>
+		<param order="lss.position" type="position" label="position" key="POSITION" rclass="text-left" T="1"/>
+		<param order="sp.private_number" type="print" label="PRIVATE_NUMBER" key="PRIVATE_NUMBER" rclass="text-left"/>
+		<param order="t.change_date" type="date" format="%Y-%m-%d" label="STARTING_DATE" key="CHANGE_DATE" rclass="text-left"/>
+		<param order="t.create_date" type="print" label="REGISTER DATE" key="CREATE_DATE" rclass="text-left"/>
+		<param order="afirstname" type="printm" label="AUTHOR" key="AFIRSTNAME, ALASTNAME" rclass="text-left" T="1" Tscope="person" />
+		<param order="t.auto_person_status_stop" type="switch" label="auto_person_status_stop" key="AUTO_PERSON_STATUS_STOP" rclass="text-center">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param order="" type="print" length="7" limit_type="1" label="operation_comment" key="OPERATION_COMMENT" rclass="text-left"/>
+		<param order="" type="print" label="CHANGING" key="" rclass="text-left"/>
+		<param order="t.status" type="opstatus" label="STATUS" key="STATUS" rclass="text-left"/>
+		<param order="t.id" type="print" label="ID" key="ID" rclass="text-center" />
+	</params>
+</install>

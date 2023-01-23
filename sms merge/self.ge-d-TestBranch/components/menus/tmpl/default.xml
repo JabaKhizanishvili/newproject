@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="page_filter_block" type="h">
+		<filter name="lib_title" type="text" default="" label="title" geokbd="1" />
+		<filter name="lib_option" type="text" default="" label="lib_option" />
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="number" default="" label="#" rclass="text-center" hclass="text-center"/>
+		<param order="" type="checkall" default="" label="" rclass="text-center"   />
+		<param order="" type="editlink" label="Title" key="LIB_TITLE" rclass="text-left" />
+		<param order="" type="print" label="LIB_OPTION" key="LIB_OPTION" rclass="text-center" />
+		<param order="" type="state" label="State" rclass="text-center" state_id='ID' state_key="ACTIVE" hclass="text-center"/>
+		<param order="" type="print" label="ORDERING" key="ORDERING" rclass="text-center" hclass="text-center"/>
+		<param order="" type="print" label="ID" key="ID" rclass="text-center" hclass="text-center"/>
+	</params>
+</install>

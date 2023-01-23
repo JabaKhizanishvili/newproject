@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://apps.magticom.ge/pda/defines/xml/table.dtd">
+<table name="slf_translate_index" history="no">
+	<columns>
+		<column name="id" type="number" null="n"/>
+		<column name="item_id" type="number" />
+		<column name="item_table" type="varchar2" length="500" />
+		<column name="item_column" type="varchar2" length="500" />
+		<column name="item_value" type="varchar2" length="1000" />
+		<column name="item_lng" type="varchar2" length="100" />
+	</columns>
+	<sequence  name="sqs_translate_index" />
+</table>

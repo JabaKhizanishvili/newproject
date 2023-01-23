@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<params name="Employees">
+		<param order="" type="number" default="" label="#" rclass="text-center" />
+		<param order="" type="printm" label="name, surname" key="WFIRSTNAME, WLASTNAME" rclass="text-left" Tscope="person" />
+		<param order="" type="orgorg" multy="e" label="ORG" key="ORG.ORG" rclass="text-left"  />
+		<param order="" type="staffschedule" multy="e" label="STAFF_SCHEDULE" rclass="text-left" key="ORG.STAFF_SCHEDULE" />
+		<param order="" type="position" multy="e" label="POSITION" rclass="text-left" key="ORG.POSITION" />
+		<param order="" type="print" default="" rclass="text-left"  label="EMAIL"  key="EMAIL" />
+		<param order="" type="print" default="" rclass="text-left"  label="MOBILE_PHONE_NUMBER"  key="MOBILE_PHONE_NUMBER" />
+		<param order="" type="print" multy="e" default="" rclass="text-left"  label="CONTRACTS_DATE"  key="ORG.CONTRACTS_DATE" />
+		<param order="" type="print" multy="e" default="" rclass="text-left"  label="CONTRACT_END_DATE"  key="ORG.CONTRACT_END_DATE" />
+	</params>
+</install>

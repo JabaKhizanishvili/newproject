@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<params name="Operations">
+		<param order="" type="number" default="" label="#" rclass="text-center" />
+		<param order="" type="editlink" label="PERSON" key="WFIRSTNAME, WLASTNAME" rclass="text-left" T="1" Tscope="person" />
+		<param order="" type="switch" label="operation_type" key="CHANGE_TYPE" rclass="text-left" >
+			<option value="1">assignment</option>
+			<option value="2">changing</option>
+			<option value="3">release</option>
+			<option value="4">benefits</option>
+			<option value="5">new_schedulechanging</option>
+			<option value="6">rollback</option>
+			<option value="7">schedulechanging</option>
+		</param>
+		<param order="" type="org" label="ORG" key="ORG" rclass="text-left" T="1"/>
+		<param order="" type="unit" label="UNIT" key="ORG_PLACE" rclass="text-left" T="1"/>
+		<param order="" type="position" label="position" key="POSITION" rclass="text-left" T="1"/>
+		<param order="" type="print" label="PRIVATE_NUMBER" key="PRIVATE_NUMBER" rclass="text-left"/>
+		<param order="" type="date" format="%Y-%m-%d" label="STARTING_DATE" key="CHANGE_DATE" rclass="text-left"/>
+		<param order="" type="print" label="REGISTER DATE" key="CREATE_DATE" rclass="text-left"/>
+		<param order="" type="print" label="AUTHOR" key="AFIRSTNAME, ALASTNAME" rclass="text-left" T="1" Tscope="person" />
+		<param order="" type="switch" label="auto_person_status_stop" key="AUTO_PERSON_STATUS_STOP" rclass="text-center">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param order="" type="print" length="7" limit_type="1" label="operation_comment" key="OPERATION_COMMENT" rclass="text-left"/>
+		<param order="" type="print" label="CHANGING" key="" rclass="text-left"/>
+		<param order="" type="opstatus" label="STATUS" key="STATUS" rclass="text-left"/>
+		<param order="" type="print" label="ID" key="ID" rclass="text-center" />
+	</params>
+</install>

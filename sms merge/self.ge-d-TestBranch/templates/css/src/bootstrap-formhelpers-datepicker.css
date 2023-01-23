@@ -1,0 +1,79 @@
+
+.bfh-datepicker-calendar {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 296px;
+}
+
+.bfh-datepicker-calendar table.calendar {
+  width: 376px;
+  background: #ffffff;
+}
+
+.bfh-datepicker-calendar table.calendar .months-header th {
+  font-size: 12px;
+  text-align: center;
+}
+
+.bfh-datepicker-calendar table.calendar .months-header th.month span {
+  display: inline-block;
+  width: 100px;
+}
+
+.bfh-datepicker-calendar table.calendar .months-header th.year span {
+  display: inline-block;
+  width: 50px;
+}
+
+.bfh-datepicker-calendar table.calendar .days-header th {
+  width: 30px;
+  font-size: 11px;
+  line-height: 12px;
+  text-align: center;
+}
+
+.bfh-datepicker-calendar table.calendar tbody tr td {
+  width: 30px;
+  font-size: 11px;
+  line-height: 12px;
+  text-align: center;
+	cursor: pointer;
+}
+
+.bfh-datepicker-calendar table.calendar tbody tr td.today {
+  color: #ffffff;
+  background-color: #428bca;
+}
+
+.bfh-datepicker-calendar table.calendar tbody tr td.off {
+  color: #999999;
+	cursor: not-allowed;
+}
+
+.bfh-datepicker-calendar  table.calendar  tbody  tr  td:not(.off):hover {
+  color: #262626;
+  cursor: pointer;
+  background-color: #f5f5f5;
+}
+
+
+.bfh-datepicker {
+  position: relative;
+}
+
+.bfh-datepicker-toggle {
+  *margin-bottom: -3px;
+}
+
+.bfh-datepicker-toggle input[readonly] {
+  cursor: inherit;
+  background-color: inherit;
+}
+
+.open .bfh-datepicker-calendar {
+  display: block;
+}

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="lib_wgroups" history="yes">
+	<columns>
+		<column name="id" type="number" null="n" />
+		<column name="lib_title" type="varchar2" length="500" Ti="1" />
+		<column name="lib_desc" type="varchar2" length="4000" />
+		<column name="workers" type="varchar2" length="4000" />
+		<column name="active" type="number" null="n" default="1" />
+		<column name="dinamic" type="number"  />
+		<column name="emailto" type="number" default="00"  />
+		<column name="role_rel"  type="varchar2" length="4000" />
+		<column name="reset_time" type="varchar2" length="4000" />
+		<column name="ordering" type="number" default="999"  />
+		<column name="type_choice" type="number" default="1"  />
+		<column name="chapters" type="varchar2" length="4000" />
+		<column name="chapters_type" type="number" />
+		<column name="positions" type="varchar2" length="4000" />
+		<column name="positions_type" type="number"  />
+		<column name="gtype" type="number" default="00"  />
+		<column name="itype" type="number" default="00"  />
+	     <column name="modify_user" type="number" />
+          <column name="modify_date" type="date" />
+     </columns>
+	<history>
+		<column name="lib_title" type="varchar2" length="500" />
+		<column name="lib_desc" type="varchar2" length="4000" />
+		<column name="workers" type="varchar2" length="4000" />
+		<column name="active" type="number" null="n" default="1" />
+		<column name="dinamic" type="number"  />
+		<column name="emailto" type="number" default="00"  />
+		<column name="role_rel"  type="varchar2" length="4000" />
+		<column name="reset_time" type="varchar2" length="4000" />
+		<column name="ordering" type="number" default="999"  />
+		<column name="type_choice" type="number" default="1"  />
+		<column name="chapters" type="varchar2" length="4000" />
+		<column name="chapters_type" type="number" />
+		<column name="positions" type="varchar2" length="4000" />
+		<column name="positions_type" type="number"  />
+		<column name="gtype" type="number" default="00"  />
+		<column name="itype" type="number" default="00"  />
+	     <column name="modify_user" type="number" />
+          <column name="modify_date" type="date" />
+     </history>
+	<sequence  name="library" />
+	<histsequence  name="sqs_wgroups_hist" />
+</table>

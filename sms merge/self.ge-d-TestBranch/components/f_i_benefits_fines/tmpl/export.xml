@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<params name="Iregular Benefits">
+		<param order="" type="number" default="" label="#" rclass="text-center" hclass="text-center"/>
+		<param order="" type="printm" label="worker" key="FIRSTNAME, LASTNAME" rclass="text-left" T="1" Tscope="person"/>
+		<param order="" type="editlink" label="PERIOD" key="PERIOD" rclass="text-left" />
+		<param order="" type="print" label="private_number" rclass="text-center" key="PRIVATE_NUMBER" />
+		<param order="" type="switch" label="TYPE" key="TYPE">
+			<option value="1">Supplement</option>
+			<option value="2">loss</option>
+		</param>
+		<param order="" type="org" label="ORG" key="ORG" rclass="text-left"  />
+		<param order="" type="print" label="worker_share" key="COMPANY_SHARE" rclass="text-left"  />
+		<param order="" type="print" label="company_share" key="WORKER_SHARE" rclass="text-left"  />
+		<param order="" type="print" label="cost" key="COST" rclass="text-left"  />
+		<param order="" type="unit" label="ORG_PLACE" key="ORG_PLACE" rclass="text-left"  />
+		<param order="" type="staffschedule" label="staff_schedule" key="STAFF_SCHEDULE" rclass="text-left" />
+		<param order="" type="print" label="position" key="POSITION" rclass="text-left" />
+		<param order="" type="print" label="ID" key="ID" rclass="text-center" hclass="text-center" />
+	</params>
+</install>

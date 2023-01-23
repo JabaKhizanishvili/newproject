@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="rel_replace_workers">
+	<column name="worker" type="number" />
+	<column name="real_date" type="date" />
+	<column name="time_id" type="number" />
+	<column name="app" type="number" />
+	<column name="replacer" type="number" />
+	<column name="graph_id" type="number" />
+</table>

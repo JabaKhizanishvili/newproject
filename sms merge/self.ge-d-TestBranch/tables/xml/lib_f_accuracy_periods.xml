@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Created by Irakli Gzirishvili 28-10-2021-->
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="lib_f_accuracy_periods" history="yes">
+	<columns>
+		<column name="id" type="number" null="n" />
+		<column name="lib_title" type="varchar2" length="500" Ti="1" />
+		<column name="lib_desc" type="varchar2" length="4000" />
+		<column name="active" type="number" null="n" default="1" />
+		<column name="ordering" type="number" null="n" default="999" />
+		<column name="client_id" type="number"  default="00"/>
+
+		<column name="PERIOD_TYPE" type="number" />
+		<column name="WEEK_START" type="number" />
+		<column name="START_DATE_OF_MONTH" type="number" />
+		<column name="FISRT_PERIOD_START" type="number" />
+		<column name="SECOND_PERIOD_START" type="number" />
+		<column name="START_DATE_OF_YEAR_DAY" type="number" />
+		<column name="START_DATE_OF_YEAR_MONTH" type="number" />
+		<column name="PERIOD_GENERATOR" type="number" />
+
+		<column name="modify_user" type="number" />
+		<column name="modify_date" type="date" />
+		
+		<column name="PERIOD_START" type="number"/>
+		<column name="YEARLY_DAY_PERIOD_START" type="number"/>
+		<column name="FIRST_PERIOD_START" type="number"/>
+		<column name="FIRST_QUARTER_OF_YEAR_MONTH" type="number"/>
+		<column name="SECOND_QUARTER_OF_YEAR_MONTH" type="number"/>
+		<column name="THIRD_QUARTER_OF_YEAR_MONTH" type="number"/>
+		<column name="FOURTH_QUARTER_OF_YEAR_MONTH" type="number"/>
+		<column name="NAME_OF_YEAR_MONTH" type="number"/>
+		<column name="QUARTER_DAY_START" type="number"/>
+	</columns>
+	<sequence  name="sqs_f_accuracy_periods" />
+</table>

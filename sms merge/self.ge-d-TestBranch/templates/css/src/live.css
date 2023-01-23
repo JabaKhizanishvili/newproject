@@ -1,0 +1,159 @@
+.toolbat_item_by,
+.toolbat_item_none,
+.toolbat_item
+{
+	width: auto;
+	float: left;
+	border: 3px solid #DDDDDD;
+	margin: 0px 3px 0px 0px;
+	cursor: pointer;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.toolbat_item_none
+{
+	float: right;
+}
+.toolbat_item_in_none,
+.toolbat_item_in
+{
+	border: 1px solid #DDDDDD;
+	padding: 5px 10px;
+	display: block;
+}
+.groups_active,
+.toolbat_item_active
+{
+	border: 3px solid #000000;
+}
+.key_st_not_in
+{
+	/*background-color: red;*/
+	color:  red;
+}
+.key_cl_blue
+{
+	/*background-color: blue;*/
+	color: blue;
+}
+.key_st_staff_in
+{
+	/*background-color: green;*/
+	color: green;
+}
+.key_st_day_off
+{
+	/*background-color: #999999;*/
+	color: #999999;
+}
+.key_none
+{
+	background-color: #999999;
+}
+.key_cl_black
+{
+	/*background-color: black;*/
+	color: black;
+}
+.key_cl_yellow
+{
+	border-color: #ffbf00 !important;
+	color: #ffbf00;
+}
+.key_cl_grey
+{
+	/*background-color: #FF1FFF;*/
+	color: #FF1FFF;
+}
+.key_cl_coffe
+{
+	/*background-color: #BF8080;*/
+	color: #BF8080;
+}
+.key_cl_orange
+{
+	background-color: #FF6600;
+}
+.key_cl_9400D3
+{
+	background-color: #9400D3;
+}
+
+.live_item
+{
+	padding: 5px;
+	font-weight: bold;
+	cursor: pointer;
+	border: 1px solid #FFFFFF;
+	border-left: 1px solid #DDDDDD;
+	margin-bottom: 3px;
+	position: relative;
+}
+.list_block_item_active,
+.live_item:hover
+{
+	border: 1px solid #DDDDDD;
+	background-color: #ffffdd;
+}
+
+.item_groups {
+	border: 1px solid #DDDDDD;
+	margin: 0 0 25px;
+	padding: 10px 0;
+}
+#list_block_groups
+{
+	border: none;
+}
+
+.item_groups legend {
+	border: 1px solid #DDDDDD;
+	padding: 5px;
+	margin-left: -1px;
+	width: calc(100% + 2px);
+	min-height: 20px;
+	font-size: 13px;
+	border:1px solid;
+	/*border-bottom: unset !important;*/
+	border-radius: 10px 10px 0 0px;
+	margin-bottom: unset !important;
+	cursor: pointer;
+}
+.toolbar_block_none,
+.toolbar_block
+{
+	margin: 15px 0px 15px;
+}
+.list_user_menu
+{
+	background: #FFFFFF;
+	display: none;
+	left: -1px;
+	position: absolute;
+	top: 22px;
+	width: 100%;
+	z-index: 99;
+	background-color: #FFFFDD;
+	border: 1px solid #DDDDDD;
+	border-top: none;
+	padding: 5px 1px 10px 0;
+	cursor: default;
+}
+.list_user_menu a
+{
+	display: block;
+	margin: 3px 10px;
+	line-height: 20px;
+	text-decoration: none;
+	color: 	#0000EE;
+	font-style: italic;
+}
+.list_user_menu a:hover
+{
+	text-decoration: underline;
+}
+.list_block_item_active .list_user_menu
+{
+	display: block;
+}

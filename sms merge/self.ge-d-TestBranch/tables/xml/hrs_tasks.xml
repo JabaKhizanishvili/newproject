@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="hrs_tasks" history="yes">
+	<columns>
+		<column name="task_id" type="number" />
+		<column name="lib_task_id" type="number" />
+		<column name="workflow_id" type="number" />
+		<column name="task_title" type="varchar2" length="4000" />
+		<column name="task_description" type="varchar2" length="4000" />
+		<column name="task_create_date" type="date" />
+		<column name="task_due_date" type="date" />
+		<column name="task_complete_date" type="date" />
+		<column name="task_complete_result" type="varchar2" length="4000" />
+		<column name="task_actor" type="number" />
+		<column name="task_actor_group" type="number" />	
+		<column name="state" type="number" />
+		<column name="modify_user" type="number" />
+		<column name="modify_date" type="date" />
+	</columns>
+	<history>
+		<column name="task_id" type="number" />
+		<column name="lib_task_id" type="number" />
+		<column name="workflow_id" type="number"  />
+		<column name="task_title" type="varchar2" length="4000" />
+		<column name="task_description" type="varchar2" length="4000" />
+		<column name="task_create_date" type="date" />
+		<column name="task_due_date" type="date" />
+		<column name="task_complete_date" type="date" />
+		<column name="task_complete_result" type="varchar2" length="4000" />
+		<column name="task_actor" type="number" />
+		<column name="task_actor_group" type="number" />
+		<column name="state" type="number" />
+		<column name="modify_user" type="number" />
+		<column name="modify_date" type="date" />
+	</history>
+	<sequence  name="procedures" />
+	<histsequence  name="sqs_tasks_hist" />
+	<primarykey  name="task_id" />
+</table>

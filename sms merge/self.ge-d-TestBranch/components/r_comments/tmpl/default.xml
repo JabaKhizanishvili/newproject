@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="table table-bordered table-condensed table-filter-vertical" type="v">
+		<filter name="firstname" type="stext" default="" label="firstname" class="kbd"  />
+		<filter name="lastname" type="stext" default="" label="lastname" class="kbd"  />
+		<!--<filter name="category_id" type="category" default="" label="category"  />-->
+		<filter name="start_date" type="calendar" default="now -7 day" label="Start Date" />
+		<filter name="end_date" type="calendar" default="now + 1 day" label="End Date" />
+		<filter name="orgid" type="org" default="" label="org" />
+		<filter name="org_place" type="unit" default="" label="unit"  elementid="orgid" />
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+	<params class="table table-bordered table-condensed table-hover table-striped">
+		<param order="" type="number" default="" label="#" rclass="text-center" />
+<!--		<param order="" type="checkall" default="" label="" rclass="text-center"   />-->
+		<param order="t.event_date" type="print" label="DATE" key="EVENT_DATE" rclass="text-center" />
+		<param order="wfirstname" type="editlink" label="FIRSTNAME_LASTNAME" key="WFIRSTNAME, WLASTNAME" rclass="text-left" T="1" Tscope="person" />
+		<param order="" type="print" label="ORG" rclass="text-left" key="ORG_NAME" />
+
+		<param order="" type="print" label="ORG_PLACE" rclass="text-left" key="STAFF_SCHEDULE" />
+		<param order="" type="print" label="ACTION" rclass="text-left" key="EVENT_NAME" />
+		<param order="" type="print" label="TIME" rclass="text-left" key="EVENT_TIME" />
+		<param order="" type="print" label="DELAY_MINUTES" rclass="text-left" key="TIME_MIN" />
+		<param order="" type="print" label="USER COMMENT/REASON" rclass="text-left" key="U_COMMENT" />
+		<param order="" type="print" label="DICISION_OF_CHIEF" rclass="text-left" key="DICISION_OF_CHIEF" />
+		<param order="" type="print" label="CHIEF" rclass="text-left" key="CHIEF" />
+		<param order="t.id" type="print" label="ID" key="ID" rclass="text-center" />
+
+	</params>
+</install>

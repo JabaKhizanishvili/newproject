@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://apps.magticom.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<params name="Doors">
+		<param order="" type="number" default="" label="#" rclass="text-center" />
+		<param order="t.rec_date" type="print" label="date" key="GRAPH_DAY" rclass="text-left"/>
+		<param order="firstname" type="joinprint" label="worker" patern="LASTNAME FIRSTNAME" rclass="text-left Georgian1" T="1" Tscope="person" />
+		<param order="private_number" type="print" label="private_number" key="PRIVATE_NUMBER" rclass="text-left"/>
+		<param order="" type="print" label="TABLENUM" key="TABLENUM" rclass="text-left"/>
+		<param order="" type="print" label="POSITION" key="POSITION" rclass="text-left"/>
+		<param order="mainunit" type="print" label="MAINUNIT" key="ORG_PLACE" tipkey="MAINUNIT" rclass="text-left"  T="1"/>
+		<param order="" type="office" label="ACOUNTUNIT" key="OFFICE"  rclass="text-left"  T="1"/>
+		<param order="" type="print" label="WORKERDHOUR_DAY" key="DAY_WORKED_TIME"  rclass="text-left" />
+		<param order="" type="print" label="WORKERDHOUR_NIGHT" key="NIGHT_WORKED_TIME"  rclass="text-left" />
+		<param order="" type="print" label="WORKERDHOUR" key="WORKED_TIME"  rclass="text-left"  T="1"/>
+		<param order="" type="print" label="STATUS" state_key="STATUS"  rclass="text-center"/>
+		<param order="" type="print" label="START_TIME" key="START_TIME"  rclass="text-left" />
+		<!--<param order="" type="pic" label="START_TIME_PIC" key="START_PIC"  rclass="text-left" />-->
+		<param order="" type="print" label="END_TIME" key="END_TIME"  rclass="text-left" />
+		<!--<param order="" type="pic" label="END_TIME_PIC" key="END_PIC"  rclass="text-left" />-->
+		<param order="ww.org" type="org" label="org" rclass="text-center" key="ORG"  T="1"/>
+		<param order="" type="orgplace" label="org_place" key="ORG_PLACE" rclass="text-left" T="1"/>
+	</params>
+</install>

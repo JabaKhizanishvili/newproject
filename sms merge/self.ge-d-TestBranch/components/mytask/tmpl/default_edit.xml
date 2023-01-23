@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<param name="comment" type="textarea" default="" label="Comment" />
+		<param name="" type="approvebuttons" default="" label="" />
+		<param name="ID" type="hidden" default="" />
+	</params>
+</install>

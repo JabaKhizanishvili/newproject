@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="hrs_applications" history="yes">
+	<columns>
+		<column name="id" type="number" null="n" />
+		<column name="worker" type="number" null="n" />
+		<column name="type" type="number" null="n" />
+		<column name="start_date" type="date" />
+		<column name="end_date" type="date" />
+		<column name="day_count" type="number" null="n"  default="00" />
+		<column name="info" type="varchar2" length="4000"  />
+		<column name="rec_date" type="date" />
+		<column name="status" type="number" null="n" />
+		<column name="approve" type="number" null="n" />
+		<column name="approve_date" type="date" />
+		<column name="sync" type="number" null="n" />
+		<column name="sync_date" type="date" />
+		<column name="del_user" type="number" null="n"  />
+		<column name="del_date" type="date" />
+		<column name="ucomment" type="varchar2" length="4000"  />
+		<column name="auto" type="number" null="n" default="00"  />
+		<column name="files" type="varchar2" length="4000"  />
+		<column name="org" type="number"   />
+		<column name="replacing_workers" type="varchar2" length="4000"  />
+		<column name="w_holiday_comment" type="varchar2" length="4000"  />
+		<column name="client_id" type="number" default="00" />
+	
+		<column name="rec_user" type="number" default="00"/>
+		<column name="additional_status" type="number" default="00"/>
+		<column name="worker_id" type="number" default="00"/>
+	</columns>
+	<history>
+		<!--<column name="id" type="number" null="n" />-->
+		<column name="worker" type="number" null="n" />
+		<!--<column name="type" type="number" null="n" />-->
+		<column name="start_date" type="date" />
+		<column name="end_date" type="date" />
+		<column name="day_count" type="number" null="n"  default="00" />
+		<column name="info" type="varchar2" length="4000"  />
+		<!--<column name="rec_date" type="date" />-->
+		<column name="status" type="number" null="n" />
+		<column name="approve" type="number" null="n" />
+		<column name="approve_date" type="date" />
+		<!--<column name="sync" type="number" null="n" />-->
+		<!--<column name="sync_date" type="date" />-->
+		<column name="del_user" type="number" null="n"  />
+		<column name="del_date" type="date" />
+		<column name="ucomment" type="varchar2" length="4000"  />
+		<column name="auto" type="number" null="n" default="00"  />
+		<column name="files" type="varchar2" length="4000"  />
+		<!--<column name="org" type="number"   />-->
+		<column name="replacing_workers" type="varchar2" length="4000"  />
+		<column name="w_holiday_comment" type="varchar2" length="4000"  />
+		<!--<column name="client_id" type="number" default="00" />-->
+	
+		<!--<column name="rec_user" type="number" default="00"/>-->
+		<column name="additional_status" type="number" default="00"/>
+		<column name="worker_id" type="number" default="00"/>
+	</history>
+	<sequence  name="procedures" />
+	<histsequence  name="sqs_applications_hist" />
+</table>

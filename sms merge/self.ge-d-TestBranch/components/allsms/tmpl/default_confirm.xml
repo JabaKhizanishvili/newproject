@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<param name="ORG" type="orgprint" default="" label="ORG"  />
+		<param name="SMS" type="printastext" default="" label="SMS_TEXT"  />
+		<param name="SELECTED_WORKERS" type="printastext" default="" label="SELECTED_WORKERS" />
+		
+		
+		<param name="SMS" type="hidden" default="" label="SMS_TEXT" must="1" />
+		<param name="WORKERS" type="hidden" label="EXCLUDED_WORKERS"  />
+		<param name="UNIT" type="hidden" label="UNIT"  />
+		<param name="POSITIONS" type="hidden" label="positions"  />
+		<param name="ORG" type="hidden" default="" label="ORG" />
+	</params>
+</install>

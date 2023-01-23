@@ -1,0 +1,52 @@
+.tabs_holder
+{
+	margin-top: -50px;
+}
+.tabs_holder .tab_content {
+	clear: left;
+}
+.tabs_holder > ul  {
+	overflow: visible;
+	height: 50px;
+	padding: 0px;
+	margin-bottom: 0px;
+	list-style: none;
+}
+.tabs_holder > ul li {
+	margin-top: 11px;
+	margin-right: 15px;
+	float: right;
+}
+.tabs_holder > ul li.tab_selected {
+	position: relative;
+	margin-top: 11px;
+}
+.tabs_holder > ul li.tab_selected a {
+	display: block;
+	float: left;
+	height: 40px;
+	background-color: #F5FAFE;
+	border: 1px solid #B6D2E8;
+	border-bottom: none;
+	border-radius: 8px 8px 0px 0px;
+	-moz-border-radius: 8px 8px 0px 0px;
+	color: #990000;
+}
+.tabs_holder > ul li a {
+	display: block;
+	padding: 0px 20px;
+	color: #212121;
+	font-size: 14px;
+	outline: 0;
+	float: left;
+	height: 30px;
+	line-height: 34px;
+	border-radius: 8px;
+	-moz-border-radius: 8px	;
+	border: 1px solid #DDDDDD;
+	font-weight: bold;
+}
+.tabs_holder .content_holder {
+	background-color: #F5FAFE;
+	border: 1px solid #B6D2E8;
+}

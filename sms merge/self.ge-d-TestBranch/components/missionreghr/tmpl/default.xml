@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<param name="WORKER"  type="slfstaff" case="7" tmpl="single"  label="Worker" must="1" />
+		<param name="START_DATE" type="calendar" default="now" label="Mission Start" must="1" />
+		<param name="END_DATE" type="calendar" default="now" label="Mission End" must="1" />
+		<param name="INFO" type="officialtypes" default="" label="Reason" must="1" />
+		<param name="UCOMMENT" type="textarea" default="" label="Comment"  />	
+		<param name="ID" type="hidden" default="" />
+	</params>
+</install>

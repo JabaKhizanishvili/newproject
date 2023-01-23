@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params group="step1">
+		<param name="ORG" type="orgprint" default="" label="ORG" key="ID" />
+		<param name="WORKERS" type="slfstaff" case="2" label="PERSON" must="1"/>
+		<param name="CHANGE_SUB_TYPE" default="-1" type="list" label="ACTION_TYPE" must="1">
+			<option value="-1">select category</option>
+			<option value="1">add_benefit</option>
+			<option value="2">change_benefit</option>
+			<option value="3">remove_benefit</option>
+		</param>
+	</params>
+	<params group="step2">
+		<param name="WORKERS" setname="BENEFIT_TYPES" type="categorybenefit" default="" label=" " />
+	</params>
+	<params group="hidden">
+		<param name="ORG" type="hidden" />
+		<param name="WORKERS" type="hidden" />
+		<param name="CHANGE_SUB_TYPE" type="hidden" />
+		<param name="BENEFIT_TYPES" type="hidden" />
+		<param name="CHANGE_DATE" type="hidden" />
+	</params>
+</install>

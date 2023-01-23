@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/edit.dtd">
+<install type="component" version="1.5.0">
+	<params>
+		<param name="LIB_TITLE" type="text" default="" label="Title" must="1" geokbd="1" />
+		<param name="LIB_DESC" type="text" default="" label="Description" geokbd="1" />
+		<param name="ACTIVE" type="radio" default="1">
+			<option value="1">Active Status</option>
+			<option value="0">Inactive</option>
+		</param>			
+		<param name="ID" type="hidden" default="" />
+	</params>
+	<params group="details">
+		<param name="START_TIME" type="time" default="" label="START_TIME" must="1" />
+		<param name="END_TIME" type="time" default="" label="END_TIME" must="1" />
+		<!--		<param name="START_BREAK" type="time" default="" label="START_BREAK" />
+		<param name="END_BREAK" type="time" default="" label="END_BREAK" />-->
+		<param name="VACATION_INDEX" type="number" default="1" label="VACATION_INDEX" must="1" step="0.5" />
+		<param name="REST_TYPE" type="rest" default="-1" label="REST_TYPE" must="1" >
+			<option value="0">No Rest</option>
+			<option value="1">Fixed</option>
+			<!--<option value="2">Dynamic</option>-->
+			<option value="4">By Minutes And Time Ranges</option>
+		</param>
+		<param name="START_BREAK" type="time" default="" label="START_BREAK" must="1"/>
+		<param name="END_BREAK" type="time" default="" label="END_BREAK" must="1"/>
+		<param name="REST_MINUTES" type="number" default="" label="REST_MINUTES" />
+		<param name="HOLIDAY_YN" type="radio" default="" must="1">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<!--<param name="COLOR" type="color" default="#990000" label="COLOR" />-->
+		<!--<param name="OWNER" type="chiefsections" default="" label="Section"  />-->
+		<param name="TIME_CODE" type="text" default="" label="code" />
+	</params>
+</install>

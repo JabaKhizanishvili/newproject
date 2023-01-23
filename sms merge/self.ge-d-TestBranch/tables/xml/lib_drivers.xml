@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://apps.magticom.ge/pda/defines/xml/table.dtd">
+<table name="lib_drivers">
+	<column name="id" type="number" null="n" />
+	<column name="worker" type="number" null="n" default="00" />
+	<column name="lib_desc" type="varchar2" length="4000" />
+	<column name="active" type="number" null="n" default="1" />
+	<column name="client_id" type="number" default="00" />
+	<column name="modify_user" type="number" />
+	<column name="modify_date" type="date" />
+</table>

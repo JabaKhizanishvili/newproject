@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="hrs_sub_graph" history="yes">
+	<columns>
+		<column name="worker" type="number" null="n" />
+		<column name="real_date" type="date" />
+		<column name="rest_time" type="number" default="00"   />
+		<column name="work_time" type="number" default="00"   />
+		<column name="lateness" type="number" default="00"   />
+		<column name="night_hours" type="number" default="00"   />
+		<column name="holiday_hours" type="number" default="00"   />
+	</columns>
+</table>

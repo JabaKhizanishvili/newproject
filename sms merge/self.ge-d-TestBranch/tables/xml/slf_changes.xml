@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<!--არ დაგავიწყდეს ტრიგერის და მეორე ცხრილის რედაქტირება!!!-->
+<table name="slf_changes" history="yes">
+	<columns>
+		<column name="id" type="number" />
+		
+		<column name="org" type="number" />
+		<column name="person" type="number" default="00" />
+		<column name="staff_schedule" type="number" />
+		<column name="salary" type="number" default="00" />
+		<column name="chiefs" type="varchar2" length="4000" />
+		<column name="tablenum"  type="varchar2" length="4000"  />
+		<column name="contracts_date" type="date" />
+		<column name="contract_end_date" type="date" />
+		<column name="calculus_regime" type="number" default="1" />
+		<column name="category_id" type="number" />
+		<column name="graphtype" type="number" default="00" />
+		<column name="accounting_offices" type="varchar2" length="1000" />
+
+		<column name="release_date" type="date" />
+		<column name="start_date" type="date" />
+		<column name="end_date" type="date" />
+		<column name="change_date" type="date"/>
+		<column name="change_type" type="number"/>
+		<column name="change_sub_type" type="number"/>
+		<column name="o_comment" type="varchar2" length="4000" />
+		<column name="client_id" type="number"  default="00"/>
+		<column name="worker_id" type="number"/>
+		<column name="contract_type" type="number"/>
+		<column name="status" type="number"/>
+	
+		<column name="iban" type="varchar2" length="1000"  />
+		<column name="auto_overtime" type="number" />
+		<column name="calculus_type" type="number" default="00" />
+	
+		<column name="working_rate" type="number" />
+		<column name="country_code" type="number" default="00" />
+		<column name="salary_payment_type" type="number" />
+	
+		<column name="release_type" type="number"/>
+		<column name="release_comment" type="varchar2" length="4000" />
+		<column name="release_files" type="varchar2" length="4000" />
+	
+		<column name="create_date" type="date"/>
+		<column name="creator_person" type="number"/>
+		
+		<column name="p_code" type="varchar2" length="500"  />
+		
+		<column name="auto_person_status_stop" type="number" default="00" />
+		<column name="salarytype" type="number" default="00" />
+		
+		<column name="benefit_types" type="varchar2" length="4000" />
+		<column name="operation_comment" type="varchar2" length="4000" />
+		<column name="token" type="varchar2" length="4000" />
+		<column name="attributes" type="varchar2" length="4000" />
+	</columns>
+	<history>
+		<!--new-->
+		<column name="org" type="number" />
+		<column name="person" type="number" default="00" />
+		<column name="staff_schedule" type="number" />
+		<column name="salary" type="number" default="00" />
+		<column name="chiefs" type="varchar2" length="4000" />
+		<column name="tablenum"  type="varchar2" length="4000"  />
+		<column name="contracts_date" type="date" />
+		<column name="contract_end_date" type="date" />
+		<column name="calculus_regime" type="number" default="1" />
+		<column name="category_id" type="number" />
+		<column name="graphtype" type="number" default="00" />
+		<column name="accounting_offices" type="varchar2" length="1000" />
+		<!--staff_schedule-->
+		<column name="change_sub_type" type="number"/>
+		<column name="worker_id" type="number"/>
+		<column name="contract_type" type="number"/>
+		<column name="status" type="number"/>
+		<column name="iban" type="varchar2" length="1000"  />
+		<column name="auto_overtime" type="number" />
+		<column name="salary_payment_type" type="number" />
+		<column name="release_type" type="number"/>
+		<column name="release_comment" type="varchar2" length="4000" />
+		<column name="release_files" type="varchar2" length="4000" />
+		<column name="creator_person" type="number"/>
+		
+		<column name="p_code" type="varchar2" length="500"  />
+		
+		<column name="auto_person_status_stop" type="number" default="00" />
+		<column name="salarytype" type="number" default="00" />
+		
+		<column name="benefit_types" type="varchar2" length="4000" />
+		<column name="operation_comment" type="varchar2" length="4000" />
+		<column name="token" type="varchar2" length="4000" />
+		<column name="attributes" type="varchar2" length="4000" />
+	</history>
+	<sequence  name="sqs_slf_change" />
+	<histsequence  name="sqs_slf_change_hist" />
+	<histdatefield name="change_date" />
+</table>

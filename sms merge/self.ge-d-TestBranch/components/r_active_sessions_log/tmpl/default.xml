@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Edited by Irakli Gzirishvili 21-10-2021-->
+<!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="page_filter_block" type="h">
+		<filter name="firstname" type="stext" default="" label="firstname" class="kbd" />
+		<filter name="lastname" type="stext" default="" label="lastname" class="kbd" />
+		<filter name="log_ip" type="stext" default="" label="IP" class="kbd" />
+		<filter name="browser_name" type="stext" default="" label="BROWSER" class="kbd" />
+		<filter name="os_name" type="stext" default="" label="OS NAME" class="kbd" />
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+	<params class="table table-bordered table-condensed table-hover table-striped exporttable" id="exportable">
+		<param order=""   type="number" default="" label="#" rclass="text-center" hclass="text-center"/>
+		<param order="" type="checkall" default="" label="" rclass="text-center"  hclass="text-center" />
+		<param order="w.log_date" type="stringdate" label="SESSION START" key="LOG_DATE" rclass="text-right" />
+		<param order="wfirstname" type="editlink" label="worker" key="WFIRSTNAME, WLASTNAME" rclass="text-left" T="1" Tscope="person" />
+		<param order="wr.private_number" type="print" label="private_number" key="PRIVATE_NUMBER" rclass="text-left" />
+		<param order="wr.mobile_phone_number" type="print" label="mobile_phone_number" key="MOBILE_PHONE_NUMBER" rclass="text-left" />
+		<param order="w.log_ip" type="print" label="IP" key="LOG_IP" rclass="text-center" />
+		<param order="w.browser_name" type="print" label="BROWSER" key="BROWSER_NAME" rclass="text-center" />
+		<param order="w.os_name" type="print" label="OS NAME" key="OS_NAME" rclass="text-center" />
+		<param order="w.start_date" type="print" label="START DATE" key="START_DATE" rclass="text-center" />
+		<param order="w.end_date" type="print" label="END DATE" key="END_DATE" rclass="text-center" />
+		<param order="w.log_date" type="print" label="UPDATE DATE" key="LOG_DATE" rclass="text-center" />
+	</params>
+
+</install>

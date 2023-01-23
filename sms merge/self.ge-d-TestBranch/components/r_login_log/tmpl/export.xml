@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Edited by Irakli Gzirishvili 21-10-2021.-->
+<!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<params name="Login_log">
+		<param order=""   type="number" default="" label="#" rclass="text-center" hclass="text-center"/>
+		<param order="w.log_ip" type="print" label="IP" key="LOG_IP" rclass="text-center" />
+		<param order="w.browser_name" type="print" label="BROWSER" key="BROWSER_NAME" rclass="text-center" />
+		<param order="w.os_name" type="print" label="OS NAME" key="OS_NAME" rclass="text-center" />
+		<param order="w.log_prev_user_name" type="print" label="PREV USERNAME" key="LOG_PREV_USER_NAME" rclass="text-center" />
+		<param order="w.log_user_name" type="print" label="USERNAME" key="LOG_USER_NAME" rclass="text-center" />
+		<param order="w.log_date" type="print" label="DATE" key="LOG_DATE" rclass="text-center" />
+	</params>
+</install>

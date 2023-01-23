@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="lib_units" history="yes">
+	<columns>
+		<column name="id" type="number" null="n" />
+		<column name="type" type="number" null="n" />
+		<column name="parent_id" type="number" null="n" />
+		<column name="ulevel" type="number" null="n" />
+		<column name="lft" type="number" null="n" />
+		<column name="rgt" type="number" null="n" />
+		<column name="lib_title" type="varchar2" length="500" Ti="1" />
+		<column name="lib_desc" type="varchar2" length="4000" />
+		<column name="active" type="number" null="n" default="1 " />
+		<column name="ordering" type="number" null="n" default="999" />
+		<column name="org" type="number"  />
+		<column name="client_id" type="number" default="00" />
+		<column name="unit_code" type="varchar2" length="500" />
+	     <column name="modify_user" type="number" />
+          <column name="modify_date" type="date" />
+     </columns>
+	<history>
+		<column name="type" type="number" null="n" />
+		<column name="parent_id" type="number" null="n" />
+		<column name="ulevel" type="number" null="n" />
+		<column name="lft" type="number" null="n" />
+		<column name="rgt" type="number" null="n" />
+		<column name="lib_title" type="varchar2" length="500" />
+		<column name="lib_desc" type="varchar2" length="4000" />
+		<column name="active" type="number" null="n" default="1 " />
+		<column name="ordering" type="number" null="n" default="999" />
+		<column name="org" type="number"  />
+		<column name="unit_code" type="varchar2" length="500" />
+	     <column name="modify_user" type="number" />
+          <column name="modify_date" type="date" />
+     </history>
+	<sequence  name="library" />
+	<histsequence  name="sqs_units_hist" />
+</table>

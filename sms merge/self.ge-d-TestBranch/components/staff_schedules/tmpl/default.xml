@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE install SYSTEM "http://web.magti.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<filters class="page_filter_block" type="h">
+		<filter name="org" type="org" default="" label="org"/>
+		<filter name="org_place" type="unit" default="" label="unit"  elementid="org" />
+		<filter name="lib_title" type="text" default="" label="Title" geokbd="1" />
+		<!--		<filter name="ulevel" type="state" default="-1" label="type" >
+			<option value="-1">SELECT CATEGORY</option>
+			<option value="1">CHIEF</option>
+			<option value="2">ASSISTANT</option>
+			<option value="3">RANKER</option>
+		</filter>-->
+		<filter name="active" type="state" default="-1" label="State">
+			<option value="-1">Select State</option>
+			<option value="0">Inactive</option>
+			<option value="1">Active Status</option>
+		</filter>
+		<filter name="schedule_code" type="text" default="" label="schedule_code" />
+		<filter type="buttons" default="" submit_label="Filter" reset_label="Clear" show_reset= "1" />
+	</filters>
+	
+	<params class="table table-bordered table-condensed table-hover table-striped exporttable" id="exportable">
+		<param order="" type="number" default="" label="#" rclass="text-center" />
+		<param order="" type="checkall" default="" label="" rclass="text-center"   />
+		
+		<param order="" type="editlink" label="Title" key="TITLE" rclass="text-left" />
+		<param order="" type="print" label="Description" key="LIB_DESC" rclass="text-left" />
+		<param order="" type="org" label="ORG" key="ORG" rclass="text-center" T="1"/>
+		<param order="" type="mainunit" label="MAINUNIT" key="ORG_PLACE" tipkey="MAINUNIT" rclass="text-left"  T="1"/>
+		<param order="" type="unit" label="UNIT" key="ORG_PLACE" rclass="text-center" T="1"/>
+		<param order="" type="office" label="office" key="OFFICE" rclass="text-left" T="1" />
+		<param order="" type="position" active="1" label="POSITION" key="POSITION" rclass="text-left" T="1"/>
+		<param order="" type="staffschedule" label="CHIEF_SCHEDULE" key="CHIEF_SCHEDULE" rclass="text-left" T="1"/>
+		<param order="" type="staffschedule" label="REPLACE_SCHEDULE" key="REPLACE_SCHEDULE" rclass="text-left" T="1"/>
+		<param order="" type="jd" label="JD" key="JD" rclass="text-left" T="1"/>
+		<param order="" type="print" default="" key="SCHEDULE_CODE" label="schedule_code" T="1"/>
+		<param order="" type="print" label="SALARY" key="SALARY" rclass="text-left" />
+		<param order="" type="print" label="COUNT" key="QUANTITY" rclass="text-left" />
+		<param order="" type="print" label="ordering" key="ORDERING" rclass="text-center" />
+		<param order="" type="state" label="State" rclass="text-center" state_id='ID' state_key="ACTIVE" />
+	</params>
+</install>

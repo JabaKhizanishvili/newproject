@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params name="SalarySheetConfig">
+		<param name="SalarySheet_work_start" type="time" default="" label="START_TIME" must=""/>
+		<param name="" type="spacer" default="Configure_salary_types" label="" description="" />
+		<param name="SalarySheet_standard_salary_case_count" type="radio" default="0"  must="" >
+			<option value="1">Calendar_type</option>
+			<option value="2">working_days</option>
+		</param>
+		<param name="SalarySheet_consider_weekends" type="radio" default=""  must="" >
+			<option value="1">yes</option>
+			<option value="0">no</option>
+		</param>
+		<param name="" type="spacer" default="Taxes - Pension tax" label="" description="" />
+		<param name="salarysheet_employee_share" type="number" default="2" label="" description="" />
+		<param name="salarysheet_company_share" type="number" default="2" label="" description="" />
+		<param name="" type="spacer" default="taxes - income tax" label="" description="" />
+		<param name="salarysheet_income_tax" type="number" default="20" label="" description="" />
+	</params>
+	<params group="details">
+		<param name="" type="spacer" default="show_sheet_columns" label="" description="" />
+		<param name="salary_sheet_position" type="radio" default="0" label="position">
+			<option value="1">YES</option>
+			<option value="0">NO</option>
+		</param>
+		<param name="salary_sheet_unit" label="unit" type="radio" default="0" >
+			<option value="1">YES</option>
+			<option value="0">NO</option>
+		</param>F
+		<param name="salary_sheet_main_unit" label="main_unit" type="radio" default="0" >
+			<option value="1">YES</option>
+			<option value="0">NO</option>
+		</param>
+		<param name="salary_sheet_tablenum" label="tablenum" type="radio" default="0" >
+			<option value="1">YES</option>
+			<option value="0">NO</option>
+		</param>
+		<param name="salary_sheet_worker_code" label="worker_code" type="radio" default="0" >
+			<option value="1">YES</option>
+			<option value="0">NO</option>
+		</param>
+		<param name="salary_sheet_unit_code" label="unit_code" type="radio" default="0" >
+			<option value="1">YES</option>
+			<option value="0">NO</option>
+		</param>
+		<param name="salary_sheet_schedule_code" label="schedule_code" type="radio" default="0" >
+			<option value="1">YES</option>
+			<option value="0">NO</option>
+		</param>
+		<param name="salary_sheet_assignment_date" label="assignment_date" type="radio" default="0" >
+			<option value="1">YES</option>
+			<option value="0">NO</option>
+		</param>
+		<param name="salary_sheet_company_assignment_date" label="company_assignment_date" type="radio" default="0" >
+			<option value="1">YES</option>
+			<option value="0">NO</option>
+		</param>
+	</params>
+</install>

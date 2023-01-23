@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<param name="ENABLE" type="radio" default="0" label="ENABLE" must="1" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="TABLENUM" type="text" default="" label="TABLENUM"  mask=""  />
+		<!--<param name="POSITION" type="text" default="" label="POSITION" geokbd="1" />-->
+		<param name="IBAN" type="text" default="" label="IBAN" />
+		<param name="STAFF_SCHEDULE" type="apptypes" label="STAFF_SCHEDULE"  />
+		<param name="SALARY" type="number" default="" label="SALARY" />
+		<param name="SALARY_PAYMENT_TYPE" type="radio" >
+			<option value="1">Cash</option>
+			<option value="2">Card</option>
+		</param>
+		<param name="SALARYCOMMENT" type="text" default="" label="SALARY_COMMENT" geokbd="1" />
+		<!--<param name="ORG_PLACE" type="orgunitnew" default="0" label="ORG_PLACE" must="1" />-->
+		<param name="CALCULUS_TYPE" type="list" default="-1" label="CALCULUS_TYPE"  must="1" >
+			<option value="-1">Select CALCULUS_TYPE</option>
+			<option value="1">Digital</option>
+			<option value="2">Material</option>
+			<option value="3">Excluded</option>
+		</param>
+		<param name="CALCULUS_REGIME" type="radio" default="1">
+			<option value="1">Office</option>
+			<option value="2">Distance</option>
+		</param>
+		<param name="CALCULUS_DATE" type="calendar" default="" label="CALCULUS_DATE" must="1" />
+
+		<param name="INSURANCE" type="radio" default="0" label="INSURANCE" must="1" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="INSURANCE_AMOUNT" type="text" default="" label="INSURANCE_AMOUNT" />
+	
+		<param name="WORK_TYPE" type="worktypes" default="0" label="WORK_TYPE" must="1" />
+<!--		<param name="WORK_TYPE" type="radio" default="0" label="WORK_TYPE" must="1" >
+			<option value="1">Full Time</option>
+			<option value="2">Part Time</option>
+		</param>-->
+		
+		<param name="FILES" type="files" default="" label="FILES" />
+		<param name="CONTRACT_STATE" type="list" default="1" label="CONTRACT_STATE">
+			<option value="1">Current Contract</option>
+			<option value="0">Paused Contract</option>
+			<option value="-2">Canceled Contract</option>
+		</param>
+		<param name="CONTRACTS_DATE" type="calendar" default="" label="CONTRACTS_DATE" must="1" />
+		<param name="CONTRACT_END_DATE" type="calendar" default="" label="CONTRACT_END_DATE" must="1" />
+		
+		<param name="GRAPHTYPE" type="graphtype" default="" label="GRAPHTYPE" must="1" />
+		<!--<param name="GRAPHGROUP" type="graphgroup" default="" label="GRAPHGROUP" />-->
+		
+		<!--<param name="CHIEFS" type="chiefs" default="" label="CHIEFS" />-->
+<!--		<param name="USER_TYPE" type="list" default="" label="USER_TYPE"  must="1" description="worker type desc">
+			<option value="1">Worker</option>
+			<option value="2">Chief</option>
+		</param>-->
+		<!--<param name="WORKERS" type="myworkers" default="" label="WORKERS" />-->
+		<param name="ID" type="hidden" default="" />
+		<param name="PARENT_ID" type="hidden" default="" />
+		<param name="ORG" type="hidden" default="" />
+	</params>
+</install>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/table.dtd">
+<table name="hrs_overtime_alerts">
+	<column name="id" type="number" null="n" />
+	<column name="worker" type="number" null="n" />
+	<column name="type" type="number" null="n" />
+	<column name="start_date" type="date" />
+	<column name="end_date" type="date" />
+	<column name="day_count" type="number" null="n"  default="00" />
+	<column name="info" type="varchar2" length="4000"  />
+	<column name="status" type="number" null="n" />
+	<column name="resolution" type="number" null="n" />
+	<column name="user_approve" type="number" null="n" />
+	<column name="user_approve_date" type="date" />
+	<column name="chief_approve" type="number" null="n" />
+	<column name="chief_approve_date" type="date" />
+	<column name="del_user" type="number" null="n"  />
+	<column name="del_date" type="date" />
+	<column name="create_user" type="number" null="n"  />
+	<column name="create_date" type="date" />
+	<column name="client_id" type="number" default="00" />
+	<column name="modify_user" type="number" />
+	<column name="modify_date" type="date" />
+</table>

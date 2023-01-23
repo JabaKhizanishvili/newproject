@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<param name="AUTO_PERSON_STATUS_STOP" type="multyradio" default="" must="1"  description="auto_person_status_stop_desc">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+	</params>
+</install>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://apps.magticom.ge/pda/defines/xml/grid.dtd">
+<install type="component" version="1.5.0">
+	<params name="Doors">
+		<param order="" type="number" default="" label="#" rclass="text-center" />
+		<param order="" type="print" label="firstname" key="FIRSTNAME" rclass="text-left Georgian1" T="1" Tscope="person" />
+		<param order="" type="print" label="lastname" key="LASTNAME" rclass="text-left Georgian1" T="1" Tscope="person" />
+		<param order="" type="print" label="date" key="REC_DATE" rclass="text-left"/>
+		<param order="" type="print" label="Worker PERMIT_ID" key="PERMIT_ID" rclass="text-left"/>
+		<param order="" type="org" label="org" rclass="text-center" key="ORG"  T="1"/>
+		<param order="" type="workerUnits" label="org_place" key="WORKER_ID" rclass="text-left" T="1"/>
+		<param order="" type="print" label="Fix CARD_ID" key="CARD_ID" rclass="text-left"/>
+		<param order="" type="print" label="Door" key="LIB_TITLE" rclass="text-left" T="1"/>
+		<param type="print" label="ID" key="ID" rclass="text-left"/>
+	</params>
+</install>

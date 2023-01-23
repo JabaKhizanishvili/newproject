@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<!--<param name="WORKER" type="chiefworkers" default="" label="Worker" must="1" />-->
+		<param name="START_DATE" type="calendar" default="now" label="Bulletins Start" must="1" />
+		<param name="ORG" type="myorgs" default="" label="org" must="1" />
+		<!--<param name="END_DATE" type="hidden" default="now + 40 day" label="Bulletins End" />-->
+		<param name="ID" type="hidden" default="" />
+	</params>	
+</install>

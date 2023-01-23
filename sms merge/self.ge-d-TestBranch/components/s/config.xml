@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE table SYSTEM "http://web.magti.ge/pda/defines/xml/component.config.dtd">
+<config>
+	<defaultTask value="getworkers" />
+	<tasks>
+		<task name="getchiefs" default="1" label="getchiefs" />
+		<task name="gettimedata" default="1" label="gettimedata" />
+		<task name="getworkers" default="1" label="getworkers" />
+		<task name="getworker" default="1" label="getworker" />
+		<task name="roleaudit" default="1" label="roleaudit" />
+		<task name="savecelldata" default="1" label="savecelldata" />
+		<!--<task name="getreworkers" default="1" label="getReWorkers" />-->
+		<task name="ajaxworkers" default="1" label="ajaxworkers" />
+		<task name="direct_subordianate_tree" default="1" label="direct_subordianate_tree" />
+		<task name="additional_subordianate_tree" default="1" label="additional_subordianate_tree" />
+	</tasks>
+	<allowTasks>
+		<task name="getgworkers" default="1" label="getgworkers" />
+		<task name="ajaxchiefs" default="1" label="ajaxchiefs" />
+		<task name="getuworkers" default="1" label="getuworkers" />
+		<task name="ajaxuniqworkers" default="1" label="ajaxuniqworkers" />
+		<task name="ajaxchiefworkers" default="1" label="ajaxchiefworkers" />
+		<task name="ajaxchiefsworkers" default="1" label="ajaxchiefsworkers" />
+		<task name="ajaxwokerschiefs" default="1" label="ajaxwokerschiefs" />
+		<task name="getgroupworkers" default="1" label="getgroupworkers" />
+		<task name="getorgunit" default="1" label="getorgunit" />
+		<task name="staffschedule" default="1" label="staffschedule" />
+		<task name="slfstaff" default="1" label="slfstaff" />
+		<task name="console" default="1" label="console" />
+		<task name="reloadweeksum" default="1" label="reloadweeksum" />
+	</allowTasks>
+</config>

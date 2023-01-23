@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<param name="USER_ROLE" type="userrole" default="" label="USER_ROLE"  must="1" />
+		<param name="WORKERS" type="batchworkers" default="" label="WORKERS" key="ID" />
+	</params>
+</install>

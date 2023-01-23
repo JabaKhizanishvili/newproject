@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="1.5.0">
+	<params>
+		<param name="LIB_TITLE" type="text" default="" label="Title" must="1"  class="kbd" />
+		<param name="LIB_DESC" type="text" default="" label="Description"  class="kbd"  />
+		<param name="ACTIVE" type="radio" default="1">
+			<option value="1">Active Status</option>
+			<option value="0">Inactive</option>
+		</param>
+	</params>
+	<params group="details">
+		<param name="LAT" type="number" default="" label="LAT" must="" />
+		<param name="LNG" type="number" default="" label="LNG" must="" />
+		<param name="RADIUS" type="number" default="" label="RADIUS" must="" />
+		<param name="OUTER_RADIUS" type="number" default="" label="OUTER_RADIUS"  must=""/>
+		<param name="V_IP" type="textarea" default="" label="access_click_ip" description="enter comma separated list" />
+		<param name="ID" type="hidden" default="" />
+	</params>
+</install>
