@@ -1,0 +1,17 @@
+  .swiper-pagination .swiper-pagination-bullet {
+    opacity: 1;
+    background-color:#8c81ee;
+  }
+
+/* .swiper-pagination{
+} */
+
+  /*active pagination*/
+  .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #c5c0f7 !important; /*orange color*/
+    opacity: 1;
+  }
+
+  .slider{
+    background-color: #7668eb;
+  }

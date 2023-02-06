@@ -1,0 +1,67 @@
+.phonepopup{
+    z-index: +999;
+    text-align: center;
+     height: 15vh;
+     width: 15vh;
+     font-size: 0;
+     position: relative;
+     grid-column-gap: 0px;
+     grid-row-gap: 0px;
+     background-color: #ffff;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     border-radius: 10%;
+     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+     transition: all .5s cubic-bezier(.65,0,.35,1);
+     transition-delay: .1s;
+}
+.phonepopup img{
+    max-width: 70%;
+}
+
+.phonepopupactive{
+    height: 30vh !important;
+    width: 30vh !important;
+    font-size: unset !important;
+    transition: all .5s cubic-bezier(.65,0,.35,1);
+    transition-delay: .1s;
+}
+
+
+.phonepopup .container{
+    color: #7063e9;
+    font-family: 'Courier New', Courier, monospace !important;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.backgroundcolorchanger{
+    z-index: -9;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+    background-color: rgba(112,99,233,0.3);
+    opacity: 0;
+    /* pointer-events: none; */
+    pointer-events: none;
+    transition: all .4s cubic-bezier(.65,0,.35,1);
+    transition-delay: .2s;
+}
+
+/* .backgroundcolorchanger */
+
+.active{
+    transition: all .4s cubic-bezier(.65,0,.35,1);
+    transition-delay: .2s;
+    transform: translate(-50%,-50%) scale(1);
+    opacity: 1;
+    transition: all 0.5s ease-out;
+    pointer-events: all;
+}

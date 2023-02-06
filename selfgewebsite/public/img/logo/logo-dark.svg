@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="194" height="121.963" viewBox="0 0 194 121.963">
+  <g id="Group_35" data-name="Group 35" transform="translate(49.001 -33.858)">
+    <g id="Group_33" data-name="Group 33" transform="translate(20 33.858)">
+      <g id="Path_1803" data-name="Path 1803" transform="translate(26.867 37.327)" fill="none">
+        <path d="M0-37.327,29.133-28.88V10.214H0Z" stroke="none"/>
+        <path d="M 5.999996185302734 -29.33997344970703 L 5.999996185302734 4.214326858520508 L 23.13349723815918 4.214326858520508 L 23.13349723815918 -24.37239265441895 L 5.999996185302734 -29.33997344970703 M -3.814697265625e-06 -37.32667541503906 L 29.13349723815918 -28.87988662719727 L 29.13349723815918 10.21432495117188 L -3.814697265625e-06 10.21432495117188 L -3.814697265625e-06 -37.32667541503906 Z" stroke="none" fill="#1B2D39"/>
+      </g>
+      <path id="Path_1804" data-name="Path 1804" d="M0,0,5.692,1.62V42.769H0Z" transform="translate(19.448 4.772)" fill="#1B2D39"/>
+      <path id="Path_1805" data-name="Path 1805" d="M0,0,5.074,1.444V38.123H0Z" transform="translate(12.424 9.418)" fill="#1B2D39" opacity="0.9"/>
+      <path id="Path_1806" data-name="Path 1806" d="M0,0,4.484,1.276V33.691H0Z" transform="translate(5.844 13.85)" fill="#1B2D39" opacity="0.8"/>
+      <path id="Path_1807" data-name="Path 1807" d="M0,0,3.925,1.117V29.492H0Z" transform="translate(0 18.049)" fill="#1B2D39" opacity="0.7"/>
+    </g>
+    <text id="window" transform="translate(47.999 126.586)" fill="#1B2D39" font-size="40" font-family="SegoeUI, Segoe UI" letter-spacing="0.104em"><tspan x="-96.66" y="0">WINDOW</tspan></text>
+    <text id="bakuriani" transform="translate(47.731 152.82)" fill="#1B2D39" font-size="12" font-family="SegoeUI-Bold, Segoe UI" font-weight="700" letter-spacing="0.104em"><tspan x="-31.731" y="0">Bakuriani</tspan></text>
+  </g>
+</svg>
